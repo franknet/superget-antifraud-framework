@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+        <array key="CalibriBold.ttf">
+            <string>Calibri-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="zAw-qs-6A8" customClass="GPListItemDisclousure" customModule="Getpay_Core" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zAw-qs-6A8" id="fPh-Cr-U11">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-yd-7Ue">
+                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.88026040790000004" green="0.18247449399999999" blue="0.16193705799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3r2-Eu-mJR"/>
+                            <constraint firstAttribute="height" constant="40" id="ZXo-7f-cfP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Luan Almeida Rocha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMT-ju-bkq">
+                        <rect key="frame" x="72" y="16" width="316" height="16"/>
+                        <fontDescription key="fontDescription" name="Calibri-Bold" family="Calibri" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banco Santander Banco Santander Banco Santander" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyL-ot-BgO">
+                        <rect key="frame" x="72" y="37" width="316" height="57"/>
+                        <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gp_favorite" translatesAutoresizingMaskIntoConstraints="NO" id="BXM-3d-poD">
+                        <rect key="frame" x="404" y="24" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="mX9-NC-ppU"/>
+                            <constraint firstAttribute="width" constant="24" id="sRf-EY-kg1"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IGu-yd-7Ue" firstAttribute="top" secondItem="fPh-Cr-U11" secondAttribute="top" constant="16" id="6rT-dS-ogH"/>
+                    <constraint firstItem="BXM-3d-poD" firstAttribute="leading" secondItem="lyL-ot-BgO" secondAttribute="trailing" constant="16" id="8h5-DH-8mc"/>
+                    <constraint firstItem="IGu-yd-7Ue" firstAttribute="leading" secondItem="fPh-Cr-U11" secondAttribute="leading" constant="16" id="9Yl-uw-9rS"/>
+                    <constraint firstItem="lyL-ot-BgO" firstAttribute="top" secondItem="DMT-ju-bkq" secondAttribute="bottom" constant="5" id="Cx0-WN-Twr"/>
+                    <constraint firstAttribute="bottom" secondItem="lyL-ot-BgO" secondAttribute="bottom" constant="16" id="PP9-63-faC"/>
+                    <constraint firstAttribute="trailing" secondItem="BXM-3d-poD" secondAttribute="trailing" constant="16" id="c1O-uy-iPZ"/>
+                    <constraint firstItem="BXM-3d-poD" firstAttribute="centerY" secondItem="IGu-yd-7Ue" secondAttribute="centerY" id="iGC-BP-9dx"/>
+                    <constraint firstItem="DMT-ju-bkq" firstAttribute="top" secondItem="IGu-yd-7Ue" secondAttribute="top" id="lsP-BQ-IHk"/>
+                    <constraint firstItem="BXM-3d-poD" firstAttribute="leading" secondItem="DMT-ju-bkq" secondAttribute="trailing" constant="16" id="ozI-Pu-mfi"/>
+                    <constraint firstItem="DMT-ju-bkq" firstAttribute="leading" secondItem="IGu-yd-7Ue" secondAttribute="trailing" constant="16" id="p65-f7-gcS"/>
+                    <constraint firstItem="lyL-ot-BgO" firstAttribute="leading" secondItem="DMT-ju-bkq" secondAttribute="leading" id="w8y-eO-V0a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="disclousureImage" destination="BXM-3d-poD" id="Rbo-Hd-dnc"/>
+                <outlet property="lblSubTitle" destination="lyL-ot-BgO" id="Paf-vf-fTy"/>
+                <outlet property="lblTitle" destination="DMT-ju-bkq" id="Jla-QT-Zme"/>
+                <outlet property="userImage" destination="IGu-yd-7Ue" id="SjD-pu-kbm"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="46"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="gp_favorite" width="24" height="24"/>
+    </resources>
+</document>

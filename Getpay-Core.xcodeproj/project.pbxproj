@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */; };
+		1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FF24006F8A00247FC7 /* GPAccount.swift */; };
+		1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E101240072B100247FC7 /* GPBankingInstitution.swift */; };
+		1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E103240072D000247FC7 /* GPAccountBalance.swift */; };
+		1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E105240072EF00247FC7 /* GPAddress.swift */; };
+		1E10E1082400730100247FC7 /* GPMerchant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E1072400730100247FC7 /* GPMerchant.swift */; };
+		1E10E10A2400733700247FC7 /* GPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E1092400733700247FC7 /* GPUser.swift */; };
+		1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E10B2400734A00247FC7 /* GPTerminal.swift */; };
+		1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E10D2400736D00247FC7 /* GPReceipt.swift */; };
+		1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E10F2400738900247FC7 /* GPReceiptData.swift */; };
+		1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E1112400739B00247FC7 /* GPErrorMessage.swift */; };
+		1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A4F2403E429008B5822 /* GPErrorViewController.swift */; };
+		1E1E8A522403E429008B5822 /* GPErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E8A502403E429008B5822 /* GPErrorViewController.xib */; };
+		1E1E8A5424040CFA008B5822 /* GPMerchantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A5324040CFA008B5822 /* GPMerchantRepository.swift */; };
+		1E1E8A7D24045B47008B5822 /* GPModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A7924044F9F008B5822 /* GPModelTests.swift */; };
+		1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */; };
+		1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */; };
+		1E32AF1423F7088A00693F52 /* GPRoundedButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E32AF1623F70E7300693F52 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1523F70E7300693F52 /* NibLoadable.swift */; };
+		1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1723F711A000693F52 /* StringExtension.swift */; };
+		1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1923F711E500693F52 /* UIScreenExtension.swift */; };
+		1E32AF1E23F712FF00693F52 /* GPLoginTextFieldSwappableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */; };
+		1E32AF1F23F712FF00693F52 /* GPTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */; };
+		1E32AF2823F7172900693F52 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E32AF2723F7172900693F52 /* RxSwift */; };
+		1E32AF2A23F7172900693F52 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1E32AF2923F7172900693F52 /* RxCocoa */; };
+		1E32AF2D23F718B300693F52 /* GPTextInputComponentAtionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */; };
+		1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */; };
+		1E3E0AC023F46DC10067CF3E /* GPListItemDisclousure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */; };
+		1E4CFE9423F2E71000E445F3 /* Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */; };
+		1E4CFE9923F2E71000E445F3 /* Getpay_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */; };
+		1E4CFE9B23F2E71000E445F3 /* Getpay_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E62A46523F30AD4009ED647 /* GPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A46423F30AD4009ED647 /* GPConstants.swift */; };
+		1E62A47A23F322E1009ED647 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E62A47923F322E1009ED647 /* Buttons.xib */; };
+		1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A47E23F3298B009ED647 /* GPOutlinedButton.swift */; };
+		1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48023F330CB009ED647 /* GPTextButton.swift */; };
+		1E62A48323F33D12009ED647 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1E62A48223F33D12009ED647 /* Fonts */; };
+		1E62A48923F33FA2009ED647 /* GPContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48823F33FA2009ED647 /* GPContainedButton.swift */; };
+		1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48F23F429E8009ED647 /* UIViewExtension.swift */; };
+		1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A49123F42AC2009ED647 /* UINibExtension.swift */; };
+		1E95B9EC23FB1395000A3AC8 /* UIViewControllerExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EB0A18C23FEC65900D7693D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB0A18B23FEC65900D7693D /* Alamofire */; };
+		1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A19123FEC76500D7693D /* GPNetworkInterceptor.swift */; };
+		1EB0A19523FEE4BE00D7693D /* GPNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A19423FEE4BE00D7693D /* GPNetworkingService.swift */; };
+		1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1A22400027800D7693D /* CGSizeExtencion.swift */; };
+		1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1A4240002A800D7693D /* GPCGFloatExtension.swift */; };
+		1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1A62400088C00D7693D /* UILabelExtension.swift */; };
+		1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */; };
+		1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1AA240011FD00D7693D /* GPReceiptViewController.swift */; };
+		1EB0A1AD240011FD00D7693D /* GPReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB0A1AB240011FD00D7693D /* GPReceiptViewController.xib */; };
+		1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB5402923FC5D0600C798BA /* UIImageViewEXtension.swift */; };
+		1EF36E9E23F4754D00A27983 /* CoreImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */; };
+		1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; };
+		1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */; };
+		1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E4CFE9523F2E71000E445F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E4CFE8123F2E71000E445F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E4CFE8923F2E71000E445F3;
+			remoteInfo = "Getpay-Core";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		1E10E0FF24006F8A00247FC7 /* GPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccount.swift; sourceTree = "<group>"; };
+		1E10E101240072B100247FC7 /* GPBankingInstitution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBankingInstitution.swift; sourceTree = "<group>"; };
+		1E10E103240072D000247FC7 /* GPAccountBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccountBalance.swift; sourceTree = "<group>"; };
+		1E10E105240072EF00247FC7 /* GPAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAddress.swift; sourceTree = "<group>"; };
+		1E10E1072400730100247FC7 /* GPMerchant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPMerchant.swift; sourceTree = "<group>"; };
+		1E10E1092400733700247FC7 /* GPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUser.swift; sourceTree = "<group>"; };
+		1E10E10B2400734A00247FC7 /* GPTerminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTerminal.swift; sourceTree = "<group>"; };
+		1E10E10D2400736D00247FC7 /* GPReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceipt.swift; sourceTree = "<group>"; };
+		1E10E10F2400738900247FC7 /* GPReceiptData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptData.swift; sourceTree = "<group>"; };
+		1E10E1112400739B00247FC7 /* GPErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPErrorMessage.swift; sourceTree = "<group>"; };
+		1E1E8A4F2403E429008B5822 /* GPErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPErrorViewController.swift; sourceTree = "<group>"; };
+		1E1E8A502403E429008B5822 /* GPErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPErrorViewController.xib; sourceTree = "<group>"; };
+		1E1E8A5324040CFA008B5822 /* GPMerchantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPMerchantRepository.swift; sourceTree = "<group>"; };
+		1E1E8A7924044F9F008B5822 /* GPModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPModelTests.swift; sourceTree = "<group>"; };
+		1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLoadingOverlay.swift; sourceTree = "<group>"; };
+		1E1E8A83240467CF008B5822 /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JVFloatLabeledText.framework; sourceTree = "<group>"; };
+		1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPRoundedButton.swift; sourceTree = "<group>"; };
+		1E32AF1523F70E7300693F52 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		1E32AF1723F711A000693F52 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		1E32AF1923F711E500693F52 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
+		1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPLoginTextFieldSwappableImage.swift; sourceTree = "<group>"; };
+		1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTextInputViewModel.swift; sourceTree = "<group>"; };
+		1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextInputComponentAtionType.swift; sourceTree = "<group>"; };
+		1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListItemDisclousure.swift; sourceTree = "<group>"; };
+		1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListItemDisclousure.xib; sourceTree = "<group>"; };
+		1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Getpay_Core.h; sourceTree = "<group>"; };
+		1E4CFE8E23F2E71000E445F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E4CFE9323F2E71000E445F3 /* Getpay-CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Getpay-CoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getpay_CoreTests.swift; sourceTree = "<group>"; };
+		1E4CFE9A23F2E71000E445F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E62A46423F30AD4009ED647 /* GPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPConstants.swift; sourceTree = "<group>"; };
+		1E62A47923F322E1009ED647 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
+		1E62A47E23F3298B009ED647 /* GPOutlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPOutlinedButton.swift; sourceTree = "<group>"; };
+		1E62A48023F330CB009ED647 /* GPTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextButton.swift; sourceTree = "<group>"; };
+		1E62A48223F33D12009ED647 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		1E62A48823F33FA2009ED647 /* GPContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPContainedButton.swift; sourceTree = "<group>"; };
+		1E62A48F23F429E8009ED647 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		1E62A49123F42AC2009ED647 /* UINibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibExtension.swift; sourceTree = "<group>"; };
+		1EB0A19123FEC76500D7693D /* GPNetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkInterceptor.swift; sourceTree = "<group>"; };
+		1EB0A19423FEE4BE00D7693D /* GPNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingService.swift; sourceTree = "<group>"; };
+		1EB0A1A22400027800D7693D /* CGSizeExtencion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtencion.swift; sourceTree = "<group>"; };
+		1EB0A1A4240002A800D7693D /* GPCGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPCGFloatExtension.swift; sourceTree = "<group>"; };
+		1EB0A1A62400088C00D7693D /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPErrorViewModel.swift; sourceTree = "<group>"; };
+		1EB0A1AA240011FD00D7693D /* GPReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptViewController.swift; sourceTree = "<group>"; };
+		1EB0A1AB240011FD00D7693D /* GPReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPReceiptViewController.xib; sourceTree = "<group>"; };
+		1EB5402923FC5D0600C798BA /* UIImageViewEXtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEXtension.swift; sourceTree = "<group>"; };
+		1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreImages.xcassets; sourceTree = "<group>"; };
+		1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListDisclousureCellTableViewCell.swift; sourceTree = "<group>"; };
+		1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListDisclousureCellTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E4CFE8723F2E71000E445F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E32AF2A23F7172900693F52 /* RxCocoa in Frameworks */,
+				1EB0A18C23FEC65900D7693D /* Alamofire in Frameworks */,
+				1E32AF2823F7172900693F52 /* RxSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CFE9023F2E71000E445F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CFE9423F2E71000E445F3 /* Getpay_Core.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E32AF1B23F712C200693F52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */,
+				1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */,
+				1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */,
+				1E10E0FF24006F8A00247FC7 /* GPAccount.swift */,
+				1E10E101240072B100247FC7 /* GPBankingInstitution.swift */,
+				1E10E103240072D000247FC7 /* GPAccountBalance.swift */,
+				1E10E105240072EF00247FC7 /* GPAddress.swift */,
+				1E10E1072400730100247FC7 /* GPMerchant.swift */,
+				1E10E1092400733700247FC7 /* GPUser.swift */,
+				1E10E10B2400734A00247FC7 /* GPTerminal.swift */,
+				1E10E10D2400736D00247FC7 /* GPReceipt.swift */,
+				1E10E10F2400738900247FC7 /* GPReceiptData.swift */,
+				1E10E1112400739B00247FC7 /* GPErrorMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E32AF2023F714B800693F52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E1E8A83240467CF008B5822 /* JVFloatLabeledText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E32AF2B23F7189900693F52 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1E3E0ABB23F46CF50067CF3E /* ListItems */ = {
+			isa = PBXGroup;
+			children = (
+				1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */,
+				1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */,
+				1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */,
+				1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */,
+			);
+			path = ListItems;
+			sourceTree = "<group>";
+		};
+		1E4CFE8023F2E71000E445F3 = {
+			isa = PBXGroup;
+			children = (
+				1E4CFE8C23F2E71000E445F3 /* Getpay-Core */,
+				1E4CFE9723F2E71000E445F3 /* Getpay-CoreTests */,
+				1E4CFE8B23F2E71000E445F3 /* Products */,
+				1E32AF2023F714B800693F52 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E4CFE8B23F2E71000E445F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */,
+				1E4CFE9323F2E71000E445F3 /* Getpay-CoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E4CFE8C23F2E71000E445F3 /* Getpay-Core */ = {
+			isa = PBXGroup;
+			children = (
+				1E62A46123F30A95009ED647 /* Framework Structure */,
+				1E62A46023F30A8D009ED647 /* Supporting Files */,
+				1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */,
+				1E4CFE8E23F2E71000E445F3 /* Info.plist */,
+			);
+			path = "Getpay-Core";
+			sourceTree = "<group>";
+		};
+		1E4CFE9723F2E71000E445F3 /* Getpay-CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */,
+				1E1E8A7924044F9F008B5822 /* GPModelTests.swift */,
+				1E4CFE9A23F2E71000E445F3 /* Info.plist */,
+			);
+			path = "Getpay-CoreTests";
+			sourceTree = "<group>";
+		};
+		1E62A46023F30A8D009ED647 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E62A46123F30A95009ED647 /* Framework Structure */ = {
+			isa = PBXGroup;
+			children = (
+				1EB0A19023FEC74500D7693D /* Networking */,
+				1E32AF2B23F7189900693F52 /* Protocols */,
+				1E62A48E23F429D8009ED647 /* Extensions */,
+				1E62A47423F31FF3009ED647 /* Components */,
+				1E62A46223F30AB1009ED647 /* Supporting Files */,
+			);
+			path = "Framework Structure";
+			sourceTree = "<group>";
+		};
+		1E62A46223F30AB1009ED647 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E62A48223F33D12009ED647 /* Fonts */,
+				1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */,
+				1E62A46423F30AD4009ED647 /* GPConstants.swift */,
+				1E1E8A5324040CFA008B5822 /* GPMerchantRepository.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E62A47423F31FF3009ED647 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1EF36E9F23F47FDD00A27983 /* Views */,
+				1E3E0ABB23F46CF50067CF3E /* ListItems */,
+				1E62A47823F32265009ED647 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1E62A47823F32265009ED647 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */,
+				1E62A47E23F3298B009ED647 /* GPOutlinedButton.swift */,
+				1E62A48823F33FA2009ED647 /* GPContainedButton.swift */,
+				1E62A48023F330CB009ED647 /* GPTextButton.swift */,
+				1E62A47923F322E1009ED647 /* Buttons.xib */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		1E62A48E23F429D8009ED647 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E62A48F23F429E8009ED647 /* UIViewExtension.swift */,
+				1E62A49123F42AC2009ED647 /* UINibExtension.swift */,
+				1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */,
+				1E32AF1523F70E7300693F52 /* NibLoadable.swift */,
+				1E32AF1723F711A000693F52 /* StringExtension.swift */,
+				1E32AF1923F711E500693F52 /* UIScreenExtension.swift */,
+				1EB5402923FC5D0600C798BA /* UIImageViewEXtension.swift */,
+				1EB0A1A22400027800D7693D /* CGSizeExtencion.swift */,
+				1EB0A1A4240002A800D7693D /* GPCGFloatExtension.swift */,
+				1EB0A1A62400088C00D7693D /* UILabelExtension.swift */,
+				1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EB0A19023FEC74500D7693D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1EB0A19123FEC76500D7693D /* GPNetworkInterceptor.swift */,
+				1EB0A19423FEE4BE00D7693D /* GPNetworkingService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1EF36E9F23F47FDD00A27983 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E32AF1B23F712C200693F52 /* Models */,
+				1EB0A1AA240011FD00D7693D /* GPReceiptViewController.swift */,
+				1EB0A1AB240011FD00D7693D /* GPReceiptViewController.xib */,
+				1E1E8A4F2403E429008B5822 /* GPErrorViewController.swift */,
+				1E1E8A502403E429008B5822 /* GPErrorViewController.xib */,
+				1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E4CFE8523F2E71000E445F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4CFE9B23F2E71000E445F3 /* Getpay_Core.h in Headers */,
+				1E32AF1423F7088A00693F52 /* GPRoundedButton.swift in Headers */,
+				1E95B9EC23FB1395000A3AC8 /* UIViewControllerExtension.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E4CFE8923F2E71000E445F3 /* Getpay-Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CFE9E23F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-Core" */;
+			buildPhases = (
+				1E4CFE8523F2E71000E445F3 /* Headers */,
+				1E4CFE8623F2E71000E445F3 /* Sources */,
+				1E4CFE8723F2E71000E445F3 /* Frameworks */,
+				1E4CFE8823F2E71000E445F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Getpay-Core";
+			packageProductDependencies = (
+				1E32AF2723F7172900693F52 /* RxSwift */,
+				1E32AF2923F7172900693F52 /* RxCocoa */,
+				1EB0A18B23FEC65900D7693D /* Alamofire */,
+			);
+			productName = "Getpay-Core";
+			productReference = 1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1E4CFE9223F2E71000E445F3 /* Getpay-CoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E4CFEA123F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-CoreTests" */;
+			buildPhases = (
+				1E4CFE8F23F2E71000E445F3 /* Sources */,
+				1E4CFE9023F2E71000E445F3 /* Frameworks */,
+				1E4CFE9123F2E71000E445F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4CFE9623F2E71000E445F3 /* PBXTargetDependency */,
+			);
+			name = "Getpay-CoreTests";
+			productName = "Getpay-CoreTests";
+			productReference = 1E4CFE9323F2E71000E445F3 /* Getpay-CoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E4CFE8123F2E71000E445F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Getnet;
+				TargetAttributes = {
+					1E4CFE8923F2E71000E445F3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					1E4CFE9223F2E71000E445F3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1E4CFE8423F2E71000E445F3 /* Build configuration list for PBXProject "Getpay-Core" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E4CFE8023F2E71000E445F3;
+			packageReferences = (
+				1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 1E4CFE8B23F2E71000E445F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E4CFE8923F2E71000E445F3 /* Getpay-Core */,
+				1E4CFE9223F2E71000E445F3 /* Getpay-CoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E4CFE8823F2E71000E445F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3E0AC023F46DC10067CF3E /* GPListItemDisclousure.xib in Resources */,
+				1E62A47A23F322E1009ED647 /* Buttons.xib in Resources */,
+				1E1E8A522403E429008B5822 /* GPErrorViewController.xib in Resources */,
+				1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */,
+				1EF36E9E23F4754D00A27983 /* CoreImages.xcassets in Resources */,
+				1EB0A1AD240011FD00D7693D /* GPReceiptViewController.xib in Resources */,
+				1E62A48323F33D12009ED647 /* Fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CFE9123F2E71000E445F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E4CFE8623F2E71000E445F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB0A19523FEE4BE00D7693D /* GPNetworkingService.swift in Sources */,
+				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
+				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
+				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
+				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
+				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
+				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
+				1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */,
+				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
+				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
+				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
+				1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */,
+				1E62A46523F30AD4009ED647 /* GPConstants.swift in Sources */,
+				1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */,
+				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
+				1E32AF1E23F712FF00693F52 /* GPLoginTextFieldSwappableImage.swift in Sources */,
+				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
+				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
+				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
+				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
+				1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */,
+				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
+				1E1E8A5424040CFA008B5822 /* GPMerchantRepository.swift in Sources */,
+				1E10E1082400730100247FC7 /* GPMerchant.swift in Sources */,
+				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
+				1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */,
+				1E32AF1623F70E7300693F52 /* NibLoadable.swift in Sources */,
+				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
+				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
+				1E32AF1F23F712FF00693F52 /* GPTextInputViewModel.swift in Sources */,
+				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
+				1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */,
+				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
+				1E32AF2D23F718B300693F52 /* GPTextInputComponentAtionType.swift in Sources */,
+				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
+				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
+				1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */,
+				1E62A48923F33FA2009ED647 /* GPContainedButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E4CFE8F23F2E71000E445F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1E8A7D24045B47008B5822 /* GPModelTests.swift in Sources */,
+				1E4CFE9923F2E71000E445F3 /* Getpay_CoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E4CFE9623F2E71000E445F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E4CFE8923F2E71000E445F3 /* Getpay-Core */;
+			targetProxy = 1E4CFE9523F2E71000E445F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E4CFE9C23F2E71000E445F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+				);
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E4CFE9D23F2E71000E445F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					i386,
+				);
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1E4CFE9F23F2E71000E445F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PEW6979Z9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Getpay-Core",
+				);
+				INFOPLIST_FILE = "Getpay-Core/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-Core";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
+			};
+			name = Debug;
+		};
+		1E4CFEA023F2E71000E445F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PEW6979Z9C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Getpay-Core",
+				);
+				INFOPLIST_FILE = "Getpay-Core/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-Core";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
+			};
+			name = Release;
+		};
+		1E4CFEA223F2E71000E445F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEW6979Z9C;
+				INFOPLIST_FILE = "Getpay-CoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-CoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E4CFEA323F2E71000E445F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEW6979Z9C;
+				INFOPLIST_FILE = "Getpay-CoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-CoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E4CFE8423F2E71000E445F3 /* Build configuration list for PBXProject "Getpay-Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CFE9C23F2E71000E445F3 /* Debug */,
+				1E4CFE9D23F2E71000E445F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4CFE9E23F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CFE9F23F2E71000E445F3 /* Debug */,
+				1E4CFEA023F2E71000E445F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E4CFEA123F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-CoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E4CFEA223F2E71000E445F3 /* Debug */,
+				1E4CFEA323F2E71000E445F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E32AF2723F7172900693F52 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1E32AF2923F7172900693F52 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		1EB0A18B23FEC65900D7693D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1E4CFE8123F2E71000E445F3 /* Project object */;
+}
