@@ -90,11 +90,11 @@ public enum GPConstants {
     
     public enum Margins {
         public enum views {
-            static let defaultMargin = 16
-            static let defaultMarginTop = 16
-            static let defaultMarginBotton = 16
-            static let defaultMarginRight = 16
-            static let defaultMarginLeft = 16
+            public static let defaultMargin = 16
+            public static let defaultMarginTop = 16
+            public static let defaultMarginBotton = 16
+            public static let defaultMarginRight = 16
+            public static let defaultMarginLeft = 16
         }
     }
 

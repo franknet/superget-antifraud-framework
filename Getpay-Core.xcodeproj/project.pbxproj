@@ -28,11 +28,7 @@
 		1E32AF1623F70E7300693F52 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1523F70E7300693F52 /* NibLoadable.swift */; };
 		1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1723F711A000693F52 /* StringExtension.swift */; };
 		1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1923F711E500693F52 /* UIScreenExtension.swift */; };
-		1E32AF1E23F712FF00693F52 /* GPLoginTextFieldSwappableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */; };
-		1E32AF1F23F712FF00693F52 /* GPTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */; };
-		1E32AF2823F7172900693F52 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E32AF2723F7172900693F52 /* RxSwift */; };
-		1E32AF2A23F7172900693F52 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1E32AF2923F7172900693F52 /* RxCocoa */; };
-		1E32AF2D23F718B300693F52 /* GPTextInputComponentAtionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */; };
+		1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BBFAD240D4CC600283C58 /* StringProtocolExtension.swift */; };
 		1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */; };
 		1E3E0AC023F46DC10067CF3E /* GPListItemDisclousure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */; };
 		1E4CFE9423F2E71000E445F3 /* Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */; };
@@ -61,6 +57,7 @@
 		1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; };
 		1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */; };
 		1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */; };
+		1EFBE8762407F861003805EC /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBE8752407F861003805EC /* GPLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +92,7 @@
 		1E32AF1523F70E7300693F52 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		1E32AF1723F711A000693F52 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1E32AF1923F711E500693F52 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
-		1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPLoginTextFieldSwappableImage.swift; sourceTree = "<group>"; };
-		1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPTextInputViewModel.swift; sourceTree = "<group>"; };
-		1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextInputComponentAtionType.swift; sourceTree = "<group>"; };
+		1E3BBFAD240D4CC600283C58 /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
 		1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListItemDisclousure.swift; sourceTree = "<group>"; };
 		1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListItemDisclousure.xib; sourceTree = "<group>"; };
 		1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +122,7 @@
 		1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListDisclousureCellTableViewCell.swift; sourceTree = "<group>"; };
 		1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListDisclousureCellTableViewCell.xib; sourceTree = "<group>"; };
+		1EFBE8752407F861003805EC /* GPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E32AF2A23F7172900693F52 /* RxCocoa in Frameworks */,
 				1EB0A18C23FEC65900D7693D /* Alamofire in Frameworks */,
-				1E32AF2823F7172900693F52 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +148,6 @@
 		1E32AF1B23F712C200693F52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1E32AF1C23F712FE00693F52 /* GPLoginTextFieldSwappableImage.swift */,
-				1E32AF1D23F712FF00693F52 /* GPTextInputViewModel.swift */,
 				1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */,
 				1E10E0FF24006F8A00247FC7 /* GPAccount.swift */,
 				1E10E101240072B100247FC7 /* GPBankingInstitution.swift */,
@@ -182,7 +174,6 @@
 		1E32AF2B23F7189900693F52 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1E32AF2C23F718B300693F52 /* GPTextInputComponentAtionType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,6 +239,7 @@
 		1E62A46123F30A95009ED647 /* Framework Structure */ = {
 			isa = PBXGroup;
 			children = (
+				1E694A3824092AD9004C273E /* Default Delegates */,
 				1EB0A19023FEC74500D7693D /* Networking */,
 				1E32AF2B23F7189900693F52 /* Protocols */,
 				1E62A48E23F429D8009ED647 /* Extensions */,
@@ -264,6 +256,7 @@
 				1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */,
 				1E62A46423F30AD4009ED647 /* GPConstants.swift */,
 				1E1E8A5324040CFA008B5822 /* GPMerchantRepository.swift */,
+				1EFBE8752407F861003805EC /* GPLogger.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -304,8 +297,16 @@
 				1EB0A1A4240002A800D7693D /* GPCGFloatExtension.swift */,
 				1EB0A1A62400088C00D7693D /* UILabelExtension.swift */,
 				1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */,
+				1E3BBFAD240D4CC600283C58 /* StringProtocolExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E694A3824092AD9004C273E /* Default Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Default Delegates";
 			sourceTree = "<group>";
 		};
 		1EB0A19023FEC74500D7693D /* Networking */ = {
@@ -361,8 +362,6 @@
 			);
 			name = "Getpay-Core";
 			packageProductDependencies = (
-				1E32AF2723F7172900693F52 /* RxSwift */,
-				1E32AF2923F7172900693F52 /* RxCocoa */,
 				1EB0A18B23FEC65900D7693D /* Alamofire */,
 			);
 			productName = "Getpay-Core";
@@ -416,7 +415,6 @@
 			);
 			mainGroup = 1E4CFE8023F2E71000E445F3;
 			packageReferences = (
-				1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1E4CFE8B23F2E71000E445F3 /* Products */;
@@ -473,13 +471,13 @@
 				1E62A46523F30AD4009ED647 /* GPConstants.swift in Sources */,
 				1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
-				1E32AF1E23F712FF00693F52 /* GPLoginTextFieldSwappableImage.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */,
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
+				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
 				1E1E8A5424040CFA008B5822 /* GPMerchantRepository.swift in Sources */,
 				1E10E1082400730100247FC7 /* GPMerchant.swift in Sources */,
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
@@ -487,11 +485,10 @@
 				1E32AF1623F70E7300693F52 /* NibLoadable.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
-				1E32AF1F23F712FF00693F52 /* GPTextInputViewModel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
 				1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */,
+				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
-				1E32AF2D23F718B300693F52 /* GPTextInputComponentAtionType.swift in Sources */,
 				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
 				1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */,
@@ -523,10 +520,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -577,11 +570,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -591,10 +582,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -639,12 +626,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s i386";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -653,7 +638,6 @@
 		1E4CFE9F23F2E71000E445F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -680,19 +664,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
 		1E4CFEA023F2E71000E445F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -715,15 +698,15 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.getnet.Getpay-Core";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
@@ -798,14 +781,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
 		1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -817,16 +792,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E32AF2723F7172900693F52 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		1E32AF2923F7172900693F52 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E32AF2623F7172900693F52 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
 		1EB0A18B23FEC65900D7693D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1EB0A18A23FEC65900D7693D /* XCRemoteSwiftPackageReference "Alamofire" */;
