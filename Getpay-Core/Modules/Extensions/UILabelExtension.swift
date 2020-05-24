@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
     func autoLayoutFont(viewHeight: CGFloat, viewIdealHeight: CGFloat) {
         guard let font = self.font else { return }
 

@@ -8,8 +8,15 @@
 
 import Foundation
 
+public extension StringProtocol  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
+}
+
 public extension StringProtocol {
     var isValidCPF: Bool {
+        guard isNumber else { return false }
         let numbers = compactMap({ $0.wholeNumberValue })
         guard numbers.count == 11 && Set(numbers).count != 1 else { return false }
         func digitCalculator(_ slice: ArraySlice<Int>) -> Int {
@@ -24,10 +31,9 @@ public extension StringProtocol {
         let dv2 = digitCalculator(numbers.prefix(10))
         return dv1 == numbers[9] && dv2 == numbers[10]
     }
-}
-
-public extension StringProtocol {
+    
     var isValidCNPJ: Bool {
+        guard isNumber else { return false }
         let numbers = compactMap({ $0.wholeNumberValue })
         guard numbers.count == 14 && Set(numbers).count != 1 else { return false }
         func digitCalculator(_ slice: ArraySlice<Int>) -> Int {
@@ -42,5 +48,10 @@ public extension StringProtocol {
         let dv1 = digitCalculator(numbers.prefix(12))
         let dv2 = digitCalculator(numbers.prefix(13))
         return dv1 == numbers[12] && dv2 == numbers[13]
+    }
+    
+    var isValidPassword: Bool {
+        // Password rules here
+        return self.count > 3
     }
 }

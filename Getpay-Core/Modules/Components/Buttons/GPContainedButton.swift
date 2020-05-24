@@ -26,13 +26,13 @@ public class GPContainedButton: GPRoundedButton {
     
     private func initialColors() {
         // Default Background Color
-        backgroundImageColor = GPConstants.Colors.Buttons.primary
+        backgroundImageColor = GPColors.homer.color
         
         // Default Text Color
-        setTitleColor(GPConstants.Colors.Buttons.secondary,
+        setTitleColor(GPColors.maggie.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.secondary
-        titleLabel?.font = GPConstants.Fonts.Buttons.defaultFont
+        titleLabel?.textColor = GPColors.maggie.color
+        titleLabel?.font = FontFamily.Calibri.light.font(size: 16.0)
         
         // Default Border Color
         borderSize = 0
@@ -42,13 +42,13 @@ public class GPContainedButton: GPRoundedButton {
     }
     
     private func disabledColor() {
-        setTitleColor(GPConstants.Colors.Buttons.disabled,
+        setTitleColor(GPColors.krusty.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.disabled
+        titleLabel?.textColor = GPColors.krusty.color
         
-        backgroundImageColor = GPConstants.Colors.Buttons.secondary
+        backgroundImageColor = GPColors.maggie.color
 
-        borderColor = GPConstants.Colors.Buttons.disabled
+        borderColor = GPColors.krusty.color
         
         layoutSubviews()
     }

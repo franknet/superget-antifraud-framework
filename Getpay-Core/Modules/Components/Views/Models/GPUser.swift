@@ -8,19 +8,22 @@
 
 import Foundation
 
-public struct GPUser {
+public class GPUser: Codable {
     
-    var username: String
-    var email: String
-    var name: String
-    var cpf: String
-    var urlPicture: String? = nil
+    public var username: String = ""
+    public var email: String = ""
+    public var name: String = ""
+    public var cpf: String = ""
+    public var urlPicture: String? = nil
     
-    init(username: String, email: String, name: String) {
+    public convenience init(username: String, email: String, name: String) {
+        self.init()
         self.username = username
         self.email = email
         self.name = name
         self.cpf = username
     }
+    
+    internal required init() {}
     
 }

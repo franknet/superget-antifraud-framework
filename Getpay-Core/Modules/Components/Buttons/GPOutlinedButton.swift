@@ -27,29 +27,29 @@ public class GPOutlinedButton: GPRoundedButton {
     
     private func initialColors() {
         // Default Background Color
-        backgroundImageColor = GPConstants.Colors.Buttons.secondary
+        backgroundImageColor = GPColors.maggie.color
         
         // Default Text Color
-        setTitleColor(GPConstants.Colors.Buttons.primary,
+        setTitleColor(GPColors.homer.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.primary
-        titleLabel?.font = GPConstants.Fonts.Buttons.defaultFont
+        titleLabel?.textColor = GPColors.homer.color
+        titleLabel?.font = FontFamily.Calibri.light.font(size: 16.0)
         
         // Default Border Color
         borderSize = 1
-        borderColor = GPConstants.Colors.Buttons.primary
+        borderColor = GPColors.homer.color
         
         layoutSubviews()
     }
     
     private func disabledColor() {
-        setTitleColor(GPConstants.Colors.Buttons.disabled,
+        setTitleColor(GPColors.krusty.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.disabled
+        titleLabel?.textColor = GPColors.krusty.color
         
-        backgroundImageColor = GPConstants.Colors.Buttons.secondary
+        backgroundImageColor = GPColors.maggie.color
 
-        borderColor = GPConstants.Colors.Buttons.disabled
+        borderColor = GPColors.krusty.color
         
         layoutSubviews()
     }

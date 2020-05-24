@@ -8,14 +8,17 @@
 
 import Foundation
 
-public struct GPBankingInstitution {
+public class GPBankingInstitution: Codable {
     
-    var number: Int
-    var name: String
+    public var number: Int = 0
+    public var name: String = ""
     
-    init(number: Int, name: String) {
+    public convenience init(number: Int, name: String) {
+        self.init()
         self.number = number
         self.name = name
     }
+    
+    required init() {}
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGFloat {
+public extension CGFloat {
     func convert(viewSize: CGFloat, viewIdealSize: CGFloat) -> CGFloat {
         let scale = viewSize / viewIdealSize
         return self * scale

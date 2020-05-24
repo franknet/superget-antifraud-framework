@@ -26,14 +26,14 @@ public class GPTextButton: GPRoundedButton {
     // MARK: Custom Methods
     private func initialColors() {
         // Default Background Color
-        backgroundImageColor = GPConstants.Colors.Buttons.secondary
+        backgroundImageColor = GPColors.maggie.color
         
         
         // Default Text Color
-        setTitleColor(GPConstants.Colors.Buttons.primary,
+        setTitleColor(GPColors.homer.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.primary
-        titleLabel?.font = GPConstants.Fonts.Buttons.defaultFont
+        titleLabel?.textColor = GPColors.homer.color
+        titleLabel?.font = FontFamily.Calibri.light.font(size: 16.0)
         
         // Default Border Color
         borderColor = UIColor.clear
@@ -42,11 +42,11 @@ public class GPTextButton: GPRoundedButton {
     }
     
     private func disabledColor() {
-        setTitleColor(GPConstants.Colors.Buttons.disabled,
+        setTitleColor(GPColors.krusty.color,
                       for: .normal)
-        titleLabel?.textColor = GPConstants.Colors.Buttons.disabled
+        titleLabel?.textColor = GPColors.krusty.color
         
-        backgroundImageColor = GPConstants.Colors.Buttons.secondary
+        backgroundImageColor = GPColors.maggie.color
 
         borderColor = UIColor.clear
         

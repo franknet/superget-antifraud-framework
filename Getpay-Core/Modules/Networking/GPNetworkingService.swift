@@ -1,45 +1,65 @@
-//
-//  GPNetworkingService.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 20/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
-import Foundation
-import Alamofire
+import AppAuth
 
 final public class GPNetworkService {
     
+    // MARK: Properties
+    
     public static let shared = GPNetworkService()
-    private let interceptor = GPNetworkInterceptor()
     
-    private init(){}
+    // MARK: Initializers
     
-    public var authToken: String {
-        return "012301230"
-    }
+    public init() {}
     
-    public var ecNumber: String {
-        return "123123"
-    }
+    // MARK: Custom Methods
     
-    public func Auth() {
-        AF.request("https://servicosportais.getnet.com.br/auth/realms/external/protocol/openid-connect/token", interceptor: interceptor).response { response in
-            switch response.result {
-            case .success(let data):
-                print("success \(String(describing: data))")
-            case .failure(let data):
-                // Could not get anything from API
-                print("failure \(data)")
+    public func auth(username: String, password: String, completionHandler: @escaping (String?) -> Void) {
+        
+        let authUrl = Urls.shared.issuer + "/auth/realms/external/protocol/openid-connect/auth"
+        let tokenUrl = Urls.shared.issuer + "/auth/realms/external/protocol/openid-connect/token"
+        
+        guard let authorizationEndpoint = URL(string: authUrl) else { return }
+        guard let tokenEndpoint = URL(string: tokenUrl) else {return}
+        let configuration = OIDServiceConfiguration(authorizationEndpoint: authorizationEndpoint,
+                                                    tokenEndpoint: tokenEndpoint)
+        
+        let request = OIDTokenRequest(configuration: configuration,
+                                      grantType: "password",
+                                      authorizationCode: nil,
+                                      redirectURL: nil,
+                                      clientID: "superget-mobile",
+                                      clientSecret: nil,
+                                      scope: "offline_access",
+                                      refreshToken: nil,
+                                      codeVerifier: nil,
+                                      additionalParameters: [
+                                        "username": username,
+                                        "password": password
+        ])
+        
+        guard let issuer = URL(string: Urls.shared.issuer) else { return }
+        
+        // perform the token request...
+        OIDAuthorizationService.perform(request) { response, error in
+            
+            if error != nil {
+                GPLogger.log("Auth Error: " + String(describing: error))
             }
+            
+            // builds authentication request
+            let request = OIDAuthorizationRequest(configuration: configuration,
+                                                  clientId: "superget-mobile",
+                                                  clientSecret: nil,
+                                                  scopes: [OIDScopeOpenID, OIDScopeProfile],
+                                                  redirectURL: issuer,
+                                                  responseType: OIDResponseTypeCode,
+                                                  additionalParameters: nil)
+            
+            let authResponse = OIDAuthorizationResponse(request: request, parameters: [:])
+            let authState = OIDAuthState(authorizationResponse: authResponse, tokenResponse: response)
+            
+            AuthStateManager.saveAuthStateInKeyChain(authState)
+            
+            completionHandler(response?.accessToken)
         }
     }
-    
-    public func refreshTokens(completion: (Bool)->Void) {
-        AF.request("https://servicosportais.getnet.com.br/auth/realms/external/protocol/openid-connect/token", interceptor: interceptor).response { response in
-            print(response)
-        }
-    }
-    
 }
