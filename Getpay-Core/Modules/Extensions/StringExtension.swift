@@ -9,7 +9,12 @@
 import UIKit
 import CoreImage
 
-extension String {
+public extension String {
+    
+    var isNotEmpty: Bool {
+        return !self.isEmpty
+    }
+    
     var formatedAsCPF: String {
         var input = self.removeSeparators()
         while input.count > 11 {
@@ -79,15 +84,101 @@ extension String {
 
         return nil
     }
+    
+    var isValidCPF: Bool {
+        let cpf = self.numbers
+        guard cpf.count == 11 else { return false }
+        
+        if cpf == "11111111111" {
+            return false
+        } else if cpf == "22222222222" {
+            return false
+        } else if cpf == "33333333333" {
+            return false
+        } else if cpf == "44444444444" {
+            return false
+        } else if cpf == "55555555555" {
+            return false
+        } else if cpf == "66666666666" {
+            return false
+        } else if cpf == "77777777777" {
+            return false
+        } else if cpf == "88888888888" {
+            return false
+        } else if cpf == "99999999999" {
+            return false
+        } else if cpf == "00000000000" {
+            return false
+        }
+        
+        
+        let i1 = cpf.index(cpf.startIndex, offsetBy: 9)
+        let i2 = cpf.index(cpf.startIndex, offsetBy: 10)
+        let i3 = cpf.index(cpf.startIndex, offsetBy: 11)
+        let d1 = Int(cpf[i1..<i2])
+        let d2 = Int(cpf[i2..<i3])
+        
+        var temp1 = 0, temp2 = 0
+        
+        for i in 0...8 {
+            let start = cpf.index(cpf.startIndex, offsetBy: i)
+            let end = cpf.index(cpf.startIndex, offsetBy: i+1)
+            let char = Int(cpf[start..<end])
+            
+            temp1 += char! * (10 - i)
+            temp2 += char! * (11 - i)
+        }
+        
+        temp1 %= 11
+        temp1 = temp1 < 2 ? 0 : 11-temp1
+        
+        temp2 += temp1 * 2
+        temp2 %= 11
+        temp2 = temp2 < 2 ? 0 : 11-temp2
+        
+        return temp1 == d1 && temp2 == d2
+    }
+    
+    var numbers: String {
+        return components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+    }
+    
+    var formatedPhone: String {
+        let cleanPhoneNumber = components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+
+        let mask = "(XX) XXXXX-XXXX"
+
+        var result = ""
+        var index = cleanPhoneNumber.startIndex
+        for ch in mask where index < cleanPhoneNumber.endIndex {
+            if ch == "X" {
+                result.append(cleanPhoneNumber[index])
+                index = cleanPhoneNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
+    }
+
+    var isValidPhoneNumber: Bool {
+        let regex = "^[1-9]{2}[9-9][0-9]{3,4}[0-9]{4}$"
+        let mobileTest = NSPredicate(format: "SELF MATCHES %@", regex)
+        return mobileTest.evaluate(with: self)
+    }
+    
+    var onlyCharacters: String {
+        return self.components(separatedBy: CharacterSet.decimalDigits).joined()
+    }
 }
 
-extension String {
+public extension String {
     
     var withoutSpaces: String {
         return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
     }
     
-    public func isValidEmail() -> Bool {
+    func isValidEmail() -> Bool {
         let emailRegEx = "(?:[a-zA-Z0-9!#$%\\&‘*+/=?\\^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%\\&'*+/=?\\^_`{|}" +
             "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" +
             "x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-" +
@@ -159,5 +250,94 @@ public extension String {
         }
         return nil
     }
+    
+    /// Receives a string and returns the first letter of the first and last word
+    var generateAbbreviationName: String {
+        var str = ""
 
+        let trimmed = self.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if trimmed.isEmpty || trimmed == " " {
+            return str
+        }
+
+        let array = trimmed.components(separatedBy: " ")
+
+        guard let first = array.first else { return ""}
+        guard let char1 = first.character(at: 0) else { return "" }
+        str.append(char1.uppercased())
+
+        if array.count > 1 {
+            guard let last = array.last else { return str}
+            guard let char2 = last.character(at: 0) else { return "" }
+            str.append(char2.uppercased())
+        }
+
+        return str
+    }
+
+}
+
+public extension String {
+    var hexaBytes: [UInt8] {
+        var position = startIndex
+        return (0..<count/2).compactMap { _ in    // for Swift 4.1 or later use compactMap instead of flatMap
+            defer { position = index(position, offsetBy: 2) }
+            return UInt8(self[position...index(after: position)], radix: 16)
+        }
+    }
+    var hexaData: Data { return hexaBytes.data }
+}
+
+public extension Collection where Element == UInt8 {
+    var data: Data {
+        return Data(self)
+    }
+    var hexa: String {
+        return map{ String(format: "%02X", $0) }.joined()
+    }
+}
+
+public extension String {
+    
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+        
+        return String(data: data, encoding: .utf8)
+    }
+    
+    func toBase64() -> String {
+        return Data(self.utf8).base64EncodedString()
+    }
+}
+
+public extension String {
+    /**
+     * Completa uma string � esquerda ou � direita com um determinado
+     * caractere at� um tamanho especificado. Caso a string indicada tenha
+     * comprimento maior do que o tamanho especificado, a string retornada
+     * ser� igual � passada como par�metro.
+     *
+     * param str a string a ser completada com espa�os.
+     * @param tamanho o tamanho da string com o complemento.
+     * @param complemento o caractere a ser usado para completar a string.
+     * @param esquerda <code>true</code> indica que o complemento ser� feito �
+     *        esquerda. <code>false</code> indica que o complemento ser� feito �
+     *        direita.
+     *
+     * @return a string com complemento.
+     */
+    static func completaString(texto: String, tamanho: Int, complemento: String, esquerda: Bool) -> String {
+        var temp: String = texto
+        while (temp.count < tamanho) {
+            if (esquerda) {
+                temp = complemento + temp
+            } else {
+                temp = temp + complemento
+            }
+        }
+        return temp
+    }
 }

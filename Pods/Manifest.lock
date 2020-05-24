@@ -1,16 +1,56 @@
 PODS:
   - Alamofire (5.0.2)
+  - AppAuth (1.3.0):
+    - AppAuth/Core (= 1.3.0)
+    - AppAuth/ExternalUserAgent (= 1.3.0)
+  - AppAuth/Core (1.3.0)
+  - AppAuth/ExternalUserAgent (1.3.0)
+  - JVFloatLabeledTextField (1.2.2)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.0)
+  - SwiftGen (6.1.0)
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AppAuth
+  - JVFloatLabeledTextField
+  - RxGesture
+  - RxSwift
+  - SwiftGen (~> 6.0)
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AppAuth
+    - JVFloatLabeledTextField
+    - RxCocoa
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - SwiftGen
+    - SwiftKeychainWrapper
   trunk:
     - Alamofire
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
+  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: 893e40e126dff04c657ea8be2fadd36b3809583c
+PODFILE CHECKSUM: 09b5cb3e488ad3e52b59a9637caabedce2a72253
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0

@@ -12,12 +12,12 @@ public class GPListItemDisclousure: UITableViewCell {
     
     @IBOutlet public weak var lblTitle: UILabel! {
         didSet {
-            self.lblTitle.font = GPConstants.Fonts.ListItems.listTitle
+            self.lblTitle.font = FontFamily.Calibri.bold.font(size: 16.0)
         }
     }
     @IBOutlet public weak var lblSubTitle: UILabel! {
         didSet {
-            self.lblSubTitle.font = GPConstants.Fonts.ListItems.listSubTitle
+            self.lblSubTitle.font = FontFamily.Calibri.light.font(size: 14.0)
         }
     }
     @IBOutlet public weak var userImage: UIImageView! {
@@ -31,7 +31,7 @@ public class GPListItemDisclousure: UITableViewCell {
         userImage.layer.cornerRadius = userImage.frame.width * 0.5
         userImage.layer.masksToBounds = true
         userImage.contentMode = .center
-        userImage.backgroundColor = GPConstants.Colors.Backgrounds.defaultRed
+        userImage.backgroundColor = GPColors.homer.color
     }
     
 }

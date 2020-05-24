@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGSize {
+public extension CGSize {
     func convert(currentSize: CGSize, idealSize: CGSize) -> CGSize {
         let newWidth = self.width.convert(viewSize: currentSize.width, viewIdealSize: idealSize.width)
         let newHeight = self.height.convert(viewSize: currentSize.height, viewIdealSize: idealSize.height)

@@ -1,15 +1,15 @@
 //
 //  NibLoadable.swift
-//  Getpay-Core
+//  
 //
-//  Created by Leandro Lopes on 14/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
+//  Created by Leandro Lopes on 25/03/20.
 //
 
 import UIKit
 
 public protocol NibLoadable {
     static var nibName: String { get }
+    static var bundle: Bundle { get }
 }
 
 public extension NibLoadable where Self: UIView {

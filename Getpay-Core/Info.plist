@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Calibri-Semibold.ttf</string>
+		<string>Calibri-Italic.ttf</string>
+		<string>Calibri-Regular.ttf</string>
+		<string>Calibri-Bold.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -15,15 +22,8 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>calibril.tff</string>
-		<string>Calibrili.tff</string>
-		<string>CalibriBold.tff</string>
-		<string>Calibri.tff</string>
-	</array>
 </dict>
 </plist>

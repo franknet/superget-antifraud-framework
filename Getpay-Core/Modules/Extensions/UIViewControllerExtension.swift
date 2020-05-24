@@ -1,20 +1,37 @@
-//
-//  UIViewControllerExtension.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 12/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import UIKit
+import RxSwift
+
+// MARK: - Private variables
+
+fileprivate var ak_MyDisposeBag: UInt8 = 0
+
+// MARK: - UIViewController extensions
 
 public extension UIViewController {
+    
+       var disposeBag: DisposeBag {
+        
+        get {
+            
+            if let obj = objc_getAssociatedObject(self, &ak_MyDisposeBag) as? DisposeBag {
+                return obj
+            }
+            let obj = DisposeBag()
+            objc_setAssociatedObject(self, &ak_MyDisposeBag, obj, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            return obj
+        }
+        
+        set(newValue) {
+            
+            objc_setAssociatedObject(self, &ak_MyDisposeBag, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+    }
 
     var toastTag: Int {
         return 70457
     }
 
-    @objc private func dismissToast() {
+    @objc func dismissToast() {
         hideToast()
     }
 
@@ -55,7 +72,7 @@ public extension UIViewController {
             let action = #selector(dismissToast)
             button.addTarget(self, action: action, for: .touchUpInside)
             
-            let image = UIImage.init(named: "gp_close_white", in: Bundle(identifier: "br.com.getnet.Getpay-Core"), compatibleWith: nil)
+            let image = UIImage(named: "gp_close_white")
             
             button.setImage(image, for: .normal)
             dismissButton = button
@@ -146,6 +163,42 @@ public extension UIViewController {
             toastView.removeFromSuperview()
         }
     }
+
+}
+
+// Handling keyboard
+public extension UIViewController {
+    
+    func addKeyboardNotifications() {
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(self,
+                       selector: #selector(willShowKeyboard(notification:)),
+                       name: UIResponder.keyboardWillShowNotification,
+                       object: nil)
+        nc.addObserver(self,
+                       selector: #selector(didShowKeyboard(notification:)),
+                       name: UIResponder.keyboardDidShowNotification,
+                       object: nil)
+        nc.addObserver(self,
+                       selector: #selector(willHideKeyboard(notification:)),
+                       name: UIResponder.keyboardWillHideNotification,
+                       object: nil)
+        nc.addObserver(self,
+                       selector: #selector(didHideKeyboard(notification:)),
+                       name: UIResponder.keyboardDidHideNotification,
+                       object: nil)
+        nc.addObserver(self,
+                       selector: #selector(willChangeKeyboard(notification:)),
+                       name: UIResponder.keyboardWillChangeFrameNotification,
+                       object: nil)
+    }
+    
+    @objc func willShowKeyboard(notification: Notification) {}
+    @objc func didShowKeyboard(notification: Notification) {}
+    @objc func willHideKeyboard(notification: Notification) {}
+    @objc func didHideKeyboard(notification: Notification) {}
+    @objc func willChangeKeyboard(notification: Notification) {}
     
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -156,5 +209,10 @@ public extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func mainDismiss(animated: Bool) {
+        DispatchQueue.main.async {
+            self.dismiss(animated: animated, completion: nil)
+        }
+    }
 }
-

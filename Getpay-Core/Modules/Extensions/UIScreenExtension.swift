@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DeviceSizeCategory {
+public enum DeviceSizeCategory {
     case xsMax_xr_models // (414.0, 896.0)
     case x_xs_models // (375.0, 812.0)
     case plus_models // (414.0, 736.0)
@@ -16,7 +16,7 @@ enum DeviceSizeCategory {
     case compact_models // (320.0, 568.0)
 }
 
-extension UIScreen {
+public extension UIScreen {
     static var size: CGSize {
         return UIScreen.main.bounds.size
     }
@@ -37,7 +37,7 @@ extension UIScreen {
     }
 }
 
-extension UILabel {
+public extension UILabel {
     func set(font: UIFont, for deviceSizeCategory: DeviceSizeCategory) {
         if UIScreen.deviceSizeCategory == deviceSizeCategory {
             self.font = font

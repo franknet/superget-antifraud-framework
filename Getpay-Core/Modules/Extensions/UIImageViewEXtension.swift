@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIImageView{
+public extension UIImageView{
     var circled : UIImageView{
         self.layer.cornerRadius = self.frame.width / 2;
         //self.layer.borderWidth = 2

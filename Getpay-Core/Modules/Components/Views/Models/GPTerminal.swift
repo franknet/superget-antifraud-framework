@@ -8,12 +8,23 @@
 
 import Foundation
 
-public struct GPTerminal {
+public class GPTerminal: Codable {
     
-    let number: String
+    public var number: String = ""
     
-    init(number: String) {
+    internal required init() {}
+
+    convenience public init(number: String) {
+        self.init()
         self.number = number
     }
     
+    public func getTerminal() -> String {
+        return number
+    }
+
+}
+
+public struct Terminal: Codable {
+    public let number: String
 }

@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -61,21 +60,5 @@
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-147" y="72"/>
         </button>
-        <viewController id="eOJ-he-mBp">
-            <view key="view" contentMode="scaleToFill" id="VmL-2b-rYw">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x15-sD-IV6" customClass="GPContainedButton" customModule="Getpay_Core" customModuleProvider="target">
-                        <rect key="frame" x="100" y="392" width="158" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                    </button>
-                </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                <viewLayoutGuide key="safeArea" id="EbZ-nJ-fwg"/>
-            </view>
-            <point key="canvasLocation" x="424.63768115942031" y="53.571428571428569"/>
-        </viewController>
     </objects>
 </document>

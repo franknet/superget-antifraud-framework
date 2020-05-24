@@ -9,13 +9,13 @@
 import UIKit
 
 public class GPErrorViewController: UIViewController, NibLoadable {
+    public static var bundle: Bundle {
+        return Bundle(for: GPErrorViewController.self)
+    }
+    
     // MARK: Properties
     public static var nibName: String {
         return String(describing: GPErrorViewController.self)
-    }
-
-    public static var bundle: Bundle {
-        return Bundle(for: GPErrorViewController.self)
     }
 
     public var model: GPErrorMessage? {
