@@ -1,0 +1,16 @@
+fonts:
+- inputs: Getpay-Core/Resources/Fonts/Calibri
+  filter: .+\.ttf$
+  outputs:
+    templateName: swift4
+    output: Getpay-Core/Modules/SwiftGen/GPFonts.swift
+    params:
+      publicAccess: true
+colors:
+ - inputs: Getpay-Core/Resources/Colors/colors.txt
+   outputs:
+     templateName: swift4
+     output: Getpay-Core/Modules/SwiftGen/GPColors.swift
+     params:
+       publicAccess: true
+       enumName: GPColors

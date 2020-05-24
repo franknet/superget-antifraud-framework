@@ -1,0 +1,16 @@
+Homer    : #DE3131
+Marge    : #F06166
+Bart     : #FBD2D3
+Lisa     : #F58E92
+Maggie   : #FFFFFF
+Barney   : #000000
+Krusty   : #BCC4CC
+Apu      : #F5F7FA
+Moe      : #E1E6EB
+Nelson   : #9AA9B8
+Edna     : #222629
+Flanders : #66707A
+Duffman  : #EDF9ED
+Burns    : #87D883
+Milhouse : #FFA64D
+Ralph    : #454B52
