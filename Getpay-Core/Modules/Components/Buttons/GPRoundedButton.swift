@@ -51,28 +51,28 @@ public class GPRoundedButton: UIButton {
     }
     
     @IBInspectable
-    var borderSize: CGFloat = 0 {
+    public var borderSize: CGFloat = 0 {
         didSet {
             refreshBorder(withSize: borderSize)
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = UIColor.clear {
+    public var borderColor: UIColor = UIColor.clear {
         didSet {
             refreshBorder(withColor: borderColor.cgColor)
         }
     }
     
     @IBInspectable
-    var cornerRadius: CGFloat = 15 {
+    public var cornerRadius: CGFloat = 15 {
         didSet {
             refreshCorners(value: cornerRadius)
         }
     }
     
     @IBInspectable
-    var backgroundImageColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
+    public var backgroundImageColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
         didSet {
             refreshColor(color: backgroundImageColor)
         }
