@@ -70,6 +70,9 @@ public struct GPColors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#454b52"></span>
   /// Alpha: 100% <br/> (0x454b52ff)
   public static let ralph = GPColors(rgbaValue: 0x454b52ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#67717a"></span>
+  /// Alpha: 100% <br/> (0x67717aff)
+  public static let stanley = GPColors(rgbaValue: 0x67717aff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3366ff"></span>
   /// Alpha: 100% <br/> (0x3366ffff)
   public static let todd = GPColors(rgbaValue: 0x3366ffff)

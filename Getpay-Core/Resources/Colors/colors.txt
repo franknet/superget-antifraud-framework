@@ -5,6 +5,7 @@ Lisa     : #F58E92
 Maggie   : #FFFFFF
 Barney   : #000000
 Krusty   : #BCC4CC
+Heyman   : #8996A3
 Apu      : #F5F7FA
 Moe      : #E1E6EB
 Nelson   : #9AA9B8
@@ -13,6 +14,9 @@ Flanders : #66707A
 Duffman  : #EDF9ED
 Burns    : #87D883
 Milhouse : #FFA64D
+Luann    : #F27130
 Ralph    : #454B52
 Lenny    : #FFFBEF
 Todd     : #3366FF
+Rod      : #7194FF
+Stanley  : #67717A
