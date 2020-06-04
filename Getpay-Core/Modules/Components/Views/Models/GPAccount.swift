@@ -10,15 +10,15 @@ import Foundation
 
 public struct GPAccount: Codable {
     
-    public var id: String = ""
-    public var status: String = ""
-    public var number: String = ""
-    public var branchNumber: String = ""
-    public var origin: String = ""
-    public var userAlias: String = ""
-    public var aliasAccountStatus: String = ""
-    public var pictureUrl: String = ""
-    public var bankingInstitution: GPBankingInstitution? = nil // not optional
-    public var balance: GPAccountBalance? = nil // not optional
+    public var id: Int?
+    public var status: String?
+    public var number: String?
+    public var branchNumber: String?
+    public var origin: String?
+    public var userAlias: String?
+    public var aliasAccountStatus: String?
+    public var pictureUrl: String?
+    public var bankingInstitution: GPBankingInstitution?
+    public var balance: GPAccountBalance?
     
 }

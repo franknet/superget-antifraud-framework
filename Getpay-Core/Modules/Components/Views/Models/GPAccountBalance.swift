@@ -8,17 +8,9 @@
 
 import Foundation
 
-public class GPAccountBalance: Codable {
+public struct GPAccountBalance: Codable {
     
-    public var withdrawAvailableBalance: String = ""
-    public var globalAvailableBalance: String = ""
-    
-    public convenience init(withdrawAvailableBalance: String, globalAvailableBalance: String) {
-        self.init()
-        self.withdrawAvailableBalance = withdrawAvailableBalance
-        self.globalAvailableBalance = globalAvailableBalance
-    }
-    
-    required init() {}
+    public var withdrawAvailableBalance: Float
+    public var globalAvailableBalance: Float
     
 }
