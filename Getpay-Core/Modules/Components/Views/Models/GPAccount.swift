@@ -15,16 +15,32 @@ public class GPAccount: Codable {
     public var number: String = ""
     public var branchNumber: String = ""
     public var origin: String = ""
+    public var userAlias: String = ""
+    public var aliasAccountStatus: String = ""
     public var pictureUrl: String = ""
     public var bankingInstitution: GPBankingInstitution? = nil // not optional
     public var balance: GPAccountBalance? = nil // not optional
     
-    public convenience init(id: String, status: String, number: String, branchNumber: String, pictureUrl: String, bankingInstitution: GPBankingInstitution, balance: GPAccountBalance) {
+    public convenience init(
+        id: String,
+        status: String,
+        number: String,
+        branchNumber: String,
+        origin: String,
+        userAlias: String,
+        aliasAccountStatus: String,
+        pictureUrl: String,
+        bankingInstitution: GPBankingInstitution,
+        balance: GPAccountBalance)
+    {
         self.init()
         self.id = id
         self.status = status
         self.number = number
         self.branchNumber = branchNumber
+        self.origin = origin
+        self.userAlias = userAlias
+        self.aliasAccountStatus = aliasAccountStatus
         self.pictureUrl = pictureUrl
         self.bankingInstitution = bankingInstitution
         self.balance = balance
