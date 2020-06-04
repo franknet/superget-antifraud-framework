@@ -46,6 +46,9 @@ public struct GPColors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#bcc4cc"></span>
   /// Alpha: 100% <br/> (0xbcc4ccff)
   public static let krusty = GPColors(rgbaValue: 0xbcc4ccff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fffbef"></span>
+  /// Alpha: 100% <br/> (0xfffbefff)
+  public static let lenny = GPColors(rgbaValue: 0xfffbefff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f58e92"></span>
   /// Alpha: 100% <br/> (0xf58e92ff)
   public static let lisa = GPColors(rgbaValue: 0xf58e92ff)
@@ -67,6 +70,9 @@ public struct GPColors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#454b52"></span>
   /// Alpha: 100% <br/> (0x454b52ff)
   public static let ralph = GPColors(rgbaValue: 0x454b52ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3366ff"></span>
+  /// Alpha: 100% <br/> (0x3366ffff)
+  public static let todd = GPColors(rgbaValue: 0x3366ffff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

@@ -14,3 +14,5 @@ Duffman  : #EDF9ED
 Burns    : #87D883
 Milhouse : #FFA64D
 Ralph    : #454B52
+Lenny    : #FFFBEF
+Todd     : #3366FF
