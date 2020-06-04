@@ -40,15 +40,24 @@ public struct GPColors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#66707a"></span>
   /// Alpha: 100% <br/> (0x66707aff)
   public static let flanders = GPColors(rgbaValue: 0x66707aff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#8996a3"></span>
+  /// Alpha: 100% <br/> (0x8996a3ff)
+  public static let heyman = GPColors(rgbaValue: 0x8996a3ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#de3131"></span>
   /// Alpha: 100% <br/> (0xde3131ff)
   public static let homer = GPColors(rgbaValue: 0xde3131ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#bcc4cc"></span>
   /// Alpha: 100% <br/> (0xbcc4ccff)
   public static let krusty = GPColors(rgbaValue: 0xbcc4ccff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fffbef"></span>
+  /// Alpha: 100% <br/> (0xfffbefff)
+  public static let lenny = GPColors(rgbaValue: 0xfffbefff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f58e92"></span>
   /// Alpha: 100% <br/> (0xf58e92ff)
   public static let lisa = GPColors(rgbaValue: 0xf58e92ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f27130"></span>
+  /// Alpha: 100% <br/> (0xf27130ff)
+  public static let luann = GPColors(rgbaValue: 0xf27130ff)
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
   /// Alpha: 100% <br/> (0xffffffff)
   public static let maggie = GPColors(rgbaValue: 0xffffffff)
@@ -67,6 +76,12 @@ public struct GPColors {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#454b52"></span>
   /// Alpha: 100% <br/> (0x454b52ff)
   public static let ralph = GPColors(rgbaValue: 0x454b52ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#7194ff"></span>
+  /// Alpha: 100% <br/> (0x7194ffff)
+  public static let rod = GPColors(rgbaValue: 0x7194ffff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3366ff"></span>
+  /// Alpha: 100% <br/> (0x3366ffff)
+  public static let todd = GPColors(rgbaValue: 0x3366ffff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 
