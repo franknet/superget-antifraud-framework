@@ -19,4 +19,3 @@ Ralph    : #454B52
 Lenny    : #FFFBEF
 Todd     : #3366FF
 Rod      : #7194FF
-Stanley  : #67717A
