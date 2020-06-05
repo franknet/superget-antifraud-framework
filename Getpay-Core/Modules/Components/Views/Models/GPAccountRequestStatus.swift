@@ -1,9 +1,3 @@
-//
-//  GPAccountStatus.swift
-//  Alamofire
-//
-//  Created by Leandro Lopes on 05/06/20.
-//
 
 import Foundation
 
@@ -50,7 +44,5 @@ public enum GPAccountRequestStatus: Int {
     /// account, but that returns an "error" 403
     /// (error code = 403)
     case active403
-    
-    
 
 }
