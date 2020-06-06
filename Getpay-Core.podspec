@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
-  spec.version      = "6.0.4"
+  spec.version      = "6.0.5"
   spec.summary      = "A Getnet framework."
   spec.homepage     = "https://www.superget.com.br/"
 
@@ -30,6 +30,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'SwiftKeychainWrapper'
   spec.dependency 'JVFloatLabeledTextField'
   spec.dependency 'RxGesture'
+  spec.dependency 'IQKeyboardManagerSwift'
 
   spec.source_files = ["#{spec.name}/**/*.{swift}", "#{spec.name}/**/*.{h}", "#{spec.name}/**/*.{m}"]
 

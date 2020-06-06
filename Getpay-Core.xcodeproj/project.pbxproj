@@ -42,6 +42,7 @@
 		1E62A48923F33FA2009ED647 /* GPContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48823F33FA2009ED647 /* GPContainedButton.swift */; };
 		1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48F23F429E8009ED647 /* UIViewExtension.swift */; };
 		1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A49123F42AC2009ED647 /* UINibExtension.swift */; };
+		1E71C796248C364500BB307E /* GPAccountPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71C795248C364500BB307E /* GPAccountPersistence.swift */; };
 		1E9516932427958100C92A04 /* GPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9516922427958100C92A04 /* GPSession.swift */; };
 		1E95B9EC23FB1395000A3AC8 /* UIViewControllerExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */; };
@@ -137,6 +138,7 @@
 		1E62A48823F33FA2009ED647 /* GPContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPContainedButton.swift; sourceTree = "<group>"; };
 		1E62A48F23F429E8009ED647 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1E62A49123F42AC2009ED647 /* UINibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibExtension.swift; sourceTree = "<group>"; };
+		1E71C795248C364500BB307E /* GPAccountPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAccountPersistence.swift; sourceTree = "<group>"; };
 		1E9516922427958100C92A04 /* GPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSession.swift; sourceTree = "<group>"; };
 		1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		1EB0A19123FEC76500D7693D /* GPNetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkInterceptor.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		1E32AF1B23F712C200693F52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1E71C795248C364500BB307E /* GPAccountPersistence.swift */,
 				1E19D9AB248AD68700C8D656 /* GPAccountRequestStatus.swift */,
 				1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */,
 				1E10E0FF24006F8A00247FC7 /* GPAccount.swift */,
@@ -696,6 +699,7 @@
 				D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */,
 				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
 				BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */,
+				1E71C796248C364500BB307E /* GPAccountPersistence.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
