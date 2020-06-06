@@ -3,7 +3,7 @@ import Foundation
 
 // MARK: - Enum
 
-public enum GPAccountRequestStatus: Int {
+public enum GPAccountRequestStatus: Int, Codable {
     
     /// this state reflact the unknow status,
     /// where we dont have the information yet
