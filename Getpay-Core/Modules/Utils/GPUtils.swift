@@ -5,29 +5,29 @@ public class GPUtils {
     
     private static let defaults = UserDefaults.shared
     private static let terminalKey = "terminalKey"
-    private static let accountStatusKey = "accountStatusKey"
+    private static let accountPersistenceKey = "accountPersistenceKey"
     private static let merchantKey = "merchantKey"
     
-    public static func save(accountStatusInUD status: GPAccountRequestStatus) {
-        defaults.set(status.rawValue, forKey: accountStatusKey)
+    public static func save(account: GPAccountPersistence) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(account) {
+            defaults.set(encoded, forKey: accountPersistenceKey)
+        }
     }
     
-    /// Try to get the last account status, if none, return .loading so
-    ///  execute request again
-    /// - Returns: An GPAccountRequestStatus that reflect the business rules
-    /// using payload "status" and "origin". If there is no data, return .loading
-    public static func loadAccountStatusFromUD() -> GPAccountRequestStatus {
-        if let value = defaults.object(forKey: accountStatusKey) as? Int {
-            if let status = GPAccountRequestStatus(rawValue: value) {
-                return status
+    public static func loadAccountPersistenceFromUD() -> GPAccountPersistence {
+        if let account = defaults.object(forKey: accountPersistenceKey) as? Data {
+            let decoder = JSONDecoder()
+            if let loadedAccount = try? decoder.decode(GPAccountPersistence.self, from: account) {
+                return loadedAccount
             }
         }
-        return .loading
+        return GPAccountPersistence(status: .loading, id: nil)
     }
     
     /// Called wehn user logout or change ec
-    public static func removeAccountStatusFromUD() {
-        defaults.removeObject(forKey: accountStatusKey)
+    public static func removeAccountPersistenceFromUD() {
+        defaults.removeObject(forKey: accountPersistenceKey)
     }
     
     public static func saveTerminalInUD(terminal: String) {

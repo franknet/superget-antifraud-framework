@@ -14,6 +14,7 @@ def shared_pods
   pod 'SwiftKeychainWrapper'
   pod 'JVFloatLabeledTextField'
   pod 'RxGesture'
+  pod 'IQKeyboardManagerSwift'
 end
 
 target 'Getpay-Core' do
