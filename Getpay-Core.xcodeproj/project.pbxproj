@@ -30,6 +30,7 @@
 		1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BBFAD240D4CC600283C58 /* StringProtocolExtension.swift */; };
 		1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */; };
 		1E3E0AC023F46DC10067CF3E /* GPListItemDisclousure.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */; };
+		1E3FCBDC248D8D9B00EC29DD /* GPPendingAccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FCBDB248D8D9B00EC29DD /* GPPendingAccountInfoView.swift */; };
 		1E4CFE9423F2E71000E445F3 /* Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */; };
 		1E4CFE9923F2E71000E445F3 /* Getpay_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */; };
 		1E4CFE9B23F2E71000E445F3 /* Getpay_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +124,7 @@
 		1E3BBFAD240D4CC600283C58 /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
 		1E3E0ABD23F46D530067CF3E /* GPListItemDisclousure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListItemDisclousure.swift; sourceTree = "<group>"; };
 		1E3E0ABF23F46DC10067CF3E /* GPListItemDisclousure.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListItemDisclousure.xib; sourceTree = "<group>"; };
+		1E3FCBDB248D8D9B00EC29DD /* GPPendingAccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPendingAccountInfoView.swift; sourceTree = "<group>"; };
 		1E4CFE8A23F2E71000E445F3 /* Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Getpay_Core.h; sourceTree = "<group>"; };
 		1E4CFE8E23F2E71000E445F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */,
 				D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */,
 				D68C647B2420FC3300BA65B2 /* ErrorView.swift */,
+				1E3FCBDB248D8D9B00EC29DD /* GPPendingAccountInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
 				D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */,
 				1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */,
+				1E3FCBDC248D8D9B00EC29DD /* GPPendingAccountInfoView.swift in Sources */,
 				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,

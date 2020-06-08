@@ -1,6 +1,68 @@
 
 import UIKit
 
+// MARK: - Protocol
+private protocol PendingViewPreset {
+    
+    var title: String { get }
+    var subTitle: String { get }
+    var image: String? { get }
+    var buttonTitle: String { get }
+    
+}
+
+// MARK: - Struct
+private struct PresetNewClient404: PendingViewPreset {
+    
+    var title: String = "Abra sua conta para fazer transferências"
+    
+    var subTitle: String = "Para utilizar essa funcionalidade, é necessário abrir uma conta SuperGet."
+    
+    var image: String? = nil
+    
+    var buttonTitle: String = "ABRIR CONTA"
+    
+}
+
+// MARK: - Struct
+private struct PresetClient403: PendingViewPreset {
+
+    var title: String = "Falha ao carregar as informações"
+    
+    var subTitle: String = "Não foi possível carregar os dados da sua conta. Por favor, tente novamente."
+    
+    var image: String? = "gp_error"
+    
+    var buttonTitle: String = "TENTAR NOVAMENTE"
+    
+}
+
+// MARK: - Struct
+private struct PresetWaitingDocumentsNewClient: PendingViewPreset {
+
+    var title: String = "Complete seu cadastro para fazer transferências"
+    
+    var subTitle: String = "Para utilizar essa funcionalidade, é necessário que você envie os documentos necessários."
+    
+    var image: String? = nil
+    
+    var buttonTitle: String = "Abrir Conta"
+    
+}
+
+// MARK: - Struct
+private struct PresetGeneric: PendingViewPreset {
+
+    var title: String = "Abra sua conta para fazer transferências"
+    
+    var subTitle: String = "Para utilizar essa funcionalidade, é necessário abrir uma conta SuperGet."
+    
+    var image: String? = nil
+    
+    var buttonTitle: String = "Abrir Conta"
+    
+}
+
 // MARK: - Class
 public class GPPendingAccountInfoView: UIView {
     // MARK: - Private variables
@@ -60,6 +122,7 @@ public class GPPendingAccountInfoView: UIView {
             button.isHidden = true
         }
     }
+    
     private override init(frame: CGRect) {
         super.init(frame: frame)
         createSubviews()
@@ -115,4 +178,43 @@ extension GPPendingAccountInfoView {
             buttonAction()
         }
     }
+    private func setup(withPreset preset: PendingViewPreset) {
+        
+        titleMessage.text = preset.title
+        subtitleMessage.text = preset.subTitle
+        
+        if let imageName = preset.image {
+            icon.image = UIImage.init(named: imageName)
+        }
+        
+        button.setTitle(preset.buttonTitle, for: .normal)
+        if buttonAction == nil {
+            button.isHidden = true
+        }
+        
+    }
+    // MARK: - Public Methods
+    public func setup(withStatus status: GPAccountRequestStatus,
+                      inView: UIView?,
+                      buttonAction: ActionVoid?) {
+        
+        self.buttonAction = buttonAction
+        if let inView = inView {
+            inView.addSubview(self, constraints: true)
+            self.applyAnchors(ofType: [.leading, .trailing, .top, .bottom], to: inView)
+        }
+        
+        switch status {
+        case .newClient404:
+            setup(withPreset: PresetNewClient404())
+        case .active403:
+            setup(withPreset: PresetClient403())
+        case .waitingDocumentsNewClient:
+            setup(withPreset: PresetWaitingDocumentsNewClient())
+        default:
+            setup(withPreset: PresetGeneric())
+        }
+        
+    }
+
 }
