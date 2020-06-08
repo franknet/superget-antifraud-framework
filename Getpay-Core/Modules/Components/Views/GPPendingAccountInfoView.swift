@@ -2,7 +2,7 @@
 import UIKit
 
 // MARK: - Class
-public class GPPendingAccountInfoView: UIView {
+public class GPInformationDisplayView: UIView {
     // MARK: - Private variables
     private let icon: UIImageView = {
         let image = UIImageView()
@@ -77,7 +77,7 @@ public class GPPendingAccountInfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-extension GPPendingAccountInfoView {
+extension GPInformationDisplayView {
     // MARK: - Private methods
     private func createSubviews() {
         contentView.addSubviews([icon,
@@ -116,7 +116,7 @@ extension GPPendingAccountInfoView {
             buttonAction()
         }
     }
-    private func setup(withPreset preset: PendingViewPreset) {
+    private func setup(withPreset preset: InformationViewPreset) {
         
         titleMessage.text = preset.title
         subtitleMessage.text = preset.subTitle

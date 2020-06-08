@@ -2,7 +2,7 @@
 import Foundation
 
 // MARK: - Protocol
-public protocol PendingViewPreset {
+public protocol InformationViewPreset {
     
     var title: String { get }
     var subTitle: String { get }
@@ -12,7 +12,7 @@ public protocol PendingViewPreset {
 }
 
 // MARK: - Struct
-public struct PresetNewClient404: PendingViewPreset {
+public struct PresetNewClient404: InformationViewPreset {
     
     public var title: String = "Abra sua conta para fazer transferências"
     
@@ -25,7 +25,7 @@ public struct PresetNewClient404: PendingViewPreset {
 }
 
 // MARK: - Struct
-public struct PresetClient403: PendingViewPreset {
+public struct PresetClient403: InformationViewPreset {
 
     public var title: String = "Falha ao carregar as informações"
     
@@ -38,7 +38,7 @@ public struct PresetClient403: PendingViewPreset {
 }
 
 // MARK: - Struct
-public struct PresetWaitingDocumentsNewClient: PendingViewPreset {
+public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
 
     public var title: String = "Complete seu cadastro para fazer transferências"
     
@@ -51,7 +51,7 @@ public struct PresetWaitingDocumentsNewClient: PendingViewPreset {
 }
 
 // MARK: - Struct
-public struct PresetGeneric: PendingViewPreset {
+public struct PresetGeneric: InformationViewPreset {
 
     public var title: String = "Abra sua conta para fazer transferências"
     
