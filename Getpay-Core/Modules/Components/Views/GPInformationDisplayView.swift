@@ -24,6 +24,14 @@ public class GPInformationDisplayView: UIView {
         label.numberOfLines = 0
         return label
     }()
+    private let errorCode: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = FontFamily.Calibri.regular.font(size: 16.0)
+        label.textColor = GPColors.ralph.color
+        label.numberOfLines = 0
+        return label
+    }()
     private let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .clear
@@ -45,7 +53,8 @@ public class GPInformationDisplayView: UIView {
         self.init()
         backgroundColor = .white
         self.titleMessage.text = preset.title
-        self.subtitleMessage.text = preset.title
+        self.subtitleMessage.text = preset.subTitle
+        self.errorCode.text = preset.errorCode
         self.icon.image = preset.image
         self.buttonAction = preset.buttonAction
         self.button.isHidden = buttonAction == nil
@@ -75,14 +84,16 @@ public class GPInformationDisplayView: UIView {
 extension GPInformationDisplayView {
     // MARK: - Private methods
     private func createSubviews() {
-        contentView.addSubviews([icon,
-                     titleMessage,
-                     subtitleMessage,
-                     button], constraints: true)
+        contentView.addSubviews(
+            [icon,
+             titleMessage,
+             subtitleMessage,
+             errorCode,
+             button], constraints: true)
         addSubview(contentView, constraints: true)
     }
     private func createConstraints() {
-//        icon.heightAnchor.constraint(equalToConstant: 140.0).isActive = true
+        icon.heightAnchor.constraint(greaterThanOrEqualToConstant: 100.0).isActive = true
         icon.heightAnchor.constraint(lessThanOrEqualToConstant: 140).isActive = true
         icon.widthAnchor.constraint(equalToConstant: 140.0).isActive = true
         icon.centerXAnchor.constraint(equalTo: titleMessage.centerXAnchor).isActive = true
@@ -92,6 +103,9 @@ extension GPInformationDisplayView {
         subtitleMessage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 21.0).isActive = true
         subtitleMessage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -21.0).isActive = true
         subtitleMessage.topAnchor.constraint(equalTo: titleMessage.bottomAnchor, constant: 21.0).isActive = true
+        errorCode.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 21.0).isActive = true
+        errorCode.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -21.0).isActive = true
+        errorCode.topAnchor.constraint(equalTo: subtitleMessage.bottomAnchor, constant: 10).isActive = true
         button.topAnchor.constraint(equalTo: subtitleMessage.bottomAnchor, constant: 40.0).isActive = true
         button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         button.applyAnchors(ofType: [.bottom], to: contentView)
