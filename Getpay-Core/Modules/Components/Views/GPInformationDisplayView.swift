@@ -43,6 +43,7 @@ public class GPInformationDisplayView: UIView {
     
     @discardableResult public convenience init(preset: InformationViewPreset) {
         self.init()
+        backgroundColor = .white
         self.titleMessage.text = preset.title
         self.subtitleMessage.text = preset.title
         self.icon.image = preset.image
