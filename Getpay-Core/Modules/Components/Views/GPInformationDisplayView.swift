@@ -40,24 +40,18 @@ public class GPInformationDisplayView: UIView {
     // MARK: - Public variables
     public var buttonAction: ActionVoid?
     // MARK: - Initializers
-    @discardableResult public convenience init(title: String,
-                                               subTitle: String,
-                                               image: UIImage?,
-                                               inView: UIView?,
-                                               buttonTitle: String,
-                                               buttonAction: ActionVoid?) {
+    
+    @discardableResult public convenience init(preset: InformationViewPreset) {
         self.init()
-        titleMessage.text = title
-        subtitleMessage.text = subTitle
-        icon.image = image
-        if let inView = inView {
+        self.titleMessage.text = preset.title
+        self.subtitleMessage.text = preset.title
+        self.icon.image = preset.image
+        self.buttonAction = preset.buttonAction
+        self.button.isHidden = buttonAction == nil
+        self.button.setTitle(preset.buttonTitle, for: .normal)
+        if let inView = preset.inView {
             inView.addSubview(self, constraints: true)
             self.applyAnchors(ofType: [.leading, .trailing, .top, .bottom], to: inView)
-        }
-        self.buttonAction = buttonAction
-        button.setTitle(buttonTitle, for: .normal)
-        if buttonAction == nil {
-            button.isHidden = true
         }
     }
     
@@ -87,7 +81,8 @@ extension GPInformationDisplayView {
         addSubview(contentView, constraints: true)
     }
     private func createConstraints() {
-        icon.heightAnchor.constraint(equalToConstant: 140.0).isActive = true
+//        icon.heightAnchor.constraint(equalToConstant: 140.0).isActive = true
+        icon.heightAnchor.constraint(lessThanOrEqualToConstant: 140).isActive = true
         icon.widthAnchor.constraint(equalToConstant: 140.0).isActive = true
         icon.centerXAnchor.constraint(equalTo: titleMessage.centerXAnchor).isActive = true
         icon.applyAnchors(ofType: [.top], to: contentView)
@@ -115,44 +110,6 @@ extension GPInformationDisplayView {
         if let buttonAction = buttonAction {
             buttonAction()
         }
-    }
-    private func setup(withPreset preset: InformationViewPreset) {
-        
-        titleMessage.text = preset.title
-        subtitleMessage.text = preset.subTitle
-        
-        if let imageName = preset.image {
-            icon.image = UIImage.init(named: imageName)
-        }
-        
-        button.setTitle(preset.buttonTitle, for: .normal)
-        if buttonAction == nil {
-            button.isHidden = true
-        }
-        
-    }
-    // MARK: - Public Methods
-    public func setup(withStatus status: GPAccountRequestStatus,
-                      inView: UIView?,
-                      buttonAction: ActionVoid?) {
-        
-        self.buttonAction = buttonAction
-        if let inView = inView {
-            inView.addSubview(self, constraints: true)
-            self.applyAnchors(ofType: [.leading, .trailing, .top, .bottom], to: inView)
-        }
-        
-        switch status {
-        case .newClient404:
-            setup(withPreset: PresetNewClient404())
-        case .active403:
-            setup(withPreset: PresetClient403())
-        case .waitingDocumentsNewClient:
-            setup(withPreset: PresetWaitingDocumentsNewClient())
-        default:
-            setup(withPreset: PresetGeneric())
-        }
-        
     }
 
 }

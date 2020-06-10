@@ -1,13 +1,15 @@
 
-import Foundation
+import UIKit
 
 // MARK: - Protocol
 public protocol InformationViewPreset {
     
     var title: String { get }
     var subTitle: String { get }
-    var image: String? { get }
+    var image: UIImage? { get }
     var buttonTitle: String { get }
+    var buttonAction: ActionVoid? { get set }
+    var inView: UIView? { get set }
     
 }
 
@@ -18,9 +20,15 @@ public struct PresetNewClient404: InformationViewPreset {
     
     public var subTitle: String = "Para utilizar essa funcionalidade, é necessário abrir uma conta SuperGet."
     
-    public var image: String? = nil
+    public var image: UIImage? = nil
     
     public var buttonTitle: String = "ABRIR CONTA"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
     
 }
 
@@ -31,9 +39,15 @@ public struct PresetClient403: InformationViewPreset {
     
     public var subTitle: String = "Não foi possível carregar os dados da sua conta. Por favor, tente novamente."
     
-    public var image: String? = "gp_error"
+    public var image: UIImage? = UIImage(named: "gp_error")
     
     public var buttonTitle: String = "TENTAR NOVAMENTE"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
     
 }
 
@@ -44,9 +58,15 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
     
     public var subTitle: String = "Para utilizar essa funcionalidade, é necessário que você envie os documentos necessários."
     
-    public var image: String? = nil
+    public var image: UIImage? = nil
     
     public var buttonTitle: String = "Abrir Conta"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
     
 }
 
@@ -57,8 +77,14 @@ public struct PresetGeneric: InformationViewPreset {
     
     public var subTitle: String = "Para utilizar essa funcionalidade, é necessário abrir uma conta SuperGet."
     
-    public var image: String? = nil
+    public var image: UIImage? = nil
     
     public var buttonTitle: String = "Abrir Conta"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
     
 }
