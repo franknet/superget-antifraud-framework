@@ -126,7 +126,12 @@ extension GPNavBarView {
         
         if let titleLabel = titleLabel {
             titleLabel.centerX(to: self)
-            titleLabel.centerY(to: self)
+            if let leftButton = leftButton {
+                 titleLabel.bottomAnchor.constraint(equalTo: leftButton.bottomAnchor).isActive = true
+            }
+            else {
+                titleLabel.centerY(to: self)
+            }
         }
         
         if let titleView = titleView {
@@ -149,6 +154,8 @@ extension GPNavBarView {
                 rightButton.lastBaselineAnchor.constraint(equalTo: label.lastBaselineAnchor).isActive = true
             } else {
                 rightButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+                rightButton.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
+                rightButton.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
             }
             if let label = titleLabel {
                 rightButton.leadingAnchor.constraint(greaterThanOrEqualTo: label.trailingAnchor, constant: 8).isActive = true
