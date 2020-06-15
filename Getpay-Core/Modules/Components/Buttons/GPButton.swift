@@ -7,12 +7,12 @@ public class GPButton: UIButton {
     // MARK: - Public variables
     
     public enum Style {
-        case contained
+        case filled
         case outlined
         case text
     }
     
-    public var buttonStyle: Style = Style.contained {
+    public var buttonStyle: Style = Style.filled {
         didSet {
             updateLayout()
         }
@@ -56,7 +56,7 @@ extension GPButton {
     private func updateLayout() {
         switch buttonStyle {
             
-        case .contained:
+        case .filled:
             let color = isEnabled ? GPColors.maggie.color : GPColors.krusty.color
             setTitleColor(color, for: .normal)
             backgroundColor = isEnabled ? GPColors.homer.color : GPColors.maggie.color
