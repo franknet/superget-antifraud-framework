@@ -61,14 +61,14 @@ extension GPButton {
             setTitleColor(color, for: .normal)
             backgroundColor = isEnabled ? GPColors.homer.color : GPColors.maggie.color
             layer.borderWidth = isEnabled ? 0 : 1.0
-            layer.borderColor = isEnabled ? UIColor.clear.cgColor : UIColor.hexStringToUIColor(hex: "#CED7E0").cgColor
+            layer.borderColor = isEnabled ? UIColor.clear.cgColor : GPColors.krusty.color.cgColor
             
         case .outlined:
             let color = isEnabled ? GPColors.homer.color : GPColors.krusty.color
             setTitleColor(color, for: .normal)
             backgroundColor = GPColors.maggie.color
             layer.borderWidth = 1.0
-            layer.borderColor = isEnabled ? GPColors.homer.color.cgColor : UIColor.hexStringToUIColor(hex: "#CED7E0").cgColor
+            layer.borderColor = isEnabled ? GPColors.homer.color.cgColor : GPColors.krusty.color.cgColor
             
         case .text:
             let color = isEnabled ? GPColors.homer.color : GPColors.krusty.color
