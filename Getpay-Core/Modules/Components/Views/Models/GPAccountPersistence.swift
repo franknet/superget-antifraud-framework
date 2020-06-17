@@ -5,6 +5,6 @@ import Foundation
 public struct GPAccountPersistence: Codable {
     
     public var status: GPAccountRequestStatus = .retry
-    public var id: Int?
-    public var userAlias: String?
+    public var account: GPAccount?
+    
 }

@@ -8,21 +8,21 @@ public class GPUtils {
     private static let accountPersistenceKey = "accountPersistenceKey"
     private static let merchantKey = "merchantKey"
     
-    public static func save(account: GPAccountPersistence) {
+    public static func save(account: GPAccount) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(account) {
             defaults.set(encoded, forKey: accountPersistenceKey)
         }
     }
     
-    public static func loadAccountPersistenceFromUD() -> GPAccountPersistence {
+    public static func loadAccountPersistenceFromUD() -> GPAccount {
         if let account = defaults.object(forKey: accountPersistenceKey) as? Data {
             let decoder = JSONDecoder()
-            if let loadedAccount = try? decoder.decode(GPAccountPersistence.self, from: account) {
+            if let loadedAccount = try? decoder.decode(GPAccount.self, from: account) {
                 return loadedAccount
             }
         }
-        return GPAccountPersistence(status: .loading, id: nil)
+        return GPAccount.loading
     }
     
     /// Called wehn user logout or change ec
