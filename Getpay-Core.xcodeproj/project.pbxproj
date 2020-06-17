@@ -70,6 +70,7 @@
 		D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF4242CD162006DD69C /* BaseRequestProtocol.swift */; };
 		D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF6242CD263006DD69C /* ServiceManager.swift */; };
 		D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDFC242CE846006DD69C /* NibLoadable.swift */; };
+		D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62557552496ACCC0062367F /* GPNavBarView.swift */; };
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
@@ -169,6 +170,7 @@
 		D624BDF4242CD162006DD69C /* BaseRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestProtocol.swift; sourceTree = "<group>"; };
 		D624BDF6242CD263006DD69C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D624BDFC242CE846006DD69C /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		D62557552496ACCC0062367F /* GPNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavBarView.swift; sourceTree = "<group>"; };
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D62557542496AC8A0062367F /* NavBar */,
 				BF105A892469A220009E428E /* TextField */,
 				1EF36E9F23F47FDD00A27983 /* Views */,
 				1E3E0ABB23F46CF50067CF3E /* ListItems */,
@@ -435,6 +438,14 @@
 				D624BDF0242AB1D2006DD69C /* colors.txt */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		D62557542496AC8A0062367F /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				D62557552496ACCC0062367F /* GPNavBarView.swift */,
+			);
+			path = NavBar;
 			sourceTree = "<group>";
 		};
 		D63853E02450788F00C56F1D /* TerminalService */ = {
@@ -714,6 +725,7 @@
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
+				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
 				1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */,
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,

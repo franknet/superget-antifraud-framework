@@ -103,6 +103,55 @@ public extension UIView {
         }
     }
     
+    @discardableResult
+    func height(size: CGFloat) -> NSLayoutConstraint {
+        
+        let constraint: NSLayoutConstraint
+        constraint = heightAnchor.constraint(equalToConstant: size)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func height(min: CGFloat) -> NSLayoutConstraint {
+        let constraint: NSLayoutConstraint
+        constraint = heightAnchor.constraint(greaterThanOrEqualToConstant: min)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func width(size: CGFloat) -> NSLayoutConstraint {
+        let constraint: NSLayoutConstraint
+        constraint = widthAnchor.constraint(equalToConstant: size)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func width(min: CGFloat) -> NSLayoutConstraint {
+        let constraint: NSLayoutConstraint
+        constraint = widthAnchor.constraint(greaterThanOrEqualToConstant: min)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func centerX(to: UIView, padding: CGFloat? = 0) -> NSLayoutConstraint {
+        let constraint: NSLayoutConstraint
+        constraint = centerXAnchor.constraint(equalTo: to.centerXAnchor, constant: padding ?? 0)
+        constraint.isActive = true
+        return constraint
+    }
+    
+    @discardableResult
+    func centerY(to: UIView, padding: CGFloat? = nil) -> NSLayoutConstraint {
+        let constraint: NSLayoutConstraint
+        constraint = centerYAnchor.constraint(equalTo: to.centerYAnchor, constant: padding ?? 0)
+        constraint.isActive = true
+        return constraint
+    }
+    
     func center(to view: UIView) {
         self.applyAnchors(ofType: [.centerX, .centerY], to: view)
     }
