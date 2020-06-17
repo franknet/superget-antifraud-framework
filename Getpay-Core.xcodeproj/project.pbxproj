@@ -71,6 +71,7 @@
 		D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF6242CD263006DD69C /* ServiceManager.swift */; };
 		D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDFC242CE846006DD69C /* NibLoadable.swift */; };
 		D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62557552496ACCC0062367F /* GPNavBarView.swift */; };
+		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
 		D662BA5D244E173300D4AFDB /* Getpay-Core.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */; };
@@ -170,6 +171,7 @@
 		D624BDF6242CD263006DD69C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D624BDFC242CE846006DD69C /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		D62557552496ACCC0062367F /* GPNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavBarView.swift; sourceTree = "<group>"; };
+		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Getpay-Core.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -334,6 +336,7 @@
 				1E62A48823F33FA2009ED647 /* GPContainedButton.swift */,
 				1E62A48023F330CB009ED647 /* GPTextButton.swift */,
 				1E62A47923F322E1009ED647 /* Buttons.xib */,
+				D6348D7C2495877000AD069C /* GPButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
+				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
 				D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */,
 				1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */,
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
