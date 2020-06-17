@@ -102,6 +102,7 @@ public enum GPAssets {
   public static let gpSalePinpad = ImageAsset(name: "gp_sale_pinpad")
   public static let gpSaleQrcode = ImageAsset(name: "gp_sale_qrcode")
   public static let gpSales = ImageAsset(name: "gp_sales")
+  public static let gpSearch = ImageAsset(name: "gp_search")
   public static let gpSelfie = ImageAsset(name: "gp_selfie")
   public static let gpSendDocs = ImageAsset(name: "gp_send_docs")
   public static let gpSettings = ImageAsset(name: "gp_settings")
