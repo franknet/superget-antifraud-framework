@@ -12,6 +12,7 @@ public struct GPAccount: Codable {
     
     public var id: Int?
     public var status: String?
+    public var requestStatus: GPAccountRequestStatus?
     public var number: String?
     public var branchNumber: String?
     public var origin: String?
@@ -20,5 +21,14 @@ public struct GPAccount: Codable {
     public var pictureUrl: String?
     public var bankingInstitution: GPBankingInstitution?
     public var balance: GPAccountBalance?
+    
+    
+    public lazy var isAliasAccountActive: Bool = {
+        return self.aliasAccountStatus == "ACTIVE"
+    }()
+    
+    static var loading: GPAccount {
+        return GPAccount(requestStatus: .loading)
+    }
     
 }
