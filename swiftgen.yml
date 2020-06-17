@@ -14,3 +14,11 @@ colors:
      params:
        publicAccess: true
        enumName: GPColors
+xcassets:
+- inputs: Getpay-Core/Resources/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Getpay-Core/Modules/SwiftGen/GPAssets.swift
+    params:
+      publicAccess: true
+      enumName: GPAssets
