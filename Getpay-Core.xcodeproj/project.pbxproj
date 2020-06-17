@@ -57,7 +57,7 @@
 		1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0A1AA240011FD00D7693D /* GPReceiptViewController.swift */; };
 		1EB0A1AD240011FD00D7693D /* GPReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB0A1AB240011FD00D7693D /* GPReceiptViewController.xib */; };
 		1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB5402923FC5D0600C798BA /* UIImageViewEXtension.swift */; };
-		1EF36E9E23F4754D00A27983 /* CoreImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */; };
+		1EF36E9E23F4754D00A27983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36E9D23F4754D00A27983 /* Assets.xcassets */; };
 		1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; };
 		1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */; };
 		1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */; };
@@ -70,9 +70,11 @@
 		D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF4242CD162006DD69C /* BaseRequestProtocol.swift */; };
 		D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF6242CD263006DD69C /* ServiceManager.swift */; };
 		D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDFC242CE846006DD69C /* NibLoadable.swift */; };
+		D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62557552496ACCC0062367F /* GPNavBarView.swift */; };
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
+		D65831E1249A664A00871DFF /* GPAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65831E0249A664A00871DFF /* GPAssets.swift */; };
 		D662BA5D244E173300D4AFDB /* Getpay-Core.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */; };
 		D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662BA5E244E38DD00D4AFDB /* GPTerminalService.swift */; };
 		D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663745E24366AB0006C8E9F /* GPNetworkingService.swift */; };
@@ -151,7 +153,7 @@
 		1EB0A1AA240011FD00D7693D /* GPReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptViewController.swift; sourceTree = "<group>"; };
 		1EB0A1AB240011FD00D7693D /* GPReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPReceiptViewController.xib; sourceTree = "<group>"; };
 		1EB5402923FC5D0600C798BA /* UIImageViewEXtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEXtension.swift; sourceTree = "<group>"; };
-		1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CoreImages.xcassets; sourceTree = "<group>"; };
+		1EF36E9D23F4754D00A27983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListDisclousureCellTableViewCell.swift; sourceTree = "<group>"; };
 		1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListDisclousureCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -169,9 +171,11 @@
 		D624BDF4242CD162006DD69C /* BaseRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestProtocol.swift; sourceTree = "<group>"; };
 		D624BDF6242CD263006DD69C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D624BDFC242CE846006DD69C /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		D62557552496ACCC0062367F /* GPNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavBarView.swift; sourceTree = "<group>"; };
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		D65831E0249A664A00871DFF /* GPAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAssets.swift; sourceTree = "<group>"; };
 		D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Getpay-Core.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D662BA5E244E38DD00D4AFDB /* GPTerminalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTerminalService.swift; sourceTree = "<group>"; };
 		D663745E24366AB0006C8E9F /* GPNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNetworkingService.swift; sourceTree = "<group>"; };
@@ -306,7 +310,6 @@
 		1E62A46223F30AB1009ED647 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EF36E9D23F4754D00A27983 /* CoreImages.xcassets */,
 				1E62A46423F30AD4009ED647 /* Urls.swift */,
 				1EFBE8752407F861003805EC /* GPLogger.swift */,
 			);
@@ -316,6 +319,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D62557542496AC8A0062367F /* NavBar */,
 				BF105A892469A220009E428E /* TextField */,
 				1EF36E9F23F47FDD00A27983 /* Views */,
 				1E3E0ABB23F46CF50067CF3E /* ListItems */,
@@ -437,6 +441,14 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		D62557542496AC8A0062367F /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				D62557552496ACCC0062367F /* GPNavBarView.swift */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
 		D63853E02450788F00C56F1D /* TerminalService */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +468,7 @@
 		D68C647E242169AC00BA65B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1EF36E9D23F4754D00A27983 /* Assets.xcassets */,
 				D624BDEF242AB1A8006DD69C /* Colors */,
 				D68C647F242169B400BA65B2 /* Fonts */,
 			);
@@ -484,6 +497,7 @@
 		D68C64B02422548700BA65B2 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				D65831E0249A664A00871DFF /* GPAssets.swift */,
 				D624BDF2242AB851006DD69C /* GPColors.swift */,
 				D68C64B324225E7400BA65B2 /* GPFonts.swift */,
 			);
@@ -598,7 +612,7 @@
 				1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */,
 				D68C64A0242183BC00BA65B2 /* Calibri-Regular.ttf in Resources */,
 				D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */,
-				1EF36E9E23F4754D00A27983 /* CoreImages.xcassets in Resources */,
+				1EF36E9E23F4754D00A27983 /* Assets.xcassets in Resources */,
 				D662BA5D244E173300D4AFDB /* Getpay-Core.podspec in Resources */,
 				D68C64A2242183BC00BA65B2 /* Calibri-Bold.ttf in Resources */,
 				1EB0A1AD240011FD00D7693D /* GPReceiptViewController.xib in Resources */,
@@ -714,7 +728,9 @@
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
+				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
 				1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */,
+				D65831E1249A664A00871DFF /* GPAssets.swift in Sources */,
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,

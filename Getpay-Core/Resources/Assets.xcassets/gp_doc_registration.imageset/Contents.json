@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "gp_doc_registration.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
