@@ -75,6 +75,9 @@ open class ServiceManager {
                             completion((self.getGenericResponse()))
                         }
                     }
+                    else {
+                        completion((self.getGenericResponse()))
+                    }
                 }
         }
         debugPrint(request)
@@ -101,6 +104,9 @@ open class ServiceManager {
                         catch {
                             completion(.failure(self.getGenericResponse()))
                         }
+                    }
+                    else {
+                        completion(.failure(self.getGenericResponse()))
                     }
                 }
             })
