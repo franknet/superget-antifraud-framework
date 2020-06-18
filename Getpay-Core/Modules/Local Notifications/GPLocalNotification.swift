@@ -11,7 +11,9 @@ import UserNotifications
 
 // MARK: - Protocol
 /// Define the content to be show in a `GPLocalNotification`.
-/// If you want to show images, we must implement the attachments.
+/// - If you want to show images, we must implement the attachments.
+/// - If we want custom action in notification, we must implement a custom
+/// category to notification and handle it inside AppDelegate
 public protocol LocalNotificationModel {
     
     var title: String { get }
@@ -43,11 +45,13 @@ public class GPLocalNotification: NSObject {
         content.subtitle = model.subtitle
         content.body = model.body
         content.sound = model.sound
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
         // random identifier
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: model.trigger
+        )
 
         // add our notification request
         UNUserNotificationCenter.current().add(request)
