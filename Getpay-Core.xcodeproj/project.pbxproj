@@ -45,6 +45,7 @@
 		1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A48F23F429E8009ED647 /* UIViewExtension.swift */; };
 		1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A49123F42AC2009ED647 /* UINibExtension.swift */; };
 		1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */; };
+		1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E913528249BA57800BF4A79 /* GPLocalNotification.swift */; };
 		1E9516932427958100C92A04 /* GPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9516922427958100C92A04 /* GPSession.swift */; };
 		1E95B9EC23FB1395000A3AC8 /* UIViewControllerExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */; };
@@ -142,6 +143,7 @@
 		1E62A49123F42AC2009ED647 /* UINibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibExtension.swift; sourceTree = "<group>"; };
 		1E71C795248C364500BB307E /* GPAccountPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAccountPersistence.swift; sourceTree = "<group>"; };
 		1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewPresets.swift; sourceTree = "<group>"; };
+		1E913528249BA57800BF4A79 /* GPLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLocalNotification.swift; sourceTree = "<group>"; };
 		1E9516922427958100C92A04 /* GPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSession.swift; sourceTree = "<group>"; };
 		1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		1EB0A19123FEC76500D7693D /* GPNetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkInterceptor.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
 				D63853E02450788F00C56F1D /* TerminalService */,
 				1E9516912427957300C92A04 /* Auth */,
@@ -363,6 +366,14 @@
 				BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E913527249BA49000BF4A79 /* Local Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1E913528249BA57800BF4A79 /* GPLocalNotification.swift */,
+			);
+			path = "Local Notifications";
 			sourceTree = "<group>";
 		};
 		1E9516912427957300C92A04 /* Auth */ = {
@@ -715,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
+				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
 				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
