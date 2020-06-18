@@ -29,6 +29,10 @@ public enum GPAccountRequestStatus: Int, Codable {
     /// (status = "WAITING_DOCUMENTS" && origin="NEW_CLIENT")
     case waitingDocumentsNewClient
     
+    /// this state is a user that have an account,
+    /// who didn't send the documents
+    /// (status = "WAITING_DOCUMENTS" && origin="LEGACY")
+    case waitingDocumentsLegacy
     
     case underAnalysis
     
