@@ -41,6 +41,7 @@ public enum GPAssets {
   public static let gpCnhCase = ImageAsset(name: "gp_cnh_case")
   public static let gpCnhDesk = ImageAsset(name: "gp_cnh_desk")
   public static let gpCnhReflex = ImageAsset(name: "gp_cnh_reflex")
+  public static let gpContactNotFound = ImageAsset(name: "gp_contact_not_found")
   public static let gpCopy = ImageAsset(name: "gp_copy")
   public static let gpCrediarioBig = ImageAsset(name: "gp_crediario_big")
   public static let gpCreditoBig = ImageAsset(name: "gp_credito_big")
