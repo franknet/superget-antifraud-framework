@@ -59,13 +59,15 @@ public class GPLocalNotification: NSObject {
     
     // MARK: - Public Static Methods
     /// Used to register app for local notifications
-    public static func registerForLocalNotifications() {
+    public static func registerForLocalNotifications(withDelegate delegate: UNUserNotificationCenterDelegate) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 debugPrint("Local notifications set!")
+                UNUserNotificationCenter.current().delegate = delegate
             } else if let error = error {
                 debugPrint(error.localizedDescription)
             }
         }
     }
+    
 }
