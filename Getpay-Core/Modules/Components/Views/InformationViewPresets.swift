@@ -44,7 +44,7 @@ public struct PresetClient403: InformationViewPreset {
     
     public var errorCode: String? = "(Erro 403)"
     
-    public var image: UIImage? = UIImage(named: "gp_user_permission")
+    public var image: UIImage? = GPAssets.gpUserPermission.image
     
     public var buttonTitle: String?
     
