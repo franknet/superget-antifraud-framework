@@ -19,7 +19,7 @@ public struct GPAccount: Codable {
     public var userAlias: String?
     public var aliasAccountStatus: String?
     public var pictureUrl: String?
-    public var bankingInstitution: GPBankingInstitution?
+    public var institution: GPBankingInstitution?
     public var balance: GPAccountBalance?
     
     
