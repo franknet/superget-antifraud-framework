@@ -58,6 +58,11 @@ public class GPNavBarView: UIView {
         }
     }
     
+    private var containerStack: UIStackView = {
+        let stack = UIStackView()
+        return stack
+    }()
+    
     // MARK: - Initializers
     
     public init(navButtonStyle: NavButtonType = .back,
