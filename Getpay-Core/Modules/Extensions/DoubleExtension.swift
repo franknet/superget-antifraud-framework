@@ -22,7 +22,14 @@ public extension Double {
     }
     
     var asIntCurrency: Int {
+        if let number = parse(from: formatedAsCurrency) {
+            return number
+        }
         return Int(self*100)
+    }
+    
+    private func parse(from string: String) -> Int? {
+        return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
     }
     
     func truncate(places : Int)-> Double {
