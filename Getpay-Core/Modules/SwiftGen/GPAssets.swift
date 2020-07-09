@@ -72,6 +72,7 @@ public enum GPAssets {
   public static let gpFlash = ImageAsset(name: "gp_flash")
   public static let gpFlashOff = ImageAsset(name: "gp_flash_off")
   public static let gpFone = ImageAsset(name: "gp_fone")
+  public static let gpGetnetApp = ImageAsset(name: "gp_getnet_app")
   public static let gpHidePass = ImageAsset(name: "gp_hide_pass")
   public static let gpInicio = ImageAsset(name: "gp_inicio")
   public static let gpInsertCard = ImageAsset(name: "gp_insert_card")
