@@ -81,6 +81,8 @@
 		D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663745E24366AB0006C8E9F /* GPNetworkingService.swift */; };
 		D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */; };
 		D6695C682475A96E001333FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6695C672475A96E001333FB /* BaseViewController.swift */; };
+		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
+		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
 		D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C647B2420FC3300BA65B2 /* ErrorView.swift */; };
 		D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */; };
@@ -187,6 +189,8 @@
 		D663745E24366AB0006C8E9F /* GPNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNetworkingService.swift; sourceTree = "<group>"; };
 		D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewWithLabel.swift; sourceTree = "<group>"; };
 		D6695C672475A96E001333FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
+		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D68C647B2420FC3300BA65B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -349,6 +353,7 @@
 				1E62A48023F330CB009ED647 /* GPTextButton.swift */,
 				1E62A47923F322E1009ED647 /* Buttons.xib */,
 				D6348D7C2495877000AD069C /* GPButton.swift */,
+				D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				1E3FCBDB248D8D9B00EC29DD /* GPInformationDisplayView.swift */,
 				1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */,
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
+				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -763,6 +769,7 @@
 				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
 				BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */,
 				D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */,
+				D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
@@ -796,6 +803,7 @@
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
 				D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */,
 				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
+				D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */,
 				1E9516932427958100C92A04 /* GPSession.swift in Sources */,
 				D6695C682475A96E001333FB /* BaseViewController.swift in Sources */,
 				D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */,

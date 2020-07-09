@@ -1,14 +1,17 @@
-//
-//  UIViewExtension.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 12/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import UIKit
 
 public extension UIView {
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+    
+    class func animateWithDefaultDuration(_ animations: @escaping () -> Void, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(withDuration: TimeInterval(UINavigationController.hideShowBarDuration), animations: animations, completion: completion)
+    }
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
@@ -42,15 +45,12 @@ public extension UIView {
     }
     
     func addSubview(_ subview: UIView, constraints: Bool) {
-        
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = !constraints
     }
     
     func addSubviews(_ subviews: [UIView], constraints: Bool) {
-        
         for subview in subviews {
-            
             addSubview(subview)
             subview.translatesAutoresizingMaskIntoConstraints = !constraints
         }
@@ -185,14 +185,5 @@ public extension UIView {
         
         gradientLayerView.layer.insertSublayer(gradient, at: 0)
         layer.insertSublayer(gradientLayerView.layer, at: 0)
-    }
-}
-
-public extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
     }
 }
