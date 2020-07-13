@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
-  spec.version      = "6.5.6"
+  spec.version      = "6.7.1"
   spec.summary      = "A Getnet framework."
   spec.homepage     = "https://www.superget.com.br/"
 
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "Leandro dos Santos Lopes" => "lslopes.dev@gmail.com" }
 
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
 
   spec.source       = { :git => "https://bitbucket.getnet.com.br/scm/sgm/module-core-ios.git", :tag => spec.version }
 

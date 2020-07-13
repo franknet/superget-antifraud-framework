@@ -21,7 +21,7 @@ public struct GPAccount: Codable {
     public var pictureUrl: String?
     public var institution: GPBankingInstitution?
     public var balance: GPAccountBalance?
-    
+    public var hasCard: Bool?
     
     public lazy var isAliasAccountActive: Bool = {
         return self.aliasAccountStatus == "ACTIVE"

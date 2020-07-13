@@ -81,6 +81,8 @@
 		D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663745E24366AB0006C8E9F /* GPNetworkingService.swift */; };
 		D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */; };
 		D6695C682475A96E001333FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6695C672475A96E001333FB /* BaseViewController.swift */; };
+		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
+		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
 		D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C647B2420FC3300BA65B2 /* ErrorView.swift */; };
 		D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */; };
@@ -90,6 +92,9 @@
 		D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C64B324225E7400BA65B2 /* GPFonts.swift */; };
 		D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */; };
 		D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4940A243D186D00E98F5D /* AuthStateManager.swift */; };
+		D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91024B51F2300C656DC /* GPPageViewController.swift */; };
+		D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91324B5218700C656DC /* GPTabButton.swift */; };
+		D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */; };
 		D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -184,6 +189,8 @@
 		D663745E24366AB0006C8E9F /* GPNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNetworkingService.swift; sourceTree = "<group>"; };
 		D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewWithLabel.swift; sourceTree = "<group>"; };
 		D6695C672475A96E001333FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
+		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D68C647B2420FC3300BA65B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -194,6 +201,9 @@
 		D68C64B324225E7400BA65B2 /* GPFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFonts.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D6B4940A243D186D00E98F5D /* AuthStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateManager.swift; sourceTree = "<group>"; };
+		D6E1F91024B51F2300C656DC /* GPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPageViewController.swift; sourceTree = "<group>"; };
+		D6E1F91324B5218700C656DC /* GPTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTabButton.swift; sourceTree = "<group>"; };
+		D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtension.swift; sourceTree = "<group>"; };
 		D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBasePageableListProtocol.swift; sourceTree = "<group>"; };
 		FAE2F75ABC5834E349BC5169 /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,12 +333,13 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6E1F91224B5214400C656DC /* BaseViewController */,
+				D6E1F90F24B51F0800C656DC /* PageViewController */,
 				D62557542496AC8A0062367F /* NavBar */,
 				BF105A892469A220009E428E /* TextField */,
 				1EF36E9F23F47FDD00A27983 /* Views */,
 				1E3E0ABB23F46CF50067CF3E /* ListItems */,
 				1E62A47823F32265009ED647 /* Buttons */,
-				D6695C672475A96E001333FB /* BaseViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -342,6 +353,7 @@
 				1E62A48023F330CB009ED647 /* GPTextButton.swift */,
 				1E62A47923F322E1009ED647 /* Buttons.xib */,
 				D6348D7C2495877000AD069C /* GPButton.swift */,
+				D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -366,6 +378,7 @@
 				1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */,
 				D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */,
 				BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */,
+				D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +426,7 @@
 				1E3FCBDB248D8D9B00EC29DD /* GPInformationDisplayView.swift */,
 				1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */,
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
+				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -515,6 +529,23 @@
 				D68C64B324225E7400BA65B2 /* GPFonts.swift */,
 			);
 			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		D6E1F90F24B51F0800C656DC /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6E1F91024B51F2300C656DC /* GPPageViewController.swift */,
+				D6E1F91324B5218700C656DC /* GPTabButton.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		D6E1F91224B5214400C656DC /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6695C672475A96E001333FB /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -734,11 +765,15 @@
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
 				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
 				D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */,
+				D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */,
 				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
 				BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */,
+				D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */,
+				D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
+				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
 				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
@@ -768,6 +803,7 @@
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
 				D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */,
 				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
+				D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */,
 				1E9516932427958100C92A04 /* GPSession.swift in Sources */,
 				D6695C682475A96E001333FB /* BaseViewController.swift in Sources */,
 				D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */,

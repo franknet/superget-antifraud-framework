@@ -67,7 +67,7 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
     
     public var image: UIImage?
     
-    public var buttonTitle: String? = "ABRIR CONTA"
+    public var buttonTitle: String? = "ENVIAR DOCUMENTOS"
     
     public var buttonAction: ActionVoid?
     
