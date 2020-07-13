@@ -9,8 +9,7 @@
 import Foundation
 
 public struct GPAccountBalance: Codable {
-    
-    public var withdrawAvailableBalance: Float
-    public var globalAvailableBalance: Float
-    
+    public var id: Int
+    public var withdrawAvailableBalance: Double
+    public var globalAvailableBalance: Double
 }
