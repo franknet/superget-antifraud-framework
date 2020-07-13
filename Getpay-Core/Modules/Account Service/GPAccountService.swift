@@ -10,7 +10,7 @@ public class GPAccountService {
     
     // MARK: - Public methods
     
-    public func getBalance(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
+    public func getAccount(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
         let service = ServiceManager()
         let merchantId = GPUtils.loadGPMerchantFromUD().id
         let request = AccountDataRequest(merchantId)
