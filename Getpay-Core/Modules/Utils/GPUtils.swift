@@ -22,7 +22,7 @@ public class GPUtils {
                 return loadedAccount
             }
         }
-        return GPAccount.loading
+        return GPAccount(id: 0, status: "", number: "", branchNumber: "", origin: "", aliasAccountStatus: "", institution: GPBankingInstitution(number: 0, name: ""), balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0), hasCard: false)
     }
     
     /// Called wehn user logout or change ec

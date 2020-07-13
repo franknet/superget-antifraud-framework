@@ -72,6 +72,7 @@
 		D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF6242CD263006DD69C /* ServiceManager.swift */; };
 		D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDFC242CE846006DD69C /* NibLoadable.swift */; };
 		D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62557552496ACCC0062367F /* GPNavBarView.swift */; };
+		D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C525C24BCE2CA00627C1C /* GPAccountService.swift */; };
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
@@ -180,6 +181,7 @@
 		D624BDF6242CD263006DD69C /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D624BDFC242CE846006DD69C /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		D62557552496ACCC0062367F /* GPNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavBarView.swift; sourceTree = "<group>"; };
+		D62C525C24BCE2CA00627C1C /* GPAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccountService.swift; sourceTree = "<group>"; };
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
@@ -307,9 +309,10 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D62C525B24BCE29700627C1C /* Account Service */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
-				D63853E02450788F00C56F1D /* TerminalService */,
+				D63853E02450788F00C56F1D /* Terminal Service */,
 				1E9516912427957300C92A04 /* Auth */,
 				D68C64B02422548700BA65B2 /* SwiftGen */,
 				1EB0A19023FEC74500D7693D /* Networking */,
@@ -476,12 +479,20 @@
 			path = NavBar;
 			sourceTree = "<group>";
 		};
-		D63853E02450788F00C56F1D /* TerminalService */ = {
+		D62C525B24BCE29700627C1C /* Account Service */ = {
+			isa = PBXGroup;
+			children = (
+				D62C525C24BCE2CA00627C1C /* GPAccountService.swift */,
+			);
+			path = "Account Service";
+			sourceTree = "<group>";
+		};
+		D63853E02450788F00C56F1D /* Terminal Service */ = {
 			isa = PBXGroup;
 			children = (
 				D662BA5E244E38DD00D4AFDB /* GPTerminalService.swift */,
 			);
-			path = TerminalService;
+			path = "Terminal Service";
 			sourceTree = "<group>";
 		};
 		D63853E1245078B000C56F1D /* Utils */ = {
@@ -795,6 +806,7 @@
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
+				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
