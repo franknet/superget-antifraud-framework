@@ -1,7 +1,6 @@
 
 Pod::Spec.new do |spec|
 
-
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
   spec.version      = "6.8.0"
@@ -9,8 +8,6 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://www.superget.com.br/"
 
   spec.description  = "GetpayCore is customized and present some views with state of payments."
-
-  #spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   spec.author       = { "Leandro dos Santos Lopes" => "lslopes.dev@gmail.com" }
 
