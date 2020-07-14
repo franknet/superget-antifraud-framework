@@ -1,42 +1,14 @@
 import UIKit
 
-public enum ReceiptType {
-    case bankSlip, p2p, ted, sale, estorno
-    
-    var paramDescription: String {
-        switch self {
-        case .bankSlip:
-            return "PAYMENT_ACCOUNTS_CTA"
-        case .p2p:
-            return ""
-        case .ted:
-            return ""
-        case .sale:
-            return ""
-        case .estorno:
-            return ""
-        }
-    }
-    
-    var view: UIView {
-        switch self {
-        case .bankSlip:
-            return BankSlipView()
-        default:
-            return UIView()
-        }
-    }
-}
-
 public class ReceiptViewModel {
     
     private let transactionId: String
     private let service = ReceiptService()
     
-    let type: ReceiptType
+    let type: GPReceiptType
     var bankSlip: GPBankSlipReceipt?
     
-    public init(transactionId: String, type: ReceiptType) {
+    public init(transactionId: String, type: GPReceiptType) {
         self.transactionId = transactionId
         self.type = type
     }

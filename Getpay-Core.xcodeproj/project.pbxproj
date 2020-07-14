@@ -70,6 +70,7 @@
 		BFED886224BE17BE00275D83 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885E24BE17BE00275D83 /* ReceiptView.swift */; };
 		BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */; };
 		BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886024BE17BE00275D83 /* ReceiptService.swift */; };
+		BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886524BE5FC400275D83 /* GPReceiptType.swift */; };
 		D60B81A324A406160098443D /* TitleWithValueAndSubTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */; };
 		D624BDF1242AB1D2006DD69C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = D624BDF0242AB1D2006DD69C /* colors.txt */; };
 		D624BDF3242AB851006DD69C /* GPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF2242AB851006DD69C /* GPColors.swift */; };
@@ -186,6 +187,7 @@
 		BFED885E24BE17BE00275D83 /* ReceiptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptView.swift; sourceTree = "<group>"; };
 		BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		BFED886024BE17BE00275D83 /* ReceiptService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptService.swift; sourceTree = "<group>"; };
+		BFED886524BE5FC400275D83 /* GPReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptType.swift; sourceTree = "<group>"; };
 		CF96B50F190FD9A89EC2C4DF /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithValueAndSubTitle.swift; sourceTree = "<group>"; };
 		D624BDF0242AB1D2006DD69C /* colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				1E10E1112400739B00247FC7 /* GPErrorMessage.swift */,
 				D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */,
 				D66B07A524BE54D1003269C9 /* GPTransactionType.swift */,
+				BFED886524BE5FC400275D83 /* GPReceiptType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -899,6 +902,7 @@
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,
 				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
+				BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */,
 				1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */,
 				1E62A48923F33FA2009ED647 /* GPContainedButton.swift in Sources */,
 			);

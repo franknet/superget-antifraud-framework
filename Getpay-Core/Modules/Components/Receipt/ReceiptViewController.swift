@@ -64,7 +64,7 @@ extension ReceiptViewController {
         customView.nav.rightButton?.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
     }
     
-    private func setup(receiptType: ReceiptType) {
+    private func setup(receiptType: GPReceiptType) {
         switch receiptType {
         case .bankSlip:
             guard
