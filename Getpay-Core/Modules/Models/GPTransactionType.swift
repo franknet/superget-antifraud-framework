@@ -1,6 +1,6 @@
 import UIKit
 
-enum GPTrasactionType: String, Codable {
+public enum GPTrasactionType: String, Codable {
     case PAYMENT_ACCOUNTS_CTA
     case TRANSITORY_CREDIT_PAYMENTS_ACCOUNTS_CTA
     case UNPROCESSED_PAYMENT_REC_CELL_CTA
@@ -37,7 +37,7 @@ enum GPTrasactionType: String, Codable {
     case MOBILE_TOP_UP_CTA
     case REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA
     
-    var title: String {
+    public var title: String {
         switch self {
         case .PAYMENT_ACCOUNTS_CTA:
             return ""
@@ -146,7 +146,7 @@ enum GPTrasactionType: String, Codable {
         }
     }
     
-    var icon: UIImage {
+    public var icon: UIImage {
         switch self {
         case .PAYMENT_ACCOUNTS_CTA:
             return GPAssets.gpMoney.image
