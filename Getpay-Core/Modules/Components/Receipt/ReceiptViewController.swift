@@ -8,7 +8,7 @@ public class ReceiptViewController: BaseViewController<GPReceiptView> {
     
     let viewModel: ReceiptViewModel
     
-    var clousure: (() -> Void)?
+    public var clousure: (() -> Void)?
     
     // MARK: - Initializers
     
