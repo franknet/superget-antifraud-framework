@@ -1,6 +1,10 @@
 import UIKit
 
+// MARK: - Class
+
 class BankSlipView: UIStackView {
+    
+    // MARK: - Internal variables
     
     lazy var header = GPReceiptHeaderView()
     lazy var paymentDestination = TitleWithValueAndSubTitle()
@@ -10,6 +14,8 @@ class BankSlipView: UIStackView {
     lazy var codeBankSlip = TitleWithValueAndSubTitle()
     lazy var paymentOrigin = TitleWithValueAndSubTitle()
     lazy var codeAuthentication = TitleWithValueAndSubTitle()
+    
+    // MARK: - Initializers
     
     init() {
         super.init(frame: .zero)
@@ -23,6 +29,8 @@ class BankSlipView: UIStackView {
 }
 
 extension BankSlipView {
+    
+    // MARK: - Private methods
     
     private func setupStackView() {
         self.backgroundColor = GPColors.apu.color
@@ -39,6 +47,8 @@ extension BankSlipView {
         addArrangedSubview(paymentOrigin)
         addArrangedSubview(codeAuthentication)
     }
+    
+    // MARK: - Public methods
     
     func populate(model: GPBankSlipReceipt) {
         header.configureView(icon: GPAssets.gpCheck.image, iconTintColor: GPColors.burns.color, status: "Pagamento concluído")

@@ -62,6 +62,7 @@ extension ReceiptViewController {
     private func setupButtons() {
         customView.nav.leftButton?.addTarget(self, action: #selector(dismissReceipt), for: .touchUpInside)
         customView.nav.rightButton?.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
+        customView.share.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
     }
     
     private func setup(receiptType: GPReceiptType) {
