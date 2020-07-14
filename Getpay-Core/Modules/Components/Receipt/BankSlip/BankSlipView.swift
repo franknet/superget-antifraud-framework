@@ -14,6 +14,8 @@ class BankSlipView: UIStackView {
     lazy var codeBankSlip = TitleWithValueAndSubTitle()
     lazy var paymentOrigin = TitleWithValueAndSubTitle()
     lazy var codeAuthentication = TitleWithValueAndSubTitle()
+    private let account = GPUtils.loadAccountPersistenceFromUD()
+    private let merchant = GPUtils.loadGPMerchantFromUD()
     
     // MARK: - Initializers
     
@@ -57,7 +59,7 @@ extension BankSlipView {
         paymentDate.configure(title: "Data do pagamento", value: "\(model.transactionDate)", description: nil)
         dueDate.configure(title: "Vencimento do boleto", value: "\(model.dueDate)", description: nil)
         codeBankSlip.configure(title: "Código do Boleto", value: "\(model.barCodeNumber)", description: nil)
-        paymentOrigin.configure(title: "Pagamento de", value: "", description: "")
+        paymentOrigin.configure(title: "Pagamento de", value: "\(merchant.name)", description: "\(account.userAlias)")
         codeAuthentication.configure(title: "Código de autenticação", value: "\(model.transactionCode)", description: nil)
     }
 }
