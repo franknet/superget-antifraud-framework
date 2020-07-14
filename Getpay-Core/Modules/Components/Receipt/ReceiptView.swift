@@ -49,6 +49,8 @@ public class GPReceiptView: UIView {
         return image
     }()
     
+    // MARK: - Initializers
+    
     init() {
         super.init(frame: .zero)
         addComponents()

@@ -1,5 +1,14 @@
 import UIKit
 
+// MARK: - Class
+
+public class ReceiptService {
+    func fetch(by transactionId: String, type: GPReceiptType, completion: @escaping (Result<GPBankSlipReceipt, GPResponseError>) -> Void) {
+        let request = RequestReceiptBankSlip(type: type, transactionCode: transactionId)
+        ServiceManager().performRequest(route: request, completion: completion)
+    }
+}
+
 public struct RequestReceiptBankSlip: BaseRequestProtocol {
     private let merchant = GPUtils.loadGPMerchantFromUD()
     public var path: String
@@ -10,12 +19,6 @@ public struct RequestReceiptBankSlip: BaseRequestProtocol {
     }
 }
 
-public class ReceiptService {
-    func fetch(by transactionId: String, type: GPReceiptType, completion: @escaping (Result<GPBankSlipReceipt, GPResponseError>) -> Void) {
-        let request = RequestReceiptBankSlip(type: type, transactionCode: transactionId)
-        ServiceManager().performRequest(route: request, completion: completion)
-    }
-}
 
 struct GPBankSlipReceipt: Codable {
     let barCodeNumber: String

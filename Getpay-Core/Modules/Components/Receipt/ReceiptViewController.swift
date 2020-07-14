@@ -87,13 +87,13 @@ extension ReceiptViewController {
         view.applyAnchors(ofType: [.top, .bottom], to: customView.scrollView)
     }
     
-    @objc func dismissReceipt() {
+    @objc private func dismissReceipt() {
         dismiss(animated: true) {
             self.clousure?()
         }
     }
     
-    @objc func shareButtonDidTap() {
+    @objc private func shareButtonDidTap() {
         if let image = customView.scrollView.snapshot() {
             let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             present(activityViewController, animated: true)
