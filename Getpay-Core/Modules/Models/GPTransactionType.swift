@@ -40,7 +40,7 @@ public enum GPTrasactionType: String, Codable {
     public var title: String {
         switch self {
         case .PAYMENT_ACCOUNTS_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .TRANSITORY_CREDIT_PAYMENTS_ACCOUNTS_CTA:
             return "Ajuste de conta"
@@ -49,7 +49,7 @@ public enum GPTrasactionType: String, Codable {
             return "Recarga de celular pendente"
             
         case .ENTRANCE_BANK_TRANSFER_RECEIVED_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .RECHARGE_DEPOSIT_CTA:
             return "Depósito boleto"
@@ -64,10 +64,10 @@ public enum GPTrasactionType: String, Codable {
             return "Ajuste de conta"
             
         case .REVERSAL_DEPOSIT_BANK_SLIP_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .FINANCIAL_CREDIT_ACCOUNTS_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .REVERSAL_FEE_TRANSFERS_SENT_CTA:
             return "Estorno Tarifa TED"
@@ -76,7 +76,7 @@ public enum GPTrasactionType: String, Codable {
             return "Pagamento não realizado"
             
         case .LIQ_FINANCY_TRANSFER_BANK_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .TRANSFER_BETWEEN_ACCOUNTS_FAVORED_CTA:
             return "Transferência recebida"
@@ -88,10 +88,10 @@ public enum GPTrasactionType: String, Codable {
             return "TED enviada"
             
         case .ACCOUNT_RECEIVABLES_DEBT_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .LOW_BANK_TRANSFER_RECEIVED_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .TRANSITORY_DEBIT_PAYMENTS_ACCOUNT_CTA:
             return "Ajuste de conta"
@@ -115,10 +115,10 @@ public enum GPTrasactionType: String, Codable {
             return "Recarga bilhete único"
             
         case .RECEIVED_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .LIQ_FINANCY_DEBT_BANK_TRANSFER_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .UNPROCESSED_PAYMENT_REC_SP_TRANS_CTA:
             return "Pagamento não realizado"
@@ -133,7 +133,7 @@ public enum GPTrasactionType: String, Codable {
             return "Ajuste de conta"
             
         case .ACCOUNT_RECEIVABLES_CREDIT_CTA:
-            return ""
+            return "Ajuste de conta"
             
         case .ADJUSTING_CREDIT_BACKOFFICE_CTA:
             return "Ajuste de conta"
