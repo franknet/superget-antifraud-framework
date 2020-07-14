@@ -92,6 +92,7 @@ public enum GPAssets {
   public static let gpPlus = ImageAsset(name: "gp_plus")
   public static let gpRate = ImageAsset(name: "gp_rate")
   public static let gpReceipt = ImageAsset(name: "gp_receipt")
+  public static let gpReceiptEnd = ImageAsset(name: "gp_receipt_end")
   public static let gpRecharge = ImageAsset(name: "gp_recharge")
   public static let gpRefresh = ImageAsset(name: "gp_refresh")
   public static let gpRegistrationComplete = ImageAsset(name: "gp_registration_complete")

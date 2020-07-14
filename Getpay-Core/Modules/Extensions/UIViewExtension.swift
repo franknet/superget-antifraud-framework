@@ -186,4 +186,13 @@ public extension UIView {
         gradientLayerView.layer.insertSublayer(gradient, at: 0)
         layer.insertSublayer(gradientLayerView.layer, at: 0)
     }
+    
+    func snapshot() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        let viewCopy = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return viewCopy
+    }
 }
