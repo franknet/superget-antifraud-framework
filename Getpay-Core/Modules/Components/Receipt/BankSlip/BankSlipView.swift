@@ -57,7 +57,7 @@ extension BankSlipView {
         paymentDate.configure(title: "Data do pagamento", value: "\(model.transactionDate)", description: nil)
         dueDate.configure(title: "Vencimento do boleto", value: "\(model.dueDate)", description: nil)
         codeBankSlip.configure(title: "Código do Boleto", value: "\(model.barCodeNumber)", description: nil)
-        paymentOrigin.configure(title: "Pagamento de", value: "", description: "@fernanda.gomes - SuperGet")
+        paymentOrigin.configure(title: "Pagamento de", value: "", description: "")
         codeAuthentication.configure(title: "Código de autenticação", value: "\(model.transactionCode)", description: nil)
     }
 }
