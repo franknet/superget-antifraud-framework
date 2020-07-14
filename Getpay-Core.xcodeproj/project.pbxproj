@@ -88,6 +88,7 @@
 		D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663745E24366AB0006C8E9F /* GPNetworkingService.swift */; };
 		D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */; };
 		D6695C682475A96E001333FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6695C672475A96E001333FB /* BaseViewController.swift */; };
+		D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B07A524BE54D1003269C9 /* GPTransactionType.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
@@ -204,6 +205,7 @@
 		D663745E24366AB0006C8E9F /* GPNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNetworkingService.swift; sourceTree = "<group>"; };
 		D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewWithLabel.swift; sourceTree = "<group>"; };
 		D6695C672475A96E001333FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D66B07A524BE54D1003269C9 /* GPTransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTransactionType.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				1E10E10F2400738900247FC7 /* GPReceiptData.swift */,
 				1E10E1112400739B00247FC7 /* GPErrorMessage.swift */,
 				D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */,
+				D66B07A524BE54D1003269C9 /* GPTransactionType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -871,6 +874,7 @@
 				D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */,
 				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
 				D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */,
+				D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */,
 				1E9516932427958100C92A04 /* GPSession.swift in Sources */,
 				D6695C682475A96E001333FB /* BaseViewController.swift in Sources */,
 				D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */,
