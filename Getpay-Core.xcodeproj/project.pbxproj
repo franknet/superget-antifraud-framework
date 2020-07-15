@@ -24,6 +24,7 @@
 		1E1E8A522403E429008B5822 /* GPErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E8A502403E429008B5822 /* GPErrorViewController.xib */; };
 		1E1E8A7D24045B47008B5822 /* GPModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A7924044F9F008B5822 /* GPModelTests.swift */; };
 		1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */; };
+		1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */; };
 		1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */; };
 		1E32AF1423F7088A00693F52 /* GPRoundedButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32AF1723F711A000693F52 /* StringExtension.swift */; };
@@ -123,6 +124,7 @@
 		1E1E8A502403E429008B5822 /* GPErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPErrorViewController.xib; sourceTree = "<group>"; };
 		1E1E8A7924044F9F008B5822 /* GPModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPModelTests.swift; sourceTree = "<group>"; };
 		1E1E8A8124046102008B5822 /* GPLoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLoadingOverlay.swift; sourceTree = "<group>"; };
+		1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationExtension.swift; sourceTree = "<group>"; };
 		1E32AF1223F707EB00693F52 /* GPRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPRoundedButton.swift; sourceTree = "<group>"; };
 		1E32AF1723F711A000693F52 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1E32AF1923F711E500693F52 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */,
 				BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */,
 				D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */,
+				1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
+				1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
