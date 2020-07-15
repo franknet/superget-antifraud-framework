@@ -72,9 +72,10 @@ public extension UIViewController {
             let action = #selector(dismissToast)
             button.addTarget(self, action: action, for: .touchUpInside)
             
-            let image = UIImage(named: "gp_close_white")
+            let image = GPAssets.gpClose.image
             
             button.setImage(image, for: .normal)
+            button.tintColor = GPColors.maggie.color
             dismissButton = button
             let buttonSize: CGFloat = 20
             contentView.addSubview(button)
