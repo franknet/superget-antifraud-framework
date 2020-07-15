@@ -24,7 +24,7 @@ struct GPBankSlipReceipt: Codable {
     let barCodeNumber: String
     let description: String
     let dueDate: String
-    let fine: String
+    let fine: Double
     let recipientName: String
     let transactionCode: String
     let transactionDate: String
