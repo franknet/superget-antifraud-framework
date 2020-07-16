@@ -351,4 +351,15 @@ public extension String {
         }
         return ""
     }
+    
+    var formatTransactionDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        if let date = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let formatedDate = dateFormatter.string(from: date)
+            return formatedDate
+        }
+        return ""
+    }
 }

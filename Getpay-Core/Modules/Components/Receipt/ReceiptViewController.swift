@@ -73,7 +73,6 @@ extension ReceiptViewController {
                 let view = viewModel.type.view as? BankSlipView
             else { return }
             view.populate(model: model)
-            view.addArrangedSubview(customView.footerView)
             setConstraints(view: view)
             break
         default:
@@ -85,7 +84,7 @@ extension ReceiptViewController {
         customView.contentReceiptView.addSubview(view, constraints: true)
         view.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 16.0).isActive = true
         view.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -16.0).isActive = true
-        view.applyAnchors(ofType: [.top, .bottom], to: customView.scrollView)
+        view.applyAnchors(ofType: [.top, .bottom], to: customView.contentReceiptView)
     }
     
     @objc private func dismissReceipt() {
