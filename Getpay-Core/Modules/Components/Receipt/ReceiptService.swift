@@ -19,7 +19,6 @@ public struct RequestReceiptBankSlip: BaseRequestProtocol {
     }
 }
 
-
 struct GPBankSlipReceipt: Codable {
     let barCodeNumber: String
     let description: String
