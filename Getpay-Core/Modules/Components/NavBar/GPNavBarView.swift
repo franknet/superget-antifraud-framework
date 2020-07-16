@@ -1,13 +1,5 @@
 import UIKit
 
-// MARK: - ButtonImages
-
-fileprivate enum ButtonImages: String {
-    case back = "gp_back"
-    case close = "gp_close"
-    case share = "gp_share"
-}
-
 // MARK: - Class
 
 public class GPNavBarView: UIView {
@@ -15,12 +7,22 @@ public class GPNavBarView: UIView {
     // MARK: - Enums
     
     public enum NavButtonType: Equatable {
+        /** < _ */
         case back
+        /** x _ */
         case close
+        /** _ _ */
         case none
+        /** < _ Texto */
         case backAndText(text: String)
+        /** x _  Texto */
         case closeAndText(text: String)
+        /** x _  Share */
         case closeAndShare
+        /** _ _  Text */
+        case titleAndText(text: String)
+        /** x _ Camera */
+        case closeAndCamera
     }
     
     // MARK: - Public variables
@@ -49,12 +51,17 @@ public class GPNavBarView: UIView {
     
     private var rightButtonContainsText: Bool {
         switch buttonType {
-        case .closeAndText, .backAndText:
+        case .closeAndText, .backAndText, .titleAndText:
             return true
         default:
             return false
         }
     }
+    
+    private var containerStack: UIStackView = {
+        let stack = UIStackView()
+        return stack
+    }()
     
     // MARK: - Initializers
     
@@ -80,19 +87,19 @@ extension GPNavBarView {
     
     // MARK: - Private methods
     
-    private func setupLeftButton(image: ButtonImages) {
+    private func setupLeftButton(image: UIImage) {
         let btn = leftButton ?? UIButton(type: .custom)
         btn.contentHorizontalAlignment = .left
-        btn.setImage(UIImage(named: image.rawValue), for: .normal)
+        btn.setImage(image, for: .normal)
         btn.setTitle(nil, for: .normal)
         leftButton = btn
         if btn.superview == nil { addSubview(btn, constraints: true) }
     }
     
-    private func setupRightButton(image: ButtonImages) {
+    private func setupRightButton(image: UIImage) {
         let btn = rightButton ?? UIButton(type: .custom)
         btn.contentHorizontalAlignment = .right
-        btn.setImage(UIImage(named: image.rawValue), for: .normal)
+        btn.setImage(image, for: .normal)
         btn.setTitle(nil, for: .normal)
         rightButton = btn
         if btn.superview == nil { addSubview(btn, constraints: true) }
@@ -198,29 +205,36 @@ extension GPNavBarView {
         switch type {
             
         case .back:
-            setupLeftButton(image: ButtonImages.back)
+            setupLeftButton(image: GPAssets.gpBack.image)
             rightButton?.isHidden = true
             
         case .close:
-            setupLeftButton(image: ButtonImages.close)
+            setupLeftButton(image: GPAssets.gpClose.image)
             rightButton?.isHidden = true
             
         case .backAndText(let text):
-            setupLeftButton(image: .back)
+            setupLeftButton(image: GPAssets.gpBack.image)
             setupRightButton(title: text)
             
         case .closeAndText(let text):
-            setupLeftButton(image: .close)
+            setupLeftButton(image: GPAssets.gpClose.image)
             setupRightButton(title: text)
             
         case .closeAndShare:
-            setupLeftButton(image: .close)
-            setupRightButton(image: .share)
+            setupLeftButton(image: GPAssets.gpClose.image)
+            setupRightButton(image: GPAssets.gpShare.image)
             
         case .none:
             rightButton?.isHidden = true
             leftButton?.isHidden = true
             
+        case .titleAndText(let text):
+            leftButton?.isHidden = true
+            setupRightButton(title: text)
+            
+        case .closeAndCamera:
+            setupLeftButton(image: GPAssets.gpClose.image)
+            setupRightButton(image: GPAssets.gpCameraBoleto.image)
         }
         
         leftButton?.tintColor = GPColors.homer.color
