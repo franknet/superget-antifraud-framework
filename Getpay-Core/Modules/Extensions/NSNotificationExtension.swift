@@ -10,4 +10,6 @@ public extension Notification.Name {
         return .init("rotatePortrait")
     }
     
+    static let welcomeButtonValidation = Notification.Name("WelcomeAuthButtonValidation")
+    static let sellInputValue = Notification.Name("SellInputValue")
 }

@@ -65,6 +65,11 @@
 		1EFBE8762407F861003805EC /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBE8752407F861003805EC /* GPLogger.swift */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
+		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
+		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
+		BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */; };
+		BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED724C0BD8400D0640E /* SellButtonView.swift */; };
+		BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */; };
 		BFED885924BE168200275D83 /* BankSlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885824BE168200275D83 /* BankSlipView.swift */; };
 		BFED885C24BE16FA00275D83 /* GPReceiptHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885B24BE16FA00275D83 /* GPReceiptHeaderView.swift */; };
 		BFED886124BE17BE00275D83 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885D24BE17BE00275D83 /* ReceiptViewModel.swift */; };
@@ -183,6 +188,11 @@
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
+		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
+		BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPInputValueView.swift; sourceTree = "<group>"; };
+		BFEA3ED724C0BD8400D0640E /* SellButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellButtonView.swift; sourceTree = "<group>"; };
+		BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		BFED885824BE168200275D83 /* BankSlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSlipView.swift; sourceTree = "<group>"; };
 		BFED885B24BE16FA00275D83 /* GPReceiptHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptHeaderView.swift; sourceTree = "<group>"; };
 		BFED885D24BE17BE00275D83 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
@@ -357,6 +367,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BFEA3ED324C0BD8400D0640E /* Calculator Input View */,
 				BFED885624BE162800275D83 /* Receipt */,
 				D62C525E24BCE4A800627C1C /* Labels */,
 				D6E1F91224B5214400C656DC /* BaseViewController */,
@@ -406,6 +417,7 @@
 				BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */,
 				D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */,
 				1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */,
+				BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,6 +486,17 @@
 				BF105A8A2469A244009E428E /* GPTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		BFEA3ED324C0BD8400D0640E /* Calculator Input View */ = {
+			isa = PBXGroup;
+			children = (
+				BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */,
+				BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */,
+				BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */,
+				BFEA3ED724C0BD8400D0640E /* SellButtonView.swift */,
+			);
+			path = "Calculator Input View";
 			sourceTree = "<group>";
 		};
 		BFED885624BE162800275D83 /* Receipt */ = {
@@ -838,6 +861,7 @@
 				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
 				D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */,
 				D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */,
+				BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */,
 				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
 				BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */,
 				D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */,
@@ -851,10 +875,12 @@
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
 				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
+				BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */,
 				1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */,
 				D65831E1249A664A00871DFF /* GPAssets.swift in Sources */,
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,
+				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
 				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
@@ -890,6 +916,7 @@
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
 				1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */,
 				1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */,
+				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
 				D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
@@ -908,6 +935,7 @@
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
 				BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */,
 				1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */,
+				BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */,
 				1E62A48923F33FA2009ED647 /* GPContainedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
