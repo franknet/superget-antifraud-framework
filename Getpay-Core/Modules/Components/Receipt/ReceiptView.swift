@@ -33,6 +33,13 @@ public class GPReceiptView: UIView {
         return scroll
     }()
     
+    lazy var stackContentView: UIStackView = {
+        let stack = UIStackView()
+        stack.backgroundColor = GPColors.apu.color
+        stack.axis = .vertical
+        return stack
+    }()
+    
     lazy var contentReceiptView: UIView = {
         let view = UIView()
         view.backgroundColor = GPColors.maggie.color
@@ -41,7 +48,7 @@ public class GPReceiptView: UIView {
     
     lazy var footerView = UIView()
     
-    lazy var share = GPButton(title: "COMPARTILHAR", style: .filled)
+    lazy var share = GPButton(title: "COMPARTILHAR", style: .outlined)
     
     lazy var drawImage: UIImageView = {
         let image = UIImageView(image: GPAssets.gpReceiptEnd.image)
@@ -84,11 +91,13 @@ extension GPReceiptView {
     private func addComponents() {
         let views = [nav, outcomeView, gradientView, scrollView]
         addSubviews(views, constraints: true)
-
-        scrollView.addSubview(contentReceiptView, constraints: true)
         
         let footerSubviews = [drawImage, share]
         footerView.addSubviews(footerSubviews, constraints: true)
+        
+        scrollView.addSubview(stackContentView, constraints: true)
+        stackContentView.addArrangedSubview(contentReceiptView)
+        stackContentView.addArrangedSubview(footerView)
     }
     
     private func setupConstraints() {
@@ -121,9 +130,10 @@ extension GPReceiptView {
     }
     
     private func setupContentView() {
-        contentReceiptView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0).isActive = true
-        contentReceiptView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0).isActive = true
-        contentReceiptView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        stackContentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0).isActive = true
+        stackContentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0).isActive = true
+        stackContentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        stackContentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
     
     private func setupFooterView() {
