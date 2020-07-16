@@ -28,6 +28,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'JVFloatLabeledTextField'
   spec.dependency 'RxGesture'
   spec.dependency 'IQKeyboardManagerSwift'
+  spec.dependency 'TrustKit'
 
   spec.source_files = ["#{spec.name}/**/*.{swift}", "#{spec.name}/**/*.{h}", "#{spec.name}/**/*.{m}"]
 
