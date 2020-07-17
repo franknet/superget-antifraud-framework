@@ -36,7 +36,6 @@ open class ServiceManager: SessionDelegate {
         session = Session.init(configuration: configuration,
                                delegate: self,
                                startRequestsImmediately: true)
-        //session = Session(configuration: configuration, startRequestsImmediately: true)
         
         if let isRequiredAuthentication = isRequiredAuthentication {
             self.isRequiredAuthentication = isRequiredAuthentication
@@ -48,6 +47,20 @@ open class ServiceManager: SessionDelegate {
         }
         
         self.interceptor = GPNetworkInterceptor(isBearerToken: isBearerToken)
+        
+        let pinnedDomains: [String: [String]] = [
+            Urls.shared.baseURL: [
+                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="],
+            Urls.shared.issuer: [
+                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="]]
+        
+        self.setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
     }
     
     // MARK: Private methods
@@ -84,7 +97,7 @@ open class ServiceManager: SessionDelegate {
                     }
                 }
         }
-        debugPrint(request)
+        debugPrint(request as Any)
     }
     
     public func performRequest<T: Codable>(route:BaseRequestProtocol,
@@ -115,7 +128,7 @@ open class ServiceManager: SessionDelegate {
                 }
             })
         
-        debugPrint(request)
+        debugPrint(request as Any)
     }
     
     public func performRequest<T:Decodable>(route: BaseRequestProtocol,
@@ -147,7 +160,7 @@ open class ServiceManager: SessionDelegate {
                     }
             }
             
-            debugPrint(request)
+            debugPrint(request as Any)
             
             return Disposables.create {
                 request?.cancel()
@@ -159,7 +172,7 @@ open class ServiceManager: SessionDelegate {
 
 extension ServiceManager {
   
-    public static func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
+    func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
     
         var domainDict: [String: Any] = [:]
         
@@ -191,19 +204,14 @@ extension ServiceManager {
         }
     }
     
-    public func urlSession(_ session: URLSession,
+    func urlSession(_ session: URLSession,
                            didReceive challenge: URLAuthenticationChallenge,
                            completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         
         if TrustKit.sharedInstance().pinningValidator.handle(challenge, completionHandler: completionHandler) == false {
-            debugPrint("------> SSL pinning FAILED")
             completionHandler(.performDefaultHandling, nil)
         }
-        else {
-            debugPrint("------> SSL pinning OK")
-        }
     }
-    
 }
 
 // MARK: - GPResponseError
@@ -251,7 +259,6 @@ public struct GPGenericError: Decodable, Error {
             return
         }
     }
-    
 }
 
 public struct GPResponseError: Decodable, Error {
@@ -292,7 +299,6 @@ public struct GPResponseError: Decodable, Error {
         if let error = data.host_response_code {
             self.errorCode = error
         }
-        
     }
     
     public init(status: String, description: String, errorCode: String) {
