@@ -40,7 +40,7 @@ public enum GPTrasactionType: String, Codable {
     public var icon: UIImage {
         switch self {
         case .PAYMENT_ACCOUNTS_CTA:
-            return GPAssets.gpMoney.image
+            return GPAssets.gpPayBoleto.image
             
         case .TRANSITORY_CREDIT_PAYMENTS_ACCOUNTS_CTA:
             return GPAssets.gpMoney.image
@@ -79,19 +79,19 @@ public enum GPTrasactionType: String, Codable {
              return GPAssets.gpMoney.image
             
         case .TRANSFER_BETWEEN_ACCOUNTS_FAVORED_CTA:
-            return GPAssets.gpTransferSend.image
+            return GPAssets.gpCashIn.image
             
         case .TRANSITIONAL_DEBT_TRANSITION_ACCOUNT_CTA:
              return GPAssets.gpMoney.image
             
         case .BANK_TRANSFER_ENTRANCE_CTA:
-            return GPAssets.gpTransferReceived.image
+            return GPAssets.gpCashOut.image
             
         case .ACCOUNT_RECEIVABLES_DEBT_CTA:
             return GPAssets.gpCashIn.image
             
         case .LOW_BANK_TRANSFER_RECEIVED_CTA:
-            return GPAssets.gpChargeback2.image
+            return GPAssets.gpCashIn.image
             
         case .TRANSITORY_DEBIT_PAYMENTS_ACCOUNT_CTA:
             return GPAssets.gpMoney.image
@@ -109,7 +109,7 @@ public enum GPTrasactionType: String, Codable {
             return GPAssets.gpTarifa.image
             
         case .BANK_TRANSFER_RECEIVED_CTA:
-            return GPAssets.gpTransferReceived.image
+            return GPAssets.gpCashIn.image
             
         case .REFILL_SP_TRANSFER_CTA:
             return GPAssets.gpTicket.image
@@ -124,7 +124,7 @@ public enum GPTrasactionType: String, Codable {
             return GPAssets.gpTransactionError.image
             
         case .TRANSFER_BETWEEN_ACCOUNTS_SENDER_CTA:
-            return GPAssets.gpTransferSend.image
+            return GPAssets.gpCashOut.image
             
         case .TRANSITORY_CREDIT_TRANSFER_ACCOUNTS_CTA:
             return GPAssets.gpMoney.image

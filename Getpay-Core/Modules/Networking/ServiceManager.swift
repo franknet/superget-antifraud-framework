@@ -2,16 +2,17 @@ import Alamofire
 import RxSwift
 import SwiftKeychainWrapper
 import AppAuth
+import TrustKit
 
-// MARK: Class
+// MARK: - Class
 
-open class ServiceManager {
+open class ServiceManager: SessionDelegate {
     
-    // MARK: Private variables
+    // MARK: - Private variables
     
-    private let session : Session
+    private var session : Session?
     
-    private let interceptor: GPNetworkInterceptor
+    private var interceptor: GPNetworkInterceptor?
     
     private var isRequiredAuthentication: Bool = true
     
@@ -19,19 +20,22 @@ open class ServiceManager {
     
     private var encoding: ParameterEncoding = URLEncoding.default
     
-    // MARK: Init
+    // MARK: - Initializers
     
     /**
      - `isRequiredAuthentication`: toke is not required on request
      - `isJsonBody`: required when request is a POST / PUT / PATCH
      */
     public init(isRequiredAuthentication: Bool? = nil, isJsonBody: Bool? = nil, isBearerToken: Bool? = nil) {
+        super.init()
         
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 120
         configuration.httpShouldUsePipelining = true
         
-        session = Session(configuration: configuration, startRequestsImmediately: true)
+        session = Session.init(configuration: configuration,
+                               delegate: self,
+                               startRequestsImmediately: true)
         
         if let isRequiredAuthentication = isRequiredAuthentication {
             self.isRequiredAuthentication = isRequiredAuthentication
@@ -43,6 +47,20 @@ open class ServiceManager {
         }
         
         self.interceptor = GPNetworkInterceptor(isBearerToken: isBearerToken)
+        
+        let pinnedDomains: [String: [String]] = [
+            Urls.shared.baseURL: [
+                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="],
+            Urls.shared.issuer: [
+                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="]]
+        
+        self.setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
     }
     
     // MARK: Private methods
@@ -51,12 +69,11 @@ open class ServiceManager {
         return GPResponseError(status: "", description: "Ocorreu um erro inesperado.", errorCode: "")
     }
     
-    // MARK: Public methods
+    // MARK: - Public methods
     
-    // TODO: Validar se está funcionando
     public func performRequest(route: BaseRequestProtocol, completion: @escaping(GPResponseError?) -> Void) {
         
-        let request = session.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
+        let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
             .responseJSON { response in
                 debugPrint(route.headers as Any)
                 debugPrint(response)
@@ -80,13 +97,13 @@ open class ServiceManager {
                     }
                 }
         }
-        debugPrint(request)
+        debugPrint(request as Any)
     }
     
     public func performRequest<T: Codable>(route:BaseRequestProtocol,
                                            completion:@escaping (Result<T, GPResponseError>)->Void){
         
-        let request = session.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
+        let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
             .responseDecodable(completionHandler: { (response: DataResponse<T, AFError>) in
                 
                 debugPrint(response)
@@ -111,7 +128,7 @@ open class ServiceManager {
                 }
             })
         
-        debugPrint( request)
+        debugPrint(request as Any)
     }
     
     public func performRequest<T:Decodable>(route: BaseRequestProtocol,
@@ -119,7 +136,7 @@ open class ServiceManager {
         
         return Observable<T>.create { [session, interceptor, isRequiredAuthentication, encoding] observer in
             
-            let request = session.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil)
+            let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil)
                 .responseDecodable (decoder: decoder) { (response: AFDataResponse<T>) in
                     
                     debugPrint(response)
@@ -143,17 +160,61 @@ open class ServiceManager {
                     }
             }
             
-            debugPrint(request)
+            debugPrint(request as Any)
             
             return Disposables.create {
-                request.cancel()
+                request?.cancel()
             }
             
         }
     }
 }
 
-// MARK: GPResponseError
+extension ServiceManager {
+  
+    func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
+    
+        var domainDict: [String: Any] = [:]
+        
+        for domain in pinnedDomains.keys {
+            
+            let url = URL(string: domain)
+            let domainUrlString = url?.host ?? ""
+            
+            if let keyHashes = pinnedDomains[domain] {
+                
+                domainDict[domainUrlString] = [kTSKPublicKeyHashes: keyHashes,
+                                               kTSKIncludeSubdomains: true]
+            }
+        }
+        
+        let trustKitConfig = [
+            kTSKSwizzleNetworkDelegates: false,
+            kTSKEnforcePinning: true,
+            kTSKPinnedDomains: domainDict
+            ] as [String : Any]
+        
+        TrustKit.initSharedInstance(withConfiguration:trustKitConfig)
+        
+        TrustKit.sharedInstance().pinningValidatorCallback = { (result, _, _) in
+            
+            if result.evaluationResult != .success {
+                errorCallback()
+            }
+        }
+    }
+    
+    func urlSession(_ session: URLSession,
+                           didReceive challenge: URLAuthenticationChallenge,
+                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        if TrustKit.sharedInstance().pinningValidator.handle(challenge, completionHandler: completionHandler) == false {
+            completionHandler(.performDefaultHandling, nil)
+        }
+    }
+}
+
+// MARK: - GPResponseError
 
 public struct GPGenericError: Decodable, Error {
     public var status: String?
@@ -198,7 +259,6 @@ public struct GPGenericError: Decodable, Error {
             return
         }
     }
-    
 }
 
 public struct GPResponseError: Decodable, Error {
@@ -231,7 +291,7 @@ public struct GPResponseError: Decodable, Error {
         if let error = data.errors?.first {
             self.errorCode = error
         }
-
+        
         if let error = data.error {
             self.errorCode = error
         }
@@ -239,7 +299,6 @@ public struct GPResponseError: Decodable, Error {
         if let error = data.host_response_code {
             self.errorCode = error
         }
-        
     }
     
     public init(status: String, description: String, errorCode: String) {

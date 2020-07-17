@@ -18,6 +18,7 @@ PODS:
   - RxSwift (5.1.0)
   - SwiftGen (6.1.0)
   - SwiftKeychainWrapper (3.4.0)
+  - TrustKit (1.6.5)
 
 DEPENDENCIES:
   - Alamofire
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - RxSwift
   - SwiftGen (~> 6.0)
   - SwiftKeychainWrapper
+  - TrustKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -40,6 +42,7 @@ SPEC REPOS:
     - RxSwift
     - SwiftGen
     - SwiftKeychainWrapper
+    - TrustKit
   trunk:
     - Alamofire
 
@@ -54,7 +57,8 @@ SPEC CHECKSUMS:
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  TrustKit: 073855e3adecd317417bda4ac9e9ac54a2e3b9f2
 
-PODFILE CHECKSUM: a3546829fee12f195885f1b1ff7e24ecfd4e7e62
+PODFILE CHECKSUM: 7ba464a29b21bdb5036315cd3225b4f6a5dd1227
 
 COCOAPODS: 1.9.1
