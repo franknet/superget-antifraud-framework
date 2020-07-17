@@ -51,6 +51,7 @@ extension BankSlipView {
         addArrangedSubview(paymentDestination)
         addArrangedSubview(amount)
         addArrangedSubview(fine)
+        addArrangedSubview(interest)
         addArrangedSubview(discount)
         addArrangedSubview(paymentDate)
         addArrangedSubview(dueDate)
