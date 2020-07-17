@@ -21,7 +21,12 @@ public class ReceiptViewController: BaseViewController<GPReceiptView> {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        
+        if viewModel.bankSlip != nil {
+            setup(receiptType: .bankSlip)
+        } else {
+            setup()
+        }
     }
 }
 

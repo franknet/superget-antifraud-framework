@@ -17,6 +17,7 @@ class BankSlipView: UIStackView {
     lazy var fine = TitleWithValueAndSubTitle()
     lazy var discount = TitleWithValueAndSubTitle()
     lazy var paymentDescription = TitleWithValueAndSubTitle()
+    lazy var interest = TitleWithValueAndSubTitle()
     
     private let account = GPUtils.loadAccountPersistenceFromUD()
     private let merchant = GPUtils.loadGPMerchantFromUD()
@@ -68,7 +69,10 @@ extension BankSlipView {
         if model.fine == 0.0 {
             fine.isHidden = true
         }
-        
+        interest.configure(title: "Juros", value: model.discount.formatedAsCurrency, description: nil)
+        if model.interest == 0.0 {
+            discount.isHidden = true
+        }
         discount.configure(title: "Desconto", value: model.discount.formatedAsCurrency, description: nil)
         if model.discount == 0.0 {
             discount.isHidden = true
