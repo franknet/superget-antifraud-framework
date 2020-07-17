@@ -35,6 +35,7 @@ public enum GPAssets {
   public static let gpCardBlocked = ImageAsset(name: "gp_card_blocked")
   public static let gpCardNew = ImageAsset(name: "gp_card_new")
   public static let gpCashIn = ImageAsset(name: "gp_cash_in")
+  public static let gpCashOut = ImageAsset(name: "gp_cash_out")
   public static let gpChangePass = ImageAsset(name: "gp_change_pass")
   public static let gpChargeback2 = ImageAsset(name: "gp_chargeback_2")
   public static let gpCheck = ImageAsset(name: "gp_check")
