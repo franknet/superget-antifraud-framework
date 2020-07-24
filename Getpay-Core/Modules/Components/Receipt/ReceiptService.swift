@@ -14,8 +14,7 @@ public struct RequestReceiptBankSlip: BaseRequestProtocol {
     public var path: String
     
     init(type: GPReceiptType, transactionCode: String) {
-        // path = Urls.shared.baseURL + "/v1/merchant/\(merchant.id)/receipt?type=\(type.paramDescription)&transactionCode=\(transactionCode)"
-        path = "https://getpay-payment-getpay-hti.openshift-hml.getnet.com.br/api/v1/merchant/\(merchant.id)/receipt?transactionCode=\(transactionCode)&type=\(type.paramDescription)"
+        path = Urls.shared.baseURL + "/v1/merchant/\(merchant.id)/receipt?type=\(type.paramDescription)&transactionCode=\(transactionCode)"
     }
 }
 
