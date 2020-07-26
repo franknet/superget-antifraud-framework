@@ -76,11 +76,11 @@ public class TitleWithValueAndSubTitle: UIView {
     private func setupConstraints() {
         title.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
         title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0).isActive = true
-        title.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0).isActive = true
         
         stack.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 8).isActive = true
         stack.leadingAnchor.constraint(equalTo: title.leadingAnchor).isActive = true
-        stack.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stack.trailingAnchor.constraint(equalTo: title.trailingAnchor).isActive = true
         stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16.0).isActive = true
     }
 }
