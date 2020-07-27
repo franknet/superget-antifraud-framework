@@ -130,7 +130,6 @@ public extension UIViewController {
             toastView.removeFromSuperview()
         }
     }
-    
 }
 
 // MARK: - Handling keyboard

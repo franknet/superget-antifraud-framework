@@ -76,19 +76,10 @@ extension BankSlipView {
         amount.configure(title: "Valor do boleto", value: model.amount.formatedAsCurrency, description: nil)
         
         fine.configure(title: "Multa", value: model.fine.formatedAsCurrency, description: nil)
-        if model.fine == 0.0 {
-            fine.isHidden = true
-        }
         
         interest.configure(title: "Juros", value: model.discount.formatedAsCurrency, description: nil)
-        if model.interest == 0.0 {
-            interest.isHidden = true
-        }
         
         discount.configure(title: "Desconto", value: model.discount.formatedAsCurrency, description: nil)
-        if model.discount == 0.0 {
-            discount.isHidden = true
-        }
         
         paymentDescription.configure(title: "Descrição", value: model.description, description: nil)
         if model.description.isEmpty {

@@ -31,7 +31,7 @@ public class GPNavBarView: UIView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.spacing = 32.0
-        stack.distribution = .equalSpacing
+        stack.distribution = .fill
         stack.alignment = .center
         return stack
     }()
@@ -103,23 +103,18 @@ extension GPNavBarView {
     private func createConstraints() {
         self.height(size: 56)
         
-        leftButton.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
         leftButton.leadingAnchor.constraint(equalTo: containerStack.leadingAnchor).isActive = true
         leftButton.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
         leftButton.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
         
-        title.centerY(to: containerStack)
-        
-        if !rightButtonContainsText {
-            rightButton.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
-            rightButton.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
-        } else {
+        if rightButtonContainsText {
             rightButton.widthAnchor.constraint(equalToConstant: 74.0).isActive = true
             rightButton.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        } else {
+            rightButton.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
+            rightButton.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
         }
-        rightButton.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
         rightButton.trailingAnchor.constraint(equalTo: containerStack.trailingAnchor).isActive = true
-        
     }
     
     private func setupLeftButton(image: UIImage) {
