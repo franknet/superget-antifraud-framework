@@ -27,6 +27,7 @@ public class ReceiptViewController: BaseViewController<GPReceiptView> {
         } else {
             setup()
         }
+        setupButtons()
     }
 }
 
@@ -35,8 +36,6 @@ extension ReceiptViewController {
     // MARK: - Private methods
     
     private func setup() {
-        setupButtons()
-        
         if let window = UIApplication.shared.windows.first {
             GPLoadingOverlay.shared.showOverlay(view: window)
         }
@@ -53,20 +52,15 @@ extension ReceiptViewController {
                 self.setup(receiptType: receiptType)
             case let .failure(error):
                 let message = error.description.isNotEmpty ? error.description : error.errorCode
-                self.presentToast(
-                    message: message,
-                    showDismissButton: true,
-                    color: GPColors.milhouse.color,
-                    extraMargin: 0
-                )
+                self.presentToast(message: message)
                 break
             }
         }
     }
     
     private func setupButtons() {
-        customView.nav.leftButton?.addTarget(self, action: #selector(dismissReceipt), for: .touchUpInside)
-        customView.nav.rightButton?.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
+        customView.nav.leftButton.addTarget(self, action: #selector(dismissReceipt), for: .touchUpInside)
+        customView.nav.rightButton.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
         customView.share.addTarget(self, action: #selector(shareButtonDidTap), for: .touchUpInside)
     }
     

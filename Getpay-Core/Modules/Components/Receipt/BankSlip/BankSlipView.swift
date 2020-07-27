@@ -64,28 +64,36 @@ extension BankSlipView {
     
     func populate(model: GPBankSlipReceipt) {
         header.configureView(icon: GPAssets.gpPayBoleto.image, iconTintColor: GPColors.burns.color, status: "Pagamento realizado")
-        paymentDestination.configure(title: "Pagamento para", value: model.recipientName, description: model.recipientDocumentNumber.formatedAsCpfOrCnpj)
+        
+        paymentDestination.isHidden = true
+        if let recipientName = model.recipientName, let recipientDocumentNumber = model.recipientDocumentNumber {
+            if recipientName.isNotEmpty || recipientDocumentNumber.isNotEmpty {
+                paymentDestination.isHidden = false
+                paymentDestination.configure(title: "Pagamento para", value: recipientName, description: recipientDocumentNumber.formatedAsCpfOrCnpj)
+            }
+        }
+        
         amount.configure(title: "Valor do boleto", value: model.amount.formatedAsCurrency, description: nil)
+        
         fine.configure(title: "Multa", value: model.fine.formatedAsCurrency, description: nil)
-        if model.fine == 0.0 {
-            fine.isHidden = true
-        }
+        
         interest.configure(title: "Juros", value: model.discount.formatedAsCurrency, description: nil)
-        if model.interest == 0.0 {
-            discount.isHidden = true
-        }
+        
         discount.configure(title: "Desconto", value: model.discount.formatedAsCurrency, description: nil)
-        if model.discount == 0.0 {
-            discount.isHidden = true
-        }
+        
         paymentDescription.configure(title: "Descrição", value: model.description, description: nil)
         if model.description.isEmpty {
             paymentDescription.isHidden = true
         }
+        
         paymentDate.configure(title: "Data do pagamento", value: model.transactionDate.formatTransactionTime, description: nil)
-        dueDate.configure(title: "Vencimento do boleto", value: model.dueDate.formatTransactionDate, description: nil)
+        
+        dueDate.configure(title: "Vencimento do boleto", value: model.dueDate.formatTransactionDateWithoutTime, description: nil)
+        
         codeBankSlip.configure(title: "Código do Boleto", value: model.barCodeNumber, description: nil)
+        
         paymentOrigin.configure(title: "Pagamento de", value: merchant.name, description: account.userAlias)
-        codeAuthentication.configure(title: "Código de autenticação", value: model.transactionCode, description: nil)
+        
+        codeAuthentication.configure(title: "Código de autenticação", value: model.uid ?? "", description: nil)
     }
 }

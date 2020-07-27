@@ -20,37 +20,47 @@ public struct RequestReceiptBankSlip: BaseRequestProtocol {
 
 public struct GPBankSlipReceipt: Codable {
     
-    public let barCodeNumber: String
-    public let description: String
-    public let dueDate: String
-    public let fine: Double
-    public let recipientName: String
-    public let transactionCode: String
-    public let transactionDate: String
-    public let status: String
-    public let uid: String
-    public let recipientDocumentNumber: String
-    public let discount: Double
-    public let interest: Double
-    public let amount: Double
-    
-    // TODO: Remove later
-    public static func mock() -> GPBankSlipReceipt {
-        return GPBankSlipReceipt(
-            barCodeNumber: "836900000016836800060003001012020424125934707410",
-            description: "Boleto teste",
-            dueDate: "17/10/2020",
-            fine: 0.0,
-            recipientName: "Leandro Lopes",
-            transactionCode: "123DB12N3KJN12N3KUB",
-            transactionDate: "17/07/2020",
-            status: "CONFIRMED",
-            uid: "1293JD912J",
-            recipientDocumentNumber: "123456789",
-            discount: 0.0,
-            interest: 0.0,
-            amount: 120.5)
+    public init(barCodeNumber: String,
+                description: String,
+                dueDate: String,
+                fine: Double,
+                transactionCode: String,
+                transactionDate: String,
+                status: String,
+                uid: String?,
+                recipientName: String?,
+                recipientDocumentNumber: String?,
+                discount: Double,
+                interest: Double,
+                amount: Double) {
+        
+        self.barCodeNumber = barCodeNumber
+        self.description = description
+        self.dueDate = dueDate
+        self.fine = fine
+        self.transactionCode = transactionCode
+        self.transactionDate = transactionDate
+        self.status = status
+        self.uid = uid
+        self.recipientName = recipientName
+        self.recipientDocumentNumber = recipientDocumentNumber
+        self.discount = discount
+        self.interest = interest
+        self.amount = amount
     }
     
+    public var barCodeNumber: String
+    public var description: String
+    public var dueDate: String
+    public var fine: Double
+    public var transactionCode: String
+    public var transactionDate: String
+    public var status: String
+    public var uid: String?
+    public var recipientName: String?
+    public var recipientDocumentNumber: String?
+    public var discount: Double
+    public var interest: Double
+    public var amount: Double
 }
 

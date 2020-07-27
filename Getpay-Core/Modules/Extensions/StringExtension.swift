@@ -31,7 +31,7 @@ public extension String {
         }
         return result
     }
-
+    
     var formatedAsCNPJ: String {
         var input = self.removeSeparators()
         while input.count > 14 {
@@ -50,7 +50,7 @@ public extension String {
         }
         return result
     }
-
+    
     var formatedAsCpfOrCnpj: String {
         let input = self.removeSeparators()
         if input.count <= 11 {
@@ -58,14 +58,14 @@ public extension String {
         }
         return input.formatedAsCNPJ
     }
-
+    
     func removeSeparators() -> String {
         var result = self.replacingOccurrences(of: "-", with: "")
         result = result.replacingOccurrences(of: ".", with: "")
         result = result.replacingOccurrences(of: "/", with: "")
         return result
     }
-
+    
     var generateQRCode: UIImage? {
         let data = self.data(using: String.Encoding.ascii)
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
@@ -76,12 +76,12 @@ public extension String {
             } else {
                 transform = CGAffineTransform(scaleX: 75, y: 75)
             }
-
+            
             if let output = filter.outputImage?.transformed(by: transform) {
                 return UIImage(ciImage: output)
             }
         }
-
+        
         return nil
     }
     
@@ -145,9 +145,9 @@ public extension String {
     
     var formatedPhone: String {
         let cleanPhoneNumber = components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-
+        
         let mask = "(XX) XXXXX-XXXX"
-
+        
         var result = ""
         var index = cleanPhoneNumber.startIndex
         for ch in mask where index < cleanPhoneNumber.endIndex {
@@ -160,7 +160,7 @@ public extension String {
         }
         return result
     }
-
+    
     var isValidPhoneNumber: Bool {
         let regex = "^[1-9]{2}[9-9][0-9]{3,4}[0-9]{4}$"
         let mobileTest = NSPredicate(format: "SELF MATCHES %@", regex)
@@ -185,7 +185,7 @@ public extension String {
             "z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5" +
             "]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-" +
             "9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" +
-            "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+        "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
         
         let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
         return emailTest.evaluate(with: self)
@@ -207,14 +207,14 @@ public extension String {
         }
         return self[indexPosition]
     }
-
+    
     func substring(_ startAt: Int, _ endAt: Int) -> String {
         guard self.count >= endAt else { return "" }
         let start = self.index(startIndex, offsetBy: startAt)
         let end = self.index(startIndex, offsetBy: endAt)
         return String(self[start..<end])
     }
-
+    
     func substring(_ startAt: Int) -> String {
         let start = self.index(startIndex, offsetBy: startAt)
         let end = self.index(startIndex, offsetBy: self.count)
@@ -226,7 +226,7 @@ public extension String {
         return String(unicodeScalars
             .compactMap { pattern ~= $0 ? Character($0) : nil })
     }
-
+    
     var sgDateResponseFormated: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -239,14 +239,14 @@ public extension String {
         
         return dateFormatter.string(from: date)
     }
-
+    
     func firstMatch(regularExpression: String) -> String? {
         let string = self as NSString
         if let regex = try? NSRegularExpression(pattern: regularExpression, options: .caseInsensitive) {
             let range = NSRange(location: 0, length: string.length)
             return regex.matches(in: self, options: [], range: range).map {
                 string.substring(with: $0.range)
-                }.first
+            }.first
         }
         return nil
     }
@@ -254,28 +254,28 @@ public extension String {
     /// Receives a string and returns the first letter of the first and last word
     var generateAbbreviationName: String {
         var str = ""
-
+        
         let trimmed = self.trimmingCharacters(in: .whitespacesAndNewlines)
-
+        
         if trimmed.isEmpty || trimmed == " " {
             return str
         }
-
+        
         let array = trimmed.components(separatedBy: " ")
-
+        
         guard let first = array.first else { return ""}
         guard let char1 = first.character(at: 0) else { return "" }
         str.append(char1.uppercased())
-
+        
         if array.count > 1 {
             guard let last = array.last else { return str}
             guard let char2 = last.character(at: 0) else { return "" }
             str.append(char2.uppercased())
         }
-
+        
         return str
     }
-
+    
 }
 
 public extension String {
@@ -355,6 +355,17 @@ public extension String {
     var formatTransactionDate: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        if let date = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let formatedDate = dateFormatter.string(from: date)
+            return formatedDate
+        }
+        return ""
+    }
+    
+    var formatTransactionDateWithoutTime: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         if let date = dateFormatter.date(from: self) {
             dateFormatter.dateFormat = "dd/MM/yyyy"
             let formatedDate = dateFormatter.string(from: date)

@@ -9,7 +9,7 @@ fileprivate var ak_MyDisposeBag: UInt8 = 0
 
 public extension UIViewController {
     
-       var disposeBag: DisposeBag {
+    var disposeBag: DisposeBag {
         
         get {
             
@@ -26,148 +26,114 @@ public extension UIViewController {
             objc_setAssociatedObject(self, &ak_MyDisposeBag, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-
+    
     var toastTag: Int {
         return 70457
     }
-
+    
     @objc func dismissToast() {
         hideToast()
     }
-
-    func presentToast(message : String, showDismissButton: Bool = true, color: UIColor = #colorLiteral(red: 0.9490196078, green: 0.5843137255, blue: 0.2862745098, alpha: 1), extraMargin: CGFloat = 0) {
-        let toastView = UIView(frame: .zero)
-        let margin: CGFloat = 16
-
-        view.addSubview(toastView)
-        toastView.translatesAutoresizingMaskIntoConstraints = false
-        toastView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin).isActive = true
-        toastView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin).isActive = true
-        toastView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
-        let contentView = UIView(frame: .zero)
+    
+    /// TODO: Remover das chamadas o showDismissButton e extraMargin para que possamos remover da funcao
+    func presentToast(message : String, showDismissButton: Bool = true, color: UIColor = GPColors.milhouse.color, extraMargin: CGFloat = 0) {
+        
+        let toastView = UIView()
+        let contentView = UIView()
+        let title = GPLabel(text: message, textColor: GPColors.maggie.color)
+        let close = UIButton()
+        
+        view.addSubview(toastView, constraints: true)
+        toastView.addSubview(contentView, constraints: true)
+        contentView.addSubviews([title, close], constraints: true)
+        
+        toastView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0).isActive = true
+        toastView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0).isActive = true
+        toastView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
         contentView.backgroundColor = color
-        contentView.layer.cornerRadius = 6
+        contentView.layer.cornerRadius = 6.0
         contentView.isHidden = true
-        toastView.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.leftAnchor.constraint(equalTo: toastView.leftAnchor).isActive = true
-        contentView.rightAnchor.constraint(equalTo: toastView.rightAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: toastView.bottomAnchor, constant: -(margin+extraMargin)).isActive = true
-        contentView.topAnchor.constraint(equalTo: toastView.topAnchor).isActive = true
-
-        let messageLabel = UILabel(frame: .zero)
-        messageLabel.text = message
-        messageLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        messageLabel.numberOfLines = 0
-
-        contentView.addSubview(messageLabel)
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        var dismissButton: UIButton?
-
-        if showDismissButton {
-            let button = UIButton(frame: .zero)
-
-            let action = #selector(dismissToast)
-            button.addTarget(self, action: action, for: .touchUpInside)
-            
-            let image = GPAssets.gpClose.image
-            
-            button.setImage(image, for: .normal)
-            button.tintColor = GPColors.maggie.color
-            dismissButton = button
-            let buttonSize: CGFloat = 20
-            contentView.addSubview(button)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                button.widthAnchor.constraint(equalToConstant: buttonSize),
-                button.heightAnchor.constraint(equalToConstant: buttonSize),
-                button.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -margin),
-                button.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-                ])
-        }
-
-        NSLayoutConstraint.activate([
-            messageLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: margin),
-            messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -margin),
-            messageLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: margin)
-            ])
-
-        if let dismissButton = dismissButton {
-            messageLabel.rightAnchor.constraint(equalTo: dismissButton.leftAnchor, constant: -margin).isActive = true
-        } else {
-            messageLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -margin).isActive = true
-        }
-
+        contentView.applyAnchors(ofType: [.top, .leading, .trailing], to: toastView)
+        contentView.bottomAnchor.constraint(equalTo: toastView.bottomAnchor, constant: -16.0).isActive = true
+        
+        title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.0).isActive = true
+        title.trailingAnchor.constraint(equalTo: close.leadingAnchor, constant: -16.0).isActive = true
+        title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16.0).isActive = true
+        title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16.0).isActive = true
+        
+        close.width(size: 24.0)
+        close.height(size: 24.0)
+        close.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        close.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.0).isActive = true
+        
+        close.addTarget(self, action: #selector(dismissToast), for: .touchUpInside)
+        close.setImage(GPAssets.gpClose.image, for: .normal)
+        close.tintColor = GPColors.maggie.color
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let contentViewSize = contentView.frame.size
-
-            let balloonSize = contentViewSize.height
-            let balloonFrame = CGRect(origin: .zero, size: CGSize(width: balloonSize,
-                                                                  height: balloonSize))
-            let balloonView = UIView(frame: balloonFrame)
-            balloonView.backgroundColor = color
-            balloonView.layer.cornerRadius = balloonSize * 0.5
-
-            toastView.addSubview(balloonView)
-            balloonView.translatesAutoresizingMaskIntoConstraints = false
-
-            let widthConstraint = balloonView.widthAnchor.constraint(equalToConstant: balloonSize)
-            let heightConstraint = balloonView.heightAnchor.constraint(equalToConstant: balloonSize)
-            let bottomConstraint = balloonView.bottomAnchor.constraint(equalTo: toastView.bottomAnchor,
-                                                                       constant: balloonSize)
-
-            NSLayoutConstraint.activate([
-                widthConstraint,
-                heightConstraint,
-                balloonView.centerXAnchor.constraint(equalTo: toastView.centerXAnchor),
-                bottomConstraint
-                ])
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                bottomConstraint.constant -= balloonSize + margin + extraMargin
+            
+            let contentViewHeight = contentView.frame.size.height
+            
+            let animatedView = UIView(frame: CGRect(origin: .zero,
+                                                    size: CGSize(width: contentViewHeight,
+                                                                 height: contentViewHeight)))
+            
+            animatedView.backgroundColor = color
+            animatedView.layer.cornerRadius = contentViewHeight * 0.5
+            toastView.addSubview(animatedView, constraints: true)
+            
+            let widthConstraint = animatedView.widthAnchor.constraint(equalToConstant: contentViewHeight)
+            widthConstraint.isActive = true
+            animatedView.height(size: contentViewHeight)
+            let bottomConstraint = animatedView.bottomAnchor.constraint(equalTo: toastView.bottomAnchor, constant: contentViewHeight)
+            bottomConstraint.isActive = true
+            animatedView.centerXAnchor.constraint(equalTo: toastView.centerXAnchor).isActive = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                bottomConstraint.constant -= contentViewHeight + 16.0
                 UIView.animate(withDuration: 0.5, animations: {
                     self.view.layoutIfNeeded()
                 }, completion: { _ in
-                    widthConstraint.constant = contentViewSize.width
+                    widthConstraint.constant = contentView.frame.size.width
                     UIView.animate(withDuration: 0.5, animations: {
-                        balloonView.layer.cornerRadius = 6
+                        animatedView.layer.cornerRadius = 6
                         self.view.layoutIfNeeded()
                     }, completion: { _ in
                         contentView.isHidden = false
-                        balloonView.removeFromSuperview()
+                        animatedView.removeFromSuperview()
                     })
                 })
-            })
+            }
         }
+        
         toastView.tag = toastTag
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.dismissToast()
+        }
     }
-
+    
     func hideToast() {
         guard let toastView = view.subviews.first(where: { subview -> Bool in
             subview.tag == toastTag
         }) else { return }
-
+        
         guard let constraint = toastView.constraints.first(where: { constraint -> Bool in
             guard let someView = constraint.secondItem as? UIView else { return false }
             return someView.tag == toastTag && constraint.secondAttribute == .bottom
         }) else { return }
- 
-        // mexendo nas constraints, removido pelo efeito de derretimento
-        //constraint.constant =  toastView.frame.height + (constraint.constant * -1)
+        
         UIView.animate(withDuration: 1, animations: {
             toastView.layer.frame.origin.y += toastView.frame.height + (constraint.constant * -1)
-            // removido pelo efeito de derretimento
-            //self.view.layoutIfNeeded()
         }) { _ in
             toastView.removeFromSuperview()
         }
     }
-
 }
 
-// Handling keyboard
+// MARK: - Handling keyboard
+
 public extension UIViewController {
     
     func addKeyboardNotifications() {
