@@ -17,8 +17,6 @@ Pod::Spec.new do |spec|
 
   spec.exclude_files = "Classes/Exclude"
 
-  spec.license 		  = { :type => 'MIT', :file => "LICENSE" }
-
   spec.swift_version = "5"
 
   spec.dependency 'Alamofire'
@@ -36,5 +34,4 @@ Pod::Spec.new do |spec|
 
   spec.resources = ["#{spec.name}/**/*.{png}", "#{spec.name}/**/*.{jpeg}", "#{spec.name}/**/*. {jpg}",  "#{spec.name}/**/*.{pdf}", "#{spec.name}/**/*.{storyboard}", "#{spec.name}/**/*.{ttf}", "#{spec.name}/**/*.{xib}", "#{spec.name}/**/*.{json}", "#{spec.name}/**/*.{xcassets}", "#{spec.name}/**/*.{strings}"]
 
- 
 end
