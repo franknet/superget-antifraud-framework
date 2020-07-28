@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
-  spec.version      = "6.11.4"
+  spec.version      = "6.12.0"
   spec.summary      = "A Getnet framework."
   spec.homepage     = "https://www.superget.com.br/"
 
@@ -16,8 +16,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://bitbucket.getnet.com.br/scm/sgm/module-core-ios.git", :tag => spec.version }
 
   spec.exclude_files = "Classes/Exclude"
-
-  spec.license 		  = { :type => 'MIT', :file => "LICENSE" }
 
   spec.swift_version = "5"
 
@@ -36,5 +34,4 @@ Pod::Spec.new do |spec|
 
   spec.resources = ["#{spec.name}/**/*.{png}", "#{spec.name}/**/*.{jpeg}", "#{spec.name}/**/*. {jpg}",  "#{spec.name}/**/*.{pdf}", "#{spec.name}/**/*.{storyboard}", "#{spec.name}/**/*.{ttf}", "#{spec.name}/**/*.{xib}", "#{spec.name}/**/*.{json}", "#{spec.name}/**/*.{xcassets}", "#{spec.name}/**/*.{strings}"]
 
- 
 end

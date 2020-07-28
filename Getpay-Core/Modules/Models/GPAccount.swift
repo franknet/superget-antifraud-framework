@@ -1,15 +1,6 @@
-//
-//  GPAccountModel.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 21/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import Foundation
 
 public struct GPAccount: Codable {
-    
     public var id: Int
     public var status: String
     public var number: String
@@ -22,8 +13,18 @@ public struct GPAccount: Codable {
     public var requestStatus: GPAccountRequestStatus? = .loading
     public var userAlias: String?
     public var pictureUrl: String?
+    public var eligibility: Eligibility?
+    public var lastEligibilityCall: Date?
     
     public lazy var isAliasAccountActive: Bool = {
         return self.aliasAccountStatus == "ACTIVE"
     }()
+}
+
+// MARK: - Enum
+
+public enum Eligibility: String, Codable {
+    case REPROVED
+    case APPROVED
+    case PENDING
 }

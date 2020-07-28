@@ -106,6 +106,7 @@
 		D68C64A1242183BC00BA65B2 /* Calibri-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649D242183BC00BA65B2 /* Calibri-Italic.ttf */; };
 		D68C64A2242183BC00BA65B2 /* Calibri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649E242183BC00BA65B2 /* Calibri-Bold.ttf */; };
 		D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C64B324225E7400BA65B2 /* GPFonts.swift */; };
+		D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694D4F724D081D700013055 /* NotEligibleView.swift */; };
 		D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */; };
 		D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4940A243D186D00E98F5D /* AuthStateManager.swift */; };
 		D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91024B51F2300C656DC /* GPPageViewController.swift */; };
@@ -230,6 +231,7 @@
 		D68C649E242183BC00BA65B2 /* Calibri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-Bold.ttf"; sourceTree = "<group>"; };
 		D68C64B12422553600BA65B2 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		D68C64B324225E7400BA65B2 /* GPFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFonts.swift; sourceTree = "<group>"; };
+		D694D4F724D081D700013055 /* NotEligibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEligibleView.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D6B4940A243D186D00E98F5D /* AuthStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateManager.swift; sourceTree = "<group>"; };
 		D6C371D8F107038FF4EC2186 /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */,
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
 				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
+				D694D4F724D081D700013055 /* NotEligibleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
