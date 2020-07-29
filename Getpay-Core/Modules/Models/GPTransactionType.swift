@@ -46,7 +46,7 @@ public enum GPTrasactionType: String, Codable {
             return GPAssets.gpMoney.image
             
         case .UNPROCESSED_PAYMENT_REC_CELL_CTA:
-            return GPAssets.gpTransactionError.image
+            return GPAssets.gpPhonePending.image
             
         case .ENTRANCE_BANK_TRANSFER_RECEIVED_CTA:
             return GPAssets.gpCashIn.image
