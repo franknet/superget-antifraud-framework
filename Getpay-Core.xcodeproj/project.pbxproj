@@ -97,6 +97,8 @@
 		D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */; };
 		D6695C682475A96E001333FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6695C672475A96E001333FB /* BaseViewController.swift */; };
 		D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B07A524BE54D1003269C9 /* GPTransactionType.swift */; };
+		D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */; };
+		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
@@ -221,6 +223,8 @@
 		D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewWithLabel.swift; sourceTree = "<group>"; };
 		D6695C672475A96E001333FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D66B07A524BE54D1003269C9 /* GPTransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTransactionType.swift; sourceTree = "<group>"; };
+		D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCircleViewWithIcon.swift; sourceTree = "<group>"; };
+		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -468,6 +472,8 @@
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
 				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
 				D694D4F724D081D700013055 /* NotEligibleView.swift */,
+				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
+				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -896,6 +902,7 @@
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
+				D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */,
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */,
@@ -923,6 +930,7 @@
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
 				D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */,
+				D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
