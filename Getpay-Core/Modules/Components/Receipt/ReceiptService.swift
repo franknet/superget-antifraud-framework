@@ -26,7 +26,7 @@ public struct GPBankSlipReceipt: Codable {
                 fine: Double,
                 transactionCode: String,
                 transactionDate: String,
-                status: String,
+                status: BankSlipPaymentStatus,
                 uid: String?,
                 recipientName: String?,
                 recipientDocumentNumber: String?,
@@ -55,7 +55,7 @@ public struct GPBankSlipReceipt: Codable {
     public var fine: Double
     public var transactionCode: String
     public var transactionDate: String
-    public var status: String
+    public var status: BankSlipPaymentStatus
     public var uid: String?
     public var recipientName: String?
     public var recipientDocumentNumber: String?
@@ -64,3 +64,8 @@ public struct GPBankSlipReceipt: Codable {
     public var amount: Double
 }
 
+public enum BankSlipPaymentStatus: String, Codable {
+    case PAID
+    case PENDING
+    case DENIED
+}
