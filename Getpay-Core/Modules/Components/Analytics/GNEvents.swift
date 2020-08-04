@@ -20,6 +20,7 @@ public enum GNEventParameters: String {
         }
     }
 }
+<<<<<<< HEAD
 
 // MARK: - Class
 
@@ -34,3 +35,5 @@ public class GNAnalytics {
     }
 }
 
+=======
+>>>>>>> c462f7db505a00de08241d6ea4a651dcc7688aaa

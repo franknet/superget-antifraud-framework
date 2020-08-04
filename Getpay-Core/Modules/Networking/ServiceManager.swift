@@ -69,6 +69,18 @@ open class ServiceManager: SessionDelegate {
         return GPResponseError(status: "", description: "Ocorreu um erro inesperado.", errorCode: "")
     }
     
+    private func validateOfflineSession(error: AFError) -> Bool {
+        if error.localizedDescription.contains("invalid_grant") {
+            NotificationCenter
+                .default
+                .post(name: .offlineUserSession,
+                      object: error.localizedDescription)
+            
+            return false
+        }
+        return true
+    }
+    
     // MARK: - Public methods
     
     public func performRequest(route: BaseRequestProtocol, completion: @escaping(GPResponseError?) -> Void) {
@@ -111,7 +123,9 @@ open class ServiceManager: SessionDelegate {
                 switch response.result {
                 case .success(let response):
                     completion(.success(response))
-                case .failure(_):
+                case .failure(let error):
+                    guard self.validateOfflineSession(error: error) == true else { break }
+
                     if let data = response.data {
                         do {
                             let genericError = try JSONDecoder().decode(GPGenericError.self, from: data)
@@ -145,7 +159,9 @@ open class ServiceManager: SessionDelegate {
                     case .success(let value):
                         observer.onNext(value)
                         observer.onCompleted()
-                    case .failure(_):
+                    case .failure(let error):
+                        guard self.validateOfflineSession(error: error) == true else { break }
+                        
                         if let data = response.data {
                             do {
                                 let genericError = try JSONDecoder().decode(GPGenericError.self, from: data)

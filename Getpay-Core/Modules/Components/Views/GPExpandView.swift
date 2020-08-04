@@ -80,6 +80,9 @@ public class GPExpandView: UIView {
         expandButton.setContentCompressionResistancePriority(.required, for: .horizontal)
         expandButton.addTarget(self, action: #selector(expandAction), for: .touchUpInside)
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(expandAction))
+        addGestureRecognizer(tap)
+        
         descriptionContainerView.layer.masksToBounds = true
         descriptionContainerView.addSubview(descriptionLabel, constraints: true)
         
@@ -87,7 +90,6 @@ public class GPExpandView: UIView {
     }
     
     func setupConstraints() {
-        
         stackView.applyAnchors(ofType: [.top, .leading, .trailing, .bottom], to: self)
         
         titleContainerView.bottomAnchor.constraint(greaterThanOrEqualTo: expandButton.bottomAnchor).isActive = true
@@ -118,7 +120,6 @@ public class GPExpandView: UIView {
     // MARK: - Private methods
     
     @objc private func expandAction() {
-        
         let hiddenAlpha = descriptionLabelHeightConstraint?.isActive ?? false
         
         descriptionLabelHeightConstraint?.isActive.toggle()

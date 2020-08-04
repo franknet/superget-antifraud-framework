@@ -18,6 +18,7 @@ class BankSlipView: UIStackView {
     lazy var discount = TitleWithValueAndSubTitle()
     lazy var paymentDescription = TitleWithValueAndSubTitle()
     lazy var interest = TitleWithValueAndSubTitle()
+    lazy var paymentStatus = GPReceiptPaymentStatusView()
     
     private let account = GPUtils.loadAccountPersistenceFromUD()
     private let merchant = GPUtils.loadGPMerchantFromUD()
@@ -48,6 +49,7 @@ extension BankSlipView {
     
     private func addComponents() {
         addArrangedSubview(header)
+        addArrangedSubview(paymentStatus)
         addArrangedSubview(paymentDestination)
         addArrangedSubview(amount)
         addArrangedSubview(fine)
@@ -64,6 +66,12 @@ extension BankSlipView {
     
     func populate(model: GPBankSlipReceipt) {
         header.configureView(icon: GPAssets.gpPayBoleto.image, iconTintColor: GPColors.burns.color, status: "Pagamento realizado")
+        
+        paymentStatus.isHidden = true
+        if model.status == .PENDING {
+            paymentStatus.isHidden = false
+            paymentStatus.configure(title: "EM PROCESSAMENTO")
+        }
         
         paymentDestination.isHidden = true
         if let recipientName = model.recipientName, let recipientDocumentNumber = model.recipientDocumentNumber {
@@ -94,6 +102,10 @@ extension BankSlipView {
         
         paymentOrigin.configure(title: "Pagamento de", value: merchant.name, description: account.userAlias)
         
-        codeAuthentication.configure(title: "Código de autenticação", value: model.uid ?? "", description: nil)
+        codeAuthentication.isHidden = true
+        if model.status == .PAID {
+            codeAuthentication.isHidden = false
+            codeAuthentication.configure(title: "Código de autenticação", value: model.uid ?? "", description: nil)
+        }
     }
 }

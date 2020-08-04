@@ -115,19 +115,20 @@ public extension UIViewController {
     }
     
     func hideToast() {
-        guard let toastView = view.subviews.first(where: { subview -> Bool in
-            subview.tag == toastTag
-        }) else { return }
         
-        guard let constraint = toastView.constraints.first(where: { constraint -> Bool in
-            guard let someView = constraint.secondItem as? UIView else { return false }
-            return someView.tag == toastTag && constraint.secondAttribute == .bottom
-        }) else { return }
-        
-        UIView.animate(withDuration: 1, animations: {
-            toastView.layer.frame.origin.y += toastView.frame.height + (constraint.constant * -1)
-        }) { _ in
-            toastView.removeFromSuperview()
+        for iteratorView in view.subviews {
+            if iteratorView.tag == toastTag {
+                guard let constraint = iteratorView.constraints.first(where: { constraint -> Bool in
+                    guard let someView = constraint.secondItem as? UIView else { return false }
+                    return someView.tag == toastTag && constraint.secondAttribute == .bottom
+                }) else { return }
+                
+                UIView.animate(withDuration: 1, animations: {
+                    iteratorView.layer.frame.origin.y += iteratorView.frame.height + (constraint.constant * -1)
+                }) { _ in
+                    iteratorView.removeFromSuperview()
+                }
+            }
         }
     }
 }
@@ -181,5 +182,11 @@ public extension UIViewController {
         DispatchQueue.main.async {
             self.dismiss(animated: animated, completion: nil)
         }
+    }
+    
+    func track(event: GNEvent) {
+        let event: [String: Any] = ["event": event,
+                                    "props": GNEventParameters.MERCHANT_ID]
+        NotificationCenter.default.post(name: .trackEvent, object: nil, userInfo: event)
     }
 }

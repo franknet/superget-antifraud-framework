@@ -62,9 +62,12 @@
 		1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */; };
 		1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */; };
 		1EFBE8762407F861003805EC /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBE8752407F861003805EC /* GPLogger.swift */; };
-		205EC8AB3E0234F3ABE98F02 /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF0716E0BA7E3B9A5E58784 /* Pods_Getpay_Core.framework */; };
+		6F618BBC557A7D7E6F86CC96 /* Pods_Getpay_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF92D01A9DF7908BA0593C99 /* Pods_Getpay_CoreTests.framework */; };
+		A35F49957A83111FB3560548 /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0800BD45A1429B08C23125 /* Pods_Getpay_Core.framework */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
+		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
+		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
 		BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */; };
@@ -77,7 +80,6 @@
 		BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */; };
 		BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886024BE17BE00275D83 /* ReceiptService.swift */; };
 		BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886524BE5FC400275D83 /* GPReceiptType.swift */; };
-		C2E348FCAC6000935C3FBD18 /* Pods_Getpay_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B6532628A58978AEA16317 /* Pods_Getpay_CoreTests.framework */; };
 		D60B81A324A406160098443D /* TitleWithValueAndSubTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */; };
 		D624BDF1242AB1D2006DD69C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = D624BDF0242AB1D2006DD69C /* colors.txt */; };
 		D624BDF3242AB851006DD69C /* GPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF2242AB851006DD69C /* GPColors.swift */; };
@@ -97,6 +99,8 @@
 		D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */; };
 		D6695C682475A96E001333FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6695C672475A96E001333FB /* BaseViewController.swift */; };
 		D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B07A524BE54D1003269C9 /* GPTransactionType.swift */; };
+		D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */; };
+		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
@@ -126,7 +130,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B6532628A58978AEA16317 /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F0800BD45A1429B08C23125 /* Pods_Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1E10E0FF24006F8A00247FC7 /* GPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccount.swift; sourceTree = "<group>"; };
 		1E10E101240072B100247FC7 /* GPBankingInstitution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBankingInstitution.swift; sourceTree = "<group>"; };
@@ -183,11 +187,13 @@
 		1EF36EA223F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPListDisclousureCellTableViewCell.swift; sourceTree = "<group>"; };
 		1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPListDisclousureCellTableViewCell.xib; sourceTree = "<group>"; };
 		1EFBE8752407F861003805EC /* GPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLogger.swift; sourceTree = "<group>"; };
-		952776802847ABDC64AB69D9 /* Pods-Getpay-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
-		BE3311259F3E9728918E81B0 /* Pods-Getpay-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64E258A1CF0F4562EFADC064 /* Pods-Getpay-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.release.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.release.xcconfig"; sourceTree = "<group>"; };
+		6C2A6FA6FE8AF0F13EE89AB8 /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
+		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
 		BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPInputValueView.swift; sourceTree = "<group>"; };
@@ -200,8 +206,6 @@
 		BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		BFED886024BE17BE00275D83 /* ReceiptService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptService.swift; sourceTree = "<group>"; };
 		BFED886524BE5FC400275D83 /* GPReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptType.swift; sourceTree = "<group>"; };
-		CBDBCF22892F18653CC05B85 /* Pods-Getpay-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.release.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.release.xcconfig"; sourceTree = "<group>"; };
-		CBF0716E0BA7E3B9A5E58784 /* Pods_Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithValueAndSubTitle.swift; sourceTree = "<group>"; };
 		D624BDF0242AB1D2006DD69C /* colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
 		D624BDF2242AB851006DD69C /* GPColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColors.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 		D6691FB72416F0E8007F45B8 /* CircleViewWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewWithLabel.swift; sourceTree = "<group>"; };
 		D6695C672475A96E001333FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D66B07A524BE54D1003269C9 /* GPTransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTransactionType.swift; sourceTree = "<group>"; };
+		D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCircleViewWithIcon.swift; sourceTree = "<group>"; };
+		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -234,11 +240,13 @@
 		D694D4F724D081D700013055 /* NotEligibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEligibleView.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D6B4940A243D186D00E98F5D /* AuthStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateManager.swift; sourceTree = "<group>"; };
-		D6C371D8F107038FF4EC2186 /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		D6E1F91024B51F2300C656DC /* GPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPageViewController.swift; sourceTree = "<group>"; };
 		D6E1F91324B5218700C656DC /* GPTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTabButton.swift; sourceTree = "<group>"; };
 		D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewControllerExtension.swift; sourceTree = "<group>"; };
 		D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBasePageableListProtocol.swift; sourceTree = "<group>"; };
+		DF92D01A9DF7908BA0593C99 /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F556CF3F8089B55537AD3FEF /* Pods-Getpay-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD045B84327416EED86F3B45 /* Pods-Getpay-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,7 +254,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205EC8AB3E0234F3ABE98F02 /* Pods_Getpay_Core.framework in Frameworks */,
+				A35F49957A83111FB3560548 /* Pods_Getpay_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4CFE9423F2E71000E445F3 /* Getpay_Core.framework in Frameworks */,
-				C2E348FCAC6000935C3FBD18 /* Pods_Getpay_CoreTests.framework in Frameworks */,
+				6F618BBC557A7D7E6F86CC96 /* Pods_Getpay_CoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +377,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF601AE324D9C4B800450FD5 /* Analytics */,
 				BFEA3ED324C0BD8400D0640E /* Calculator Input View */,
 				BFED885624BE162800275D83 /* Receipt */,
 				D62C525E24BCE4A800627C1C /* Labels */,
@@ -468,6 +477,8 @@
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
 				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
 				D694D4F724D081D700013055 /* NotEligibleView.swift */,
+				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
+				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -475,10 +486,10 @@
 		37E9E8C182FFE78B9C86E8DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D6C371D8F107038FF4EC2186 /* Pods-Getpay-Core.debug.xcconfig */,
-				CBDBCF22892F18653CC05B85 /* Pods-Getpay-Core.release.xcconfig */,
-				BE3311259F3E9728918E81B0 /* Pods-Getpay-CoreTests.debug.xcconfig */,
-				952776802847ABDC64AB69D9 /* Pods-Getpay-CoreTests.release.xcconfig */,
+				6C2A6FA6FE8AF0F13EE89AB8 /* Pods-Getpay-Core.debug.xcconfig */,
+				64E258A1CF0F4562EFADC064 /* Pods-Getpay-Core.release.xcconfig */,
+				F556CF3F8089B55537AD3FEF /* Pods-Getpay-CoreTests.debug.xcconfig */,
+				FD045B84327416EED86F3B45 /* Pods-Getpay-CoreTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -489,6 +500,14 @@
 				BF105A8A2469A244009E428E /* GPTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		BF601AE324D9C4B800450FD5 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				BF601AE424D9C55800450FD5 /* GNEvents.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		BFEA3ED324C0BD8400D0640E /* Calculator Input View */ = {
@@ -527,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				BFED885B24BE16FA00275D83 /* GPReceiptHeaderView.swift */,
+				BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -535,8 +555,8 @@
 			isa = PBXGroup;
 			children = (
 				BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */,
-				CBF0716E0BA7E3B9A5E58784 /* Pods_Getpay_Core.framework */,
-				05B6532628A58978AEA16317 /* Pods_Getpay_CoreTests.framework */,
+				0F0800BD45A1429B08C23125 /* Pods_Getpay_Core.framework */,
+				DF92D01A9DF7908BA0593C99 /* Pods_Getpay_CoreTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -665,7 +685,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4CFE9E23F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-Core" */;
 			buildPhases = (
-				02580C73E89D5C00A794F6F7 /* [CP] Check Pods Manifest.lock */,
+				FEFAAAF97388E77B9DB96F14 /* [CP] Check Pods Manifest.lock */,
 				1E4CFE8523F2E71000E445F3 /* Headers */,
 				1E4CFE8623F2E71000E445F3 /* Sources */,
 				1E4CFE8723F2E71000E445F3 /* Frameworks */,
@@ -685,11 +705,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E4CFEA123F2E71000E445F3 /* Build configuration list for PBXNativeTarget "Getpay-CoreTests" */;
 			buildPhases = (
-				5082DDD0CFC82C3D4BF82490 /* [CP] Check Pods Manifest.lock */,
+				C4C3584FB5F4D7AC6CC060EA /* [CP] Check Pods Manifest.lock */,
 				1E4CFE8F23F2E71000E445F3 /* Sources */,
 				1E4CFE9023F2E71000E445F3 /* Frameworks */,
 				1E4CFE9123F2E71000E445F3 /* Resources */,
-				6BF91B52A3DA98B888944175 /* [CP] Embed Pods Frameworks */,
+				B46DAB260A136C572AC4590E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -770,29 +790,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02580C73E89D5C00A794F6F7 /* [CP] Check Pods Manifest.lock */ = {
+		B46DAB260A136C572AC4590E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Getpay-Core-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5082DDD0CFC82C3D4BF82490 /* [CP] Check Pods Manifest.lock */ = {
+		C4C3584FB5F4D7AC6CC060EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -814,23 +829,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6BF91B52A3DA98B888944175 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D68C64B2242259AC00BA65B2 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,6 +846,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\"\n";
+		};
+		FEFAAAF97388E77B9DB96F14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Getpay-Core-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -870,6 +890,7 @@
 				BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */,
 				D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */,
 				D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */,
+				BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */,
 				BFED886124BE17BE00275D83 /* ReceiptViewModel.swift in Sources */,
 				BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
@@ -896,6 +917,7 @@
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
+				D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */,
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */,
@@ -906,6 +928,7 @@
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
 				D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */,
+				BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */,
 				1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */,
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
 				D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */,
@@ -923,6 +946,7 @@
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
 				D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */,
+				D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
@@ -1086,7 +1110,7 @@
 		};
 		1E4CFE9F23F2E71000E445F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6C371D8F107038FF4EC2186 /* Pods-Getpay-Core.debug.xcconfig */;
+			baseConfigurationReference = 6C2A6FA6FE8AF0F13EE89AB8 /* Pods-Getpay-Core.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1126,7 +1150,7 @@
 		};
 		1E4CFEA023F2E71000E445F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBDBCF22892F18653CC05B85 /* Pods-Getpay-Core.release.xcconfig */;
+			baseConfigurationReference = 64E258A1CF0F4562EFADC064 /* Pods-Getpay-Core.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1165,7 +1189,7 @@
 		};
 		1E4CFEA223F2E71000E445F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE3311259F3E9728918E81B0 /* Pods-Getpay-CoreTests.debug.xcconfig */;
+			baseConfigurationReference = F556CF3F8089B55537AD3FEF /* Pods-Getpay-CoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1185,7 +1209,7 @@
 		};
 		1E4CFEA323F2E71000E445F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 952776802847ABDC64AB69D9 /* Pods-Getpay-CoreTests.release.xcconfig */;
+			baseConfigurationReference = FD045B84327416EED86F3B45 /* Pods-Getpay-CoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
