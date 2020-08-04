@@ -7,16 +7,6 @@ public enum GNEvent: String {
     case ConfirmNewAccount
     case NotElegible
     case CreateNewAccountMenu
-    
-    var name: String {
-        switch self {
-        case .ConfirmNewAccount,
-             .CreateNewAccountBanner,
-             .CreateNewAccountMenu,
-             .NotElegible:
-            return self.rawValue
-        }
-    }
 }
 
 public enum GNEventParameters: String {
