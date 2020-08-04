@@ -183,4 +183,10 @@ public extension UIViewController {
             self.dismiss(animated: animated, completion: nil)
         }
     }
+    
+    func track(event: GNEvent) {
+        let event: [String: Any] = ["event": event,
+                                    "props": GNEventParameters.MERCHANT_ID]
+        NotificationCenter.default.post(name: .trackEvent, object: nil, userInfo: event)
+    }
 }

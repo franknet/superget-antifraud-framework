@@ -16,4 +16,6 @@ public extension Notification.Name {
     
     static let welcomeButtonValidation = Notification.Name("WelcomeAuthButtonValidation")
     static let sellInputValue = Notification.Name("SellInputValue")
+    
+    static let trackEvent = Notification.Name("trackEvent")
 }
