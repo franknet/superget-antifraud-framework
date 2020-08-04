@@ -20,7 +20,6 @@ public enum GNEventParameters: String {
         }
     }
 }
-<<<<<<< HEAD
 
 // MARK: - Class
 
@@ -34,6 +33,3 @@ public class GNAnalytics {
         NotificationCenter.default.post(name: .trackEvent, object: nil, userInfo: event)
     }
 }
-
-=======
->>>>>>> c462f7db505a00de08241d6ea4a651dcc7688aaa
