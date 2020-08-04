@@ -18,7 +18,8 @@ open class GPLabel: UILabel {
                             fontSize: CGFloat? = 14.0,
                             alignment: NSTextAlignment? = .left,
                             textColor: UIColor? = GPColors.edna.color,
-                            numberOfLines: Int? = 0) {
+                            numberOfLines: Int? = 0,
+                            adjustsFontToFitWidth: Bool? = false) {
         
         self.init()
         
@@ -42,6 +43,10 @@ open class GPLabel: UILabel {
             if let size = fontSize {
                 self.font = font.font(size: size)
             }
+        }
+        
+        if let adjustsFontToFitWidth = adjustsFontToFitWidth {
+            self.adjustsFontSizeToFitWidth = adjustsFontToFitWidth
         }
     }
 }
