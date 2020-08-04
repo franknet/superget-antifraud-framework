@@ -20,3 +20,16 @@ public enum GNEventParameters: String {
         }
     }
 }
+
+// MARK: - Class
+
+public class GNAnalytics {
+    
+    // MARK: Public methods
+    
+    public static func track(event: GNEvent) {
+        let event: [String: Any] = ["event": event,
+                                    "props": GNEventParameters.MERCHANT_ID]
+        NotificationCenter.default.post(name: .trackEvent, object: nil, userInfo: event)
+    }
+}
