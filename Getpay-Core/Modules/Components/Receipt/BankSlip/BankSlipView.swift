@@ -85,7 +85,7 @@ extension BankSlipView {
         
         fine.configure(title: "Multa", value: model.fine.formatedAsCurrency, description: nil)
         
-        interest.configure(title: "Juros", value: model.discount.formatedAsCurrency, description: nil)
+        interest.configure(title: "Juros", value: model.interest.formatedAsCurrency, description: nil)
         
         discount.configure(title: "Desconto", value: model.discount.formatedAsCurrency, description: nil)
         
