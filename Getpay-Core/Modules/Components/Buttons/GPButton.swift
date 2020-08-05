@@ -32,7 +32,7 @@ public class GPButton: UIButton {
     
     // MARK: - Initializers
     
-    public init(title: String, fontSize: CGFloat? = 14.0, style: Style, horizontalAlignment: UIControl.ContentHorizontalAlignment = .center) {
+    public init(title: String? = nil, fontSize: CGFloat? = 14.0, style: Style, horizontalAlignment: UIControl.ContentHorizontalAlignment = .center) {
         super.init(frame: .zero)
         
         setTitle(title, for: UIControl.State.normal)

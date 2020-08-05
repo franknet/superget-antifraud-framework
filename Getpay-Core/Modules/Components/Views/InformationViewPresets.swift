@@ -4,6 +4,7 @@ import UIKit
 // MARK: - Protocol
 public protocol InformationViewPreset {
     
+    var navigationTitle: String? { get }
     var title: String { get }
     var subTitle: String { get }
     var errorCode: String? { get }
@@ -16,6 +17,8 @@ public protocol InformationViewPreset {
 
 // MARK: - Struct
 public struct PresetNewClient404: InformationViewPreset {
+    
+    public var navigationTitle: String?
     
     public var title: String = "Abra sua conta para fazer transferências"
     
@@ -37,7 +40,9 @@ public struct PresetNewClient404: InformationViewPreset {
 
 // MARK: - Struct
 public struct PresetClient403: InformationViewPreset {
-
+    
+    public var navigationTitle: String?
+    
     public var title: String = "Você não tem permissão"
     
     public var subTitle: String = "Para acessar esta área, você precisa ser o administrador do negócio. Caso seja, entre em contato com a Central de Atendimento Getnet."
@@ -58,7 +63,9 @@ public struct PresetClient403: InformationViewPreset {
 
 // MARK: - Struct
 public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
-
+    
+    public var navigationTitle: String?
+    
     public var title: String = "Complete seu cadastro para fazer transferências"
     
     public var subTitle: String = "Para utilizar essa funcionalidade, é necessário que você envie os documentos necessários."
@@ -79,7 +86,9 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
 
 // MARK: - Struct
 public struct PresetGeneric: InformationViewPreset {
-
+    
+    public var navigationTitle: String?
+    
     public var title: String = "Abra sua conta para fazer transferências"
     
     public var subTitle: String = "Para utilizar essa funcionalidade, é necessário abrir uma conta SuperGet."
@@ -100,14 +109,16 @@ public struct PresetGeneric: InformationViewPreset {
 
 // MARK: - Struct
 public struct PresetLoading: InformationViewPreset {
-
+    
+    public var navigationTitle: String?
+    
     public var title: String = "Falha ao carregar as informações"
     
     public var subTitle: String = "Não foi possível carregar os dados da sua conta. Por favor, tente novamente."
     
     public var errorCode: String?
     
-    public var image: UIImage? = UIImage(named: "gp_error")
+    public var image: UIImage? = GPAssets.gpError.image
     
     public var buttonTitle: String? = "TENTAR NOVAMENTE"
     
