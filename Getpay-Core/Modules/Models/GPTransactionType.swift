@@ -36,6 +36,7 @@ public enum GPTrasactionType: String, Codable {
     case ADJUSTING_CREDIT_BACKOFFICE_CTA
     case MOBILE_TOP_UP_CTA
     case REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA
+    case UNKNOWN
     
     public var title: String {
         switch self {
@@ -143,6 +144,9 @@ public enum GPTrasactionType: String, Codable {
                 
             case .REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA:
                 return "Estorno tarifa boleto"
+            
+            case .UNKNOWN:
+                return "Transferência desconhecida"
             }
     }
     
@@ -252,6 +256,9 @@ public enum GPTrasactionType: String, Codable {
             
         case .REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA:
             return GPAssets.gpChargeback2.image
+        
+        case .UNKNOWN:
+            return GPAssets.gpMoney.image
         }
     }
 }
