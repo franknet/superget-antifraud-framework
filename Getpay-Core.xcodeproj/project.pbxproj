@@ -92,6 +92,8 @@
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
+		D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */; };
+		D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */; };
 		D65831E1249A664A00871DFF /* GPAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65831E0249A664A00871DFF /* GPAssets.swift */; };
 		D662BA5D244E173300D4AFDB /* Getpay-Core.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */; };
 		D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662BA5E244E38DD00D4AFDB /* GPTerminalService.swift */; };
@@ -218,6 +220,8 @@
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSelectedViewWithRadioButton.swift; sourceTree = "<group>"; };
+		D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNRadiusButton.swift; sourceTree = "<group>"; };
 		D65831E0249A664A00871DFF /* GPAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAssets.swift; sourceTree = "<group>"; };
 		D662BA5C244E173300D4AFDB /* Getpay-Core.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Getpay-Core.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D662BA5E244E38DD00D4AFDB /* GPTerminalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTerminalService.swift; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				1E62A47923F322E1009ED647 /* Buttons.xib */,
 				D6348D7C2495877000AD069C /* GPButton.swift */,
 				D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */,
+				D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 				D694D4F724D081D700013055 /* NotEligibleView.swift */,
 				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
 				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
+				D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -898,6 +904,7 @@
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
+				D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
 				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
 				BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */,
@@ -913,6 +920,7 @@
 				D63853E3245078C700C56F1D /* GPUtils.swift in Sources */,
 				1E62A46523F30AD4009ED647 /* Urls.swift in Sources */,
 				1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */,
+				D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
