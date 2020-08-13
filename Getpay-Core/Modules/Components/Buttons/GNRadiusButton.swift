@@ -6,9 +6,9 @@ public class GNRadiusButton: UIButton {
     
     // MARK: - Private variables
     
-    private let checked = GPAssets.gpArrowForwardSmall.image
+    private let checked = GPAssets.gpRadioSelected.image
     
-    private let unchecked = GPAssets.gpAccessoriesSmall.image
+    private let unchecked = GPAssets.gpRadio.image
     
     // MARK: - Public variables
     
