@@ -21,6 +21,7 @@ public enum GPAssets {
   public static let gpAbout = ImageAsset(name: "gp_about")
   public static let gpAccessories = ImageAsset(name: "gp_accessories")
   public static let gpAccessoriesSmall = ImageAsset(name: "gp_accessories_small")
+  public static let gpAccountOpen = ImageAsset(name: "gp_account_open")
   public static let gpAccountReview = ImageAsset(name: "gp_account_review")
   public static let gpAlert = ImageAsset(name: "gp_alert")
   public static let gpArrowForward = ImageAsset(name: "gp_arrow_forward")
