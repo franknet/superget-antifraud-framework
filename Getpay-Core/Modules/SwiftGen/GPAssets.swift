@@ -90,6 +90,7 @@ public enum GPAssets {
   public static let gpNotification = ImageAsset(name: "gp_notification")
   public static let gpPassword = ImageAsset(name: "gp_password")
   public static let gpPayBoleto = ImageAsset(name: "gp_pay_boleto")
+  public static let gpPayCard = ImageAsset(name: "gp_pay_card")
   public static let gpPayQrcode = ImageAsset(name: "gp_pay_qrcode")
   public static let gpPayment = ImageAsset(name: "gp_payment")
   public static let gpPhonePending = ImageAsset(name: "gp_phone_pending")
