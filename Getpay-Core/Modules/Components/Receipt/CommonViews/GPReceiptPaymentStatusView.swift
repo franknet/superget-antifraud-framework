@@ -21,7 +21,7 @@ public class GPReceiptPaymentStatusView: UIView {
         return view
     }()
     
-    private lazy var title = GPLabel(fontSize: 14.0, alignment: .left, textColor: GPColors.flanders.color)
+    private lazy var title = GPLabel(textColor: GPColors.flanders.color)
     
     // MARK: - Initializers
     
