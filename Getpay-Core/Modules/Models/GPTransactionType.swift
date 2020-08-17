@@ -146,7 +146,7 @@ public enum GPTrasactionType: String, Codable {
                 return "Estorno tarifa boleto"
             
             case .UNKNOWN:
-                return "Transferência desconhecida"
+                return "Operação com cartão"
             }
     }
     
@@ -258,7 +258,7 @@ public enum GPTrasactionType: String, Codable {
             return GPAssets.gpChargeback2.image
         
         case .UNKNOWN:
-            return GPAssets.gpMoney.image
+            return GPAssets.gpPayCard.image
         }
     }
 }

@@ -18,7 +18,7 @@ class BankSlipView: UIStackView {
     lazy var discount = TitleWithValueAndSubTitle()
     lazy var paymentDescription = TitleWithValueAndSubTitle()
     lazy var interest = TitleWithValueAndSubTitle()
-    lazy var paymentStatus = GPReceiptPaymentStatusView()
+    lazy var paymentStatus = GPReceiptPaymentStatusView(borderTopViewColor: GPColors.maggie.color)
     
     private let account = GPUtils.loadAccountPersistenceFromUD()
     private let merchant = GPUtils.loadGPMerchantFromUD()
@@ -65,12 +65,12 @@ extension BankSlipView {
     // MARK: - Public methods
     
     func populate(model: GPBankSlipReceipt) {
-        header.configureView(icon: GPAssets.gpPayBoleto.image, iconTintColor: GPColors.burns.color, status: "Pagamento realizado")
+        header.configureView(icon: GPAssets.gpPayBoleto.image, iconTintColor: GPColors.burns.color, status: "Pagamento de Boleto")
         
         paymentStatus.isHidden = true
         if model.status == .PENDING {
             paymentStatus.isHidden = false
-            paymentStatus.configure(title: "EM PROCESSAMENTO")
+            paymentStatus.configure(title: "Em processamento. Consulte seu extrato para confirmação.")
         }
         
         paymentDestination.isHidden = true
