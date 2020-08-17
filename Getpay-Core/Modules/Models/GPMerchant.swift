@@ -1,11 +1,3 @@
-//
-//  GPMerchant.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 21/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import Foundation
 
 public class GPMerchant: Codable {
@@ -15,11 +7,18 @@ public class GPMerchant: Codable {
     public var name: String = ""
     public var tradeName: String = ""
     public var email: String? = ""
-    public var type: String = ""
+    public var type: Type = .PF
     public var address: GPAddress?
     public var merchantStatus: String = ""
     
-    public convenience init(id: Int, document: String, name: String, tradeName: String, email: String, type: String, address: GPAddress? = nil, merchantStatus: String) {
+    public convenience init(id: Int,
+                            document: String,
+                            name: String,
+                            tradeName: String,
+                            email: String,
+                            type: Type,
+                            address: GPAddress? = nil,
+                            merchantStatus: String) {
         self.init()
         self.id = id
         self.document = document
@@ -52,7 +51,7 @@ public class GPMerchant: Codable {
             self.name = try container.decode(String.self, forKey: .name)
             self.tradeName = try container.decode(String.self, forKey: .tradeName)
             self.email = try? container.decode(String.self, forKey: .email)
-            self.type = try container.decode(String.self, forKey: .type)
+            self.type = try container.decode(Type.self, forKey: .type)
             self.address = try? container.decode(GPAddress.self, forKey: .address)
             self.merchantStatus = try container.decode(String.self, forKey: .merchantStatus)
         } catch let error {
@@ -77,4 +76,9 @@ public class GPMerchant: Codable {
             fatalError(error.localizedDescription)
         }
     }
+}
+
+public enum Type: String, Codable {
+    case PJ
+    case PF
 }

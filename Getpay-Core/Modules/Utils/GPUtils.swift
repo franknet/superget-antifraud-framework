@@ -1,4 +1,3 @@
-
 import Foundation
 
 public class GPUtils {
@@ -22,7 +21,15 @@ public class GPUtils {
                 return loadedAccount
             }
         }
-        return GPAccount(id: 0, status: "", number: "", branchNumber: "", aliasAccountStatus: "", origin: "", institution: GPBankingInstitution(number: 0, name: ""), balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0), hasCard: false)
+        return GPAccount(id: 0,
+                         status: "",
+                         number: "",
+                         branchNumber: "",
+                         aliasAccountStatus: "",
+                         origin: "",
+                         institution: GPBankingInstitution(number: 0, name: ""),
+                         balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0),
+                         hasCard: false)
     }
     
     /// Called wehn user logout or change ec
@@ -33,21 +40,21 @@ public class GPUtils {
     public static func saveTerminalInUD(terminal: String) {
         defaults.set(terminal, forKey: terminalKey)
     }
-
+    
     public static func loadTerminalFromUD() -> String {
         if let terminal = defaults.string(forKey: terminalKey) {
             return terminal
         }
         return ""
     }
-
+    
     public static func saveGPMerchantInUD(merchant: GPMerchant) {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(merchant) {
             defaults.set(encoded, forKey: merchantKey)
         }
     }
-
+    
     public static func loadGPMerchantFromUD() -> GPMerchant {
         if let merchant = defaults.object(forKey: merchantKey) as? Data {
             let decoder = JSONDecoder()
@@ -55,6 +62,12 @@ public class GPUtils {
                 return loadedMerchant
             }
         }
-        return GPMerchant(id: 0, document: "", name: "", tradeName: "", email: "", type: "", merchantStatus: "")
+        return GPMerchant(id: 0,
+                          document: "",
+                          name: "",
+                          tradeName: "",
+                          email: "",
+                          type: .PF,
+                          merchantStatus: "")
     }
 }
