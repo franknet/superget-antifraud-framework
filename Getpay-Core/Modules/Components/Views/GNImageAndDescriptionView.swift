@@ -60,8 +60,8 @@ extension GNImageAndDescriptionView {
         icon.height(size: 64.0)
         icon.width(size: 64.0)
         icon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0).isActive = true
-        icon.topAnchor.constraint(equalTo: topAnchor, constant: 16.0).isActive = true
-        icon.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16.0).isActive = true
+        icon.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        icon.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
     private func setupDescription() {
