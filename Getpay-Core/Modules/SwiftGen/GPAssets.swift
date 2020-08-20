@@ -133,6 +133,7 @@ public enum GPAssets {
   public static let gpShowPass = ImageAsset(name: "gp_show_pass")
   public static let gpStar = ImageAsset(name: "gp_star")
   public static let gpSucsess = ImageAsset(name: "gp_sucsess")
+  public static let gpTakePictureButton = ImageAsset(name: "gp_take_picture_button")
   public static let gpTarifa = ImageAsset(name: "gp_tarifa")
   public static let gpTicket = ImageAsset(name: "gp_ticket")
   public static let gpTransactionError = ImageAsset(name: "gp_transaction_error")
