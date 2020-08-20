@@ -92,6 +92,7 @@
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
+		D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */; };
 		D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */; };
 		D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */; };
 		D65831E1249A664A00871DFF /* GPAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65831E0249A664A00871DFF /* GPAssets.swift */; };
@@ -220,6 +221,7 @@
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNImageAndDescriptionView.swift; sourceTree = "<group>"; };
 		D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSelectedViewWithRadioButton.swift; sourceTree = "<group>"; };
 		D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNRadiusButton.swift; sourceTree = "<group>"; };
 		D65831E0249A664A00871DFF /* GPAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAssets.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
 				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
 				D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */,
+				D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -950,6 +953,7 @@
 				1E10E1082400730100247FC7 /* GPMerchant.swift in Sources */,
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
 				1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */,
+				D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */,
 				1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */,
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
