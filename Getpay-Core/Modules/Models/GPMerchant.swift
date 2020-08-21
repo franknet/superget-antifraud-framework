@@ -10,17 +10,6 @@ public struct GPMerchant: Codable {
     public var type: Type
     public var address: GPAddress?
     public var merchantStatus: String
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case document
-        case name
-        case tradeName
-        case email
-        case type
-        case address
-        case merchantStatus
-    }
 }
 
 public enum Type: String, Codable {
