@@ -106,6 +106,10 @@
 		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
+		D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF424F0167000C6AF14 /* UserAliasService.swift */; };
+		D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */; };
+		D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */; };
+		D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF724F0167000C6AF14 /* UserAliasView.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
 		D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C647B2420FC3300BA65B2 /* ErrorView.swift */; };
 		D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */; };
@@ -235,6 +239,10 @@
 		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
+		D67F0EF424F0167000C6AF14 /* UserAliasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasService.swift; sourceTree = "<group>"; };
+		D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewController.swift; sourceTree = "<group>"; };
+		D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewModel.swift; sourceTree = "<group>"; };
+		D67F0EF724F0167000C6AF14 /* UserAliasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasView.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D68C647B2420FC3300BA65B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -355,6 +363,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D67F0EF324F015F600C6AF14 /* UserAlias */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
 				D62C525B24BCE29700627C1C /* Account Service */,
@@ -616,6 +625,17 @@
 				D63853E2245078C700C56F1D /* GPUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D67F0EF324F015F600C6AF14 /* UserAlias */ = {
+			isa = PBXGroup;
+			children = (
+				D67F0EF424F0167000C6AF14 /* UserAliasService.swift */,
+				D67F0EF724F0167000C6AF14 /* UserAliasView.swift */,
+				D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */,
+				D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */,
+			);
+			path = UserAlias;
 			sourceTree = "<group>";
 		};
 		D68C647E242169AC00BA65B2 /* Resources */ = {
@@ -903,8 +923,10 @@
 				BFED886124BE17BE00275D83 /* ReceiptViewModel.swift in Sources */,
 				BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
+				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
+				D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */,
 				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */,
@@ -936,6 +958,7 @@
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
+				D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
 				D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */,
@@ -954,6 +977,7 @@
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
 				1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */,
 				D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */,
+				D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */,
 				1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */,
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
