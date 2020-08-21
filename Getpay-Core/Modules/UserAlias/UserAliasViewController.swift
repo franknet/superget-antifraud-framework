@@ -57,20 +57,30 @@ extension UserAliasViewController {
             .bind(to: customView.statusContainer.rx.isHidden)
             .disposed(by: disposeBag)
         
-        customView.proceed.rx
+        customView.proceed
+            .rx
             .tap
             .subscribe(onNext: { [weak self] _ in
                 self?.startRequest()
             })
             .disposed(by: disposeBag)
         
-        customView.userAliasTextfield.rx
+        customView.userAliasTextfield
+            .rx
             .controlEvent(.editingChanged)
-            .subscribe(onNext: { [weak self] in
+            .subscribe(onNext: { [weak self] _ in
                 guard let string = self?.customView.userAliasTextfield.text else { return }
-                self?.customView.userAliasTextfield.text = String(string.prefix(15))
+                self?.customView.userAliasTextfield.text = String(string.prefix(15)).lowercased()
                 // cor aproximada do placeholder
                 self?.customView.prefix.textColor = string.count > 0 ? GPColors.edna.color : UIColor(red: 0.80, green: 0.80, blue: 0.80, alpha: 1.0)
+            })
+            .disposed(by: disposeBag)
+        
+        customView.userAliasTextfield
+            .rx.controlEvent(.editingDidEnd)
+            .subscribe(onNext:{ [weak self] _ in
+                guard let string = self?.customView.userAliasTextfield.text else { return }
+                self?.customView.userAliasTextfield.text = string.lowercased()
             })
             .disposed(by: disposeBag)
     }

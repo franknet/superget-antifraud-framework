@@ -22,7 +22,7 @@ public class UserAliasView: UIView {
         tf.textColor = GPColors.edna.color
         tf.textAlignment = .left
         tf.font = FontFamily.Calibri.bold.font(size: 20.0)
-        tf.placeholder = "maria.gomes"
+        tf.placeholder = "fernanda.gomes"
         return tf
     }()
     
@@ -98,7 +98,7 @@ extension UserAliasView {
     }
     
     private func setupTitleConstraints() {
-        title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 27.0).isActive = true
+        title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80.0).isActive = true
         title.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     
