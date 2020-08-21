@@ -66,6 +66,7 @@
 		A35F49957A83111FB3560548 /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0800BD45A1429B08C23125 /* Pods_Getpay_Core.framework */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
+		BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF247CD824F06F3500717CD7 /* UIImageExtension.swift */; };
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
@@ -199,6 +200,7 @@
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		BF247CD824F06F3500717CD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */,
 				1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */,
 				BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */,
+				BF247CD824F06F3500717CD7 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
+				BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
 				BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */,
