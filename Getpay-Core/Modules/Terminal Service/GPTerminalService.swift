@@ -1,14 +1,14 @@
 import Foundation
 
+// MARK: - Class
+
 public class GPTerminalService {
+    
+    // MARK: - Initializers
     
     public init(){}
     
-    private func requestTerminal(merchantId: Int, completion: @escaping (Result<TerminalResponse, GPResponseError>) -> Void) {
-        let service = ServiceManager(isJsonBody: true)
-        let request = TerminalRequest(merchantId)
-        service.performRequest(route: request, completion: completion)
-    }
+    // MARK: - Public methods
     
     /// If response is success, than the address and terminal number are saved in UserDefaults.
     public func getTerminal(merchantId: Int, completion: @escaping (GPResponseError?) -> Void) {
@@ -24,8 +24,16 @@ public class GPTerminalService {
         }
     }
     
+    // MARK: - Private methods
+    
+    private func requestTerminal(merchantId: Int, completion: @escaping (Result<TerminalResponse, GPResponseError>) -> Void) {
+        let service = ServiceManager(isJsonBody: true)
+        let request = TerminalRequest(merchantId)
+        service.performRequest(route: request, completion: completion)
+    }
+    
     private func update(_ address: GPAddress) {
-        let merchant = GPUtils.loadGPMerchantFromUD()
+        var merchant = GPUtils.loadGPMerchantFromUD()
         merchant.address = address
         GPUtils.saveGPMerchantInUD(merchant: merchant)
     }
@@ -35,7 +43,7 @@ public class GPTerminalService {
     }
 }
 
-// MARK: Request
+// MARK: - Request
 
 struct TerminalRequest: BaseRequestProtocol {
     var path: String
@@ -48,11 +56,10 @@ struct TerminalRequest: BaseRequestProtocol {
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             body = ["number" : appVersion]
         }
-        
     }
 }
 
-// MARK: Response
+// MARK: - Response
 
 public struct TerminalResponse: Codable {
     public let terminal: Terminal
