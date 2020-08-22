@@ -111,6 +111,8 @@
 		D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */; };
 		D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */; };
 		D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF724F0167000C6AF14 /* UserAliasView.swift */; };
+		D681A53D24F1A3260009CC0D /* GNSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681A53C24F1A3260009CC0D /* GNSuccessView.swift */; };
+		D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
 		D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C647B2420FC3300BA65B2 /* ErrorView.swift */; };
 		D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */; };
@@ -245,6 +247,8 @@
 		D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewController.swift; sourceTree = "<group>"; };
 		D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewModel.swift; sourceTree = "<group>"; };
 		D67F0EF724F0167000C6AF14 /* UserAliasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasView.swift; sourceTree = "<group>"; };
+		D681A53C24F1A3260009CC0D /* GNSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSuccessView.swift; sourceTree = "<group>"; };
+		D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSuccessViewController.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D68C647B2420FC3300BA65B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -394,6 +398,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D681A53B24F1A2C80009CC0D /* SuccessView */,
 				BF601AE324D9C4B800450FD5 /* Analytics */,
 				BFEA3ED324C0BD8400D0640E /* Calculator Input View */,
 				BFED885624BE162800275D83 /* Receipt */,
@@ -639,6 +644,15 @@
 				D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */,
 			);
 			path = UserAlias;
+			sourceTree = "<group>";
+		};
+		D681A53B24F1A2C80009CC0D /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				D681A53C24F1A3260009CC0D /* GNSuccessView.swift */,
+				D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */,
+			);
+			path = SuccessView;
 			sourceTree = "<group>";
 		};
 		D68C647E242169AC00BA65B2 /* Resources */ = {
@@ -911,6 +925,7 @@
 				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
+				D681A53D24F1A3260009CC0D /* GNSuccessView.swift in Sources */,
 				BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
@@ -944,6 +959,7 @@
 				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
+				D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */,
 				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
 				1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */,
 				D63853E3245078C700C56F1D /* GPUtils.swift in Sources */,

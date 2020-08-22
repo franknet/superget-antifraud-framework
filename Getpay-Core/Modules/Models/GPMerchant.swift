@@ -1,7 +1,6 @@
 import Foundation
 
 public struct GPMerchant: Codable {
-    
     public var id: Int
     public var document: String
     public var name: String
