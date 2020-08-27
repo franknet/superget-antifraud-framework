@@ -774,7 +774,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Getnet;
 				TargetAttributes = {
 					1E4CFE8923F2E71000E445F3 = {

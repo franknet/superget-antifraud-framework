@@ -29,7 +29,9 @@ public class GPUtils {
                          origin: "",
                          institution: GPBankingInstitution(number: 0, name: ""),
                          balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0),
-                         hasCard: false)
+                         hasCard: false,
+                         creationDate: "",
+                         isCriticalToSendDocuments: false)
     }
     
     /// Called wehn user logout or change ec

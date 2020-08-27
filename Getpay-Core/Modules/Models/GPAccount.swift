@@ -15,6 +15,8 @@ public struct GPAccount: Codable {
     public var pictureUrl: String?
     public var eligibility: Eligibility?
     public var lastEligibilityCall: Date?
+    public var creationDate: String?
+    public var isCriticalToSendDocuments: Bool
     
     public lazy var isAliasAccountActive: Bool = {
         return self.aliasAccountStatus == "ACTIVE"
