@@ -22,11 +22,11 @@ public class GPUtils {
             }
         }
         return GPAccount(id: 0,
-                         status: "",
+                         status: .NONE,
                          number: "",
                          branchNumber: "",
                          aliasAccountStatus: "",
-                         origin: "",
+                         origin: .NONE,
                          institution: GPBankingInstitution(number: 0, name: ""),
                          balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0),
                          hasCard: false,
