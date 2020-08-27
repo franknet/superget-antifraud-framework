@@ -174,6 +174,12 @@ public extension String {
     var onlyCharacters: String {
         return self.components(separatedBy: CharacterSet.decimalDigits).joined()
     }
+    
+    var toDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return dateFormatter.date(from: self)
+    }
 }
 
 public extension String {
