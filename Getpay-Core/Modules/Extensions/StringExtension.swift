@@ -1,15 +1,19 @@
-//
-//  StringExtension.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 14/02/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import UIKit
 import CoreImage
 
 public extension String {
+    
+    var isValidText: Bool {
+        let regex = "^[a-zA-Z0-9_.]*$"
+        return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+    
+    var isValidUserAlias: Bool {
+        if self.count < 3 || !self.isValidText {
+            return false
+        }
+        return true
+    }
     
     var isNotEmpty: Bool {
         return !self.isEmpty
@@ -169,6 +173,12 @@ public extension String {
     
     var onlyCharacters: String {
         return self.components(separatedBy: CharacterSet.decimalDigits).joined()
+    }
+    
+    var toDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return dateFormatter.date(from: self)
     }
 }
 

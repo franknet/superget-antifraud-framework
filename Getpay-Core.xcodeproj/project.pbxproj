@@ -66,8 +66,10 @@
 		A35F49957A83111FB3560548 /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0800BD45A1429B08C23125 /* Pods_Getpay_Core.framework */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
+		BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF247CD824F06F3500717CD7 /* UIImageExtension.swift */; };
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
+		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
 		BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */; };
@@ -106,6 +108,12 @@
 		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
+		D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF424F0167000C6AF14 /* UserAliasService.swift */; };
+		D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */; };
+		D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */; };
+		D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF724F0167000C6AF14 /* UserAliasView.swift */; };
+		D681A53D24F1A3260009CC0D /* GNSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681A53C24F1A3260009CC0D /* GNSuccessView.swift */; };
+		D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */; };
 		D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C6479241FB14600BA65B2 /* Coordinator.swift */; };
 		D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C647B2420FC3300BA65B2 /* ErrorView.swift */; };
 		D68C649F242183BC00BA65B2 /* Calibri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */; };
@@ -195,8 +203,10 @@
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		BF247CD824F06F3500717CD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
+		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
 		BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPInputValueView.swift; sourceTree = "<group>"; };
@@ -235,6 +245,12 @@
 		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
+		D67F0EF424F0167000C6AF14 /* UserAliasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasService.swift; sourceTree = "<group>"; };
+		D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewController.swift; sourceTree = "<group>"; };
+		D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewModel.swift; sourceTree = "<group>"; };
+		D67F0EF724F0167000C6AF14 /* UserAliasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasView.swift; sourceTree = "<group>"; };
+		D681A53C24F1A3260009CC0D /* GNSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSuccessView.swift; sourceTree = "<group>"; };
+		D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSuccessViewController.swift; sourceTree = "<group>"; };
 		D68C6479241FB14600BA65B2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D68C647B2420FC3300BA65B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D68C649B242183BC00BA65B2 /* Calibri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -355,6 +371,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D67F0EF324F015F600C6AF14 /* UserAlias */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
 				D62C525B24BCE29700627C1C /* Account Service */,
@@ -383,6 +400,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D681A53B24F1A2C80009CC0D /* SuccessView */,
 				BF601AE324D9C4B800450FD5 /* Analytics */,
 				BFEA3ED324C0BD8400D0640E /* Calculator Input View */,
 				BFED885624BE162800275D83 /* Receipt */,
@@ -436,6 +454,8 @@
 				D6E1F91524B5282A00C656DC /* UIPageViewControllerExtension.swift */,
 				1E2FA1E224BF34370058D3D9 /* NSNotificationExtension.swift */,
 				BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */,
+				BF247CD824F06F3500717CD7 /* UIImageExtension.swift */,
+				BF9E8B9B24F8512000B516D2 /* DateExension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -618,6 +638,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		D67F0EF324F015F600C6AF14 /* UserAlias */ = {
+			isa = PBXGroup;
+			children = (
+				D67F0EF424F0167000C6AF14 /* UserAliasService.swift */,
+				D67F0EF724F0167000C6AF14 /* UserAliasView.swift */,
+				D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */,
+				D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */,
+			);
+			path = UserAlias;
+			sourceTree = "<group>";
+		};
+		D681A53B24F1A2C80009CC0D /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				D681A53C24F1A3260009CC0D /* GNSuccessView.swift */,
+				D681A53E24F1A5540009CC0D /* GNSuccessViewController.swift */,
+			);
+			path = SuccessView;
+			sourceTree = "<group>";
+		};
 		D68C647E242169AC00BA65B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,7 +777,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Getnet;
 				TargetAttributes = {
 					1E4CFE8923F2E71000E445F3 = {
@@ -888,6 +928,8 @@
 				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
+				D681A53D24F1A3260009CC0D /* GNSuccessView.swift in Sources */,
+				BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
 				BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */,
@@ -903,8 +945,10 @@
 				BFED886124BE17BE00275D83 /* ReceiptViewModel.swift in Sources */,
 				BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
+				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
+				D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */,
 				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */,
@@ -918,12 +962,14 @@
 				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
+				D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */,
 				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
 				1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */,
 				D63853E3245078C700C56F1D /* GPUtils.swift in Sources */,
 				1E62A46523F30AD4009ED647 /* Urls.swift in Sources */,
 				1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */,
 				D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */,
+				BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
@@ -936,6 +982,7 @@
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
+				D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
 				D624BDF7242CD263006DD69C /* ServiceManager.swift in Sources */,
@@ -954,6 +1001,7 @@
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
 				1E62A49023F429E8009ED647 /* UIViewExtension.swift in Sources */,
 				D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */,
+				D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */,
 				1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */,
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,

@@ -100,7 +100,7 @@ extension BankSlipView {
         
         codeBankSlip.configure(title: "Código do Boleto", value: model.barCodeNumber, description: nil)
         
-        paymentOrigin.configure(title: "Pagamento de", value: merchant.name, description: account.userAlias)
+        paymentOrigin.configure(title: "Pagamento de", value: merchant.tradeName, description: account.userAlias)
         
         codeAuthentication.isHidden = true
         if model.status == .PAID {

@@ -2,11 +2,11 @@ import Foundation
 
 public struct GPAccount: Codable {
     public var id: Int
-    public var status: String
+    public var status: AccountStatus
     public var number: String
     public var branchNumber: String
     public var aliasAccountStatus: String
-    public var origin: String
+    public var origin: AccountOrigin
     public var institution: GPBankingInstitution
     public var balance: GPAccountBalance
     public var hasCard: Bool
@@ -15,6 +15,8 @@ public struct GPAccount: Codable {
     public var pictureUrl: String?
     public var eligibility: Eligibility?
     public var lastEligibilityCall: Date?
+    public var creationDate: String?
+    public var isCriticalToSendDocuments: Bool
     
     public lazy var isAliasAccountActive: Bool = {
         return self.aliasAccountStatus == "ACTIVE"
@@ -27,4 +29,17 @@ public enum Eligibility: String, Codable {
     case REPROVED
     case APPROVED
     case PENDING
+}
+
+public enum AccountStatus: String, Codable {
+    case WAITING_DOCUMENTS
+    case ACTIVE
+    case NONE
+}
+
+public enum AccountOrigin: String, Codable {
+    case VIZIR
+    case NEW_CLIENT
+    case LEGACY
+    case NONE
 }
