@@ -55,6 +55,7 @@ public enum GPAssets {
   public static let gpCrediarioBig = ImageAsset(name: "gp_crediario_big")
   public static let gpCreditoBig = ImageAsset(name: "gp_credito_big")
   public static let gpDebitoBig = ImageAsset(name: "gp_debito_big")
+  public static let gpDeviceConnected = ImageAsset(name: "gp_device_connected")
   public static let gpDocLamp = ImageAsset(name: "gp_doc_lamp")
   public static let gpDocRegistration = ImageAsset(name: "gp_doc_registration")
   public static let gpDocsAddress = ImageAsset(name: "gp_docs_address")
