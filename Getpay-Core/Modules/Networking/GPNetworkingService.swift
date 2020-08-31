@@ -2,23 +2,26 @@ import AppAuth
 
 final public class GPNetworkService {
     
-    // MARK: Properties
+    // MARK: - Singleton
     
     public static let shared = GPNetworkService()
     
-    // MARK: Initializers
+    // MARK: - Initializers
     
     public init() {}
     
-    // MARK: Custom Methods
+    // MARK: - Public methods
     
-    public func auth(username: String, password: String, completionHandler: @escaping (String?) -> Void) {
+    public func auth(username: String,
+                     password: String,
+                     completionHandler: @escaping (String?) -> Void) {
         
         let authUrl = Urls.shared.issuer + "/auth/realms/external/protocol/openid-connect/auth"
         let tokenUrl = Urls.shared.issuer + "/auth/realms/external/protocol/openid-connect/token"
         
         guard let authorizationEndpoint = URL(string: authUrl) else { return }
-        guard let tokenEndpoint = URL(string: tokenUrl) else {return}
+        guard let tokenEndpoint = URL(string: tokenUrl) else { return }
+        
         let configuration = OIDServiceConfiguration(authorizationEndpoint: authorizationEndpoint,
                                                     tokenEndpoint: tokenEndpoint)
         
@@ -31,21 +34,17 @@ final public class GPNetworkService {
                                       scope: "offline_access",
                                       refreshToken: nil,
                                       codeVerifier: nil,
-                                      additionalParameters: [
-                                        "username": username,
-                                        "password": password
-        ])
+                                      additionalParameters: ["username": username,
+                                                             "password": password])
         
         guard let issuer = URL(string: Urls.shared.issuer) else { return }
         
-        // perform the token request...
         OIDAuthorizationService.perform(request) { response, error in
             
             if error != nil {
-                GPLogger.log("Auth Error: " + String(describing: error))
+                debugPrint("Auth Error: " + String(describing: error))
             }
             
-            // builds authentication request
             let request = OIDAuthorizationRequest(configuration: configuration,
                                                   clientId: "superget-mobile",
                                                   clientSecret: nil,

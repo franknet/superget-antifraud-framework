@@ -63,31 +63,48 @@ open class ServiceManager: SessionDelegate {
         self.setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     
     private func getGenericResponse() -> GPResponseError {
-        return GPResponseError(status: "", description: "Ocorreu um erro inesperado.", errorCode: "")
+        return GPResponseError(status: "",
+                               description: "Ocorreu um erro inesperado.",
+                               errorCode: "")
     }
     
     private func validateOfflineSession(error: AFError) -> Bool {
         if error.localizedDescription.contains("invalid_grant") {
-            NotificationCenter
-                .default
-                .post(name: .offlineUserSession,
-                      object: error.localizedDescription)
-            
+            offlineUserSessionPost()
             return false
         }
         return true
     }
     
+    private func offlineUserSessionPost() {
+        NotificationCenter.default.post(name: .offlineUserSession, object: nil)
+    }
+    
+    private func verifyAuthentication() {
+        if isRequiredAuthentication && AuthStateManager.loadStateFromKeychain() == nil {
+            offlineUserSessionPost()
+        }
+    }
+
     // MARK: - Public methods
     
-    public func performRequest(route: BaseRequestProtocol, completion: @escaping(GPResponseError?) -> Void) {
+    public func performRequest(route: BaseRequestProtocol,
+                               completion: @escaping(GPResponseError?) -> Void) {
         
-        let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
+        verifyAuthentication()
+        
+        let request = session?.request(route.path,
+                                       method: route.method,
+                                       parameters: route.body,
+                                       encoding: encoding,
+                                       headers: route.headers,
+                                       interceptor: isRequiredAuthentication ? interceptor : nil)
+            .validate()
             .responseJSON { response in
-                debugPrint(route.headers as Any)
+                
                 debugPrint(response)
                 
                 if response.response?.statusCode == 200 || response.response?.statusCode == 201 {
@@ -109,23 +126,34 @@ open class ServiceManager: SessionDelegate {
                     }
                 }
         }
+        
         debugPrint(request as Any)
     }
     
     public func performRequest<T: Codable>(route:BaseRequestProtocol,
-                                           completion:@escaping (Result<T, GPResponseError>)->Void){
+                                           completion:@escaping (Result<T, GPResponseError>) -> Void) {
         
-        let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil).validate()
+        verifyAuthentication()
+        
+        let request = session?.request(route.path,
+                                       method: route.method,
+                                       parameters: route.body,
+                                       encoding: encoding,
+                                       headers: route.headers,
+                                       interceptor: isRequiredAuthentication ? interceptor : nil)
+            .validate()
             .responseDecodable(completionHandler: { (response: DataResponse<T, AFError>) in
                 
                 debugPrint(response)
                 
                 switch response.result {
+                    
                 case .success(let response):
                     completion(.success(response))
+                    
                 case .failure(let error):
                     guard self.validateOfflineSession(error: error) == true else { break }
-
+                    
                     if let data = response.data {
                         do {
                             let genericError = try JSONDecoder().decode(GPGenericError.self, from: data)
@@ -148,9 +176,16 @@ open class ServiceManager: SessionDelegate {
     public func performRequest<T:Decodable>(route: BaseRequestProtocol,
                                             decoder: JSONDecoder = JSONDecoder()) -> Observable<T> {
         
+        verifyAuthentication()
+        
         return Observable<T>.create { [session, interceptor, isRequiredAuthentication, encoding] observer in
             
-            let request = session?.request(route.path, method: route.method, parameters: route.body, encoding: encoding, headers: route.headers, interceptor: isRequiredAuthentication ? interceptor : nil)
+            let request = session?.request(route.path,
+                                           method: route.method,
+                                           parameters: route.body,
+                                           encoding: encoding,
+                                           headers: route.headers,
+                                           interceptor: isRequiredAuthentication ? interceptor : nil)
                 .responseDecodable (decoder: decoder) { (response: AFDataResponse<T>) in
                     
                     debugPrint(response)
@@ -186,10 +221,12 @@ open class ServiceManager: SessionDelegate {
     }
 }
 
+// MARK: - Setup SSL
+
 extension ServiceManager {
-  
-    func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
     
+    func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
+        
         var domainDict: [String: Any] = [:]
         
         for domain in pinnedDomains.keys {
@@ -221,8 +258,8 @@ extension ServiceManager {
     }
     
     func urlSession(_ session: URLSession,
-                           didReceive challenge: URLAuthenticationChallenge,
-                           completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+                    didReceive challenge: URLAuthenticationChallenge,
+                    completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         
         if TrustKit.sharedInstance().pinningValidator.handle(challenge, completionHandler: completionHandler) == false {
             completionHandler(.performDefaultHandling, nil)
@@ -243,7 +280,14 @@ public struct GPGenericError: Decodable, Error {
     public var error: String?
     
     enum CodingKeys: String, CodingKey {
-        case status, status_code, description, message, error_code, errors, error, host_response_code
+        case status
+        case status_code
+        case description
+        case message
+        case error_code
+        case errors
+        case error
+        case host_response_code
     }
     
     public init(from decoder: Decoder) {
