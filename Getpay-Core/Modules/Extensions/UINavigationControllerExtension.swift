@@ -84,6 +84,10 @@ public extension UINavigationController {
     func showNavBar() {
         navigationBar.isHidden = false
     }
+    
+    var previousViewController: UIViewController? {
+       viewControllers.count > 1 ? viewControllers[viewControllers.count - 2] : nil
+    }
 }
 
 public extension GPNavigationController {
