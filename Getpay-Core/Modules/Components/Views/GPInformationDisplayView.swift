@@ -34,7 +34,13 @@ public class GPInformationDisplayView: UIView {
         backgroundColor = GPColors.maggie.color
         self.navBar.title.text = preset.navigationTitle
         self.titleMessage.text = preset.title
-        self.subtitleMessage.text = preset.subTitle
+        
+        if let attributedText = preset.subTitleAttributedText {
+            self.subtitleMessage.attributedText = attributedText
+        } else {
+            self.subtitleMessage.text = preset.subTitle
+        }
+        
         self.errorCode.text = preset.errorCode
         self.icon.image = preset.image
         self.buttonAction = preset.buttonAction
@@ -44,13 +50,6 @@ public class GPInformationDisplayView: UIView {
             inView.addSubview(self, constraints: true)
             self.applyAnchors(ofType: [.leading, .trailing, .top, .bottom], to: inView)
         }
-    }
-    
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
-        createSubviews()
-        createConstraints()
-        createBinds()
     }
     
     public init() {

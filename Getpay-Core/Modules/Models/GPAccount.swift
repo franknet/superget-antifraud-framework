@@ -35,6 +35,7 @@ public enum AccountStatus: String, Codable {
     case WAITING_DOCUMENTS
     case ACTIVE
     case NONE
+    case WAITING_CORRECTIONS
 }
 
 public enum AccountOrigin: String, Codable {
