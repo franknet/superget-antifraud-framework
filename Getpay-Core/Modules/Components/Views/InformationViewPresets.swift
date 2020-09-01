@@ -1,7 +1,7 @@
-
 import UIKit
 
-// MARK: - Protocol
+// MARK: - InformationViewPreset Protocol
+
 public protocol InformationViewPreset {
     
     var navigationTitle: String? { get set }
@@ -21,7 +21,8 @@ public extension InformationViewPreset {
     }
 }
 
-// MARK: - Struct
+// MARK: - PresetNewClient404
+
 public struct PresetNewClient404: InformationViewPreset {
     
     public var subTitleAttributedText: NSMutableAttributedString?
@@ -46,7 +47,8 @@ public struct PresetNewClient404: InformationViewPreset {
     
 }
 
-// MARK: - Struct
+// MARK: - PresetClient403
+
 public struct PresetClient403: InformationViewPreset {
     
     public var subTitleAttributedText: NSMutableAttributedString?
@@ -71,7 +73,8 @@ public struct PresetClient403: InformationViewPreset {
     
 }
 
-// MARK: - Struct
+// MARK: - PresetWaitingDocumentsNewClient
+
 public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
     
     public var subTitleAttributedText: NSMutableAttributedString?
@@ -118,7 +121,8 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
     }
 }
 
-// MARK: - Struct
+// MARK: - PresetGeneric
+
 public struct PresetGeneric: InformationViewPreset {
     
     public var subTitleAttributedText: NSMutableAttributedString?
@@ -143,7 +147,8 @@ public struct PresetGeneric: InformationViewPreset {
     
 }
 
-// MARK: - Struct
+// MARK: - PresetLoading
+
 public struct PresetLoading: InformationViewPreset {
     
     public var subTitleAttributedText: NSMutableAttributedString?
@@ -166,4 +171,46 @@ public struct PresetLoading: InformationViewPreset {
     
     public init() {}
     
+}
+
+// MARK: - Present Canceled Account
+
+public struct PresetCanceledAccount: InformationViewPreset {
+    public var navigationTitle: String?
+    
+    public var title: String = "Conta desativada"
+    
+    public var subTitle: String = "Devido ao não envio de documentos necessários, sua conta foi desativada. Entre em contato com a Central de Atendimento Getnet para alterar a conta onde você recebe suas vendas. Você ainda pode continuar vendendo normalmente."
+    
+    public var errorCode: String?
+    
+    public var image: UIImage? = GPAssets.gpDisabledAccount.image
+    
+    public var buttonTitle: String? = "OK, ENTENDI"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public var subTitleAttributedText: NSMutableAttributedString?
+    
+    public init() {
+        self.subTitleAttributedText = configMessage()
+    }
+    
+    private func configMessage() -> NSMutableAttributedString {
+        
+        let message = NSMutableAttributedString(string: "Devido ao não envio de documentos necessários, sua conta foi desativada. Entre em contato com a ")
+        let boldString = "Central de Atendimento Getnet".makeBoldString(fontSize: 16.0,
+            color: GPColors.homer.color).underline(term: "Central de Atendimento Getnet")
+        
+        //let boldString = "Central de Atendimento Getnet"
+        
+        let finalPart = NSAttributedString(string: " para alterar a conta onde você recebe suas vendas. Você ainda pode continuar vendendo normalmente.")
+        boldString.append(finalPart)
+        
+        message.append(boldString)
+        
+        return message
+    }
 }
