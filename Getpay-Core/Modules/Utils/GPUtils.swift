@@ -72,4 +72,12 @@ public class GPUtils {
                           type: .PF,
                           merchantStatus: "")
     }
+    
+    public static func remainingDaysToSendDocuments() -> Int {
+        let account = GPUtils.loadAccountPersistenceFromUD()
+        if let numbersOfDays = account.creationDate?.toDate?.numberOfDaysFromToday {
+            return 30 - numbersOfDays
+        }
+        return 0
+    }
 }
