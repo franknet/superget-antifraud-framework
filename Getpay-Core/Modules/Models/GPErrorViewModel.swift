@@ -102,8 +102,7 @@ struct GPErrorViewModel {
             image = #imageLiteral(resourceName: "gn_erro_pin_online")
         case "SM-BT CON":
             title = "Máquina não encontrada"
-            message = "Certifique-se que a máquina esteja ligada e próxima a este dispositivo."
-            actions.append(.connError)
+            message = "Não foi possível conectar a sua máquina. Verifique se a máquina e o Bluetooth estão ligados e funcionando corretamente. Se o erro persistir, desligue e ligue o celular e a máquina."
         default:
             title = "Operação Cancelada"
             message = "Tente novamente. Caso o erro persista, entre em contato com a Central de Atendimento Getnet."
