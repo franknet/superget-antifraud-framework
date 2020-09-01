@@ -36,6 +36,7 @@ public enum AccountStatus: String, Codable {
     case ACTIVE
     case DENIED
     case NONE
+    case WAITING_CORRECTIONS
 }
 
 public enum AccountOrigin: String, Codable {

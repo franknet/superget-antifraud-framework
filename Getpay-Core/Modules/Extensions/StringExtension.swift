@@ -180,6 +180,14 @@ public extension String {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         return dateFormatter.date(from: self)
     }
+    
+    func makeBoldString(fontSize: CGFloat, color: UIColor) -> NSMutableAttributedString {
+        let attrs = [NSAttributedString.Key.font: FontFamily.Calibri.bold.font(size: fontSize),
+                     NSAttributedString.Key.foregroundColor: color]
+        
+        return NSMutableAttributedString(string: self,
+                                         attributes:attrs as [NSAttributedString.Key : Any])
+    }
 }
 
 public extension String {
