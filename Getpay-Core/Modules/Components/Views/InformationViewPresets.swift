@@ -199,16 +199,12 @@ public struct PresetCanceledAccount: InformationViewPreset {
     }
     
     private func configMessage() -> NSMutableAttributedString {
-        
         let message = NSMutableAttributedString(string: "Devido ao não envio de documentos necessários, sua conta foi desativada. Entre em contato com a ")
         let boldString = "Central de Atendimento Getnet".makeBoldString(fontSize: 16.0,
-            color: GPColors.homer.color).underline(term: "Central de Atendimento Getnet")
-        
-        //let boldString = "Central de Atendimento Getnet"
+                                                                        color: GPColors.homer.color).underline(term: "Central de Atendimento Getnet")
         
         let finalPart = NSAttributedString(string: " para alterar a conta onde você recebe suas vendas. Você ainda pode continuar vendendo normalmente.")
         boldString.append(finalPart)
-        
         message.append(boldString)
         
         return message
