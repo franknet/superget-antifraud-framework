@@ -34,7 +34,7 @@ public enum GPAccountRequestStatus: Int, Codable {
     /// (status = "WAITING_DOCUMENTS" && origin="LEGACY")
     case waitingDocumentsLegacy
     
-    case underAnalysis
+    case waitingAnalysis
     
     case denied
     
