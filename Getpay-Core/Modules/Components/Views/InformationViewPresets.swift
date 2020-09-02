@@ -210,3 +210,27 @@ public struct PresetCanceledAccount: InformationViewPreset {
         return message
     }
 }
+
+public struct PresetWaitingAnalysis: InformationViewPreset {
+    
+    public var subTitleAttributedText: NSMutableAttributedString?
+    
+    public var navigationTitle: String?
+    
+    public var title: String = "Cadastro em análise"
+    
+    public var subTitle: String = "Seus documentos foram enviados e vamos te enviar o resultado da análise o mais breve possível."
+    
+    public var errorCode: String?
+    
+    public var image: UIImage? = GPAssets.gpAccountReview.image
+    
+    public var buttonTitle: String?
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
+    
+}
