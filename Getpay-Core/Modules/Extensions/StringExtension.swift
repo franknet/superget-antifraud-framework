@@ -181,7 +181,9 @@ public extension String {
         return dateFormatter.date(from: self)
     }
     
-    func makeBoldString(fontSize: CGFloat, color: UIColor) -> NSMutableAttributedString {
+    func makeBoldString(fontSize: CGFloat,
+                        color: UIColor) -> NSMutableAttributedString {
+        
         let attrs = [NSAttributedString.Key.font: FontFamily.Calibri.bold.font(size: fontSize),
                      NSAttributedString.Key.foregroundColor: color]
         
@@ -396,4 +398,21 @@ public extension String {
 public extension StringProtocol {
     var firstUppercased: String { return prefix(1).uppercased() + dropFirst() }
     var firstCapitalized: String { return prefix(1).capitalized + dropFirst() }
+}
+
+public extension NSMutableAttributedString {
+
+    func underline(term: String) -> NSMutableAttributedString {
+        guard let underlineRange = string.range(of: term) else {
+            return NSMutableAttributedString()
+        }
+        let startPosition = string.distance(from: term.startIndex, to: underlineRange.lowerBound)
+        let nsrange = NSRange(location: startPosition, length: term.count)
+        addAttribute(
+            .underlineStyle,
+            value: NSUnderlineStyle.single.rawValue,
+            range: nsrange)
+        
+        return self
+    }
 }

@@ -91,8 +91,8 @@ extension GPInformationDisplayView {
         titleMessage.applyAnchors(ofType: [.leading, .trailing], to: contentView)
         titleMessage.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 42.0).isActive = true
         
-        subtitleMessage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 21.0).isActive = true
-        subtitleMessage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -21.0).isActive = true
+        subtitleMessage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        subtitleMessage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         subtitleMessage.topAnchor.constraint(equalTo: titleMessage.bottomAnchor, constant: 21.0).isActive = true
         
         errorCode.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 21.0).isActive = true
@@ -106,8 +106,8 @@ extension GPInformationDisplayView {
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         
         contentView.applyAnchors(ofType: [.centerY], to: self)
-        contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28.0).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28.0).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20.0).isActive = true
     }
     
     // MARK: - Internal methods

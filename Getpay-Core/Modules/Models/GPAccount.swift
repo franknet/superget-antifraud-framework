@@ -34,6 +34,7 @@ public enum Eligibility: String, Codable {
 public enum AccountStatus: String, Codable {
     case WAITING_DOCUMENTS
     case ACTIVE
+    case DENIED
     case NONE
     case WAITING_CORRECTIONS
 }

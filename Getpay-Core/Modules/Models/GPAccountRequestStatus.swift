@@ -36,6 +36,7 @@ public enum GPAccountRequestStatus: Int, Codable {
     
     case underAnalysis
     
+    case denied
     
     case disapproved
 
