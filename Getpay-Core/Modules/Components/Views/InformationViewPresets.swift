@@ -97,6 +97,11 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
     
     public init() {
         self.subTitleAttributedText = configMessage()
+        if let accountStatus = GPUtils.loadAccountPersistenceFromUD().requestStatus {
+            if accountStatus == .waitingCorrections {
+                title = "Reenvio de documentos"
+            }
+        }
     }
     
     private func configMessage() -> NSMutableAttributedString {
