@@ -38,6 +38,8 @@ public enum GPAccountRequestStatus: Int, Codable {
     
     case denied
     
+    case waitingCorrections
+    
     case disapproved
 
     /// this state erpresentas an user with an
