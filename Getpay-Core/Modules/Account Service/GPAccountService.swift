@@ -5,8 +5,8 @@ import Foundation
 public class GPAccountService {
     
     // MARK: - Private Variables
-    
     private var service = ServiceManager()
+    private let merchantId = GPUtils.loadGPMerchantFromUD().id
     
     // MARK: - Initializers
     
@@ -15,7 +15,7 @@ public class GPAccountService {
     // MARK: - Public methods
     
     public func getAccount(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
-        let merchantId = GPUtils.loadGPMerchantFromUD().id
+        
         let request = AccountDataRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
