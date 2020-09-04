@@ -114,7 +114,7 @@ public struct PresetWaitingDocumentsNewClient: InformationViewPreset {
         if numbersOfDayes <= 1 {
             dueDate = "até hoje".makeBoldString(fontSize: 16.0, color: GPColors.edna.color)
         } else {
-            let preposition = NSMutableAttributedString(string: " em até ")
+            let preposition = NSMutableAttributedString(string: "em até ")
             message.append(preposition)
             dueDate = "\(numbersOfDayes) dias".makeBoldString(fontSize: 16.0, color: GPColors.edna.color)
         }
