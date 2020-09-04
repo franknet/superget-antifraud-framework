@@ -1,57 +1,41 @@
-//
-//  StringProtocolExtension.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 02/03/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import Foundation
-
-public extension StringProtocol  {
-    var isNumber: Bool {
-        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
-    }
-}
 
 public extension StringProtocol {
     var isValidCPF: Bool {
-        guard isNumber else { return false }
-        let numbers = compactMap({ $0.wholeNumberValue })
+        let numbers = compactMap(\.wholeNumberValue)
         guard numbers.count == 11 && Set(numbers).count != 1 else { return false }
-        func digitCalculator(_ slice: ArraySlice<Int>) -> Int {
-            var number = slice.count + 2
-            let digit = 11 - slice.reduce(into: 0) {
-                number -= 1
-                $0 += $1 * number
-            } % 11
-            return digit % 10
-        }
-        let dv1 = digitCalculator(numbers.prefix(9))
-        let dv2 = digitCalculator(numbers.prefix(10))
-        return dv1 == numbers[9] && dv2 == numbers[10]
+        return numbers.prefix(9).digitoCPF == numbers[9] &&
+            numbers.prefix(10).digitoCPF == numbers[10]
     }
     
     var isValidCNPJ: Bool {
-        guard isNumber else { return false }
-        let numbers = compactMap({ $0.wholeNumberValue })
+        let numbers = compactMap(\.wholeNumberValue)
         guard numbers.count == 14 && Set(numbers).count != 1 else { return false }
-        func digitCalculator(_ slice: ArraySlice<Int>) -> Int {
-            var number = 1
-            let digit = 11 - slice.reversed().reduce(into: 0) {
-                number += 1
-                $0 += $1 * number
-                if number == 9 { number = 1 }
-            } % 11
-            return digit % 10
-        }
-        let dv1 = digitCalculator(numbers.prefix(12))
-        let dv2 = digitCalculator(numbers.prefix(13))
-        return dv1 == numbers[12] && dv2 == numbers[13]
+        return numbers.prefix(12).digitoCNPJ == numbers[12] && numbers.prefix(13).digitoCNPJ == numbers[13]
     }
     
     var isValidPassword: Bool {
-        // Password rules here
         return self.count > 3
+    }
+}
+
+extension Collection where Element == Int {
+    var digitoCNPJ: Int {
+        var number = 1
+        let digit = 11 - reversed().reduce(into: 0) {
+            number += 1
+            $0 += $1 * number
+            if number == 9 { number = 1 }
+            } % 11
+        return digit > 9 ? 0 : digit
+    }
+    
+    var digitoCPF: Int {
+        var number = count + 2
+        let digit = 11 - reduce(into: 0) {
+            number -= 1
+            $0 += $1 * number
+            } % 11
+        return digit > 9 ? 0 : digit
     }
 }
