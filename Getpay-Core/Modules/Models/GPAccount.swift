@@ -5,7 +5,7 @@ public struct GPAccount: Codable {
     public var status: AccountStatus
     public var number: String
     public var branchNumber: String
-    public var aliasAccountStatus: String
+    public var aliasAccountStatus: AliasAccountStatus
     public var origin: AccountOrigin
     public var institution: GPBankingInstitution
     public var balance: GPAccountBalance
@@ -19,7 +19,7 @@ public struct GPAccount: Codable {
     public var isCriticalToSendDocuments: Bool
     
     public lazy var isAliasAccountActive: Bool = {
-        return self.aliasAccountStatus == "ACTIVE"
+        return self.aliasAccountStatus == .ACTIVE
     }()
 }
 
@@ -45,4 +45,14 @@ public enum AccountOrigin: String, Codable {
     case NEW_CLIENT
     case LEGACY
     case NONE
+}
+
+
+public enum AliasAccountStatus: String, Codable {
+    case PENDING
+    case ACTIVE
+    case LOCKED
+    case CLOSED
+    case NOT_REQUESTED
+    case NOT_ACTIVE
 }

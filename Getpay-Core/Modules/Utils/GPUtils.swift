@@ -25,7 +25,7 @@ public class GPUtils {
                          status: .NONE,
                          number: "",
                          branchNumber: "",
-                         aliasAccountStatus: "",
+                         aliasAccountStatus: .NOT_ACTIVE,
                          origin: .NONE,
                          institution: GPBankingInstitution(number: 0, name: ""),
                          balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0),
