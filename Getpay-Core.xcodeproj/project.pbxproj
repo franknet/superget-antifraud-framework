@@ -94,6 +94,7 @@
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
+		D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FFB992505BC4200C997CC /* GNMerchantService.swift */; };
 		D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */; };
 		D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */; };
 		D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */; };
@@ -231,6 +232,7 @@
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		D64FFB992505BC4200C997CC /* GNMerchantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNMerchantService.swift; sourceTree = "<group>"; };
 		D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNImageAndDescriptionView.swift; sourceTree = "<group>"; };
 		D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSelectedViewWithRadioButton.swift; sourceTree = "<group>"; };
 		D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNRadiusButton.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D64FFB982505BC2700C997CC /* Merchant Service */,
 				D67F0EF324F015F600C6AF14 /* UserAlias */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
@@ -636,6 +639,14 @@
 				D63853E2245078C700C56F1D /* GPUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D64FFB982505BC2700C997CC /* Merchant Service */ = {
+			isa = PBXGroup;
+			children = (
+				D64FFB992505BC4200C997CC /* GNMerchantService.swift */,
+			);
+			path = "Merchant Service";
 			sourceTree = "<group>";
 		};
 		D67F0EF324F015F600C6AF14 /* UserAlias */ = {
@@ -935,6 +946,7 @@
 				BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */,
 				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
 				D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */,
+				D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */,
 				D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */,
 				BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */,
 				1E10E1102400738900247FC7 /* GPReceiptData.swift in Sources */,
