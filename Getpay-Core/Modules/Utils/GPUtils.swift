@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 public class GPUtils {
     
@@ -79,5 +80,14 @@ public class GPUtils {
             return 30 - numbersOfDays
         }
         return 0
+    }
+    
+    public static func findTabBarIn(array: [UIViewController]) -> UIViewController? {
+        for controller in array {
+            if controller.isKind(of: UITabBarController.self) {
+                return controller
+            }
+        }
+        return nil
     }
 }

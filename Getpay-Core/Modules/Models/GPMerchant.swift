@@ -8,7 +8,7 @@ public struct GPMerchant: Codable {
     public var email: String?
     public var type: Type
     public var address: GPAddress?
-    public var merchantStatus: String
+    public var merchantStatus: String?
 }
 
 public enum Type: String, Codable {
