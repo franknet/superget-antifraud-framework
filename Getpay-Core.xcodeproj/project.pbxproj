@@ -70,6 +70,7 @@
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
+		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
 		BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */; };
@@ -208,6 +209,7 @@
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
+		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
 		BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPInputValueView.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BFDC43C82510F64100D81DF4 /* Eligibility Service */,
 				D64FFB982505BC2700C997CC /* Merchant Service */,
 				D67F0EF324F015F600C6AF14 /* UserAlias */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
@@ -540,6 +543,14 @@
 				BF601AE424D9C55800450FD5 /* GNEvents.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		BFDC43C82510F64100D81DF4 /* Eligibility Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */,
+			);
+			path = "Eligibility Service";
 			sourceTree = "<group>";
 		};
 		BFEA3ED324C0BD8400D0640E /* Calculator Input View */ = {
@@ -1028,6 +1039,7 @@
 				D60B81A324A406160098443D /* TitleWithValueAndSubTitle.swift in Sources */,
 				1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */,
 				1E3FCBDC248D8D9B00EC29DD /* GPInformationDisplayView.swift in Sources */,
+				BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */,
 				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,
@@ -1214,6 +1226,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1254,6 +1267,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

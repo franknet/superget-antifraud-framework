@@ -15,6 +15,7 @@ def shared_pods
   pod 'RxGesture'
   pod 'IQKeyboardManagerSwift'
   pod 'TrustKit'
+  pod 'SkeletonView'
 end
 
 target 'Getpay-Core' do

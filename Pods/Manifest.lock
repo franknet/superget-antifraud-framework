@@ -16,6 +16,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.0)
+  - SkeletonView (1.9)
   - SwiftGen (6.1.0)
   - SwiftKeychainWrapper (3.4.0)
   - TrustKit (1.6.5)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - JVFloatLabeledTextField
   - RxGesture
   - RxSwift
+  - SkeletonView
   - SwiftGen (~> 6.0)
   - SwiftKeychainWrapper
   - TrustKit
@@ -40,6 +42,7 @@ SPEC REPOS:
     - RxGesture
     - RxRelay
     - RxSwift
+    - SkeletonView
     - SwiftGen
     - SwiftKeychainWrapper
     - TrustKit
@@ -55,10 +58,11 @@ SPEC CHECKSUMS:
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  SkeletonView: f72ac4df69730e48324efae062ba580c2fce974d
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   TrustKit: 073855e3adecd317417bda4ac9e9ac54a2e3b9f2
 
-PODFILE CHECKSUM: 7ba464a29b21bdb5036315cd3225b4f6a5dd1227
+PODFILE CHECKSUM: a0aedf208bded4c72a10dd21390b7d27fd6f2eee
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.1
