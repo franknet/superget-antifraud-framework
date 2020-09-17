@@ -44,8 +44,10 @@ struct AccountDataRequest: BaseRequestProtocol {
 struct IndiviualAccountPostRequest: BaseRequestProtocol {
     var path: String
     var headers: Headers?
+    var method: GPHttpMethod
     
     init(_ merchantId: Int) {
+        method = .post
         path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/alias-account"
         headers = [
             "merchant_id": "\(merchantId)",
