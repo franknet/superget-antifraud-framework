@@ -79,7 +79,7 @@ public class GPUtils {
         if let numbersOfDays = account.creationDate?.toDate?.numberOfDaysFromToday {
             return 30 - numbersOfDays
         }
-        return 0
+        return 30
     }
     
     public static func findTabBarIn(array: [UIViewController]) -> UIViewController? {
