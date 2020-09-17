@@ -6,7 +6,7 @@ public struct GPAccount: Codable {
     public var number: String
     public var branchNumber: String
     public var aliasAccountStatus: AliasAccountStatus
-    public var origin: AccountOrigin
+    public var origin: AccountOrigin?
     public var institution: GPBankingInstitution
     public var balance: GPAccountBalance
     public var hasCard: Bool

@@ -43,8 +43,16 @@ struct AccountDataRequest: BaseRequestProtocol {
 
 struct IndiviualAccountPostRequest: BaseRequestProtocol {
     var path: String
+    var headers: Headers?
     
     init(_ merchantId: Int) {
         path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/alias-account"
+        headers = [
+            "merchant_id": "\(merchantId)",
+            "Content-Type": "application/json",
+            "x-api-version": "2",
+            "scope": "APP"
+        ]
+
     }
 }
