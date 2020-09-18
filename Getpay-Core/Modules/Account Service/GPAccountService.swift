@@ -22,7 +22,7 @@ public class GPAccountService {
     
     public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
         let merchantId = GPUtils.loadGPMerchantFromUD().id
-        let request = AccountDataRequest(merchantId)
+        let request = IndiviualAccountPostRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
     
