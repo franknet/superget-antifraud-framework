@@ -6,7 +6,9 @@ public class GPAccountService {
     
     // MARK: - Private Variables
     private var service = ServiceManager()
-    private let merchantId = GPUtils.loadGPMerchantFromUD().id
+    private var merchantId: Int {
+        return GPUtils.loadGPMerchantFromUD().id
+    }
     
     // MARK: - Initializers
     
