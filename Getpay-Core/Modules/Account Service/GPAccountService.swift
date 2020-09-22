@@ -10,6 +10,15 @@ public class GPAccountService {
     private var merchantId: Int {
         return GPUtils.loadGPMerchantFromUD().id
     }
+    private let eligibilityService = GNEligibilityService()
+    private(set) var persistedAccount: GPAccount {
+        get {
+            return GPUtils.loadAccountPersistenceFromUD()
+        }
+        set {
+            GPUtils.save(account: newValue)
+        }
+    }
     
     // MARK: - Initializers
     
@@ -19,13 +28,7 @@ public class GPAccountService {
 extension GPAccountService {
     
     // MARK: - Public methods
-    
-    public func getAccount(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
         
-        let request = AccountDataRequest(merchantId)
-        service.performRequest(route: request, completion: completion)
-    }
-    
     public func getAccount(completion: @escaping (Bool) -> Void) {
         self.get { [weak self] response in
             switch response {
@@ -107,6 +110,12 @@ extension GPAccountService {
             }
         }
     }
+    
+    public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
+        let merchantId = GPUtils.loadGPMerchantFromUD().id
+        let request = IndiviualAccountPostRequest(merchantId)
+        service.performRequest(route: request, completion: completion)
+    }
 }
 
 // MARK: - Request
@@ -136,6 +145,6 @@ struct IndiviualAccountPostRequest: BaseRequestProtocol {
             "x-api-version": "2",
             "scope": "APP"
         ]
-
+        
     }
 }
