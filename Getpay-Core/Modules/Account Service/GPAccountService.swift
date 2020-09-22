@@ -7,15 +7,8 @@ public class GPAccountService {
     // MARK: - Private Variables
     
     private var service = ServiceManager()
-    private let merchantId = GPUtils.loadGPMerchantFromUD().id
-    private let eligibilityService = GNEligibilityService()
-    private(set) var persistedAccount: GPAccount {
-        get {
-            return GPUtils.loadAccountPersistenceFromUD()
-        }
-        set {
-            GPUtils.save(account: newValue)
-        }
+    private var merchantId: Int {
+        return GPUtils.loadGPMerchantFromUD().id
     }
     
     // MARK: - Initializers
@@ -27,8 +20,8 @@ extension GPAccountService {
     
     // MARK: - Public methods
     
-    public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
-        let merchantId = GPUtils.loadGPMerchantFromUD().id
+    public func getAccount(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
+        
         let request = AccountDataRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
