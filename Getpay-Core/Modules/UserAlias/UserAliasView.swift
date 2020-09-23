@@ -6,16 +6,18 @@ public class UserAliasView: UIView {
     
     // MARK: - Private variables
     
-    private let title = GPLabel(text: "Nome do usuário",
+    private let title = GPLabel(text: "Nome de usuário",
                                 font: FontFamily.Calibri.bold,
                                 fontSize: 24.0,
                                 alignment: .center)
     
-    private let subTitle = GPLabel(text: "Escolha um nome de usuário para sua conta",
+    private let subTitle = GPLabel(text: "Primeiro precisamos que você escolha um nome de usuário para sua conta.",
                                    fontSize: 16.0,
                                    textColor: GPColors.ralph.color)
     
     // MARK: - Internal variables
+    
+    let navBarView = GPNavBarView(navButtonStyle: .back)
     
     let userAliasTextfield: UITextField = {
         let tf = UITextField()
@@ -26,7 +28,7 @@ public class UserAliasView: UIView {
         return tf
     }()
     
-    let proceed = GPButton(title: "FINALIZAR CADASTRO", style: .filled)
+    let proceed = GPButton(title: "CONTINUAR", style: .filled)
     
     let statusContainer = UIView()
     
@@ -72,6 +74,7 @@ extension UserAliasView {
     
     private func setupLayout() {
         addComponents()
+        setupNavBarView()
         setupTitleConstraints()
         setupSubTitleConstraints()
         setupUserAliasTextfieldConstraints()
@@ -85,7 +88,8 @@ extension UserAliasView {
     }
     
     private func addComponents() {
-        addSubviews([title,
+        addSubviews([navBarView,
+                     title,
                      subTitle,
                      userAliasTextfield,
                      proceed,
@@ -95,6 +99,11 @@ extension UserAliasView {
                                      statusTitle], constraints: true)
         
         containerPrefix.addSubview(prefix, constraints: true)
+    }
+    
+    private func setupNavBarView() {
+        navBarView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        navBarView.applyAnchors(ofType: [.leading, .trailing], to: self)
     }
     
     private func setupTitleConstraints() {
