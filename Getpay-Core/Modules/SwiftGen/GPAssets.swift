@@ -33,6 +33,7 @@ public enum GPAssets {
   public static let gpBoletoBig = ImageAsset(name: "gp_boleto_big")
   public static let gpBorderDoc = ImageAsset(name: "gp_border_doc")
   public static let gpBuyCard = ImageAsset(name: "gp_buy_card")
+  public static let gpBvSymbol = ImageAsset(name: "gp_bv_symbol")
   public static let gpCameraBoleto = ImageAsset(name: "gp_camera_boleto")
   public static let gpCardBig = ImageAsset(name: "gp_card_big")
   public static let gpCardBlocked = ImageAsset(name: "gp_card_blocked")

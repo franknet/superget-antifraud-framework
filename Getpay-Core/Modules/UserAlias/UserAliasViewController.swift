@@ -57,6 +57,12 @@ extension UserAliasViewController {
             .bind(to: customView.statusContainer.rx.isHidden)
             .disposed(by: disposeBag)
         
+        customView.navBarView.leftButton
+            .rx
+            .tap.subscribe(onNext: { [weak self] _ in
+                self?.navigationController?.popViewController(animated: true)
+            }).disposed(by: disposeBag)
+        
         customView.proceed
             .rx
             .tap
