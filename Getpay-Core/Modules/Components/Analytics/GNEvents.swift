@@ -7,6 +7,14 @@ public enum GNEvent: String {
     case ConfirmNewAccount
     case NotElegible
     case CreateNewAccountMenu
+    case shortcut_menu_pinpad_checkout
+    case shortcut_menu_transfer
+    case shortcut_menu_pix
+    case shortcut_menu_qrcode_checkout
+    case shortcut_menu_slip_deposit
+    case shortcut_menu_slip_payment
+    case shortcut_menu_expand_menu
+    case shortcut_menu_cancel_checkout
 }
 
 public enum GNEventParameters: String {

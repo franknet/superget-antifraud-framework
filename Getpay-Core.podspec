@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
-  spec.version      = "6.19.10"
+  spec.version      = "7.0.0"
   spec.summary      = "A Getnet framework."
   spec.homepage     = "https://www.superget.com.br/"
 
@@ -27,6 +27,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'RxGesture'
   spec.dependency 'IQKeyboardManagerSwift'
   spec.dependency 'TrustKit'
+  spec.dependency 'SkeletonView'
 
   spec.source_files = ["#{spec.name}/**/*.{swift}", "#{spec.name}/**/*.{h}", "#{spec.name}/**/*.{m}"]
 
