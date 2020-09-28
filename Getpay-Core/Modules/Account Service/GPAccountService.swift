@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 // MARK: - Class
 
@@ -28,7 +29,7 @@ public class GPAccountService {
 extension GPAccountService {
     
     // MARK: - Public methods
-        
+    
     public func getAccount(completion: @escaping (Bool) -> Void) {
         self.get { [weak self] response in
             switch response {
@@ -44,8 +45,28 @@ extension GPAccountService {
         }
     }
     
+    public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
+        let merchantId = GPUtils.loadGPMerchantFromUD().id
+        let request = IndiviualAccountPostRequest(merchantId)
+        service.performRequest(route: request, completion: completion)
+    }
+    
+    public func get(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
+        let request = AccountDataRequest(merchantId)
+        service.performRequest(route: request, completion: completion)
+    }
+    
     func accountResponseHandler(response: GPAccount) {
+        
+        shouldSendAccountNotification(response: response)
+        
         persistedAccount = response
+        
+        if response.aliasAccountStatus == .NOT_REQUESTED && response.status == .ACTIVE {
+            postIndividualAccount { (error) in
+                debugPrint(error as Any)
+            }
+        }
         
         if response.status == .WAITING_ANALYSIS {
             persistedAccount.requestStatus = .waitingAnalysis
@@ -61,6 +82,7 @@ extension GPAccountService {
                 persistedAccount.requestStatus = .waitingDocumentsLegacy
                 
             }
+            
         } else if response.status == .DENIED {
             persistedAccount.requestStatus = .denied
             
@@ -69,7 +91,6 @@ extension GPAccountService {
             
         } else {
             persistedAccount.requestStatus = .active
-            
         }
     }
     
@@ -92,11 +113,6 @@ extension GPAccountService {
     
     // MARK: - Private methods
     
-    private func get(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
-        let request = AccountDataRequest(merchantId)
-        service.performRequest(route: request, completion: completion)
-    }
-    
     private func getEligibility() {
         eligibilityService.getStatus { [weak self] response in
             switch response {
@@ -111,10 +127,23 @@ extension GPAccountService {
         }
     }
     
-    public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
-        let merchantId = GPUtils.loadGPMerchantFromUD().id
-        let request = IndiviualAccountPostRequest(merchantId)
-        service.performRequest(route: request, completion: completion)
+    private func shouldSendAccountNotification(response: GPAccount) {
+        let persistedValidation = (persistedAccount.aliasAccountStatus != response.aliasAccountStatus && self.persistedAccount.id != 0)
+        if persistedValidation && response.aliasAccountStatus == .ACTIVE {
+            GPLocalNotification.fireNotification(withModel: self.setupNotification(withAccount: response))
+        }
+    }
+    
+    func setupNotification(withAccount account: GPAccount) -> LocalNotificationModel {
+        let bankingInstitution = account.institution
+        let agency = account.branchNumber
+        let cc = account.number
+
+        var preset = IndividualAccountNotification()
+        preset.body = String(
+            format: preset.body, "\(bankingInstitution.number) - \(bankingInstitution.name)", "\(agency) / \(cc)"
+        )
+        return preset
     }
 }
 
@@ -147,4 +176,12 @@ struct IndiviualAccountPostRequest: BaseRequestProtocol {
         ]
         
     }
+}
+
+struct IndividualAccountNotification: LocalNotificationModel {
+    var title: String = "Sua conta foi criada"
+    var subtitle: String = ""
+    var body: String = "Agora você pode aproveitar todos os benefícios do aplicativo. \n\nConfira os dados da sua conta Superget. \n\n Banco\n %@ \n\nAgência / Conta\n %@"
+    var sound = UNNotificationSound.default
+    var trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 3, repeats: false)
 }
