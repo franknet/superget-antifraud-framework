@@ -8,9 +8,7 @@ public class GPUtils {
     private static let accountPersistenceKey = "accountPersistenceKey"
     private static let merchantKey = "merchantKey"
     
-    ///The current object is deleted and is saved the new one
     public static func save(account: GPAccount) {
-        removeAccountPersistenceFromUD()
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(account) {
             defaults.set(encoded, forKey: accountPersistenceKey)
