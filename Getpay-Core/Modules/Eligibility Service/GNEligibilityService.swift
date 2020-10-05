@@ -38,6 +38,7 @@ public extension GNEligibilityService {
     func saveCurrentDate() {
         if let date = getCurrentDateWithoutTime() {
             account.lastEligibilityCall = date
+            GPUtils.save(account: account)
         }
     }
     
