@@ -12,14 +12,6 @@ public class GPAccountService {
         return GPUtils.loadGPMerchantFromUD().id
     }
     private let eligibilityService = GNEligibilityService()
-    private(set) var persistedAccount: GPAccount {
-        get {
-            return GPUtils.loadAccountPersistenceFromUD()
-        }
-        set {
-            GPUtils.save(account: newValue)
-        }
-    }
     
     // MARK: - Initializers
     
@@ -32,13 +24,14 @@ extension GPAccountService {
     
     public func getAccount(completion: @escaping (Bool) -> Void) {
         self.get { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let account):
-                self?.accountResponseHandler(response: account)
+                self.accountResponseHandler(response: account)
                 completion(true)
                 
             case .failure(let error):
-                self?.accountResponseHandler(error: error)
+                self.accountResponseHandler(error: error)
                 completion(false)
                 
             }
@@ -57,10 +50,9 @@ extension GPAccountService {
     }
     
     func accountResponseHandler(response: GPAccount) {
-        
         shouldSendAccountNotification(response: response)
         
-        persistedAccount = response
+        var persistedAccount = response
         
         if response.aliasAccountStatus == .NOT_REQUESTED && response.status == .ACTIVE {
             postIndividualAccount { (error) in
@@ -92,9 +84,12 @@ extension GPAccountService {
         } else {
             persistedAccount.requestStatus = .active
         }
+        GPUtils.save(account: persistedAccount)
     }
     
     func accountResponseHandler(error: GPResponseError) {
+        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
+        
         if error.status == "404" {
             persistedAccount.requestStatus = .newClient404
             
@@ -109,15 +104,18 @@ extension GPAccountService {
             persistedAccount.requestStatus = .retry
             
         }
+        GPUtils.save(account: persistedAccount)
     }
     
     // MARK: - Private methods
     
     private func getEligibility() {
+        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
         eligibilityService.getStatus { [weak self] response in
             switch response {
             case .success(let result):
-                self?.persistedAccount.eligibility = result.status
+                persistedAccount.eligibility = result.status
+                GPUtils.save(account: persistedAccount)
                 self?.eligibilityService.saveCurrentDate()
                 
             case .failure(let error):
@@ -128,7 +126,8 @@ extension GPAccountService {
     }
     
     private func shouldSendAccountNotification(response: GPAccount) {
-        let persistedValidation = (persistedAccount.aliasAccountStatus != response.aliasAccountStatus && self.persistedAccount.id != 0)
+        let persistedAccount = GPUtils.loadAccountPersistenceFromUD()
+        let persistedValidation = (persistedAccount.aliasAccountStatus != response.aliasAccountStatus && persistedAccount.id != 0)
         if persistedValidation && response.aliasAccountStatus == .ACTIVE {
             GPLocalNotification.fireNotification(withModel: self.setupNotification(withAccount: response))
         }

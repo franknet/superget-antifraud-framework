@@ -92,6 +92,7 @@ public enum GPAssets {
   public static let gpInsertCard = ImageAsset(name: "gp_insert_card")
   public static let gpLocked = ImageAsset(name: "gp_locked")
   public static let gpLockedBig = ImageAsset(name: "gp_locked_big")
+  public static let gpLoginBg = ImageAsset(name: "gp_login_bg")
   public static let gpLogoSuperget = ImageAsset(name: "gp_logo_superget")
   public static let gpMessage = ImageAsset(name: "gp_message")
   public static let gpMoney = ImageAsset(name: "gp_money")
