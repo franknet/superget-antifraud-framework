@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "gp_pix_intro_keys_register.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

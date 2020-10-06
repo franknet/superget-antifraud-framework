@@ -109,6 +109,8 @@ public enum GPAssets {
   public static let gpPhotoFace = ImageAsset(name: "gp_photo_face")
   public static let gpPhotoFaceSmall = ImageAsset(name: "gp_photo_face_small")
   public static let gpPix = ImageAsset(name: "gp_pix")
+  public static let gpPixIntroKeysRegister = ImageAsset(name: "gp_pix_intro_keys_register")
+  public static let gpPixIntroKeysType = ImageAsset(name: "gp_pix_intro_keys_type")
   public static let gpPlus = ImageAsset(name: "gp_plus")
   public static let gpQrcodeBg = ImageAsset(name: "gp_qrcode_bg")
   public static let gpRadio = ImageAsset(name: "gp_radio")
