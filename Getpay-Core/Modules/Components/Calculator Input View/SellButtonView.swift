@@ -1,4 +1,3 @@
-import RxSwift
 import UIKit
 
 public class SellButtonView: UIView {

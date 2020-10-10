@@ -86,7 +86,6 @@ public class GPInputValueView: UIView {
         stack.applyAnchors(ofType: [.top, .bottom, .leading, .trailing], to: self)
         sellButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         calculator.heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.5).isActive = true
-//        valueDisplay.heightAnchor.constraint(lessThanOrEqualTo: calculator.heightAnchor, multiplier: 0.4).isActive = true
     }
 
     private func setupNotifications() {
