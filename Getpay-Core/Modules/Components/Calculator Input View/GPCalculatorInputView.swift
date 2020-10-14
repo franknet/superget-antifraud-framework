@@ -67,66 +67,50 @@ protocol GPCalculatorStackDelegate: AnyObject {
 }
 
 class GPCalculatorStack: UIStackView {
-    // MARK: Private Variables
+    
+    // MARK: - Private Variables
 
-    private enum Colors {
-        static let buttonSale = GPColors.moe.color
-        static let buttonReverse = UIColor.white
-        static let backgroundSale = GPColors.apu.color
-        static let backgroundReverse = GPColors.moe.color
-    }
+    private let buttonColor = GPColors.moe.color
 
     private var inputMode: InputValueViewMode
 
     private lazy var stack1: GPStackLine = {
-        let buttonColor = getButtonColor(forMode: self.inputMode)
-        let line = GPStackLine(buttons: [
-            GPStackButton(title: "1", bgColor: buttonColor),
-            GPStackButton(title: "2", bgColor: buttonColor),
-            GPStackButton(title: "3", bgColor: buttonColor)
-        ])
+        let line = GPStackLine(buttons: [GPStackButton(title: "1", bgColor: buttonColor),
+                                         GPStackButton(title: "2", bgColor: buttonColor),
+                                         GPStackButton(title: "3", bgColor: buttonColor)])
         return line
     }()
 
     private lazy var stack2: GPStackLine = {
-        let buttonColor = getButtonColor(forMode: self.inputMode)
-        let line = GPStackLine(buttons: [
-            GPStackButton(title: "4", bgColor: buttonColor),
-            GPStackButton(title: "5", bgColor: buttonColor),
-            GPStackButton(title: "6", bgColor: buttonColor)
-        ])
+        let line = GPStackLine(buttons: [GPStackButton(title: "4", bgColor: buttonColor),
+                                         GPStackButton(title: "5", bgColor: buttonColor),
+                                         GPStackButton(title: "6", bgColor: buttonColor)])
         return line
     }()
 
     private lazy var stack3: GPStackLine = {
-        let buttonColor = getButtonColor(forMode: self.inputMode)
-        let line = GPStackLine(buttons: [
-            GPStackButton(title: "7", bgColor: buttonColor),
-            GPStackButton(title: "8", bgColor: buttonColor),
-            GPStackButton(title: "9", bgColor: buttonColor)
-        ])
+        let line = GPStackLine(buttons: [GPStackButton(title: "7", bgColor: buttonColor),
+                                         GPStackButton(title: "8", bgColor: buttonColor),
+                                         GPStackButton(title: "9", bgColor: buttonColor)])
         return line
     }()
 
     private lazy var stack4: GPStackLine = {
-        let buttonColor = getButtonColor(forMode: self.inputMode)
-        let customButtonColor = getCustomButtonColor(forMode: self.inputMode)
-        let specialButtonColor = getCustomBackSpaceAndClearButton(forMode: self.inputMode)
-        let btnImage = GPStackButton(image: UIImage(named: "gn_backspace"), bgColor: specialButtonColor)
-        btnImage.tintColor = .black
-        let line = GPStackLine(buttons: [
-            GPStackButton(title: "C", bgColor: specialButtonColor),
-            GPStackButton(title: "0", bgColor: buttonColor),
-            btnImage
-        ])
+        let btnImage = GPStackButton(image: GPAssets.gnBackspace.image,
+                                     bgColor: GPColors.maggie.color)
+        btnImage.tintColor = GPColors.barney.color
+        
+        let line = GPStackLine(buttons: [GPStackButton(title: "C", bgColor: GPColors.maggie.color),
+                                         GPStackButton(title: "0", bgColor: buttonColor),
+                                         btnImage])
         return line
     }()
 
-    // MARK: Public Variable
+    // MARK: - Public variables
 
     public weak var delegate: GPCalculatorStackDelegate?
 
-    // MARK: Initializers
+    // MARK: - Initializers
 
     init(mode: InputValueViewMode) {
         inputMode = mode
@@ -139,7 +123,6 @@ class GPCalculatorStack: UIStackView {
     override init(frame: CGRect) {
         inputMode = .sell
         super.init(frame: frame)
-
         setupLayout()
         addComponents()
     }
@@ -161,29 +144,5 @@ class GPCalculatorStack: UIStackView {
         axis = .vertical
         spacing = 6
         distribution = .fillEqually
-    }
-
-    private func getButtonColor(forMode _: InputValueViewMode) -> UIColor {
-        switch inputMode {
-        case .sell, .transaction:
-            return Colors.buttonSale
-        default:
-            return Colors.buttonReverse
-        }
-    }
-
-    private func getCustomButtonColor(forMode _: InputValueViewMode) -> UIColor {
-        return inputMode == .sell ? Colors.backgroundSale : Colors.backgroundReverse
-    }
-    
-    private func getCustomBackSpaceAndClearButton(forMode _: InputValueViewMode) -> UIColor {
-        switch inputMode {
-        case .sell:
-            return Colors.backgroundSale
-        case .transaction:
-            return GPColors.maggie.color
-        default:
-            return Colors.backgroundReverse
-        }
     }
 }

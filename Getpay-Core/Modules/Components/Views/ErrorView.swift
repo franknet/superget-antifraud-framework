@@ -127,8 +127,8 @@ public class ErrorView: UIView {
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         
         contentView.applyAnchors(ofType: [.centerY], to: self)
-        contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28.0).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28.0).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0).isActive = true
     }
     
     // MARK: - Internal methods

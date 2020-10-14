@@ -18,6 +18,7 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum GPAssets {
+  public static let gnBackspace = ImageAsset(name: "gn_backspace")
   public static let gpAbout = ImageAsset(name: "gp_about")
   public static let gpAccessories = ImageAsset(name: "gp_accessories")
   public static let gpAccessoriesSmall = ImageAsset(name: "gp_accessories_small")

@@ -15,7 +15,7 @@ public class GPValueDisplayView: UIView {
     public lazy var currency: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "R$"
-        label.textColor = UIColor.hexStringToUIColor(hex: "#8D99AE")
+        label.textColor = GPColors.heyman.color
         label.font = FontFamily.Calibri.regular.font(size: 32)
         label.isHidden = self.inputMode == .CV ? true : false
         return label
@@ -27,8 +27,8 @@ public class GPValueDisplayView: UIView {
         text.adjustsFontSizeToFitWidth = true
         text.minimumScaleFactor = 0.7
         text.adjustsFontForContentSizeCategory = true
-        text.font = FontFamily.Calibri.regular.font(size: 60.0)
-        text.textColor = self.labelColorForMode()
+        text.font = FontFamily.Calibri.bold.font(size: 60.0)
+        text.textColor = GPColors.barney.color
         return text
     }()
 
@@ -118,8 +118,8 @@ public class GPValueDisplayView: UIView {
     }
 
     private func addComponents() {
-        addSubview(currency, constraints: true)
-        addSubview(valueLabel, constraints: true)
+        addSubviews([currency,
+                     valueLabel], constraints: true)
     }
 
     private func setupConstraints() {
@@ -147,15 +147,6 @@ public class GPValueDisplayView: UIView {
         default:
             rx_textValue.accept(rx_value.value.formatedAsCurrency)
             valueLabel.text = rx_value.value.formatedAsCurrency.replacingOccurrences(of: "R$", with: "")
-        }
-    }
-
-    private func labelColorForMode() -> UIColor {
-        switch inputMode {
-        case .sell:
-            return UIColor.hexStringToUIColor(hex: "#8996A3")
-        default:
-            return .black
         }
     }
 }
