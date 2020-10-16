@@ -394,6 +394,17 @@ public extension String {
         return ""
     }
     
+    var formatDateAPI: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        if let date = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let formatedDate = dateFormatter.string(from: date)
+            return formatedDate
+        }
+        return ""
+    }
+    
     var formatTransactionDateWithoutTime: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
