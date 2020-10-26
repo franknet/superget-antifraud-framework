@@ -72,6 +72,7 @@ public enum GPAssets {
   public static let gpEmail = ImageAsset(name: "gp_email")
   public static let gpEmailSent = ImageAsset(name: "gp_email_sent")
   public static let gpEmissorBig = ImageAsset(name: "gp_emissor_big")
+  public static let gpEmprestimo = ImageAsset(name: "gp_emprestimo")
   public static let gpEmptyBusiness = ImageAsset(name: "gp_empty_business")
   public static let gpEmptyChaves = ImageAsset(name: "gp_empty_chaves")
   public static let gpError = ImageAsset(name: "gp_error")
