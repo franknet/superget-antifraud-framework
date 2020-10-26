@@ -8,7 +8,6 @@ public class GNEligibilityService {
     
     private let service = ServiceManager()
     private let merchant = GPUtils.loadGPMerchantFromUD()
-    private var account = GPUtils.loadAccountPersistenceFromUD()
     
     // MARK: - Initializer
     
@@ -25,6 +24,8 @@ public extension GNEligibilityService {
     }
     
     func shouldMakeEligibilityCall() -> Bool {
+        let account = GPUtils.loadAccountPersistenceFromUD()
+        
         if let savedDate = account.lastEligibilityCall {
             if let currentDate = getCurrentDateWithoutTime() {
                 if currentDate <= savedDate {
@@ -36,6 +37,8 @@ public extension GNEligibilityService {
     }
     
     func saveCurrentDate() {
+        var account = GPUtils.loadAccountPersistenceFromUD()
+        
         if let date = getCurrentDateWithoutTime() {
             account.lastEligibilityCall = date
             GPUtils.save(account: account)

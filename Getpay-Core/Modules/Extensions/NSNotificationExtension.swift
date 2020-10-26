@@ -20,4 +20,5 @@ public extension Notification.Name {
     static let trackEvent = Notification.Name("trackEvent")
     
     static let didTransactionsUpdate = Notification.Name("didTransactionsUpdate")
+    static let loadAccountData = Notification.Name("loadAccountData")
 }
