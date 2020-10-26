@@ -31,9 +31,7 @@ extension GPAccountService {
                 completion(true)
                 
             case .failure(let error):
-                self.accountResponseHandler(error: error)
-                completion(false)
-                
+                self.accountResponseHandler(error: error, completion: completion)
             }
         }
     }
@@ -87,29 +85,33 @@ extension GPAccountService {
         GPUtils.save(account: persistedAccount)
     }
     
-    func accountResponseHandler(error: GPResponseError) {
+    func accountResponseHandler(error: GPResponseError, completion: @escaping (Bool) -> Void) {
         var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
         
-        if error.status == "404" {
+        switch error.status {
+        case "404":
             persistedAccount.requestStatus = .newClient404
+            GPUtils.save(account: persistedAccount)
             
             if eligibilityService.shouldMakeEligibilityCall() {
-                getEligibility()
+                getEligibility(completion: completion)
+            } else {
+                completion(false)
             }
-            
-        } else if error.status == "403" {
+        case "403":
             persistedAccount.requestStatus = .active403
-            
-        } else {
-            persistedAccount.requestStatus = .retry
-            
+            GPUtils.save(account: persistedAccount)
+            completion(false)
+
+        default:
+            break
         }
-        GPUtils.save(account: persistedAccount)
+        completion(false)
     }
     
     // MARK: - Private methods
     
-    private func getEligibility() {
+    private func getEligibility(completion: @escaping (Bool) -> Void) {
         var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
         eligibilityService.getStatus { [weak self] response in
             switch response {
@@ -122,6 +124,7 @@ extension GPAccountService {
                 debugPrint(error)
                 
             }
+            completion(false)
         }
     }
     
