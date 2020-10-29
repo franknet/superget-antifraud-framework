@@ -23,6 +23,10 @@ extension GPAccountService {
     // MARK: - Public methods
     
     public func getAccount(completion: @escaping (Bool) -> Void) {
+        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
+        persistedAccount.requestStatus = .loading
+        GPUtils.save(account: persistedAccount)
+        
         self.get { [weak self] response in
             guard let self = self else { return }
             switch response {
@@ -104,9 +108,8 @@ extension GPAccountService {
             completion(false)
 
         default:
-            break
+            completion(false)
         }
-        completion(false)
     }
     
     // MARK: - Private methods
