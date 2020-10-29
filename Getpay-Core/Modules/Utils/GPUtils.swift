@@ -90,4 +90,28 @@ public class GPUtils {
         }
         return nil
     }
+    
+    public static func isAccessAllowed(isCard: Bool = false) -> Bool {
+        let account = GPUtils.loadAccountPersistenceFromUD()
+        
+        if isCard && (account.requestStatus == .active || account.requestStatus == .waitingDocumentsVizir) {
+            return true
+        }
+        
+        switch account.requestStatus {
+        case .active403,
+             .newClient404,
+             .waitingDocumentsNewClient,
+             .waitingDocumentsLegacy,
+             .waitingCorrections,
+             .loading,
+             .denied,
+             .waitingAnalysis,
+             .waitingDocumentsVizir:
+            
+            return false
+        default:
+            return true
+        }
+    }
 }

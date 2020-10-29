@@ -239,3 +239,24 @@ public struct PresetWaitingAnalysis: InformationViewPreset {
     public init() {}
     
 }
+
+public struct PresentHasNoCard: InformationViewPreset {
+    
+    public var navigationTitle: String?
+    
+    public var title = "Desbloqueie o seu cartão"
+    
+    public var subTitle = "Para fazer um pagamento, o seu cartão SuperGet precisa ser desbloqueado."
+    
+    public var errorCode: String?
+    
+    public var image: UIImage? = GPAssets.gpCardBlocked.image
+    
+    public var buttonTitle: String? = "DESBLOQUEAR CARTÃO"
+    
+    public var buttonAction: ActionVoid?
+    
+    public var inView: UIView?
+    
+    public init() {}
+}
