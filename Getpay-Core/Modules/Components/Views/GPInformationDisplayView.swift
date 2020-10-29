@@ -23,6 +23,12 @@ public class GPInformationDisplayView: UIView {
     
     private let button = GPButton(style: .filled)
     
+    public let cancelButton: GPButton = {
+        let button = GPButton(title: "CANCELAR", style: .text)
+        button.isHidden = true
+        return button
+    }()
+    
     // MARK: - Public variables
     
     public var buttonAction: ActionVoid?
@@ -73,7 +79,8 @@ extension GPInformationDisplayView {
                                  titleMessage,
                                  subtitleMessage,
                                  errorCode,
-                                 button], constraints: true)
+                                 button,
+                                 cancelButton], constraints: true)
         addSubviews([navBar, contentView], constraints: true)
     }
     
@@ -101,9 +108,13 @@ extension GPInformationDisplayView {
         
         button.topAnchor.constraint(equalTo: subtitleMessage.bottomAnchor, constant: 40.0).isActive = true
         button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        button.applyAnchors(ofType: [.bottom], to: contentView)
         button.widthAnchor.constraint(equalToConstant: 182.0).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        
+        cancelButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 16.0).isActive = true
+        cancelButton.applyAnchors(ofType: [.trailing, .leading], to: button)
+        cancelButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        cancelButton.height(size: 40.0)
         
         contentView.applyAnchors(ofType: [.centerY], to: self)
         contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0).isActive = true

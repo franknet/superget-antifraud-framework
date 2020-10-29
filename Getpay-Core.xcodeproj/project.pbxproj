@@ -68,6 +68,8 @@
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
 		BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF247CD824F06F3500717CD7 /* UIImageExtension.swift */; };
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
+		BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */; };
+		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
 		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
@@ -206,6 +208,8 @@
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		BF247CD824F06F3500717CD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
+		BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewController.swift; sourceTree = "<group>"; };
+		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
 		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF63AD7C254B85AE0089FA78 /* ModalAccountStatus */,
 				D681A53B24F1A2C80009CC0D /* SuccessView */,
 				BF601AE324D9C4B800450FD5 /* Analytics */,
 				BFEA3ED324C0BD8400D0640E /* Calculator Input View */,
@@ -543,6 +548,15 @@
 				BF601AE424D9C55800450FD5 /* GNEvents.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		BF63AD7C254B85AE0089FA78 /* ModalAccountStatus */ = {
+			isa = PBXGroup;
+			children = (
+				BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */,
+				BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */,
+			);
+			path = ModalAccountStatus;
 			sourceTree = "<group>";
 		};
 		BFDC43C82510F64100D81DF4 /* Eligibility Service */ = {
@@ -995,6 +1009,7 @@
 				BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
+				BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
 				D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */,
@@ -1004,6 +1019,7 @@
 				BFED885C24BE16FA00275D83 /* GPReceiptHeaderView.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
+				BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
 				D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
