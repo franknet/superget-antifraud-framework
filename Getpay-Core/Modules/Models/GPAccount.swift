@@ -18,6 +18,8 @@ public struct GPAccount: Codable {
     public var creationDate: String?
     public var isCriticalToSendDocuments: Bool
     
+    public var needAccountUpdate: Bool? = false
+    
     public lazy var isAliasAccountActive: Bool = {
         return self.aliasAccountStatus == .ACTIVE
     }()

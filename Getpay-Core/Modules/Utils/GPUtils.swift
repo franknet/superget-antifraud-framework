@@ -35,7 +35,6 @@ public class GPUtils {
                          isCriticalToSendDocuments: false)
     }
     
-    /// Called wehn user logout or change ec
     public static func removeAccountPersistenceFromUD() {
         defaults.removeObject(forKey: accountPersistenceKey)
     }
@@ -108,10 +107,24 @@ public class GPUtils {
              .denied,
              .waitingAnalysis,
              .waitingDocumentsVizir:
-            
             return false
+            
         default:
             return true
         }
+    }
+    
+    public static func shouldUpdateAccount() -> Bool {
+        let account = GPUtils.loadAccountPersistenceFromUD()
+        if let status = account.needAccountUpdate {
+            return status
+        }
+        return false
+    }
+    
+    public static func setNeedAccountUpdate(_ status: Bool) {
+        var account = GPUtils.loadAccountPersistenceFromUD()
+        account.needAccountUpdate = status
+        save(account: account)
     }
 }
