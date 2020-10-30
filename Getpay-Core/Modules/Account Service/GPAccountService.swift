@@ -91,6 +91,7 @@ extension GPAccountService {
     
     func accountResponseHandler(error: GPResponseError, completion: @escaping (Bool) -> Void) {
         var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
+        GPUtils.setNeedAccountUpdate(false)
         
         switch error.status {
         case "404":
