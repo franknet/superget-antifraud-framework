@@ -136,21 +136,9 @@ extension GPAccountService {
         let persistedAccount = GPUtils.loadAccountPersistenceFromUD()
         let persistedValidation = (persistedAccount.aliasAccountStatus != response.aliasAccountStatus && persistedAccount.id != 0)
         if persistedValidation && response.aliasAccountStatus == .ACTIVE {
-            GPLocalNotification.fireNotification(withModel: self.setupNotification(withAccount: response))
+            GPLocalNotification.fireNotification(withModel: IndividualAccountNotification())
         }
-    }
-    
-    func setupNotification(withAccount account: GPAccount) -> LocalNotificationModel {
-        let bankingInstitution = account.institution
-        let agency = account.branchNumber
-        let cc = account.number
-
-        var preset = IndividualAccountNotification()
-        preset.body = String(
-            format: preset.body, "\(bankingInstitution.number) - \(bankingInstitution.name)", "\(agency) / \(cc)"
-        )
-        return preset
-    }
+    }    
 }
 
 // MARK: - Request
@@ -185,9 +173,9 @@ struct IndiviualAccountPostRequest: BaseRequestProtocol {
 }
 
 struct IndividualAccountNotification: LocalNotificationModel {
-    var title: String = "Sua conta foi criada"
+    var title: String = "Sua conta SuperGet mudou."
     var subtitle: String = ""
-    var body: String = "Agora você pode aproveitar todos os benefícios do aplicativo. \n\nConfira os dados da sua conta Superget. \n\n Banco\n %@ \n\nAgência / Conta\n %@"
+    var body: String = "Agora, com a parceria com o Banco Votorantim, você realiza transferências para qualquer banco, faz pagamentos de contas e muito mais. Acesse o app SuperGet e aproveite todas as vantagens."
     var sound = UNNotificationSound.default
     var trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 3, repeats: false)
 }
