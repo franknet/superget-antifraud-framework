@@ -18,9 +18,13 @@ public struct OnboardingStep {
 
 public final class OnboardingViewController: BaseViewController<OnboardingView> {
 
+    // MARK: - Public variables
+    
+    public var callBack: ActionVoid?
+    
     // MARK: - Private variables
     
-    var pages = [OnboardingStep]()
+    private var pages = [OnboardingStep]()
     
     // MARK: - Initializers
     
@@ -70,7 +74,11 @@ extension OnboardingViewController {
                                                   animated: true,
                                                   completion: nil)
         } else {
-            self.dismiss(animated: true)
+            if let callBack = callBack {
+                callBack()
+            } else {
+                dismiss(animated: true)
+            }
         }
     }
 }
