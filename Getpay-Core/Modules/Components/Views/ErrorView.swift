@@ -100,9 +100,9 @@ public class ErrorView: UIView {
     
     private func createSubviews() {
         contentView.addSubviews([icon,
-                     titleMessage,
-                     subtitleMessage,
-                     button], constraints: true)
+                                 titleMessage,
+                                 subtitleMessage,
+                                 button], constraints: true)
         
         addSubview(contentView, constraints: true)
     }

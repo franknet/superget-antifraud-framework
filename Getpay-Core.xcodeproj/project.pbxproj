@@ -126,6 +126,11 @@
 		D68C64A2242183BC00BA65B2 /* Calibri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68C649E242183BC00BA65B2 /* Calibri-Bold.ttf */; };
 		D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C64B324225E7400BA65B2 /* GPFonts.swift */; };
 		D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D694D4F724D081D700013055 /* NotEligibleView.swift */; };
+		D6A992212551C807007F2655 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A992202551C807007F2655 /* OnboardingView.swift */; };
+		D6A992502551E89F007F2655 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9924F2551E89F007F2655 /* OnboardingViewController.swift */; };
+		D6A992552551E938007F2655 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A992542551E938007F2655 /* OnboardingPageViewController.swift */; };
+		D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */; };
+		D6A9925F2551EF4F007F2655 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */; };
 		D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */; };
 		D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4940A243D186D00E98F5D /* AuthStateManager.swift */; };
 		D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91024B51F2300C656DC /* GPPageViewController.swift */; };
@@ -271,6 +276,11 @@
 		D68C64B12422553600BA65B2 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		D68C64B324225E7400BA65B2 /* GPFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFonts.swift; sourceTree = "<group>"; };
 		D694D4F724D081D700013055 /* NotEligibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotEligibleView.swift; sourceTree = "<group>"; };
+		D6A992202551C807007F2655 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D6A9924F2551E89F007F2655 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D6A992542551E938007F2655 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepViewController.swift; sourceTree = "<group>"; };
+		D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D6B4940A243D186D00E98F5D /* AuthStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateManager.swift; sourceTree = "<group>"; };
 		D6E1F91024B51F2300C656DC /* GPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPageViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +420,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6A9921F2551C7CC007F2655 /* Onboarding */,
 				BF63AD7C254B85AE0089FA78 /* ModalAccountStatus */,
 				D681A53B24F1A2C80009CC0D /* SuccessView */,
 				BF601AE324D9C4B800450FD5 /* Analytics */,
@@ -733,6 +744,26 @@
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
+		D6A9921F2551C7CC007F2655 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D6A992532551E91E007F2655 /* OnboardingPageViewController */,
+				D6A992202551C807007F2655 /* OnboardingView.swift */,
+				D6A9924F2551E89F007F2655 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D6A992532551E91E007F2655 /* OnboardingPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6A992542551E938007F2655 /* OnboardingPageViewController.swift */,
+				D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */,
+				D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */,
+			);
+			path = OnboardingPageViewController;
+			sourceTree = "<group>";
+		};
 		D6E1F90F24B51F0800C656DC /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -979,6 +1010,7 @@
 				D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */,
 				D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */,
 				BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */,
+				D6A9925F2551EF4F007F2655 /* OnboardingStepView.swift in Sources */,
 				BFED886124BE17BE00275D83 /* ReceiptViewModel.swift in Sources */,
 				BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */,
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
@@ -986,6 +1018,7 @@
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */,
+				D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */,
 				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */,
@@ -994,6 +1027,7 @@
 				BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */,
 				1EF36EA123F4885700A27983 /* UIViewControllerExtension.swift in Sources */,
 				D65831E1249A664A00871DFF /* GPAssets.swift in Sources */,
+				D6A992552551E938007F2655 /* OnboardingPageViewController.swift in Sources */,
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,
 				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
@@ -1006,9 +1040,11 @@
 				1E62A46523F30AD4009ED647 /* Urls.swift in Sources */,
 				1EB0A1A5240002A800D7693D /* GPCGFloatExtension.swift in Sources */,
 				D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */,
+				D6A992502551E89F007F2655 /* OnboardingViewController.swift in Sources */,
 				BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
+				D6A992212551C807007F2655 /* OnboardingView.swift in Sources */,
 				BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
