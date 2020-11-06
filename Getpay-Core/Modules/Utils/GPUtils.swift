@@ -32,7 +32,9 @@ public class GPUtils {
                          balance: GPAccountBalance(id: 0, withdrawAvailableBalance: 0, globalAvailableBalance: 0),
                          hasCard: false,
                          creationDate: "",
-                         isCriticalToSendDocuments: false)
+                         isCriticalToSendDocuments: false,
+                         name: "",
+                         document: "")
     }
     
     public static func removeAccountPersistenceFromUD() {

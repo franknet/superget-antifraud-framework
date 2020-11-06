@@ -17,6 +17,8 @@ public struct GPAccount: Codable {
     public var lastEligibilityCall: Date?
     public var creationDate: String?
     public var isCriticalToSendDocuments: Bool
+    public var name: String
+    public var document: String
     
     public var needAccountUpdate: Bool? = false
     
