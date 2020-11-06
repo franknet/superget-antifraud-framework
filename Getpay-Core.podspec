@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = "5"
 
-  spec.dependency 'Alamofire'
+  spec.dependency 'Alamofire', '5.3.0'
   spec.dependency 'RxSwift'
   spec.dependency 'AppAuth'
   spec.dependency 'SwiftKeychainWrapper'

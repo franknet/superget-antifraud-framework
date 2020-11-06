@@ -6,7 +6,7 @@ source 'https://bitbucket.getnet.com.br/scm/sgm/podspecs.git'
 
 def shared_pods
   use_frameworks!
-  pod 'Alamofire'
+  pod 'Alamofire', '5.3.0'
   pod 'RxSwift'
   pod 'SwiftGen', '~> 6.0'
   pod 'AppAuth'
