@@ -109,6 +109,8 @@ extension GPAccountService {
             completion(false)
 
         default:
+            persistedAccount.requestStatus = .retry
+            GPUtils.save(account: persistedAccount)
             completion(false)
         }
     }
