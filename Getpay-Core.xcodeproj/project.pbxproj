@@ -98,6 +98,8 @@
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
 		D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FFB992505BC4200C997CC /* GNMerchantService.swift */; };
+		D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129CD2564724D00AADD63 /* MenuItemView.swift */; };
+		D65129D52564775200AADD63 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */; };
 		D652CCDB24E759F60088048E /* GNImageAndDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */; };
 		D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */; };
 		D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */; };
@@ -247,6 +249,8 @@
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		D64FFB992505BC4200C997CC /* GNMerchantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNMerchantService.swift; sourceTree = "<group>"; };
+		D65129CD2564724D00AADD63 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
 		D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNImageAndDescriptionView.swift; sourceTree = "<group>"; };
 		D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSelectedViewWithRadioButton.swift; sourceTree = "<group>"; };
 		D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNRadiusButton.swift; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 				BFEA3EDC24C0C0EF00D0640E /* UITableViewExtension.swift */,
 				BF247CD824F06F3500717CD7 /* UIImageExtension.swift */,
 				BF9E8B9B24F8512000B516D2 /* DateExension.swift */,
+				D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
 				D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */,
 				D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */,
+				D65129CD2564724D00AADD63 /* MenuItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1016,6 +1022,7 @@
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
+				D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */,
 				D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */,
@@ -1047,6 +1054,7 @@
 				D6A992212551C807007F2655 /* OnboardingView.swift in Sources */,
 				BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */,
 				1EF36EA423F48E4E00A27983 /* GPListDisclousureCellTableViewCell.swift in Sources */,
+				D65129D52564775200AADD63 /* UICollectionViewCellExtension.swift in Sources */,
 				1E913526248ECCF900BF4A79 /* InformationViewPresets.swift in Sources */,
 				D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */,
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
