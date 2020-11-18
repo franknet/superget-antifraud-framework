@@ -99,6 +99,10 @@ public class GPUtils {
             return true
         }
         
+        if !account.hasCard {
+            return false
+        }
+        
         switch account.requestStatus {
         case .active403,
              .newClient404,
