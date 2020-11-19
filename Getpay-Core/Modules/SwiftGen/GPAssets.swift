@@ -20,6 +20,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum GPAssets {
   public static let gnBackspace = ImageAsset(name: "gn_backspace")
+  public static let gnQrcodeExpired = ImageAsset(name: "gn_qrcode_expired")
   public static let gpAbout = ImageAsset(name: "gp_about")
   public static let gpAccessories = ImageAsset(name: "gp_accessories")
   public static let gpAccessoriesSmall = ImageAsset(name: "gp_accessories_small")
@@ -39,6 +40,7 @@ public enum GPAssets {
   public static let gpCameraBoleto = ImageAsset(name: "gp_camera_boleto")
   public static let gpCardBig = ImageAsset(name: "gp_card_big")
   public static let gpCardBlocked = ImageAsset(name: "gp_card_blocked")
+  public static let gpCardCanceled = ImageAsset(name: "gp_card_canceled")
   public static let gpCardNew = ImageAsset(name: "gp_card_new")
   public static let gpCashIn = ImageAsset(name: "gp_cash_in")
   public static let gpCashOut = ImageAsset(name: "gp_cash_out")
@@ -124,6 +126,9 @@ public enum GPAssets {
   public static let gpPhotoFace = ImageAsset(name: "gp_photo_face")
   public static let gpPhotoFaceSmall = ImageAsset(name: "gp_photo_face_small")
   public static let gpPix = ImageAsset(name: "gp_pix")
+  public static let gpPixIntro = ImageAsset(name: "gp_pix_intro")
+  public static let gpPixIntro2 = ImageAsset(name: "gp_pix_intro_2")
+  public static let gpPixIntro3 = ImageAsset(name: "gp_pix_intro_3")
   public static let gpPixIntroKeysRegister = ImageAsset(name: "gp_pix_intro_keys_register")
   public static let gpPixIntroKeysType = ImageAsset(name: "gp_pix_intro_keys_type")
   public static let gpPlus = ImageAsset(name: "gp_plus")
