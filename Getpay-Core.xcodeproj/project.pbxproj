@@ -134,6 +134,9 @@
 		D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */; };
 		D6A9925F2551EF4F007F2655 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */; };
 		D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */; };
+		D6B087A7256838B200E6E3EB /* GNTermsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B087A6256838B200E6E3EB /* GNTermsService.swift */; };
+		D6B087AD25683DA900E6E3EB /* GNFingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B087AC25683DA900E6E3EB /* GNFingerPrint.swift */; };
+		D6B087B12568411700E6E3EB /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B087B02568411700E6E3EB /* UITextViewExtension.swift */; };
 		D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4940A243D186D00E98F5D /* AuthStateManager.swift */; };
 		D6E1F91124B51F2300C656DC /* GPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91024B51F2300C656DC /* GPPageViewController.swift */; };
 		D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E1F91324B5218700C656DC /* GPTabButton.swift */; };
@@ -286,6 +289,9 @@
 		D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepViewController.swift; sourceTree = "<group>"; };
 		D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		D6B087A6256838B200E6E3EB /* GNTermsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNTermsService.swift; sourceTree = "<group>"; };
+		D6B087AC25683DA900E6E3EB /* GNFingerPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNFingerPrint.swift; sourceTree = "<group>"; };
+		D6B087B02568411700E6E3EB /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		D6B4940A243D186D00E98F5D /* AuthStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateManager.swift; sourceTree = "<group>"; };
 		D6E1F91024B51F2300C656DC /* GPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPageViewController.swift; sourceTree = "<group>"; };
 		D6E1F91324B5218700C656DC /* GPTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTabButton.swift; sourceTree = "<group>"; };
@@ -393,6 +399,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D6B087A52568389E00E6E3EB /* Terms Service */,
 				BFDC43C82510F64100D81DF4 /* Eligibility Service */,
 				D64FFB982505BC2700C997CC /* Merchant Service */,
 				D67F0EF324F015F600C6AF14 /* UserAlias */,
@@ -483,6 +490,7 @@
 				BF247CD824F06F3500717CD7 /* UIImageExtension.swift */,
 				BF9E8B9B24F8512000B516D2 /* DateExension.swift */,
 				D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */,
+				D6B087B02568411700E6E3EB /* UITextViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -770,6 +778,15 @@
 			path = OnboardingPageViewController;
 			sourceTree = "<group>";
 		};
+		D6B087A52568389E00E6E3EB /* Terms Service */ = {
+			isa = PBXGroup;
+			children = (
+				D6B087A6256838B200E6E3EB /* GNTermsService.swift */,
+				D6B087AC25683DA900E6E3EB /* GNFingerPrint.swift */,
+			);
+			path = "Terms Service";
+			sourceTree = "<group>";
+		};
 		D6E1F90F24B51F0800C656DC /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1049,6 +1066,7 @@
 				D655D73524E5D06B001C5C91 /* GNRadiusButton.swift in Sources */,
 				D6A992502551E89F007F2655 /* OnboardingViewController.swift in Sources */,
 				BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */,
+				D6B087B12568411700E6E3EB /* UITextViewExtension.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				D6A992212551C807007F2655 /* OnboardingView.swift in Sources */,
@@ -1087,7 +1105,9 @@
 				D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */,
 				1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */,
 				BFEA3EDB24C0BD8400D0640E /* SellButtonView.swift in Sources */,
+				D6B087A7256838B200E6E3EB /* GNTermsService.swift in Sources */,
 				1E10E10A2400733700247FC7 /* GPUser.swift in Sources */,
+				D6B087AD25683DA900E6E3EB /* GNFingerPrint.swift in Sources */,
 				D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */,
 				D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
