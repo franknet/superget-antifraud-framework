@@ -21,6 +21,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 public enum GPAssets {
   public static let gnBackspace = ImageAsset(name: "gn_backspace")
   public static let gnQrcodeExpired = ImageAsset(name: "gn_qrcode_expired")
+  public static let gnQrcodeSkeleton = ImageAsset(name: "gn_qrcode_skeleton")
   public static let gpAbout = ImageAsset(name: "gp_about")
   public static let gpAccessories = ImageAsset(name: "gp_accessories")
   public static let gpAccessoriesSmall = ImageAsset(name: "gp_accessories_small")

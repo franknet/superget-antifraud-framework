@@ -48,7 +48,6 @@ extension GNFingerPrint {
         freeifaddrs(ifaddr)
         return address
     }
-    
 }
 
 // MARK: - Enum
