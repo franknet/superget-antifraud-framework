@@ -133,4 +133,8 @@ public class GPUtils {
         account.needAccountUpdate = status
         save(account: account)
     }
+    
+    public static func getImage(icon: String) -> UIImage? {
+        return ImageAsset(name: icon).image
+    }
 }
