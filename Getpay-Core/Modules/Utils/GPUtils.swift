@@ -142,20 +142,21 @@ public class GPUtils {
     }
     
     public static func feedbackShouldBePresented() -> Bool {
-        if feedbackShouldBeShown() {
-            if !appHasBeenRated() && remainingDaysToShowFeedback() >= 15 {
+        if appHasBeenRated() {
+            return false
+        } else {
+            if feedbackShouldBeShown() && feedbackShouldBeShownByDate() {
                 return true
             }
+            return false
         }
-        
-        return false
     }
     
     private static func appHasBeenRated() -> Bool {
         return defaults.bool(forKey: didSendFeedback)
     }
     
-    private static func remainingDaysToShowFeedback() -> Int {
+    private static func remainingDaysToShowFeedback() -> Int? {
         if let date = defaults.object(forKey: dateFeedbackShowed) as? Date {
             let calendar = Calendar.current
             
@@ -169,7 +170,23 @@ public class GPUtils {
             }
         }
         
-        return 15
+        return nil
+    }
+    
+    private static func feedbackShouldBeShownByDate() -> Bool {
+        if remainingDaysToShowFeedback() == nil {
+            return true
+        } else {
+            if let remainingDays = remainingDaysToShowFeedback() {
+                debugPrint("remainingDays", remainingDays)
+                
+                if remainingDays >= 15 {
+                    return true
+                }
+            }
+        }
+        
+        return false
     }
     
     public static func setFeedBackStatus(_ status: Bool) {
