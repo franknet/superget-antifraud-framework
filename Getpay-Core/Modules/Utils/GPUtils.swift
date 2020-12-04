@@ -7,6 +7,8 @@ public class GPUtils {
     private static let terminalKey = "terminalKey"
     private static let accountPersistenceKey = "accountPersistenceKey"
     private static let merchantKey = "merchantKey"
+    private static let didSendFeedback = "didSendFeedback"
+    private static let dateFeedbackShowed = "dateFeedbackShowed"
     
     public static func save(account: GPAccount) {
         let encoder = JSONEncoder()
@@ -132,5 +134,43 @@ public class GPUtils {
         var account = GPUtils.loadAccountPersistenceFromUD()
         account.needAccountUpdate = status
         save(account: account)
+    }
+    
+    public static func feedbackShouldBePresented() -> Bool {
+        if !appHasBeenRated() && remainingDaysToShowFeedback() >= 15 {
+            return true
+        }
+        
+        return false
+    }
+    
+    private static func appHasBeenRated() -> Bool {
+        return defaults.bool(forKey: didSendFeedback)
+    }
+    
+    private static func remainingDaysToShowFeedback() -> Int {
+        if let date = defaults.object(forKey: dateFeedbackShowed) as? Date {
+            let calendar = Calendar.current
+            
+            let date1 = calendar.startOfDay(for: date)
+            let date2 = calendar.startOfDay(for: Date())
+            
+            let components = calendar.dateComponents([.day], from: date1, to: date2)
+            
+            if let days = components.day {
+                debugPrint("DAYS --->", days)
+                return days
+            }
+        }
+
+        return 15
+    }
+    
+    public static func setFeedBackStatus(_ status: Bool) {
+        defaults.set(status, forKey: didSendFeedback)
+    }
+    
+    public static func setFeedBackDate(_ date: Date) {
+        defaults.set(date, forKey: dateFeedbackShowed)
     }
 }
