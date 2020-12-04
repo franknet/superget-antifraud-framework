@@ -178,8 +178,6 @@ public class GPUtils {
             return true
         } else {
             if let remainingDays = remainingDaysToShowFeedback() {
-                debugPrint("remainingDays", remainingDays)
-                
                 if remainingDays >= 15 {
                     return true
                 }
