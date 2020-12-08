@@ -138,7 +138,9 @@ public class GPUtils {
     }
     
     public static func getImage(icon: String) -> UIImage? {
-        return ImageAsset(name: icon).image
+        return UIImage(named: icon,
+                       in: Bundle(for: self),
+                       compatibleWith: nil)
     }
     
     public static func feedbackShouldBePresented() -> Bool {
