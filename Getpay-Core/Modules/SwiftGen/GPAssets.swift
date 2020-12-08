@@ -29,7 +29,7 @@ public enum GPAssets {
   public static let gpAccountReview = ImageAsset(name: "gp_account_review")
   public static let gpAlelo = ImageAsset(name: "gp_alelo")
   public static let gpAlert = ImageAsset(name: "gp_alert")
-  public static let gpAmericanExpress = ImageAsset(name: "gp_american_express")
+  public static let gpAmex = ImageAsset(name: "gp_amex")
   public static let gpArrowForward = ImageAsset(name: "gp_arrow_forward")
   public static let gpArrowForwardSmall = ImageAsset(name: "gp_arrow_forward_small")
   public static let gpAvistaBig = ImageAsset(name: "gp_avista_big")
