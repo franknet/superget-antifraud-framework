@@ -73,6 +73,7 @@
 		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
+		BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */; };
 		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
@@ -228,6 +229,7 @@
 		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
+		BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BFD76EE42582B9DA00C469F1 /* SwitchButton */,
 				D6A9921F2551C7CC007F2655 /* Onboarding */,
 				BF63AD7C254B85AE0089FA78 /* ModalAccountStatus */,
 				D681A53B24F1A2C80009CC0D /* SuccessView */,
@@ -585,6 +588,14 @@
 				BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */,
 			);
 			path = ModalAccountStatus;
+			sourceTree = "<group>";
+		};
+		BFD76EE42582B9DA00C469F1 /* SwitchButton */ = {
+			isa = PBXGroup;
+			children = (
+				BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */,
+			);
+			path = SwitchButton;
 			sourceTree = "<group>";
 		};
 		BFDC43C82510F64100D81DF4 /* Eligibility Service */ = {
@@ -1117,6 +1128,7 @@
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
+				BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */,
 				BF10BD62257E595300389E0F /* ThreatMetrix.swift in Sources */,
 				D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */,
 				BFED886224BE17BE00275D83 /* ReceiptView.swift in Sources */,
