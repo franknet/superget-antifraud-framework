@@ -18,4 +18,5 @@ public extension Notification.Name {
     static let sellInputValue = Notification.Name("SellInputValue")
     static let trackEvent = Notification.Name("trackEvent")
     static let loadAccountData = Notification.Name("loadAccountData")
+    static let didAccountUpdated = Notification.Name("didAccountUpdated")
 }
