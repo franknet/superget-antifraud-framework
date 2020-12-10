@@ -116,6 +116,8 @@ public enum GPAssets {
   public static let gpFortbrasil = ImageAsset(name: "gp_fortbrasil")
   public static let gpGetnetApp = ImageAsset(name: "gp_getnet_app")
   public static let gpGetnetAppShadow = ImageAsset(name: "gp_getnet_app_shadow")
+  public static let gpGetpayEmpty = ImageAsset(name: "gp_getpay_empty")
+  public static let gpGetpayIntro = ImageAsset(name: "gp_getpay_intro")
   public static let gpGoodcard = ImageAsset(name: "gp_goodcard")
   public static let gpHidePass = ImageAsset(name: "gp_hide_pass")
   public static let gpHiper = ImageAsset(name: "gp_hiper")
@@ -193,6 +195,7 @@ public enum GPAssets {
   public static let gpServicesSelected = ImageAsset(name: "gp_services_selected")
   public static let gpSettings = ImageAsset(name: "gp_settings")
   public static let gpShare = ImageAsset(name: "gp_share")
+  public static let gpShieldCheck = ImageAsset(name: "gp_shield_check")
   public static let gpShowPass = ImageAsset(name: "gp_show_pass")
   public static let gpSodexo = ImageAsset(name: "gp_sodexo")
   public static let gpSoftnex = ImageAsset(name: "gp_softnex")
@@ -221,6 +224,7 @@ public enum GPAssets {
   public static let gpVoucherBig = ImageAsset(name: "gp_voucher_big")
   public static let gpVr = ImageAsset(name: "gp_vr")
   public static let gpWallet = ImageAsset(name: "gp_wallet")
+  public static let gpWeb = ImageAsset(name: "gp_web")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
