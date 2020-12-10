@@ -116,6 +116,7 @@ public enum GPAssets {
   public static let gpFortbrasil = ImageAsset(name: "gp_fortbrasil")
   public static let gpGetnetApp = ImageAsset(name: "gp_getnet_app")
   public static let gpGetnetAppShadow = ImageAsset(name: "gp_getnet_app_shadow")
+  public static let gpGetpayEmpty = ImageAsset(name: "gp_getpay_empty")
   public static let gpGetpayIntro = ImageAsset(name: "gp_getpay_intro")
   public static let gpGoodcard = ImageAsset(name: "gp_goodcard")
   public static let gpHidePass = ImageAsset(name: "gp_hide_pass")
