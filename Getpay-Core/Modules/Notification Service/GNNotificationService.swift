@@ -9,8 +9,6 @@ public class GNNotificationService {
     
     private let service = ServiceManager(isJsonBody: true)
     
-    private var merchantId = GPUtils.loadGPMerchantFromUD().id
-    
     // MARK: - Initializers
     
     public init() {}
@@ -21,17 +19,19 @@ extension GNNotificationService {
     // MARK: - Public methods
     
     public func update(deviceId: String, completion: @escaping (Bool) -> Void) {
-        self.put(deviceId: deviceId) { error in
-            if let _ = error {
-                completion(false)
+        put(deviceId: deviceId) { error in
+            guard let _ = error else {
+                completion(true)
+                return
             }
-            completion(true)
+            completion(false)
         }
     }
     
     // MARK: - Private methods
     
     private func put(deviceId: String, completion: @escaping (GPResponseError?) -> Void) -> Void {
+        let merchantId = GPUtils.loadGPMerchantFromUD().id
         let request = NotificationRequest(merchantId: merchantId, deviceId: deviceId)
         service.performRequest(route: request, completion: completion)
     }
