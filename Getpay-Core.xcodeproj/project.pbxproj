@@ -68,6 +68,7 @@
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
 		BF10BD62257E595300389E0F /* ThreatMetrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10BD61257E595300389E0F /* ThreatMetrix.swift */; };
 		BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF247CD824F06F3500717CD7 /* UIImageExtension.swift */; };
+		BF58F7532587D48B00192A80 /* GNNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58F7522587D48B00192A80 /* GNNotificationService.swift */; };
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
 		BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */; };
 		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
@@ -224,6 +225,7 @@
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		BF10BD61257E595300389E0F /* ThreatMetrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreatMetrix.swift; sourceTree = "<group>"; };
 		BF247CD824F06F3500717CD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		BF58F7522587D48B00192A80 /* GNNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNNotificationService.swift; sourceTree = "<group>"; };
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
 		BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewController.swift; sourceTree = "<group>"; };
 		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BF58F7512587D46F00192A80 /* Notification Service */,
 				D6B087A52568389E00E6E3EB /* Terms Service */,
 				BFDC43C82510F64100D81DF4 /* Eligibility Service */,
 				D64FFB982505BC2700C997CC /* Merchant Service */,
@@ -571,6 +574,14 @@
 				BF105A8A2469A244009E428E /* GPTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		BF58F7512587D46F00192A80 /* Notification Service */ = {
+			isa = PBXGroup;
+			children = (
+				BF58F7522587D48B00192A80 /* GNNotificationService.swift */,
+			);
+			path = "Notification Service";
 			sourceTree = "<group>";
 		};
 		BF601AE324D9C4B800450FD5 /* Analytics */ = {
@@ -1097,6 +1108,7 @@
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
 				BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
+				BF58F7532587D48B00192A80 /* GNNotificationService.swift in Sources */,
 				D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */,
 				1EB0A1AC240011FD00D7693D /* GPReceiptViewController.swift in Sources */,
 				D6348D7D2495877000AD069C /* GPButton.swift in Sources */,
