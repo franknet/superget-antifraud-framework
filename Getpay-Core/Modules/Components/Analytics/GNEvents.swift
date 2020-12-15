@@ -17,6 +17,8 @@ public enum GNEvent: String {
     case shortcut_menu_cancel_checkout
     case shortcut_menu_sim_loan
     case onboarding_pix_finish
+    case pix_qrcode_payment
+    case pix_key_payment
 }
 
 public enum GNEventParameters: String {
