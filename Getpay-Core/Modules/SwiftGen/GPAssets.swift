@@ -166,6 +166,7 @@ public enum GPAssets {
   public static let gpPlus = ImageAsset(name: "gp_plus")
   public static let gpPraticard = ImageAsset(name: "gp_praticard")
   public static let gpQrcodeBg = ImageAsset(name: "gp_qrcode_bg")
+  public static let gpQrcodeMask = ImageAsset(name: "gp_qrcode_mask")
   public static let gpRadio = ImageAsset(name: "gp_radio")
   public static let gpRadioSelected = ImageAsset(name: "gp_radio_selected")
   public static let gpRate = ImageAsset(name: "gp_rate")
