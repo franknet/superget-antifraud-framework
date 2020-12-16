@@ -136,6 +136,7 @@
 		D6A992552551E938007F2655 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A992542551E938007F2655 /* OnboardingPageViewController.swift */; };
 		D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */; };
 		D6A9925F2551EF4F007F2655 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */; };
+		D6AB1F7B258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB1F7A258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift */; };
 		D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */; };
 		D6B087A7256838B200E6E3EB /* GNTermsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B087A6256838B200E6E3EB /* GNTermsService.swift */; };
 		D6B087AD25683DA900E6E3EB /* GNFingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B087AC25683DA900E6E3EB /* GNFingerPrint.swift */; };
@@ -294,6 +295,7 @@
 		D6A992542551E938007F2655 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		D6A9925A2551EF18007F2655 /* OnboardingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepViewController.swift; sourceTree = "<group>"; };
 		D6A9925E2551EF4F007F2655 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		D6AB1F7A258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithValueAndSubTitleV2.swift; sourceTree = "<group>"; };
 		D6AFB926244B70E900803CC3 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D6B087A6256838B200E6E3EB /* GNTermsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNTermsService.swift; sourceTree = "<group>"; };
 		D6B087AC25683DA900E6E3EB /* GNFingerPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNFingerPrint.swift; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 				D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */,
 				D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */,
 				D65129CD2564724D00AADD63 /* MenuItemView.swift */,
+				D6AB1F7A258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1080,6 +1083,7 @@
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,
 				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
+				D6AB1F7B258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
 				D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */,
