@@ -1,12 +1,5 @@
-//
-//  GPLOcalPushNotification.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 18/06/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import Foundation
+import UIKit
 import UserNotifications
 
 // MARK: - Protocol
@@ -32,12 +25,15 @@ public protocol LocalNotificationModel {
 }
 
 // MARK: - Class
+
 public class GPLocalNotification: NSObject {
         
     // MARK: - Initializers
+    
     private override init() {}
     
     // MARK: - Public Methods
+    
     /// Fire the local app notification
     public static func fireNotification(withModel model: LocalNotificationModel) {
         let content = UNMutableNotificationContent()
@@ -45,7 +41,6 @@ public class GPLocalNotification: NSObject {
         content.subtitle = model.subtitle
         content.body = model.body
         content.sound = model.sound
-        // random identifier
         
         let request = UNNotificationRequest(
             identifier: UUID().uuidString,
@@ -53,21 +48,19 @@ public class GPLocalNotification: NSObject {
             trigger: model.trigger
         )
 
-        // add our notification request
         UNUserNotificationCenter.current().add(request)
     }
-    
-    // MARK: - Public Static Methods
+
     /// Used to register app for local notifications
-    public static func registerForLocalNotifications(withDelegate delegate: UNUserNotificationCenterDelegate) {
+    public static func registerForLocalNotifications(_ application: UIApplication, withDelegate delegate: UNUserNotificationCenterDelegate) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             if success {
                 debugPrint("Local notifications set!")
                 UNUserNotificationCenter.current().delegate = delegate
+                application.registerForRemoteNotifications()
             } else if let error = error {
                 debugPrint(error.localizedDescription)
             }
         }
     }
-    
 }
