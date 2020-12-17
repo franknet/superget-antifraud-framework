@@ -138,6 +138,7 @@ public enum GPAssets {
   public static let gpLoginBg = ImageAsset(name: "gp_login_bg")
   public static let gpLogoSuperget = ImageAsset(name: "gp_logo_superget")
   public static let gpMaestro = ImageAsset(name: "gp_maestro")
+  public static let gpMaster = ImageAsset(name: "gp_master")
   public static let gpMastercard = ImageAsset(name: "gp_mastercard")
   public static let gpMessage = ImageAsset(name: "gp_message")
   public static let gpMettacard = ImageAsset(name: "gp_mettacard")
