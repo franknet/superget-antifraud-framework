@@ -11,5 +11,12 @@ public extension Date {
         let result = formatter.string(from: self)
         return result
     }
+    
+    var formatDateDDMMYYYY: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyy"
+        let result = formatter.string(from: self)
+        return result
+    }
 }
 

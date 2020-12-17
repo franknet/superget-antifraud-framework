@@ -100,6 +100,7 @@
 		D6348D7D2495877000AD069C /* GPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6348D7C2495877000AD069C /* GPButton.swift */; };
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
+		D6476A2F258B89AF00C72602 /* SheetViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */; };
 		D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FFB992505BC4200C997CC /* GNMerchantService.swift */; };
 		D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129CD2564724D00AADD63 /* MenuItemView.swift */; };
 		D65129D52564775200AADD63 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */; };
@@ -258,6 +259,7 @@
 		D6348D7C2495877000AD069C /* GPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPButton.swift; sourceTree = "<group>"; };
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewControllerExtension.swift; sourceTree = "<group>"; };
 		D64FFB992505BC4200C997CC /* GNMerchantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNMerchantService.swift; sourceTree = "<group>"; };
 		D65129CD2564724D00AADD63 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				BF9E8B9B24F8512000B516D2 /* DateExension.swift */,
 				D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */,
 				D6B087B02568411700E6E3EB /* UITextViewExtension.swift */,
+				D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1107,6 +1110,7 @@
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */,
+				D6476A2F258B89AF00C72602 /* SheetViewControllerExtension.swift in Sources */,
 				BFED885C24BE16FA00275D83 /* GPReceiptHeaderView.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
