@@ -16,6 +16,7 @@ def shared_pods
   pod 'IQKeyboardManagerSwift'
   pod 'TrustKit'
   pod 'SkeletonView'
+  pod 'FittedSheets', '~> 1'
 end
 
 target 'Getpay-Core' do

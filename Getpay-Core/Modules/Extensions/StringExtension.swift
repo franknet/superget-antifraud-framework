@@ -2,6 +2,48 @@ import UIKit
 import CoreImage
 
 public extension String {
+    var maskedCPF: String {
+        let string = self.formatedAsCPF
+        let maskedName = String(string.enumerated().map { (index, element) -> Character in
+            if (index > 3 && index < 7) || (index > 7 && index < 11) {
+                return "*"
+            } else {
+                return element
+            }
+        })
+        return maskedName
+    }
+    
+    var formatToCurrency: String {
+        let formatter = NumberFormatter()
+        formatter.locale = .init(identifier: "PT-BR")
+        formatter.numberStyle = .currencyAccounting
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        
+        var amount = self
+        
+        do {
+            let regex = try NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
+            amount = regex.stringByReplacingMatches(in: amount, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count), withTemplate: "")
+            
+            let double = (amount as NSString).doubleValue
+            let number = NSNumber(value: (double / 100))
+            
+            guard number != 0 as NSNumber else {
+                return ""
+            }
+            
+            guard let formattedString = formatter.string(from: number) else {
+                return ""
+            }
+            
+            return formattedString
+            
+        } catch {
+            return ""
+        }
+    }
     
     var isValidText: Bool {
         let regex = "^[a-zA-Z0-9_.]*$"
@@ -215,7 +257,6 @@ public extension String {
 }
 
 public extension String {
-    
     var withoutSpaces: String {
         return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
     }
@@ -227,7 +268,7 @@ public extension String {
             "z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5" +
             "]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-" +
             "9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" +
-        "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+            "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
         
         let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
         return emailTest.evaluate(with: self)
@@ -237,7 +278,6 @@ public extension String {
 
 // Build your own String Extension for grabbing a character at a specific position
 public extension String {
-    
     func index(at position: Int, from start: Index? = nil) -> Index? {
         let startingIndex = start ?? startIndex
         return index(startingIndex, offsetBy: position, limitedBy: endIndex)
@@ -266,7 +306,7 @@ public extension String {
     var westernArabicNumeralsOnly: String {
         let pattern = UnicodeScalar("0")..."9"
         return String(unicodeScalars
-            .compactMap { pattern ~= $0 ? Character($0) : nil })
+                        .compactMap { pattern ~= $0 ? Character($0) : nil })
     }
     
     var sgDateResponseFormated: String {
@@ -317,7 +357,6 @@ public extension String {
         
         return str
     }
-    
 }
 
 public extension String {
@@ -341,7 +380,6 @@ public extension Collection where Element == UInt8 {
 }
 
 public extension String {
-    
     func fromBase64() -> String? {
         guard let data = Data(base64Encoded: self) else {
             return nil
@@ -434,7 +472,6 @@ public extension StringProtocol {
 }
 
 public extension NSMutableAttributedString {
-
     func underline(term: String) -> NSMutableAttributedString {
         guard let underlineRange = string.range(of: term) else {
             return NSMutableAttributedString()
