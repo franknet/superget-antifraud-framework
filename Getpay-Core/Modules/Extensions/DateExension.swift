@@ -18,5 +18,12 @@ public extension Date {
         let result = formatter.string(from: self)
         return result
     }
+    
+    var formatRangeDateServiceWithTime: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        let result = formatter.string(from: self)
+        return result
+    }
 }
 
