@@ -101,6 +101,8 @@
 		D63853E3245078C700C56F1D /* GPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63853E2245078C700C56F1D /* GPUtils.swift */; };
 		D6429AE32445E648003F6A62 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = D6429AE22445E648003F6A62 /* Readme.md */; };
 		D6476A2F258B89AF00C72602 /* SheetViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */; };
+		D6476A88258B9E8700C72602 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A87258B9E8700C72602 /* PasswordView.swift */; };
+		D6476A8E258BA12F00C72602 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A8D258BA12F00C72602 /* PasswordViewController.swift */; };
 		D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FFB992505BC4200C997CC /* GNMerchantService.swift */; };
 		D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129CD2564724D00AADD63 /* MenuItemView.swift */; };
 		D65129D52564775200AADD63 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */; };
@@ -260,6 +262,8 @@
 		D63853E2245078C700C56F1D /* GPUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUtils.swift; sourceTree = "<group>"; };
 		D6429AE22445E648003F6A62 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewControllerExtension.swift; sourceTree = "<group>"; };
+		D6476A87258B9E8700C72602 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		D6476A8D258BA12F00C72602 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		D64FFB992505BC4200C997CC /* GNMerchantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNMerchantService.swift; sourceTree = "<group>"; };
 		D65129CD2564724D00AADD63 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
@@ -443,6 +447,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6476A86258B9E5300C72602 /* PasswordBottomSheet */,
 				BFD76EE42582B9DA00C469F1 /* SwitchButton */,
 				D6A9921F2551C7CC007F2655 /* Onboarding */,
 				BF63AD7C254B85AE0089FA78 /* ModalAccountStatus */,
@@ -720,6 +725,15 @@
 				D63853E2245078C700C56F1D /* GPUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D6476A86258B9E5300C72602 /* PasswordBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D6476A87258B9E8700C72602 /* PasswordView.swift */,
+				D6476A8D258BA12F00C72602 /* PasswordViewController.swift */,
+			);
+			path = PasswordBottomSheet;
 			sourceTree = "<group>";
 		};
 		D64FFB982505BC2700C997CC /* Merchant Service */ = {
@@ -1071,6 +1085,7 @@
 				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
 				D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */,
+				D6476A8E258BA12F00C72602 /* PasswordViewController.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
 				D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */,
 				D6A9925B2551EF18007F2655 /* OnboardingStepViewController.swift in Sources */,
@@ -1161,6 +1176,7 @@
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,
 				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
+				D6476A88258B9E8700C72602 /* PasswordView.swift in Sources */,
 				BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */,
 				1E32AF1823F711A000693F52 /* StringExtension.swift in Sources */,
 				BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */,
