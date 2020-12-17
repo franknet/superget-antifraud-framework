@@ -14,7 +14,7 @@ public extension Date {
     
     var formatDateDDMMYYYY: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyy"
+        formatter.dateFormat = "dd/MM/yyyy"
         let result = formatter.string(from: self)
         return result
     }
