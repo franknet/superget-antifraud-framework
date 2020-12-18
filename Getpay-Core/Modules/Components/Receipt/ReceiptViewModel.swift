@@ -6,11 +6,14 @@ public class ReceiptViewModel {
     
     // MARK: - Internal variables
     
-    private var transactionId: String?
-    private let service = ReceiptService()
-    
     let type: GPReceiptType
     var bankSlip: GPBankSlipReceipt?
+    var pixPayment: GPPixPaymentReceipt?
+    
+    // MARK: - Private variables
+    
+    private var transactionId: String?
+    private let service = ReceiptService()
     
     // MARK: - Initializers
     
@@ -22,6 +25,11 @@ public class ReceiptViewModel {
     public init(bankSlip: GPBankSlipReceipt) {
         self.bankSlip = bankSlip
         self.type = .bankSlip
+    }
+    
+    public init(pixPayment: GPPixPaymentReceipt) {
+        self.pixPayment = pixPayment
+        self.type = .pixPayment
     }
 }
 

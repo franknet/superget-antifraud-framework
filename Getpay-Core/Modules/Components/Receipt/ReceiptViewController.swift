@@ -24,6 +24,8 @@ public class ReceiptViewController: BaseViewController<GPReceiptView> {
         
         if viewModel.bankSlip != nil {
             setup(receiptType: .bankSlip)
+        } else if viewModel.pixPayment != nil{
+            setup(receiptType: .pixPayment)
         } else {
             setup()
         }
@@ -74,6 +76,16 @@ extension ReceiptViewController {
             view.populate(model: model)
             setConstraints(view: view)
             break
+            
+        case .pixPayment:
+            guard
+                let model = viewModel.pixPayment,
+                let view = viewModel.type.view as? PixView
+            else { return }
+            view.populate(model: model)
+            setConstraints(view: view)
+            break
+            
         default:
             break
         }

@@ -18,6 +18,34 @@ public struct RequestReceiptBankSlip: BaseRequestProtocol {
     }
 }
 
+public struct GPPixPaymentReceipt: Codable {
+    
+    public init(receiverName: String,
+                receiverDocument: String,
+                receiverBank: String,
+                amount: Double,
+                idTransaction: String,
+                description: String,
+                paymentDate: String) {
+        
+        self.receiverName = receiverName
+        self.receiverDocument = receiverDocument
+        self.receiverBank = receiverBank
+        self.amount = amount
+        self.idTransaction = idTransaction
+        self.description = description
+        self.paymentDate = paymentDate
+    }
+    
+    public var receiverName: String
+    public var receiverDocument: String
+    public var receiverBank: String
+    public var amount: Double
+    public var idTransaction: String
+    public var description: String
+    public var paymentDate: String
+}
+
 public struct GPBankSlipReceipt: Codable {
     
     public init(barCodeNumber: String,
