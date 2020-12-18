@@ -103,6 +103,7 @@
 		D6476A2F258B89AF00C72602 /* SheetViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */; };
 		D6476A88258B9E8700C72602 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A87258B9E8700C72602 /* PasswordView.swift */; };
 		D6476A8E258BA12F00C72602 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476A8D258BA12F00C72602 /* PasswordViewController.swift */; };
+		D6476AA6258BD8EF00C72602 /* PixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6476AA5258BD8EF00C72602 /* PixView.swift */; };
 		D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FFB992505BC4200C997CC /* GNMerchantService.swift */; };
 		D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129CD2564724D00AADD63 /* MenuItemView.swift */; };
 		D65129D52564775200AADD63 /* UICollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */; };
@@ -264,6 +265,7 @@
 		D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewControllerExtension.swift; sourceTree = "<group>"; };
 		D6476A87258B9E8700C72602 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		D6476A8D258BA12F00C72602 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		D6476AA5258BD8EF00C72602 /* PixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixView.swift; sourceTree = "<group>"; };
 		D64FFB992505BC4200C997CC /* GNMerchantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNMerchantService.swift; sourceTree = "<group>"; };
 		D65129CD2564724D00AADD63 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtension.swift; sourceTree = "<group>"; };
@@ -642,6 +644,7 @@
 		BFED885624BE162800275D83 /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
+				D6476AA4258BD8CA00C72602 /* Pix */,
 				BFED886024BE17BE00275D83 /* ReceiptService.swift */,
 				BFED885E24BE17BE00275D83 /* ReceiptView.swift */,
 				BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */,
@@ -734,6 +737,14 @@
 				D6476A8D258BA12F00C72602 /* PasswordViewController.swift */,
 			);
 			path = PasswordBottomSheet;
+			sourceTree = "<group>";
+		};
+		D6476AA4258BD8CA00C72602 /* Pix */ = {
+			isa = PBXGroup;
+			children = (
+				D6476AA5258BD8EF00C72602 /* PixView.swift */,
+			);
+			path = Pix;
 			sourceTree = "<group>";
 		};
 		D64FFB982505BC2700C997CC /* Merchant Service */ = {
@@ -1060,6 +1071,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6476AA6258BD8EF00C72602 /* PixView.swift in Sources */,
 				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
