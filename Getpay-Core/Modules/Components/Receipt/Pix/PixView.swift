@@ -12,6 +12,7 @@ final class PixView: UIStackView {
     lazy var paymentDate = TitleWithValueAndSubTitle()
     lazy var paymentDescription = TitleWithValueAndSubTitle()
     lazy var idTransaction = TitleWithValueAndSubTitle()
+    lazy var codeAuthentication = TitleWithValueAndSubTitle()
     lazy var payer = TitleWithValueAndSubTitleV2()
     
     private let account = GPUtils.loadAccountPersistenceFromUD()
@@ -48,6 +49,7 @@ extension PixView {
         addArrangedSubview(paymentDate)
         addArrangedSubview(paymentDescription)
         addArrangedSubview(idTransaction)
+        addArrangedSubview(codeAuthentication)
         addArrangedSubview(payer)
     }
     
@@ -82,6 +84,10 @@ extension PixView {
         idTransaction.configure(title: "ID da transação",
                                 value: model.idTransaction,
                                 description: nil)
+        
+        codeAuthentication.configure(title: "Código de autenticação",
+                                     value: model.codeAuthentication,
+                                     description: nil)
         
         if let document = account.document {
             payer.configure(title: "Pagamento de",

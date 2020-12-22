@@ -254,6 +254,20 @@ public extension String {
         }
         return ""
     }
+    
+    func formatDate(inputSymbols: String, outputSymbols: String) -> String {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = inputSymbols
+        
+        guard let date = inputDateFormatter.date(from: self) else {
+            return .init()
+        }
+        
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = outputSymbols
+        
+        return outputDateFormatter.string(from: date)
+    }
 }
 
 public extension String {
