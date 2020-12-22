@@ -25,6 +25,7 @@ public struct GPPixPaymentReceipt: Codable {
                 receiverBank: String,
                 amount: Double,
                 idTransaction: String,
+                codeAuthentication: String,
                 description: String,
                 paymentDate: String) {
         
@@ -33,6 +34,7 @@ public struct GPPixPaymentReceipt: Codable {
         self.receiverBank = receiverBank
         self.amount = amount
         self.idTransaction = idTransaction
+        self.codeAuthentication = codeAuthentication
         self.description = description
         self.paymentDate = paymentDate
     }
@@ -42,6 +44,7 @@ public struct GPPixPaymentReceipt: Codable {
     public var receiverBank: String
     public var amount: Double
     public var idTransaction: String
+    public var codeAuthentication: String
     public var description: String
     public var paymentDate: String
 }
