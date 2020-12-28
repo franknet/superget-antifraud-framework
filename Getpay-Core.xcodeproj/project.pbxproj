@@ -74,6 +74,7 @@
 		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
+		BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */; };
 		BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */; };
 		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
@@ -236,6 +237,7 @@
 		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
+		BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBalanceService.swift; sourceTree = "<group>"; };
 		BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
@@ -415,15 +417,10 @@
 		1E62A46123F30A95009ED647 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BF58F7512587D46F00192A80 /* Notification Service */,
-				D6B087A52568389E00E6E3EB /* Terms Service */,
-				BFDC43C82510F64100D81DF4 /* Eligibility Service */,
-				D64FFB982505BC2700C997CC /* Merchant Service */,
+				BFA5F2A8259A582D00CC4983 /* Services */,
 				D67F0EF324F015F600C6AF14 /* UserAlias */,
 				1E913527249BA49000BF4A79 /* Local Notifications */,
 				D63853E1245078B000C56F1D /* Utils */,
-				D62C525B24BCE29700627C1C /* Account Service */,
-				D63853E02450788F00C56F1D /* Terminal Service */,
 				1E9516912427957300C92A04 /* Auth */,
 				D68C64B02422548700BA65B2 /* SwiftGen */,
 				1EB0A19023FEC74500D7693D /* Networking */,
@@ -612,6 +609,28 @@
 				BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */,
 			);
 			path = ModalAccountStatus;
+			sourceTree = "<group>";
+		};
+		BFA5F2A7259A582000CC4983 /* Balance Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */,
+			);
+			path = "Balance Service";
+			sourceTree = "<group>";
+		};
+		BFA5F2A8259A582D00CC4983 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5F2A7259A582000CC4983 /* Balance Service */,
+				BF58F7512587D46F00192A80 /* Notification Service */,
+				D6B087A52568389E00E6E3EB /* Terms Service */,
+				BFDC43C82510F64100D81DF4 /* Eligibility Service */,
+				D64FFB982505BC2700C997CC /* Merchant Service */,
+				D62C525B24BCE29700627C1C /* Account Service */,
+				D63853E02450788F00C56F1D /* Terminal Service */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BFD76EE42582B9DA00C469F1 /* SwitchButton */ = {
@@ -1185,6 +1204,7 @@
 				BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */,
 				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
+				BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */,
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,
 				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
