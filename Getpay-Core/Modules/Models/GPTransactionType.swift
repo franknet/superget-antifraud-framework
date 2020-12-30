@@ -36,119 +36,24 @@ public enum GPTrasactionType: String, Codable {
     case ADJUSTING_CREDIT_BACKOFFICE_CTA
     case MOBILE_TOP_UP_CTA
     case REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA
+    case PIX_RECEIVED_TRANSACTIONAL_ACCOUNT
+    case PIX_SENT_TRANSACTIONAL_ACCOUNT
+    case PIX_FEE_SENT
+    case PIX_CREDIT_FEE_RECEIVED
+    case TRANSITIONAL_ACCOUNT_PIX_SENT_UNPROCESSED
+    case PIX_DEBIT_FEE_CHARGE_SENT
+    case PIX_SENT_FEE_UNPROCESSED
+    case PIX_RECEIVED_FEE
+    case PIX_DEBIT_FEE_CHARGE_RECEIVED
+    case PIX_RECEIVED_NOT_PROCESSED_TRANSACTIONAL_ACCOUNT
+    case PIX_FEE_RECEIVED_NOT_PROCESSED
+    case PIX_RETURN_TRANSACTION_TRANSACTIONAL_ACCOUNT
+    case PIX_RETURN_UNPROCESSED_TRANSACTIONAL_ACCOUNT
+    case MOBILE_REVERSAL_CTA
+    case CHARGEBACK_PAYMENT_ACCOUNTS
+    case BILLS_PAYMENT_RATE
+    case CHARGEBACK_RATE_PAYMENT_ACCOUNTS
     case UNKNOWN
-    
-    public var title: String {
-        switch self {
-            case .PAYMENT_ACCOUNTS_CTA:
-                return "Pagamento de boleto"
-                
-            case .TRANSITORY_CREDIT_PAYMENTS_ACCOUNTS_CTA:
-                return ""
-                
-            case .UNPROCESSED_PAYMENT_REC_CELL_CTA:
-                return "Recarga de celular pendente"
-                
-            case .ENTRANCE_BANK_TRANSFER_RECEIVED_CTA:
-                return "Transferência realizada"
-                
-            case .RECHARGE_DEPOSIT_CTA:
-                return "Depósito boleto recebido"
-                
-            case .TRANSITORY_DEBIT_TRANSFER_BANK_CTA:
-                 return ""
-                
-            case .BANK_TRANSFER_FEE_ENTRANCE_CTA:
-                return "Tarifa TED"
-                
-            case .TRANSITORY_DEBT_RECEIVABLES_CTA:
-                 return ""
-                
-            case .REVERSAL_DEPOSIT_BANK_SLIP_CTA:
-                return ""
-                
-            case .FINANCIAL_CREDIT_ACCOUNTS_CTA:
-                 return ""
-                
-            case .REVERSAL_FEE_TRANSFERS_SENT_CTA:
-                return "Estorno tarifa TED"
-                
-            case .UNPROCESSED_PAYMENT_ACCOUNT_CTA:
-                 return "Pagamento não realizado"
-                
-            case .LIQ_FINANCY_TRANSFER_BANK_CTA:
-                 return ""
-                
-            case .TRANSFER_BETWEEN_ACCOUNTS_FAVORED_CTA:
-                return "Transferência recebida"
-                
-            case .TRANSITIONAL_DEBT_TRANSITION_ACCOUNT_CTA:
-                 return ""
-                
-            case .BANK_TRANSFER_ENTRANCE_CTA:
-                return "TED enviada"
-                
-            case .ACCOUNT_RECEIVABLES_DEBT_CTA:
-                return ""
-                
-            case .LOW_BANK_TRANSFER_RECEIVED_CTA:
-                return "Duplicidade de Recebíveis"
-                
-            case .TRANSITORY_DEBIT_PAYMENTS_ACCOUNT_CTA:
-                return ""
-                
-            case .ADJUST_DEBIT_BACKOFFICE_CTA:
-                return "Ajuste de conta"
-                
-            case .TRANSITORY_CREDIT_TRANSFER_BANK_CTA:
-                return ""
-                
-            case .BANK_TRANSFER_CHARGEBACK_SENT_CTA:
-                return "Estorno TED"
-                
-            case .RATE_REC_DEPOSIT_BANK_SLIP_CTA:
-                return "Tarifa boleto"
-                
-            case .BANK_TRANSFER_RECEIVED_CTA:
-                return "Transferência recebida"
-                
-            case .REFILL_SP_TRANSFER_CTA:
-                return "Recarga bilhete único"
-                
-            case .RECEIVED_CTA:
-                return "Venda realizada"
-                
-            case .LIQ_FINANCY_DEBT_BANK_TRANSFER_CTA:
-                return ""
-                
-            case .UNPROCESSED_PAYMENT_REC_SP_TRANS_CTA:
-                return "Pagamento não realizado"
-                
-            case .TRANSFER_BETWEEN_ACCOUNTS_SENDER_CTA:
-                return "Transferência enviada"
-                
-            case .TRANSITORY_CREDIT_TRANSFER_ACCOUNTS_CTA:
-                return ""
-                
-            case .TRANSITORY_CREDIT_RECEIVABLES_CTA:
-                 return ""
-                
-            case .ACCOUNT_RECEIVABLES_CREDIT_CTA:
-                return ""
-                
-            case .ADJUSTING_CREDIT_BACKOFFICE_CTA:
-                return "Ajuste de conta"
-                
-            case .MOBILE_TOP_UP_CTA:
-                return "Recarga de celular"
-                
-            case .REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA:
-                return "Estorno tarifa boleto"
-            
-            case .UNKNOWN:
-                return "Operação com cartão"
-            }
-    }
     
     public var icon: UIImage {
         switch self {
@@ -258,6 +163,48 @@ public enum GPTrasactionType: String, Codable {
             return GPAssets.gpChargeback2.image
         
         case .UNKNOWN:
+            return GPAssets.gpPayCard.image
+            
+        case .PIX_RECEIVED_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_SENT_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_FEE_SENT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_CREDIT_FEE_RECEIVED:
+            return GPAssets.gpPix.image
+            
+        case .TRANSITIONAL_ACCOUNT_PIX_SENT_UNPROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_DEBIT_FEE_CHARGE_SENT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_SENT_FEE_UNPROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RECEIVED_FEE:
+            return GPAssets.gpPix.image
+            
+        case .PIX_DEBIT_FEE_CHARGE_RECEIVED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RECEIVED_NOT_PROCESSED_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_FEE_RECEIVED_NOT_PROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RETURN_TRANSACTION_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RETURN_UNPROCESSED_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        default:
             return GPAssets.gpPayCard.image
         }
     }
