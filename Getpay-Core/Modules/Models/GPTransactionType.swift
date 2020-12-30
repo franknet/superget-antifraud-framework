@@ -37,6 +37,22 @@ public enum GPTrasactionType: String, Codable {
     case MOBILE_TOP_UP_CTA
     case REFUND_RATE_REC_DEPOSIT_BANK_SPLIT_CTA
     case PIX_RECEIVED_TRANSACTIONAL_ACCOUNT
+    case PIX_SENT_TRANSACTIONAL_ACCOUNT
+    case PIX_FEE_SENT
+    case PIX_CREDIT_FEE_RECEIVED
+    case TRANSITIONAL_ACCOUNT_PIX_SENT_UNPROCESSED
+    case PIX_DEBIT_FEE_CHARGE_SENT
+    case PIX_SENT_FEE_UNPROCESSED
+    case PIX_RECEIVED_FEE
+    case PIX_DEBIT_FEE_CHARGE_RECEIVED
+    case PIX_RECEIVED_NOT_PROCESSED_TRANSACTIONAL_ACCOUNT
+    case PIX_FEE_RECEIVED_NOT_PROCESSED
+    case PIX_RETURN_TRANSACTION_TRANSACTIONAL_ACCOUNT
+    case PIX_RETURN_UNPROCESSED_TRANSACTIONAL_ACCOUNT
+    case MOBILE_REVERSAL_CTA
+    case CHARGEBACK_PAYMENT_ACCOUNTS
+    case BILLS_PAYMENT_RATE
+    case CHARGEBACK_RATE_PAYMENT_ACCOUNTS
     case UNKNOWN
     
     public var icon: UIImage {
@@ -152,6 +168,44 @@ public enum GPTrasactionType: String, Codable {
         case .PIX_RECEIVED_TRANSACTIONAL_ACCOUNT:
             return GPAssets.gpPix.image
             
+        case .PIX_SENT_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_FEE_SENT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_CREDIT_FEE_RECEIVED:
+            return GPAssets.gpPix.image
+            
+        case .TRANSITIONAL_ACCOUNT_PIX_SENT_UNPROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_DEBIT_FEE_CHARGE_SENT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_SENT_FEE_UNPROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RECEIVED_FEE:
+            return GPAssets.gpPix.image
+            
+        case .PIX_DEBIT_FEE_CHARGE_RECEIVED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RECEIVED_NOT_PROCESSED_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_FEE_RECEIVED_NOT_PROCESSED:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RETURN_TRANSACTION_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        case .PIX_RETURN_UNPROCESSED_TRANSACTIONAL_ACCOUNT:
+            return GPAssets.gpPix.image
+            
+        default:
+            return GPAssets.gpPayCard.image
         }
     }
 }
