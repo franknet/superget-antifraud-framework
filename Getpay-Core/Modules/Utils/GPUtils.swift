@@ -137,7 +137,7 @@ public class GPUtils {
     }
     
     public static func getImage(icon: String) -> UIImage? {
-            return ImageAsset(name: icon).image
+        return ImageAsset(name: icon).image
     }
     
     public static func feedbackShouldBePresented() -> Bool {
@@ -166,7 +166,7 @@ public class GPUtils {
                 return days
             }
         }
-
+        
         return 15
     }
     
