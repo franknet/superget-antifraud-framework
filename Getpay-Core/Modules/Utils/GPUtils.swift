@@ -9,6 +9,7 @@ public class GPUtils {
     private static let merchantKey = "merchantKey"
     private static let didSendFeedback = "didSendFeedback"
     private static let dateFeedbackShowed = "dateFeedbackShowed"
+    private static let showFeedback = "showFeedback"
     
     public static func save(account: GPAccount) {
         let encoder = JSONEncoder()
@@ -141,8 +142,10 @@ public class GPUtils {
     }
     
     public static func feedbackShouldBePresented() -> Bool {
-        if !appHasBeenRated() && remainingDaysToShowFeedback() >= 15 {
-            return true
+        if feedbackShouldBeShown() {
+            if !appHasBeenRated() && remainingDaysToShowFeedback() >= 15 {
+                return true
+            }
         }
         
         return false
@@ -162,7 +165,6 @@ public class GPUtils {
             let components = calendar.dateComponents([.day], from: date1, to: date2)
             
             if let days = components.day {
-                debugPrint("DAYS --->", days)
                 return days
             }
         }
@@ -176,5 +178,13 @@ public class GPUtils {
     
     public static func setFeedBackDate(_ date: Date) {
         defaults.set(date, forKey: dateFeedbackShowed)
+    }
+    
+    public static func setNeedShowFeedback(_ status: Bool) {
+        defaults.set(status, forKey: showFeedback)
+    }
+    
+    private static func feedbackShouldBeShown() -> Bool {
+        return defaults.bool(forKey: showFeedback)
     }
 }
