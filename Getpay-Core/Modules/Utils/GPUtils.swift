@@ -136,6 +136,10 @@ public class GPUtils {
         save(account: account)
     }
     
+    public static func getImage(icon: String) -> UIImage? {
+            return ImageAsset(name: icon).image
+    }
+    
     public static func feedbackShouldBePresented() -> Bool {
         if !appHasBeenRated() && remainingDaysToShowFeedback() >= 15 {
             return true
