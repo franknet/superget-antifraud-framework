@@ -19,6 +19,21 @@ public enum GNEvent: String {
     case onboarding_pix_finish
     case pix_qrcode_payment
     case pix_key_payment
+    case getpay_value_return
+    case getpay_value_next
+    case getpay_sale_data_return
+    case getpay_sale_data_next
+    case getpay_payment_method_return
+    case getpay_payment_method_next
+    case getpay_summary_return
+    case getpay_summary_create
+    case getpay_copy_link
+    case getpay_link_share
+    case getpay_contract
+    case getpay_new_link
+    case getpay_link_detail
+    case getpay_detail_edit
+    case getpay_detail_edit_save
 }
 
 public enum GNEventParameters: String {

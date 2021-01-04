@@ -77,6 +77,7 @@
 		BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */; };
 		BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */; };
 		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
+		BFE8D72025A350B7008728B0 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
 		BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */; };
@@ -240,6 +241,7 @@
 		BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBalanceService.swift; sourceTree = "<group>"; };
 		BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
+		BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
 		BFEA3ED624C0BD8400D0640E /* GPInputValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPInputValueView.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				D65129D42564775200AADD63 /* UICollectionViewCellExtension.swift */,
 				D6B087B02568411700E6E3EB /* UITextViewExtension.swift */,
 				D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */,
+				BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1191,6 +1194,7 @@
 				D662BA5F244E38DD00D4AFDB /* GPTerminalService.swift in Sources */,
 				D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
+				BFE8D72025A350B7008728B0 /* EncodableExtension.swift in Sources */,
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
