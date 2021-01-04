@@ -1,3 +1,9 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "fastlane"
+gem 'cocoapods'
+gem 'cocoapods-keys'
+
+gem 'fui', '~> 0.3.0'
+gem 'xcpretty'
+gem 'second_curtain', '~> 0.2.3'
+gem 'fastlane'
