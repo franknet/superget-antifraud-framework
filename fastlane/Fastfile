@@ -1,5 +1,4 @@
 default_platform(:ios)
-#podspec_name = "Getpay-Core.podspec"
 
 platform :ios do
 
@@ -19,11 +18,11 @@ platform :ios do
   end
 
   def release(type)
-    #pod_lib_lint(allow_warnings: true)
-    version = version_bump_podspec(path: "Getpay-Core.podspec",
+    podspec_name = "Getpay-Core.podspec" #DONT FORGET TO CHANGE TO CURRENT MODULE FILE NAME
+    version = version_bump_podspec(path: podspec_name,
                                    bump_type: type)
-    git_add(path: "Getpay-Core.podspec")
-    git_commit(path: ["Getpay-Core.podspec"],
+    git_add(path: podspec_name)
+    git_commit(path: [podspec_name],
                message: "#{version} upgrade repo")
     add_git_tag(tag: "#{version}")
     push_to_git_remote
