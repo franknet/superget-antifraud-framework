@@ -1,6 +1,0 @@
-framework module Pods_Getpay_Core {
-  umbrella header "Pods-Getpay-Core-umbrella.h"
-
-  export *
-  module * { export * }
-}

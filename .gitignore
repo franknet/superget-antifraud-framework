@@ -69,8 +69,11 @@ vendor/
 ### Xcode Patch ###
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
+*.xcodeproj/xcshareddata/
+*.xcworkspace/contents.xcworkspacedata
 /*.gcno
+
+fastlane/report.xml
+
 
 # End of https://www.gitignore.io/api/osx,swift,xcode,macos,fastlane,firebase,carthage,cocoapods,objective-c
