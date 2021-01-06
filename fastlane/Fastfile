@@ -18,6 +18,7 @@ platform :ios do
   end
 
   def release(type)
+    clean_cocoapods_cache 
     podspec_name = "Getpay-Core.podspec" #DONT FORGET TO CHANGE TO CURRENT MODULE FILE NAME
     version = version_bump_podspec(path: podspec_name,
                                    bump_type: type)
