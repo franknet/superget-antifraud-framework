@@ -20,6 +20,8 @@ open class ServiceManager: SessionDelegate {
     
     private var encoding: ParameterEncoding = URLEncoding.default
     
+    private var environment = GNGeneralConfig.shared.environment
+    
     // MARK: - Initializers
     
     /**
@@ -46,21 +48,23 @@ open class ServiceManager: SessionDelegate {
             self.encoding = isJsonBody ? JSONEncoding.default : URLEncoding.default
         }
         
-        self.interceptor = GPNetworkInterceptor(isBearerToken: isBearerToken)
+        interceptor = GPNetworkInterceptor(isBearerToken: isBearerToken)
         
-        let pinnedDomains: [String: [String]] = [
-            Urls.shared.baseURL: [
-                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
-                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
-                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
-                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="],
-            Urls.shared.issuer: [
-                "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
-                "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
-                "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
-                "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="]]
-        
-        self.setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
+        if environment == .prod {
+            let pinnedDomains: [String: [String]] = [
+                Urls.shared.baseURL: [
+                    "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                    "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                    "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="],
+                Urls.shared.issuer: [
+                    "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
+                    "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
+                    "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
+                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="]]
+            
+            setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
+        }
     }
     
     // MARK: - Private methods
@@ -261,7 +265,11 @@ extension ServiceManager {
                     didReceive challenge: URLAuthenticationChallenge,
                     completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         
-        if TrustKit.sharedInstance().pinningValidator.handle(challenge, completionHandler: completionHandler) == false {
+        if environment == .prod {
+            if TrustKit.sharedInstance().pinningValidator.handle(challenge, completionHandler: completionHandler) == false {
+                completionHandler(.performDefaultHandling, nil)
+            }
+        } else {
             completionHandler(.performDefaultHandling, nil)
         }
     }

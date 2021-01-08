@@ -31,6 +31,10 @@ final public class GPNetworkInterceptor: RequestInterceptor {
                 }
                 if let token = accessToken {
                     
+                    adaptedRequest.headers.add(name: "app-version", value: GNGeneralConfig.shared.appVersion)
+                    adaptedRequest.headers.add(name: "device-id", value: GNGeneralConfig.shared.sessionIDTMX)
+                    adaptedRequest.headers.add(name: "device-os", value: "iOS")
+                    
                     if self.isBearerToken {
                        adaptedRequest.headers.add(.authorization(bearerToken: token))
                     }
