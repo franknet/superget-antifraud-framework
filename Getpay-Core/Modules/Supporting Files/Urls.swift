@@ -1,14 +1,13 @@
-
 // MARK: - Urls
 
 public class Urls {
     
     // MARK: - Public variables
     
-    public var baseURL = ""
-    public var issuer = ""
-    public var transactionalURL = ""
-    public var portServicesURL = ""
+    public var baseURL = GNGeneralConfig.shared.environment.url.baseURL
+    public var issuer = GNGeneralConfig.shared.environment.url.issuer
+    public var transactionalURL = GNGeneralConfig.shared.environment.url.transactionalURL
+    public var portServicesURL = GNGeneralConfig.shared.environment.url.portServicesURL
     
     public static var shared = Urls()
         
@@ -16,14 +15,6 @@ public class Urls {
     
     public init() {}
     
-    // MARK: - Public methods
-    
-    public func configure(environment: Environment) {
-        self.baseURL = environment.url.baseURL
-        self.issuer = environment.url.issuer
-        self.transactionalURL = environment.url.transactionalURL
-        self.portServicesURL = environment.url.portServicesURL
-    }
 }
 
 // MARK: - Environment

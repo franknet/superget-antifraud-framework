@@ -66,7 +66,7 @@
 		725FC2EDE20685C7C647FA68 /* Pods_Getpay_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493AD0140CE0A3CEDBA2BAE6 /* Pods_Getpay_CoreTests.framework */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
-		BF10BD62257E595300389E0F /* ThreatMetrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10BD61257E595300389E0F /* ThreatMetrix.swift */; };
+		BF10BD62257E595300389E0F /* GNGeneralConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10BD61257E595300389E0F /* GNGeneralConfig.swift */; };
 		BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF247CD824F06F3500717CD7 /* UIImageExtension.swift */; };
 		BF58F7532587D48B00192A80 /* GNNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF58F7522587D48B00192A80 /* GNNotificationService.swift */; };
 		BF601AE524D9C55800450FD5 /* GNEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF601AE424D9C55800450FD5 /* GNEvents.swift */; };
@@ -230,7 +230,7 @@
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
-		BF10BD61257E595300389E0F /* ThreatMetrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreatMetrix.swift; sourceTree = "<group>"; };
+		BF10BD61257E595300389E0F /* GNGeneralConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNGeneralConfig.swift; sourceTree = "<group>"; };
 		BF247CD824F06F3500717CD7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		BF58F7522587D48B00192A80 /* GNNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNNotificationService.swift; sourceTree = "<group>"; };
 		BF601AE424D9C55800450FD5 /* GNEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEvents.swift; sourceTree = "<group>"; };
@@ -440,7 +440,7 @@
 			children = (
 				1E62A46423F30AD4009ED647 /* Urls.swift */,
 				1EFBE8752407F861003805EC /* GPLogger.swift */,
-				BF10BD61257E595300389E0F /* ThreatMetrix.swift */,
+				BF10BD61257E595300389E0F /* GNGeneralConfig.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1199,7 +1199,7 @@
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
 				BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */,
-				BF10BD62257E595300389E0F /* ThreatMetrix.swift in Sources */,
+				BF10BD62257E595300389E0F /* GNGeneralConfig.swift in Sources */,
 				D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */,
 				BFED886224BE17BE00275D83 /* ReceiptView.swift in Sources */,
 				D60B81A324A406160098443D /* TitleWithValueAndSubTitle.swift in Sources */,
