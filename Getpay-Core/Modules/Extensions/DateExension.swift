@@ -25,5 +25,8 @@ public extension Date {
         let result = formatter.string(from: self)
         return result
     }
+    
+    var currentTimeMillis: Int64 {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
 }
-
