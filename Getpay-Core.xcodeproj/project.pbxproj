@@ -123,6 +123,7 @@
 		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
+		D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */; };
 		D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF424F0167000C6AF14 /* UserAliasService.swift */; };
 		D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */; };
 		D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */; };
@@ -287,6 +288,7 @@
 		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
+		D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNPendenciesService.swift; sourceTree = "<group>"; };
 		D67F0EF424F0167000C6AF14 /* UserAliasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasService.swift; sourceTree = "<group>"; };
 		D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewController.swift; sourceTree = "<group>"; };
 		D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewModel.swift; sourceTree = "<group>"; };
@@ -625,6 +627,7 @@
 		BFA5F2A8259A582D00CC4983 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D67A5B4425BB123200903F3C /* Pendencies Service */,
 				BFA5F2A7259A582000CC4983 /* Balance Service */,
 				BF58F7512587D46F00192A80 /* Notification Service */,
 				D6B087A52568389E00E6E3EB /* Terms Service */,
@@ -775,6 +778,14 @@
 				D64FFB992505BC4200C997CC /* GNMerchantService.swift */,
 			);
 			path = "Merchant Service";
+			sourceTree = "<group>";
+		};
+		D67A5B4425BB123200903F3C /* Pendencies Service */ = {
+			isa = PBXGroup;
+			children = (
+				D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */,
+			);
+			path = "Pendencies Service";
 			sourceTree = "<group>";
 		};
 		D67F0EF324F015F600C6AF14 /* UserAlias */ = {
@@ -1174,6 +1185,7 @@
 				1E32AF1323F707EB00693F52 /* GPRoundedButton.swift in Sources */,
 				1EB0A19223FEC76500D7693D /* GPNetworkInterceptor.swift in Sources */,
 				D68C647C2420FC3300BA65B2 /* ErrorView.swift in Sources */,
+				D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */,
 				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
 				D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */,
 				D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */,
