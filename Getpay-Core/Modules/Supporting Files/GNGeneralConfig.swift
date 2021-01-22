@@ -9,6 +9,10 @@ public class GNGeneralConfig {
     public var appVersion = ""
     public var environment: Environment = .hti
     
+    // MARK: - Private variables
+    
+    private var pendencies: Pendencies?
+    
     public static var shared = GNGeneralConfig()
     
     // MARK: - Initializers
@@ -27,5 +31,17 @@ public class GNGeneralConfig {
     
     public func configure(environment: Environment) {
         self.environment = environment
+    }
+    
+    public func configure(pendencies: Pendencies) {
+        self.pendencies = pendencies
+    }
+    
+    public func getPendencies() -> Pendencies? {
+        guard
+            let pendencies = self.pendencies
+        else { return nil }
+        
+        return pendencies
     }
 }
