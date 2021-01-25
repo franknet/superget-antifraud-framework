@@ -29,7 +29,6 @@ public class GNPendenciesService {
         }
     }
     
-    
     // MARK: - Private methods
     
     private func isRequiredResolvePendencies(pendencies: Pendencies) -> Bool {
