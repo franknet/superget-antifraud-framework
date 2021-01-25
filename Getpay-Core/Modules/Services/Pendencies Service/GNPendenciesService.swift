@@ -29,12 +29,11 @@ public class GNPendenciesService {
         }
     }
     
-
     // MARK: - Private methods
     
     private func isRequiredResolvePendencies(pendencies: Pendencies) -> Bool {
         if pendencies.status == .CREATED {
-           return true
+            return true
         }
         return false
     }
@@ -86,9 +85,12 @@ public enum ValidationType: String, Codable {
 }
 
 public enum DataType: String, Codable {
-    case COUNTRY, MCC, MOBILE_PHONE,
-         EMAIL, MONTHLY_INCOME, NET_WORTH,
-         RESIDENTIAL_ADDRESS, COMMERCIAL_ADDRESS, BUSINESS_ADDRESS
+    case BIRTH_COUNTRY, LEGAL_REPRESENTATIVE_BIRTH_COUNTRY, MCC,
+         CELL_PHONE, LEGAL_REPRESENTATIVE_CELL_PHONE, PHONE,
+         EMAIL, LEGAL_REPRESENTATIVE_EMAIL, MONTHLY_INCOME,
+         LEGAL_REPRESENTATIVE_MONTHLY_INCOME, ANNUAL_INCOME, NET_WORTH,
+         LEGAL_REPRESENTATIVE_NET_WORTH, TRADE_NAME, RESIDENTIAL_ADDRESS,
+         COMMERCIAL_ADDRESS, BUSINESS_ADDRESS, LEGAL_REPRESENTATIVE_RESIDENTIAL_ADDRESS
 }
 
 public enum Status: String, Codable {
