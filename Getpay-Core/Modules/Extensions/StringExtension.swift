@@ -3,7 +3,7 @@ import CoreImage
 
 public extension String {
     
-    var currencyToDouble: Double {
+    var currencyToDouble: Double? {
         let formatter = NumberFormatter()
         formatter.locale = .init(identifier: "PT-BR")
         formatter.numberStyle = .currencyAccounting
@@ -12,7 +12,7 @@ public extension String {
             return amount.doubleValue
         }
         
-        return 0
+        return nil
     }
     
     var maskedCPF: String {
