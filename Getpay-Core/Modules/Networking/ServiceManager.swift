@@ -114,11 +114,13 @@ open class ServiceManager: SessionDelegate {
                 guard
                     let statusCode = response.response?.statusCode
                 else {
-                    return completion(self.getGenericResponse())
+                    completion(self.getGenericResponse())
+                    return
                 }
                 
-                if statusCode >= 200 && statusCode < 300 {
+                if (200 ..< 300).contains(statusCode) {
                     completion(nil)
+                    
                 } else {
                     if let data = response.data {
                         do {

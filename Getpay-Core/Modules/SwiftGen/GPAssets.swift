@@ -57,6 +57,8 @@ public enum GPAssets {
   public static let gpChaveCel = ImageAsset(name: "gp_chave_cel")
   public static let gpChaveCpf = ImageAsset(name: "gp_chave_cpf")
   public static let gpCheck = ImageAsset(name: "gp_check")
+  public static let gpCheckbox = ImageAsset(name: "gp_checkbox")
+  public static let gpCheckboxSelected = ImageAsset(name: "gp_checkbox_selected")
   public static let gpCirrus = ImageAsset(name: "gp_cirrus")
   public static let gpClose = ImageAsset(name: "gp_close")
   public static let gpCnh = ImageAsset(name: "gp_cnh")
