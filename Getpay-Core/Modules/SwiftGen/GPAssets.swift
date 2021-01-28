@@ -199,6 +199,7 @@ public enum GPAssets {
   public static let gpShare = ImageAsset(name: "gp_share")
   public static let gpShieldCheck = ImageAsset(name: "gp_shield_check")
   public static let gpShowPass = ImageAsset(name: "gp_show_pass")
+  public static let gpSmsValidation = ImageAsset(name: "gp_sms_validation")
   public static let gpSodexo = ImageAsset(name: "gp_sodexo")
   public static let gpSoftnex = ImageAsset(name: "gp_softnex")
   public static let gpSorocred = ImageAsset(name: "gp_sorocred")
