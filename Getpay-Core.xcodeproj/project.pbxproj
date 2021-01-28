@@ -90,6 +90,8 @@
 		BFED886324BE17BE00275D83 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */; };
 		BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886024BE17BE00275D83 /* ReceiptService.swift */; };
 		BFED886624BE5FC400275D83 /* GPReceiptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED886524BE5FC400275D83 /* GPReceiptType.swift */; };
+		D607EB7F25C2F62E00594370 /* GNCheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607EB7E25C2F62E00594370 /* GNCheckboxButton.swift */; };
+		D607EBF925C309C800594370 /* GNCheckBoxWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D607EBF825C309C800594370 /* GNCheckBoxWithDescription.swift */; };
 		D60B81A324A406160098443D /* TitleWithValueAndSubTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */; };
 		D624BDF1242AB1D2006DD69C /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = D624BDF0242AB1D2006DD69C /* colors.txt */; };
 		D624BDF3242AB851006DD69C /* GPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BDF2242AB851006DD69C /* GPColors.swift */; };
@@ -255,6 +257,8 @@
 		BFED885F24BE17BE00275D83 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		BFED886024BE17BE00275D83 /* ReceiptService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptService.swift; sourceTree = "<group>"; };
 		BFED886524BE5FC400275D83 /* GPReceiptType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptType.swift; sourceTree = "<group>"; };
+		D607EB7E25C2F62E00594370 /* GNCheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCheckboxButton.swift; sourceTree = "<group>"; };
+		D607EBF825C309C800594370 /* GNCheckBoxWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCheckBoxWithDescription.swift; sourceTree = "<group>"; };
 		D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleWithValueAndSubTitle.swift; sourceTree = "<group>"; };
 		D624BDF0242AB1D2006DD69C /* colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = colors.txt; sourceTree = "<group>"; };
 		D624BDF2242AB851006DD69C /* GPColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColors.swift; sourceTree = "<group>"; };
@@ -481,6 +485,7 @@
 				D6348D7C2495877000AD069C /* GPButton.swift */,
 				D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */,
 				D655D73424E5D06A001C5C91 /* GNRadiusButton.swift */,
+				D607EB7E25C2F62E00594370 /* GNCheckboxButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 				D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */,
 				D65129CD2564724D00AADD63 /* MenuItemView.swift */,
 				D6AB1F7A258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift */,
+				D607EBF825C309C800594370 /* GNCheckBoxWithDescription.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1129,6 +1135,7 @@
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
+				D607EBF925C309C800594370 /* GNCheckBoxWithDescription.swift in Sources */,
 				D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */,
 				D6476A8E258BA12F00C72602 /* PasswordViewController.swift in Sources */,
 				1E62A47F23F3298B009ED647 /* GPOutlinedButton.swift in Sources */,
@@ -1145,6 +1152,7 @@
 				D6A992552551E938007F2655 /* OnboardingPageViewController.swift in Sources */,
 				1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */,
 				D663745F24366AB0006C8E9F /* GPNetworkingService.swift in Sources */,
+				D607EB7F25C2F62E00594370 /* GNCheckboxButton.swift in Sources */,
 				BFEA3EDD24C0C0EF00D0640E /* UITableViewExtension.swift in Sources */,
 				D6AB1F7B258A533D00192CB5 /* TitleWithValueAndSubTitleV2.swift in Sources */,
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
