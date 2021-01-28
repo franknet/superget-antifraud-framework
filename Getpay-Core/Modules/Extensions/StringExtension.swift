@@ -2,6 +2,19 @@ import UIKit
 import CoreImage
 
 public extension String {
+    
+    var currencyToDouble: Double? {
+        let formatter = NumberFormatter()
+        formatter.locale = .init(identifier: "PT-BR")
+        formatter.numberStyle = .currencyAccounting
+        
+        if let amount = formatter.number(from: self) {
+            return amount.doubleValue
+        }
+        
+        return nil
+    }
+    
     var maskedCPF: String {
         let string = self.formatedAsCPF
         let maskedName = String(string.enumerated().map { (index, element) -> Character in
