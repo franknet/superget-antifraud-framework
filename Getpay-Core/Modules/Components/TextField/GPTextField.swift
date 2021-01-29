@@ -7,7 +7,11 @@ import RxGesture
 // MARK: - Enum MaskType
 
 public enum MaskType: Int {
-    case mobilePhone, cpf, cnpj, currency
+    case mobilePhone,
+         cpf,
+         cnpj,
+         currency,
+         residencialPhone
 }
 
 // MARK: - Class
@@ -100,6 +104,8 @@ extension GPCustomTextField {
             return text.formatedPhone
         case .currency:
             return text.formatToCurrency
+        case .residencialPhone:
+            return text.formatPhoneNumber
         }
     }
 }
