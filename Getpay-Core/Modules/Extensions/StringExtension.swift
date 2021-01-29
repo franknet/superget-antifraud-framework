@@ -202,11 +202,21 @@ public extension String {
         return components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
     }
     
+    var formatedValidationPhoneString: String {
+        return formatPhone(mask: "(XX) XXX****XX", replacingAsterisks: true)
+    }
+    
     var formatedPhone: String {
+        return formatPhone()
+    }
+    
+    /// Format an cellphone/number
+    /// - Parameters:
+    ///   - mask: the mask String to be used, "X" is the character that represent numbers
+    ///   - replacing: replace occurrences of "*", hidding chars
+    /// - Returns: returns the formated String
+    private func formatPhone(mask: String = "(XX) XXXXX-XXXX", replacingAsterisks: Bool = false) -> String {
         let cleanPhoneNumber = components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        
-        let mask = "(XX) XXXXX-XXXX"
-        
         var result = ""
         var index = cleanPhoneNumber.startIndex
         for ch in mask where index < cleanPhoneNumber.endIndex {
@@ -215,6 +225,9 @@ public extension String {
                 index = cleanPhoneNumber.index(after: index)
             } else {
                 result.append(ch)
+                if replacingAsterisks && ch == "*" {
+                    index = cleanPhoneNumber.index(after: index)
+                }
             }
         }
         return result
@@ -511,5 +524,24 @@ public extension NSMutableAttributedString {
             range: nsrange)
         
         return self
+    }
+}
+
+public extension String {
+    
+    var formatedEmailValidationString: String {
+        let email = self
+        let components = email.components(separatedBy: "@")
+        let result = hideMidChars(components.first!) + "@" + components.last!
+        return result
+    }
+    
+    /// Hide all chars despite the leading and trailing two chars
+    /// - Parameter value: the String to be modified
+    /// - Returns: a String that has hidden chars
+    private func hideMidChars(_ value: String) -> String {
+       return String(value.enumerated().map { index, char in
+          return [0, 1, value.count - 1, value.count - 2].contains(index) ? char : "*"
+       })
     }
 }
