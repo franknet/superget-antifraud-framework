@@ -75,6 +75,7 @@
 		BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */; };
 		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
+		BF98013825C46ED00018D4AF /* GNCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98013725C46ED00018D4AF /* GNCountry.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
 		BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */; };
 		BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */; };
@@ -244,6 +245,7 @@
 		BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewController.swift; sourceTree = "<group>"; };
 		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
+		BF98013725C46ED00018D4AF /* GNCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCountry.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
 		BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBalanceService.swift; sourceTree = "<group>"; };
 		BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		1E32AF1B23F712C200693F52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF98013725C46ED00018D4AF /* GNCountry.swift */,
 				1E19D9AB248AD68700C8D656 /* GPAccountRequestStatus.swift */,
 				1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */,
 				1E10E0FF24006F8A00247FC7 /* GPAccount.swift */,
@@ -1192,6 +1195,7 @@
 				D6B4940B243D186D00E98F5D /* AuthStateManager.swift in Sources */,
 				1EB0A1A32400027800D7693D /* CGSizeExtencion.swift in Sources */,
 				1E2FA1E324BF34370058D3D9 /* NSNotificationExtension.swift in Sources */,
+				BF98013825C46ED00018D4AF /* GNCountry.swift in Sources */,
 				D6476A2F258B89AF00C72602 /* SheetViewControllerExtension.swift in Sources */,
 				BFED885C24BE16FA00275D83 /* GPReceiptHeaderView.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
