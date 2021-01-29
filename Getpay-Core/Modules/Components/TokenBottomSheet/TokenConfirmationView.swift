@@ -70,7 +70,7 @@ extension TokenConfirmationView {
             tokenTextField.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 24),
             tokenTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             tokenTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            tokenTextField.heightAnchor.constraint(equalToConstant: 40.0)
+            tokenTextField.heightAnchor.constraint(equalToConstant: 56.0)
         ])
     }
     

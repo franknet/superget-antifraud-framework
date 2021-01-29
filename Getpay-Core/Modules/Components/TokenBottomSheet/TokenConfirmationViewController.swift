@@ -1,7 +1,7 @@
 import UIKit
 
 public protocol TokenConfirmationDelegate: AnyObject {
-    func getPassword(password: String)
+    func getToken(token: String)
 }
 
 // MARK: - Class
@@ -58,9 +58,9 @@ extension TokenConfirmationViewController {
         self.sheetViewController?.closeSheet { [weak self] in
             guard
                 let self = self,
-                let password = self.customView.tokenTextField.text
+                let token = self.customView.tokenTextField.text
                 else { return }
-            self.delegate?.getPassword(password: password)
+            self.delegate?.getToken(token: token)
         }
     }
 }
