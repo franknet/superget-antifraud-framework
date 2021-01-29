@@ -92,7 +92,7 @@ open class ServiceManager: SessionDelegate {
             offlineUserSessionPost()
         }
     }
-
+    
     // MARK: - Public methods
     
     public func performRequest(route: BaseRequestProtocol,
@@ -111,10 +111,17 @@ open class ServiceManager: SessionDelegate {
                 
                 debugPrint(response)
                 
-                if response.response?.statusCode == 200 || response.response?.statusCode == 201 {
-                    completion(nil)
-                }
+                guard
+                    let statusCode = response.response?.statusCode
                 else {
+                    completion(self.getGenericResponse())
+                    return
+                }
+                
+                if (200 ..< 300).contains(statusCode) {
+                    completion(nil)
+                    
+                } else {
                     if let data = response.data {
                         do {
                             let genericError = try JSONDecoder().decode(GPGenericError.self, from: data)
@@ -129,7 +136,7 @@ open class ServiceManager: SessionDelegate {
                         completion((self.getGenericResponse()))
                     }
                 }
-        }
+            }
         
         debugPrint(request as Any)
     }
@@ -151,7 +158,7 @@ open class ServiceManager: SessionDelegate {
                 debugPrint(response)
                 
                 switch response.result {
-                    
+                
                 case .success(let response):
                     completion(.success(response))
                     
@@ -213,21 +220,20 @@ open class ServiceManager: SessionDelegate {
                         }
                         observer.onError(self.getGenericResponse())
                     }
-            }
+                }
             
             debugPrint(request as Any)
             
             return Disposables.create {
                 request?.cancel()
             }
-            
         }
     }
 }
 
-// MARK: - Setup SSL
-
 extension ServiceManager {
+    
+    // MARK: - Setup SSL
     
     func setupSSLPinning(pinnedDomains: [String: [String]], errorCallback: @escaping () -> Void) {
         
@@ -249,7 +255,7 @@ extension ServiceManager {
             kTSKSwizzleNetworkDelegates: false,
             kTSKEnforcePinning: true,
             kTSKPinnedDomains: domainDict
-            ] as [String : Any]
+        ] as [String : Any]
         
         TrustKit.initSharedInstance(withConfiguration:trustKitConfig)
         
@@ -275,7 +281,7 @@ extension ServiceManager {
     }
 }
 
-// MARK: - GPResponseError
+// MARK: - GPGenericError
 
 public struct GPGenericError: Decodable, Error {
     public var status: String?
@@ -328,6 +334,8 @@ public struct GPGenericError: Decodable, Error {
         }
     }
 }
+
+// MARK: - GPResponseError
 
 public struct GPResponseError: Decodable, Error {
     public var status: String = ""
