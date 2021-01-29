@@ -233,10 +233,29 @@ public extension String {
         return result
     }
     
+    var formatPhoneNumber: String {
+        let isNineDigits = self.numbers.count > 10
+        let regex = "^(\\d{0,2})(\\d{0,\(isNineDigits ? "5" : "4")})(\\d{0,4})"
+        let mask = "($1) $2-$3"
+        
+        var newWord = self
+            .numbers
+            .replacingOccurrences(of: regex,
+                                  with: mask,
+                                  options: .regularExpression)
+        while
+            let last = newWord.last,
+            Int(String(last)) == nil {
+            
+            newWord.removeLast()
+        }
+        return newWord
+    }
+    
     var isValidPhoneNumber: Bool {
-        let regex = "^[1-9]{2}[9-9][0-9]{3,4}[0-9]{4}$"
-        let mobileTest = NSPredicate(format: "SELF MATCHES %@", regex)
-        return mobileTest.evaluate(with: self)
+        let range = self.replacingOccurrences(of: "\\D", with: "", options: .regularExpression)
+            .range(of: "^\\d{10,11}$", options: .regularExpression)
+        return range != nil
     }
     
     var onlyCharacters: String {
