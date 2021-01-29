@@ -4,14 +4,19 @@ import UIKit
 
 public final class TokenConfirmationView: UIView {
     
-    // MARK: - Internal variables
+    // MARK: - Internal Variables
         
     lazy var title = GPLabel(text: "Digite o código de verificação.",
                              fontSize: 16.0,
                              alignment: .center,
                              textColor: GPColors.ralph.color)
-
-    lazy var tokenTextField: UITextField = {
+    
+    lazy var continueButton = GPButton(title: "CONTINUAR",
+                                       style: .filled)
+    
+    // MARK: - Public Variables
+    
+    public lazy var tokenTextField: UITextField = {
         $0.placeholder = ""
         if #available(iOS 12.0, *) {
             $0.textContentType = .oneTimeCode
@@ -23,9 +28,6 @@ public final class TokenConfirmationView: UIView {
         $0.tintColor = GPColors.homer.color
         return $0
     }(UITextField())
-    
-    lazy var continueButton = GPButton(title: "CONTINUAR",
-                                       style: .filled)
     
     // MARK: - Initializers
     
