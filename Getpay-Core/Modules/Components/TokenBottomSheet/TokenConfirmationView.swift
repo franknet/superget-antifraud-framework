@@ -22,7 +22,7 @@ public final class TokenConfirmationView: UIView {
             $0.textContentType = .oneTimeCode
         }
         $0.textAlignment = .center
-        $0.keyboardType = .default
+        $0.keyboardType = .numberPad
         $0.font = FontFamily.Calibri.bold.font(size: 24.0)
         $0.textColor = GPColors.edna.color
         $0.tintColor = GPColors.homer.color
