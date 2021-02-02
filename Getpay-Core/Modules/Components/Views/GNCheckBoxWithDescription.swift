@@ -46,7 +46,7 @@ extension GNCheckBoxWithDescription {
     }
     
     private func setupTitle() {
-        title.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 8.0).isActive = true
+        title.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 16.0).isActive = true
         title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0).isActive = true
         title.centerY(to: checkbox)
     }
