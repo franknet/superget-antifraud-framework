@@ -11,7 +11,8 @@ public enum MaskType: Int {
          cpf,
          cnpj,
          currency,
-         residencialPhone
+         residencialPhone,
+         postalCode
 }
 
 // MARK: - Class
@@ -106,6 +107,8 @@ extension GPCustomTextField {
             return text.formatToCurrency
         case .residencialPhone:
             return text.formatPhoneNumber
+        case .postalCode:
+            return text.formatPostalCode
         }
     }
 }

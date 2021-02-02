@@ -252,6 +252,16 @@ public extension String {
         return newWord
     }
     
+    var formatPostalCode: String {
+        return self.replacingOccurrences(of: "^(\\d{5})(\\d{3})$", with: "$1-$2", options: .regularExpression)
+    }
+    
+    var isValidPostalCode: Bool {
+        let range = self.replacingOccurrences(of: "\\D", with: "", options: .regularExpression)
+            .range(of: "^\\d{8}$", options: .regularExpression)
+        return range != nil
+    }
+    
     var isValidPhoneNumber: Bool {
         let range = self.replacingOccurrences(of: "\\D", with: "", options: .regularExpression)
             .range(of: "^\\d{10,11}$", options: .regularExpression)
