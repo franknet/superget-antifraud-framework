@@ -126,6 +126,7 @@
 		D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66B07A524BE54D1003269C9 /* GPTransactionType.swift */; };
 		D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */; };
 		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
+		D67802DA25CB23D40041B71C /* GNBrazilStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67802D925CB23D40041B71C /* GNBrazilStates.swift */; };
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */; };
@@ -296,6 +297,7 @@
 		D66B07A524BE54D1003269C9 /* GPTransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTransactionType.swift; sourceTree = "<group>"; };
 		D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCircleViewWithIcon.swift; sourceTree = "<group>"; };
 		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
+		D67802D925CB23D40041B71C /* GNBrazilStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBrazilStates.swift; sourceTree = "<group>"; };
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNPendenciesService.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				D6F88E57243E21760017B4DE /* GPBasePageableListProtocol.swift */,
 				D66B07A524BE54D1003269C9 /* GPTransactionType.swift */,
 				BFED886524BE5FC400275D83 /* GPReceiptType.swift */,
+				D67802D925CB23D40041B71C /* GNBrazilStates.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1184,6 +1187,7 @@
 				D6A992502551E89F007F2655 /* OnboardingViewController.swift in Sources */,
 				BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */,
 				D6B087B12568411700E6E3EB /* UITextViewExtension.swift in Sources */,
+				D67802DA25CB23D40041B71C /* GNBrazilStates.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				D6A992212551C807007F2655 /* OnboardingView.swift in Sources */,

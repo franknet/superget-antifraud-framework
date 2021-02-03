@@ -69,7 +69,7 @@ public struct Pendencies: Codable {
 
 public struct Validation: Codable {
     public let type: ValidationType
-    public let value: String
+    public let value: String?
 }
 
 public enum AcceptanceType: String, Codable {
