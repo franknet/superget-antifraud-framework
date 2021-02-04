@@ -37,6 +37,7 @@
 		1E4CFE9923F2E71000E445F3 /* Getpay_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */; };
 		1E4CFE9B23F2E71000E445F3 /* Getpay_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E4CFE8D23F2E71000E445F3 /* Getpay_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E543D8C2412C5B000CB59E3 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E543D8B2412C5B000CB59E3 /* UIColorExtension.swift */; };
+		1E55CE0B25CB8AFA003F1F02 /* DescriptionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E55CE0A25CB8AFA003F1F02 /* DescriptionInputView.swift */; };
 		1E60EFFF243FE0D300FB22F8 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60EFFE243FE0D300FB22F8 /* IntExtension.swift */; };
 		1E62A46523F30AD4009ED647 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62A46423F30AD4009ED647 /* Urls.swift */; };
 		1E62A47A23F322E1009ED647 /* Buttons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E62A47923F322E1009ED647 /* Buttons.xib */; };
@@ -203,6 +204,7 @@
 		1E4CFE9823F2E71000E445F3 /* Getpay_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getpay_CoreTests.swift; sourceTree = "<group>"; };
 		1E4CFE9A23F2E71000E445F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E543D8B2412C5B000CB59E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1E55CE0A25CB8AFA003F1F02 /* DescriptionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionInputView.swift; sourceTree = "<group>"; };
 		1E60EFFE243FE0D300FB22F8 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		1E62A46423F30AD4009ED647 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		1E62A47923F322E1009ED647 /* Buttons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Buttons.xib; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 				D694D4F724D081D700013055 /* NotEligibleView.swift */,
 				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
 				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
+				1E55CE0A25CB8AFA003F1F02 /* DescriptionInputView.swift */,
 				D655D73224E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift */,
 				D652CCDA24E759F60088048E /* GNImageAndDescriptionView.swift */,
 				D65129CD2564724D00AADD63 /* MenuItemView.swift */,
@@ -1220,6 +1223,7 @@
 				1E9516932427958100C92A04 /* GPSession.swift in Sources */,
 				D6695C682475A96E001333FB /* BaseViewController.swift in Sources */,
 				D6AFB927244B70E900803CC3 /* UserDefaultsExtension.swift in Sources */,
+				1E55CE0B25CB8AFA003F1F02 /* DescriptionInputView.swift in Sources */,
 				1E543D8C2412C5B000CB59E3 /* UIColorExtension.swift in Sources */,
 				1E10E1082400730100247FC7 /* GPMerchant.swift in Sources */,
 				1E10E1122400739B00247FC7 /* GPErrorMessage.swift in Sources */,
