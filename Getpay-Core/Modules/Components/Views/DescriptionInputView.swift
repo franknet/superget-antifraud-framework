@@ -30,12 +30,6 @@ public final class DescriptionInputView: UIView {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Public methods
-    
-    public func configure(placeholder: String) {
-        self.placeholder = placeholder
-    }
 }
 
 extension DescriptionInputView {
@@ -62,7 +56,7 @@ extension DescriptionInputView {
     }
 }
 
-// MARK: UITextViewDelegate
+// MARK: - UITextViewDelegate
 
 extension DescriptionInputView: UITextViewDelegate {
     public func textViewDidBeginEditing(_ textView: UITextView) {
