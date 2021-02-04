@@ -30,7 +30,7 @@ public extension String {
     var maskedCPF: String {
         let string = self.formatedAsCPF
         let maskedName = String(string.enumerated().map { (index, element) -> Character in
-            if (index > 3 && index < 7) || (index > 7 && index < 11) {
+            if (index < 3) || (index > 11) {
                 return "*"
             } else {
                 return element
