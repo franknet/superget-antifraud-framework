@@ -1,4 +1,4 @@
-public enum GNCountry {
+public enum GNCountry: String, CaseIterable {
     case AF
     case ZA
     case AX

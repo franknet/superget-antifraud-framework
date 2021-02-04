@@ -1,11 +1,3 @@
-//
-//  DoubleExtension.swift
-//  Getpay-Core
-//
-//  Created by Leandro Lopes on 19/03/20.
-//  Copyright © 2020 Getnet. All rights reserved.
-//
-
 import Foundation
 
 public extension Double {
@@ -36,4 +28,8 @@ public extension Double {
         return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
     }
     
+    var doubleToDecimal: Decimal? {
+        let value = String(format: "%.02f", self)
+        return Decimal.init(string: value.description)
+    }
 }

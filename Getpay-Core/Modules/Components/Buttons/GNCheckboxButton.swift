@@ -36,8 +36,8 @@ extension GNCheckboxButton {
     // MARK: - Private methods
     
     private func common() {
-        self.height(size: 20.0)
-        self.width(size: 20.0)
+        self.height(size: 24.0)
+        self.width(size: 24.0)
         self.setImage(unchecked, for: .normal)
         self.addTarget(self,
                        action:#selector(buttonClicked(sender:)),
