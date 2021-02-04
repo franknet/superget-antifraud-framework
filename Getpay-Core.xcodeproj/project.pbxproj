@@ -131,6 +131,7 @@
 		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */; };
+		D67D5D1925CCB1A5000B5226 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */; };
 		D67F0EF824F0167000C6AF14 /* UserAliasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF424F0167000C6AF14 /* UserAliasService.swift */; };
 		D67F0EF924F0167000C6AF14 /* UserAliasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */; };
 		D67F0EFA24F0167000C6AF14 /* UserAliasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */; };
@@ -303,6 +304,7 @@
 		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNPendenciesService.swift; sourceTree = "<group>"; };
+		D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		D67F0EF424F0167000C6AF14 /* UserAliasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasService.swift; sourceTree = "<group>"; };
 		D67F0EF524F0167000C6AF14 /* UserAliasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewController.swift; sourceTree = "<group>"; };
 		D67F0EF624F0167000C6AF14 /* UserAliasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAliasViewModel.swift; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				D6B087B02568411700E6E3EB /* UITextViewExtension.swift */,
 				D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */,
 				BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */,
+				D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1243,6 +1246,7 @@
 				D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */,
 				BFED885924BE168200275D83 /* BankSlipView.swift in Sources */,
 				BFE8D72025A350B7008728B0 /* EncodableExtension.swift in Sources */,
+				D67D5D1925CCB1A5000B5226 /* DictionaryExtension.swift in Sources */,
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
