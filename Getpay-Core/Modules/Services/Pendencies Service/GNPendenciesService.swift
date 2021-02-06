@@ -62,7 +62,6 @@ public struct Pendencies: Codable {
     public let acceptances: [AcceptanceType]
     public let documents: [DocumentType]
     public let dataGrid: [DataType]
-    public let account: [AccountType]
     public let status: Status
     public let personType: PersonType
 }
@@ -85,7 +84,7 @@ public enum ValidationType: String, Codable {
 }
 
 public enum DataType: String, Codable {
-    case BIRTH_COUNTRY, LEGAL_REPRESENTATIVE_BIRTH_COUNTRY, MCC,
+    case COUNTRY, LEGAL_REPRESENTATIVE_COUNTRY, MCC,
          CELL_PHONE, LEGAL_REPRESENTATIVE_CELL_PHONE, PHONE,
          EMAIL, LEGAL_REPRESENTATIVE_EMAIL, MONTHLY_INCOME,
          LEGAL_REPRESENTATIVE_MONTHLY_INCOME, ANNUAL_INCOME, NET_WORTH,
@@ -99,8 +98,4 @@ public enum Status: String, Codable {
 
 public enum PersonType: String, Codable {
     case PF, PJ
-}
-
-public enum AccountType: String, Codable {
-    case USER_ALIAS
 }
