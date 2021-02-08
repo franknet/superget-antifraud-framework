@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 // MARK: - Class
@@ -40,12 +39,6 @@ extension GPAccountService {
         }
     }
     
-    public func postIndividualAccount(completion: @escaping (GPResponseError?) -> Void) -> Void {
-        let merchantId = GPUtils.loadGPMerchantFromUD().id
-        let request = IndiviualAccountPostRequest(merchantId)
-        service.performRequest(route: request, completion: completion)
-    }
-    
     public func get(completion: @escaping (Result<GPAccount, GPResponseError>) -> Void) {
         let request = AccountDataRequest(merchantId)
         service.performRequest(route: request, completion: completion)
@@ -55,12 +48,6 @@ extension GPAccountService {
         shouldSendAccountNotification(response: response)
         
         var persistedAccount = response
-        
-        if response.aliasAccountStatus == .NOT_REQUESTED && response.status == .ACTIVE {
-            postIndividualAccount { (error) in
-                debugPrint(error as Any)
-            }
-        }
         
         if response.status == .WAITING_ANALYSIS {
             persistedAccount.requestStatus = .waitingAnalysis
@@ -155,24 +142,6 @@ struct AccountDataRequest: BaseRequestProtocol {
 
 
 // MARK: - Request
-
-struct IndiviualAccountPostRequest: BaseRequestProtocol {
-    var path: String
-    var headers: Headers?
-    var method: GPHttpMethod
-    
-    init(_ merchantId: Int) {
-        method = .post
-        path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/alias-account"
-        headers = [
-            "merchant_id": "\(merchantId)",
-            "Content-Type": "application/json",
-            "x-api-version": "2",
-            "scope": "APP"
-        ]
-        
-    }
-}
 
 struct IndividualAccountNotification: LocalNotificationModel {
     var title: String = "Sua conta SuperGet mudou."
