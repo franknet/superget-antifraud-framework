@@ -60,7 +60,7 @@ struct PendencieseRequest: BaseRequestProtocol {
 public struct Pendencies: Codable {
     public let validations: [Validation]
     public let acceptances: [AcceptanceType]
-    public let documents: [DocumentType]
+    public let documents: [PendenciesDocumentType]
     public let dataGrid: [DataType]
     public let status: Status
     public let personType: PersonType
@@ -75,8 +75,9 @@ public enum AcceptanceType: String, Codable {
     case ORDER_SUMMARY, TERMS_AND_CONDITIONS, PRIVACY_POLICY
 }
 
-public enum DocumentType: String, Codable {
-    case SELFIE, IDENTIFICATION_DOCUMENT, SOCIAL_CONTRACT, LETTER_OF_ATTORNEY
+public enum PendenciesDocumentType: String, Codable {
+    case SELFIE, IDENTIFICATION_DOCUMENT, SOCIAL_CONTRACT,
+         LETTER_OF_ATTORNEY, ID_CARD, DRIVER_LICENSE
 }
 
 public enum ValidationType: String, Codable {
@@ -98,4 +99,12 @@ public enum Status: String, Codable {
 
 public enum PersonType: String, Codable {
     case PF, PJ
+}
+
+public enum FileType: String, Codable {
+    case JPEG, JPG, PNG, PDF
+}
+
+public enum DocumentSide: String, Codable {
+    case FRONT, BACK
 }
