@@ -2,6 +2,29 @@ import UIKit
 
 public extension UIView {
     
+    func addDashedBorder(color: UIColor,
+                         lineWidth: CGFloat,
+                         cornerRadius: CGFloat) {
+        let color = color.cgColor
+        let shapeLayer:CAShapeLayer = CAShapeLayer()
+        let frameSize = self.frame.size
+        let shapeRect = CGRect(x: 0,
+                               y: 0,
+                               width: frameSize.width,
+                               height: frameSize.height)
+        shapeLayer.bounds = shapeRect
+        shapeLayer.position = CGPoint(x: frameSize.width/2,
+                                      y: frameSize.height/2)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = color
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+        shapeLayer.lineDashPattern = [8,12]
+        shapeLayer.path = UIBezierPath(roundedRect: shapeRect,
+                                       cornerRadius: cornerRadius).cgPath
+        self.layer.addSublayer(shapeLayer)
+    }
+    
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()

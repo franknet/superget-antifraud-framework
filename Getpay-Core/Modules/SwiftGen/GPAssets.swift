@@ -20,6 +20,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum GPAssets {
   public static let gnBackspace = ImageAsset(name: "gn_backspace")
+  public static let gnFileUpload = ImageAsset(name: "gn_file_upload")
   public static let gnQrcodeExpired = ImageAsset(name: "gn_qrcode_expired")
   public static let gnQrcodeSkeleton = ImageAsset(name: "gn_qrcode_skeleton")
   public static let gpAbout = ImageAsset(name: "gp_about")
@@ -109,6 +110,7 @@ public enum GPAssets {
   public static let gpFaq = ImageAsset(name: "gp_faq")
   public static let gpFavorite = ImageAsset(name: "gp_favorite")
   public static let gpFileUpload = ImageAsset(name: "gp_file_upload")
+  public static let gpFileUploaded = ImageAsset(name: "gp_file_uploaded")
   public static let gpFilter = ImageAsset(name: "gp_filter")
   public static let gpFingerprint = ImageAsset(name: "gp_fingerprint")
   public static let gpFingerprintAnimation = ImageAsset(name: "gp_fingerprint_animation")
