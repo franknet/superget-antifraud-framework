@@ -1,11 +1,3 @@
-//
-//  IconWithTitleAndSubtitleCell.swift
-//  Getpay-Core
-//
-//  Created by Marcus Vinicius Grussner on 09/03/21.
-//  Copyright © 2021 Getnet. All rights reserved.
-//
-
 import UIKit
 
 public final class IconWithTitleAndSubtitleCell: UITableViewCell {
@@ -97,4 +89,3 @@ extension IconWithTitleAndSubtitleCell {
         ])
     }
 }
-

@@ -13,4 +13,10 @@ public extension Array where Element: Hashable {
             return element
         }
     }
+    
+    func difference(from other: [Element]) -> [Element] {
+        let thisSet = Set(self)
+        let otherSet = Set(other)
+        return Array(thisSet.symmetricDifference(otherSet))
+    }
 }

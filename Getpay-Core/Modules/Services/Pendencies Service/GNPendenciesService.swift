@@ -73,7 +73,7 @@ public struct Validation: Codable {
 
 extension Validation: Hashable, Equatable {
     public static func ==(lhs: Validation, rhs: Validation) -> Bool {
-        return lhs.type == rhs.type && lhs.value == rhs.value
+        return lhs.type == rhs.type
     }
 }
 
