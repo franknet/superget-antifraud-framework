@@ -12,14 +12,14 @@ public final class IconWithTitleAndSubtitleView: UIView {
         $0.spacing = 16.0
         $0.alignment = .top
         return $0
-    } (UIStackView())
+    }(UIStackView())
     
     private let contentStack: UIStackView = {
         $0.axis = .vertical
         $0.distribution = .fill
         $0.spacing = 4.0
         return $0
-    } (UIStackView())
+    }(UIStackView())
     
     private lazy var icon: UIImageView = {
         $0.tintColor = GPColors.homer.color
