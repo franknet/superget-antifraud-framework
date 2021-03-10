@@ -71,6 +71,12 @@ public struct Validation: Codable {
     public let value: String?
 }
 
+extension Validation: Hashable, Equatable {
+    public static func ==(lhs: Validation, rhs: Validation) -> Bool {
+        return lhs.type == rhs.type
+    }
+}
+
 public enum AcceptanceType: String, Codable {
     case ORDER_SUMMARY, TERMS_AND_CONDITIONS, PRIVACY_POLICY
 }
