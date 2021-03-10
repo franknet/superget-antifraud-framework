@@ -1,8 +1,10 @@
 import UIKit
 
+// MARK: - Class
+
 public final class IconWithTitleAndSubtitleCell: UITableViewCell {
     
-    // MARK: - Internal variables
+    // MARK: - Public variables
     
     public static let identifier = String(describing: IconWithTitleAndSubtitleCell.self)
     
