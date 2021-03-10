@@ -76,6 +76,8 @@
 		BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */; };
 		BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */; };
 		BF6BACE724D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */; };
+		BF913AE025F8673900293381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF913ADF25F8673900293381 /* ArrayExtension.swift */; };
+		BF913AE525F8683B00293381 /* IconWithTitleAndSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF913AE425F8683B00293381 /* IconWithTitleAndSubtitleCell.swift */; };
 		BF98013825C46ED00018D4AF /* GNCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98013725C46ED00018D4AF /* GNCountry.swift */; };
 		BF9E8B9C24F8512000B516D2 /* DateExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E8B9B24F8512000B516D2 /* DateExension.swift */; };
 		BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */; };
@@ -249,6 +251,8 @@
 		BF63AD7F254B85E50089FA78 /* ModalAccountStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewController.swift; sourceTree = "<group>"; };
 		BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalAccountStatusViewModel.swift; sourceTree = "<group>"; };
 		BF6BACE624D47EB200BF1C0E /* GPReceiptPaymentStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReceiptPaymentStatusView.swift; sourceTree = "<group>"; };
+		BF913ADF25F8673900293381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BF913AE425F8683B00293381 /* IconWithTitleAndSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithTitleAndSubtitleCell.swift; sourceTree = "<group>"; };
 		BF98013725C46ED00018D4AF /* GNCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCountry.swift; sourceTree = "<group>"; };
 		BF9E8B9B24F8512000B516D2 /* DateExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExension.swift; sourceTree = "<group>"; };
 		BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBalanceService.swift; sourceTree = "<group>"; };
@@ -468,6 +472,7 @@
 		1E62A47423F31FF3009ED647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF913AE325F867F800293381 /* Cells */,
 				1EADB69C25C1F36C00F6C2AA /* TokenBottomSheet */,
 				D6476A86258B9E5300C72602 /* PasswordBottomSheet */,
 				BFD76EE42582B9DA00C469F1 /* SwitchButton */,
@@ -535,6 +540,7 @@
 				D6476A2E258B89AF00C72602 /* SheetViewControllerExtension.swift */,
 				BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */,
 				D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */,
+				BF913ADF25F8673900293381 /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -646,6 +652,14 @@
 				BF63AD85254B85F60089FA78 /* ModalAccountStatusViewModel.swift */,
 			);
 			path = ModalAccountStatus;
+			sourceTree = "<group>";
+		};
+		BF913AE325F867F800293381 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF913AE425F8683B00293381 /* IconWithTitleAndSubtitleCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BFA5F2A7259A582000CC4983 /* Balance Service */ = {
@@ -1141,6 +1155,7 @@
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
 				1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */,
 				D681A53D24F1A3260009CC0D /* GNSuccessView.swift in Sources */,
+				BF913AE025F8673900293381 /* ArrayExtension.swift in Sources */,
 				BF247CD924F06F3500717CD7 /* UIImageExtension.swift in Sources */,
 				BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */,
 				1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */,
@@ -1258,6 +1273,7 @@
 				1E10E10E2400736D00247FC7 /* GPReceipt.swift in Sources */,
 				1E3FCBDC248D8D9B00EC29DD /* GPInformationDisplayView.swift in Sources */,
 				BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */,
+				BF913AE525F8683B00293381 /* IconWithTitleAndSubtitleCell.swift in Sources */,
 				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
 				BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */,
