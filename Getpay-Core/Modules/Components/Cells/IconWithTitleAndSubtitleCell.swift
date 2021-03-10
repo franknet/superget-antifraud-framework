@@ -40,8 +40,7 @@ public final class IconWithTitleAndSubtitleCell: UITableViewCell {
                                      fontSize: 16.0,
                                      textColor: GPColors.edna.color)
     
-    private lazy var subTitle = GPLabel(fontSize: 14.0,
-                                        textColor: GPColors.flanders.color)
+    private lazy var subTitle = GPLabel(textColor: GPColors.flanders.color)
     
     // MARK: - Initializers
     
