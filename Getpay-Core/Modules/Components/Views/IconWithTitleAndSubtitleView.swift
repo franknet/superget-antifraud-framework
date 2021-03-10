@@ -2,11 +2,7 @@ import UIKit
 
 // MARK: - Class
 
-public final class IconWithTitleAndSubtitleCell: UITableViewCell {
-    
-    // MARK: - Public variables
-    
-    public static let identifier = String(describing: IconWithTitleAndSubtitleCell.self)
+public final class IconWithTitleAndSubtitleView: UIView {
     
     // MARK: - Private variables
     
@@ -38,10 +34,9 @@ public final class IconWithTitleAndSubtitleCell: UITableViewCell {
     
     // MARK: - Initializers
     
-    override init(style _: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    public init() {
+        super.init(frame: .zero)
         setupLayout()
-        selectionStyle = .none
     }
     
     required init?(coder _: NSCoder) {
@@ -49,7 +44,7 @@ public final class IconWithTitleAndSubtitleCell: UITableViewCell {
     }
 }
 
-extension IconWithTitleAndSubtitleCell {
+extension IconWithTitleAndSubtitleView {
     
     // MARK: - Public methods
     
@@ -68,7 +63,7 @@ extension IconWithTitleAndSubtitleCell {
     }
     
     private func addComponents() {
-        contentView.addSubview(wrapperStack, constraints: true)
+        addSubview(wrapperStack, constraints: true)
         
         wrapperStack.addArrangedSubview(icon)
         wrapperStack.addArrangedSubview(contentStack)
@@ -84,10 +79,10 @@ extension IconWithTitleAndSubtitleCell {
     
     private func setupContainerStack() {
         NSLayoutConstraint.activate([
-            wrapperStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16.0),
-            wrapperStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16.0),
-            wrapperStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16.0),
-            wrapperStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.0)
+            wrapperStack.topAnchor.constraint(equalTo: topAnchor, constant: 16.0),
+            wrapperStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.0),
+            wrapperStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16.0),
+            wrapperStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0)
         ])
     }
 }
