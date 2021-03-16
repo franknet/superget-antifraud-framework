@@ -83,6 +83,9 @@
 		BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */; };
 		BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */; };
 		BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */; };
+		BFE6004B2601344400A9CB1D /* TokenConfirmationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6004A2601344400A9CB1D /* TokenConfirmationDelegate.swift */; };
+		BFE6FFEB2601328200A9CB1D /* TokenConfirmationWithResendButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6FFEA2601328200A9CB1D /* TokenConfirmationWithResendButtonView.swift */; };
+		BFE6FFF12601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE6FFF02601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift */; };
 		BFE8D72025A350B7008728B0 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */; };
 		BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */; };
 		BFEA3ED924C0BD8400D0640E /* GPCalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */; };
@@ -258,6 +261,9 @@
 		BFA5F2A9259A588200CC4983 /* GNBalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBalanceService.swift; sourceTree = "<group>"; };
 		BFD76EE52582B9FD00C469F1 /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNEligibilityService.swift; sourceTree = "<group>"; };
+		BFE6004A2601344400A9CB1D /* TokenConfirmationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConfirmationDelegate.swift; sourceTree = "<group>"; };
+		BFE6FFEA2601328200A9CB1D /* TokenConfirmationWithResendButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConfirmationWithResendButtonView.swift; sourceTree = "<group>"; };
+		BFE6FFF02601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConfirmationWithResendButtonViewController.swift; sourceTree = "<group>"; };
 		BFE8D71F25A350B7008728B0 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		BFEA3ED424C0BD8400D0640E /* GPValueDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPValueDisplayView.swift; sourceTree = "<group>"; };
 		BFEA3ED524C0BD8400D0640E /* GPCalculatorInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPCalculatorInputView.swift; sourceTree = "<group>"; };
@@ -564,8 +570,9 @@
 		1EADB69C25C1F36C00F6C2AA /* TokenBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				1EADB69D25C1F4E800F6C2AA /* TokenConfirmationView.swift */,
-				1EADB6A325C1F52900F6C2AA /* TokenConfirmationViewController.swift */,
+				BFE6FFE92601323D00A9CB1D /* WithResendSmsButton */,
+				BFE6FFE42601322A00A9CB1D /* Default */,
+				BFE6004A2601344400A9CB1D /* TokenConfirmationDelegate.swift */,
 			);
 			path = TokenBottomSheet;
 			sourceTree = "<group>";
@@ -699,6 +706,24 @@
 				BFDC43C92510F69F00D81DF4 /* GNEligibilityService.swift */,
 			);
 			path = "Eligibility Service";
+			sourceTree = "<group>";
+		};
+		BFE6FFE42601322A00A9CB1D /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				1EADB69D25C1F4E800F6C2AA /* TokenConfirmationView.swift */,
+				1EADB6A325C1F52900F6C2AA /* TokenConfirmationViewController.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		BFE6FFE92601323D00A9CB1D /* WithResendSmsButton */ = {
+			isa = PBXGroup;
+			children = (
+				BFE6FFEA2601328200A9CB1D /* TokenConfirmationWithResendButtonView.swift */,
+				BFE6FFF02601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift */,
+			);
+			path = WithResendSmsButton;
 			sourceTree = "<group>";
 		};
 		BFEA3ED324C0BD8400D0640E /* Calculator Input View */ = {
@@ -1162,6 +1187,7 @@
 				BFED886424BE17BE00275D83 /* ReceiptService.swift in Sources */,
 				1EB5402A23FC5D0600C798BA /* UIImageViewEXtension.swift in Sources */,
 				D68C64B424225E7400BA65B2 /* GPFonts.swift in Sources */,
+				BFE6FFEB2601328200A9CB1D /* TokenConfirmationWithResendButtonView.swift in Sources */,
 				D64FFB9A2505BC4200C997CC /* GNMerchantService.swift in Sources */,
 				D6E1F91424B5218700C656DC /* GPTabButton.swift in Sources */,
 				BFEA3ED824C0BD8400D0640E /* GPValueDisplayView.swift in Sources */,
@@ -1176,6 +1202,7 @@
 				D6691FB82416F0E8007F45B8 /* CircleViewWithLabel.swift in Sources */,
 				D67F0EFB24F0167000C6AF14 /* UserAliasView.swift in Sources */,
 				1E62A48123F330CB009ED647 /* GPTextButton.swift in Sources */,
+				BFE6004B2601344400A9CB1D /* TokenConfirmationDelegate.swift in Sources */,
 				D607EBF925C309C800594370 /* GNCheckBoxWithDescription.swift in Sources */,
 				D65129CE2564724D00AADD63 /* MenuItemView.swift in Sources */,
 				D6476A8E258BA12F00C72602 /* PasswordViewController.swift in Sources */,
@@ -1199,6 +1226,7 @@
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
 				D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */,
+				BFE6FFF12601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift in Sources */,
 				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
 				1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */,
 				D63853E3245078C700C56F1D /* GPUtils.swift in Sources */,
