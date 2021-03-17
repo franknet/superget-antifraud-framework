@@ -1,9 +1,5 @@
 import UIKit
 
-public protocol TokenConfirmationDelegate: AnyObject {
-    func getToken(token: String)
-}
-
 // MARK: - Class
 
 public final class TokenConfirmationViewController: BaseViewController<TokenConfirmationView> {
