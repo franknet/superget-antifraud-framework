@@ -50,6 +50,7 @@
 		1E913529249BA57800BF4A79 /* GPLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E913528249BA57800BF4A79 /* GPLocalNotification.swift */; };
 		1E9516932427958100C92A04 /* GPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9516922427958100C92A04 /* GPSession.swift */; };
 		1E95B9EC23FB1395000A3AC8 /* UIViewControllerExtension.swift in Headers */ = {isa = PBXBuildFile; fileRef = 1EF36EA023F4885700A27983 /* UIViewControllerExtension.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EA012A5260A8353004AE849 /* GNBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA012A4260A8353004AE849 /* GNBank.swift */; };
 		1EACBB572423AFC3008DA4EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */; };
 		1EADB69E25C1F4E800F6C2AA /* TokenConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADB69D25C1F4E800F6C2AA /* TokenConfirmationView.swift */; };
 		1EADB6A425C1F52900F6C2AA /* TokenConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADB6A325C1F52900F6C2AA /* TokenConfirmationViewController.swift */; };
@@ -223,6 +224,7 @@
 		1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewPresets.swift; sourceTree = "<group>"; };
 		1E913528249BA57800BF4A79 /* GPLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPLocalNotification.swift; sourceTree = "<group>"; };
 		1E9516922427958100C92A04 /* GPSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSession.swift; sourceTree = "<group>"; };
+		1EA012A4260A8353004AE849 /* GNBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNBank.swift; sourceTree = "<group>"; };
 		1EACBB562423AFC3008DA4EC /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		1EADB69D25C1F4E800F6C2AA /* TokenConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConfirmationView.swift; sourceTree = "<group>"; };
 		1EADB6A325C1F52900F6C2AA /* TokenConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 				1EB0A1A824000D4700D7693D /* GPErrorViewModel.swift */,
 				1E10E0FF24006F8A00247FC7 /* GPAccount.swift */,
 				1E10E101240072B100247FC7 /* GPBankingInstitution.swift */,
+				1EA012A4260A8353004AE849 /* GNBank.swift */,
 				1E10E103240072D000247FC7 /* GPAccountBalance.swift */,
 				1E10E105240072EF00247FC7 /* GPAddress.swift */,
 				1E10E1072400730100247FC7 /* GPMerchant.swift */,
@@ -1253,6 +1256,7 @@
 				BFED885C24BE16FA00275D83 /* GPReceiptHeaderView.swift in Sources */,
 				1E32AF1A23F711E500693F52 /* UIScreenExtension.swift in Sources */,
 				D62C525D24BCE2CA00627C1C /* GPAccountService.swift in Sources */,
+				1EA012A5260A8353004AE849 /* GNBank.swift in Sources */,
 				BF63AD86254B85F60089FA78 /* ModalAccountStatusViewModel.swift in Sources */,
 				D6F88E58243E21760017B4DE /* GPBasePageableListProtocol.swift in Sources */,
 				BF58F7532587D48B00192A80 /* GNNotificationService.swift in Sources */,

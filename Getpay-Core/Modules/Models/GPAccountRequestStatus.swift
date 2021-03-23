@@ -3,6 +3,24 @@ import Foundation
 
 // MARK: - Enum
 
+public enum GNAccountStatus: String, Codable {
+    /// Não houve qualquer tipo de solicitação de abertura de conta.
+    case NOT_REQUESTED
+    /// A solicitação da abertura de conta será feita pelo backend.
+    case PROCESSING
+    /// Há pendências a serem resolvidas. Equivalente aos atuais status [WAITING_DOCUMENTS e WAITING_CORRECTIONS].
+    case PENDING
+    /// Abertura de conta em analise.
+    case WAITING_ANALYSIS
+    /// Aguardando a individualização da conta.
+    case ALIAS_ACCOUNT_PENDING
+    /// Status final. Conta individualizada ok.
+    case ACTIVE
+    case BLOCKED
+}
+
+// MARK: - Enum
+
 public enum GPAccountRequestStatus: Int, Codable {
     
     /// this state reflact the unknow status,
