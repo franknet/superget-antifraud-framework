@@ -8,6 +8,7 @@ public struct GPMerchant: Codable {
     public var email: String?
     public var type: Type
     public var address: GPAddress?
+    public var banking: GPBankingStatus?
     public var merchantStatus: String?
 }
 
