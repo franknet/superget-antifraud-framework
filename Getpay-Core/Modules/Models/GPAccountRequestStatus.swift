@@ -3,7 +3,7 @@ import Foundation
 
 // MARK: - Enum
 
-public enum GPAccountStatus: String, Codable {
+public enum GNAccountStatus: String, Codable {
     /// Não houve qualquer tipo de solicitação de abertura de conta.
     case NOT_REQUESTED
     /// A solicitação da abertura de conta será feita pelo backend.
