@@ -12,6 +12,7 @@ public class GNGeneralConfig {
     // MARK: - Private variables
     
     private var pendencies: Pendencies?
+    private var pendenciesAccount: PendenciesAccount?
     
     public static var shared = GNGeneralConfig()
     
@@ -37,11 +38,23 @@ public class GNGeneralConfig {
         self.pendencies = pendencies
     }
     
+    public func configure(pendenciesAccount: PendenciesAccount) {
+        self.pendenciesAccount = pendenciesAccount
+    }
+    
     public func getPendencies() -> Pendencies? {
         guard
             let pendencies = self.pendencies
         else { return nil }
         
         return pendencies
+    }
+    
+    public func getPendenciesAccount() -> PendenciesAccount? {
+        guard
+            let pendenciesAccount = self.pendenciesAccount
+        else { return nil }
+        
+        return pendenciesAccount
     }
 }
