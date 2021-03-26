@@ -3,5 +3,7 @@ import Foundation
 // MARK: - Struct
 
 public struct GNBank: Codable {
-    public let status: GNAccountStatus
+    public var status: GNAccountStatus
+    public var creationDate: String?
+    public var isCriticalToSendDocuments: Bool?
 }

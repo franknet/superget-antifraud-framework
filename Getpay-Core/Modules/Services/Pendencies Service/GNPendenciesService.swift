@@ -29,7 +29,28 @@ public class GNPendenciesService {
         }
     }
     
+    public func shouldResolvePendenciesAccount(completion: @escaping (Bool) -> Void) {
+        self.fetchPendenciesAccount { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let result):
+                GNGeneralConfig.shared.configure(pendenciesAccount: result)
+                let isRequired = self.isRequiredResolvePendencies(pendencies: result)
+                completion(isRequired)
+            case .failure(_):
+                completion(false)
+            }
+        }
+    }
+    
     // MARK: - Private methods
+    
+    private func isRequiredResolvePendencies(pendencies: PendenciesAccount) -> Bool {
+        if pendencies.dataGridDocuments.count > 0 || pendencies.documents.count > 0 {
+            return true
+        }
+        return false
+    }
     
     private func isRequiredResolvePendencies(pendencies: Pendencies) -> Bool {
         if pendencies.status == .CREATED {
@@ -41,6 +62,12 @@ public class GNPendenciesService {
     private func fetch(completion: @escaping (Result<Pendencies, GPResponseError>) -> Void) {
         let merchantId = GPUtils.loadGPMerchantFromUD().id
         let request = PendencieseRequest(merchantId)
+        service.performRequest(route: request, completion: completion)
+    }
+    
+    private func fetchPendenciesAccount(completion: @escaping (Result<PendenciesAccount, GPResponseError>) -> Void) {
+        let merchantId = GPUtils.loadGPMerchantFromUD().id
+        let request = PendenciesAccountRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
 }
@@ -55,6 +82,14 @@ struct PendencieseRequest: BaseRequestProtocol {
     }
 }
 
+struct PendenciesAccountRequest: BaseRequestProtocol {
+    var path: String
+    
+    init(_ merchantId: Int) {
+        path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/proposal/pendencies"
+    }
+}
+
 // MARK: - Pendencies Response
 
 public struct Pendencies: Codable {
@@ -66,6 +101,11 @@ public struct Pendencies: Codable {
     public let personType: PersonType
 }
 
+public struct PendenciesAccount: Codable {
+    public let dataGridDocuments: [AccountDataType]
+    public let documents: [AccountDocumentType]
+}
+
 public struct Validation: Codable {
     public let type: ValidationType
     public let value: String?
@@ -75,6 +115,14 @@ extension Validation: Hashable, Equatable {
     public static func ==(lhs: Validation, rhs: Validation) -> Bool {
         return lhs.type == rhs.type
     }
+}
+
+public enum AccountDataType: String, Codable {
+    case IDENTIFICATION_DOCUMENT_NUMBER, IDENTIFICATION_DOCUMENT_EXPEDITION_DATE, USER_ALIAS
+}
+
+public enum AccountDocumentType: String, Codable {
+    case SELFIE, IDENTIFICATION_DOCUMENT
 }
 
 public enum AcceptanceType: String, Codable {

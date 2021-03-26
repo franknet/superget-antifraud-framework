@@ -8,8 +8,9 @@ public enum GNAccountStatus: String, Codable {
     case NOT_REQUESTED
     /// A solicitação da abertura de conta será feita pelo backend.
     case PROCESSING
-    /// Há pendências a serem resolvidas. Equivalente aos atuais status [WAITING_DOCUMENTS e WAITING_CORRECTIONS].
+    /// Há pendências a serem resolvidas. Equivalente aos atuais status [WAITING_DOCUMENTS].
     case PENDING
+    case WAITING_CORRECTIONS
     /// Abertura de conta em analise.
     case WAITING_ANALYSIS
     /// Aguardando a individualização da conta.
