@@ -23,6 +23,7 @@ public enum Environment: String {
     
     case prod
     case hti
+    case mock
     
     var url: AppUrls {
         switch self {
@@ -33,6 +34,11 @@ public enum Environment: String {
                            portServicesURL: "https://servicosportais.getnet.com.br/")
         case .hti:
             return AppUrls(baseURL: "https://api-homologacao.getnet.com.br/getpay",
+                           issuer: "https://getsso-hom.getnet.com.br",
+                           transactionalURL: "",
+                           portServicesURL: "https://servicosportais-hti.getnet.com.br/")
+        case .mock:
+            return AppUrls(baseURL: "http://demo6462393.mockable.io",
                            issuer: "https://getsso-hom.getnet.com.br",
                            transactionalURL: "",
                            portServicesURL: "https://servicosportais-hti.getnet.com.br/")
