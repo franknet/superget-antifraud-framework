@@ -1,5 +1,4 @@
 import UIKit
-import RxSwift
 // MARK: - Class
 
 public typealias VerifyResult = (preset: InformationViewPreset?, status: GNAccountStatus?)
