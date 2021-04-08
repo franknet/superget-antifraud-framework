@@ -158,13 +158,9 @@ extension GPAccountService {
         var model: InformationViewPreset
         let merchant = GPUtils.loadGPMerchantFromUD()
         
-        guard let banking = merchant.banking else {
-            return (nil, nil)
-        }
-        
-        switch banking.status {
+        switch merchant.banking.status {
         case .NOT_REQUESTED:
-            return (PresetClient403(), banking.status)
+            return (PresetClient403(), merchant.banking.status)
             
         case .PENDING, .WAITING_CORRECTIONS, .ALIAS_ACCOUNT_PENDING:
             model = PresetWaitingDocumentsNewClient()
@@ -176,20 +172,20 @@ extension GPAccountService {
                 }
             }
             
-            return (model, banking.status)
+            return (model, merchant.banking.status)
             
         case .WAITING_ANALYSIS:
             model = PresetWaitingAnalysis()
             model.navigationTitle = navigationTitle
-            return (model, banking.status)
+            return (model, merchant.banking.status)
             
         case .BLOCKED:
             model = PresetCanceledAccount()
             model.navigationTitle = navigationTitle
-            return (model, banking.status)
+            return (model, merchant.banking.status)
             
         default:
-            return (nil, banking.status)
+            return (nil, merchant.banking.status)
         }
     }
 }

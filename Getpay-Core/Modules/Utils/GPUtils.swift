@@ -75,6 +75,7 @@ public class GPUtils {
                           tradeName: "",
                           email: "",
                           type: .PF,
+                          banking: GNBank(status: .NOT_REQUESTED),
                           merchantStatus: "")
     }
     
