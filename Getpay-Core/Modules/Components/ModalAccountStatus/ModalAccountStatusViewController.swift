@@ -50,12 +50,7 @@ public extension ModalAccountStatusViewController {
     private func goTo(AccountInfo info: VerifyResult) {
         guard var preset = info.preset else { return }
         preset.inView = view
-        if info.status == .loading {
-            preset.buttonAction = { [weak self] in
-                self?.informationDisplay?.removeFromSuperview()
-                self?.startViews()
-            }
-        }
+        
         informationDisplay = GPInformationDisplayView(preset: preset)
         informationDisplay?.cancelButton.isHidden = false
         informationDisplay?.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
@@ -64,20 +59,9 @@ public extension ModalAccountStatusViewController {
     private func startViews() {
         informationDisplay?.removeFromSuperview()
         notEligibleView.removeFromSuperview()
-        let information = viewModel.verifyAccount()
+        guard let information = viewModel.checkAccount(), let status = information.status  else { return }
 
-        if let _ = information.preset {
-            if information.status == .newClient404 {
-                let account = GPUtils.loadAccountPersistenceFromUD()
-                if account.eligibility == .REPROVED {
-                    self.addNotEligibleView()
-                } else {
-                    goTo(AccountInfo: information)
-                }
-            } else {
-                goTo(AccountInfo: information)
-            }
-        } else {
+        guard let _ = information.preset else {
             let account = GPUtils.loadAccountPersistenceFromUD()
             
             if !account.hasCard {
@@ -90,10 +74,21 @@ public extension ModalAccountStatusViewController {
                 informationDisplay = GPInformationDisplayView(preset: preset)
                 informationDisplay?.cancelButton.isHidden = false
                 informationDisplay?.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
+                
             }
+            return
+        }
+        
+        switch status {
+        case .NOT_REQUESTED:
+            self.addNotEligibleView()
+        case .BLOCKED:
+            self.addNotEligibleView()
+        default:
+            goTo(AccountInfo: information)
         }
     }
-    
+
     private func addNotEligibleView() {
         notEligibleView.configure(headerTitle: "Pagar",
                                   title: "Não é possível realizar pagamentos",

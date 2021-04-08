@@ -1,6 +1,8 @@
 import UIKit
-
+import RxSwift
 // MARK: - Class
+
+public typealias VerifyResult = (preset: InformationViewPreset?, status: GNAccountStatus?)
 
 public class GPAccountService {
     
@@ -150,3 +152,46 @@ struct IndividualAccountNotification: LocalNotificationModel {
     var sound = UNNotificationSound.default
     var trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 3, repeats: false)
 }
+
+//MARK: Verify Account
+extension GPAccountService {
+    public func checkAccount(navigationTitle: String? = "", coordinator: Coordinator? = nil) -> VerifyResult? {
+        var model: InformationViewPreset
+        let merchant = GPUtils.loadGPMerchantFromUD()
+        
+        guard let banking = merchant.banking else {
+            return (nil, nil)
+        }
+        
+        switch banking.status {
+        case .NOT_REQUESTED:
+            return (PresetClient403(), banking.status)
+            
+        case .PENDING, .WAITING_CORRECTIONS, .ALIAS_ACCOUNT_PENDING:
+            model = PresetWaitingDocumentsNewClient()
+            model.navigationTitle = navigationTitle
+         
+            if let coo = coordinator as? GPAccountCoordinator {
+                model.buttonAction = {
+                    coo.startDocuments()
+                }
+            }
+            
+            return (model, banking.status)
+            
+        case .WAITING_ANALYSIS:
+            model = PresetWaitingAnalysis()
+            model.navigationTitle = navigationTitle
+            return (model, banking.status)
+            
+        case .BLOCKED:
+            model = PresetCanceledAccount()
+            model.navigationTitle = navigationTitle
+            return (model, banking.status)
+            
+        default:
+            return (nil, banking.status)
+        }
+    }
+}
+
