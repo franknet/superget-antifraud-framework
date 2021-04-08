@@ -56,36 +56,38 @@ public extension ModalAccountStatusViewController {
         informationDisplay?.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
     }
     
+    private func checkCard() {
+        guard GPUtils.loadAccountPersistenceFromUD().hasCard else {
+            var preset = PresentHasNoCard()
+            preset.inView = view
+            preset.buttonAction = { [weak self] in
+                guard let self = self else { return }
+                self.delegate?.modalAccountStatusDidTapActiveCard(self)
+            }
+            informationDisplay = GPInformationDisplayView(preset: preset)
+            informationDisplay?.cancelButton.isHidden = false
+            informationDisplay?.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
+            return
+        }
+    }
+    
     private func startViews() {
         informationDisplay?.removeFromSuperview()
         notEligibleView.removeFromSuperview()
-        guard let information = viewModel.checkAccount(), let status = information.status  else { return }
-
-        guard let _ = information.preset else {
-            let account = GPUtils.loadAccountPersistenceFromUD()
-            
-            if !account.hasCard {
-                var preset = PresentHasNoCard()
-                preset.inView = view
-                preset.buttonAction = { [weak self] in
-                    guard let self = self else { return }
-                    self.delegate?.modalAccountStatusDidTapActiveCard(self)
-                }
-                informationDisplay = GPInformationDisplayView(preset: preset)
-                informationDisplay?.cancelButton.isHidden = false
-                informationDisplay?.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
-                
+        checkCard()
+        
+        guard let pendencies = viewModel.checkAccount(), let status = pendencies.status else { return }
+        
+        guard status == .ACTIVE else {
+            switch status {
+            case .NOT_REQUESTED:
+                self.addNotEligibleView()
+            case .BLOCKED:
+                self.addNotEligibleView()
+            default:
+                goTo(AccountInfo: pendencies)
             }
             return
-        }
-        
-        switch status {
-        case .NOT_REQUESTED:
-            self.addNotEligibleView()
-        case .BLOCKED:
-            self.addNotEligibleView()
-        default:
-            goTo(AccountInfo: information)
         }
     }
 
