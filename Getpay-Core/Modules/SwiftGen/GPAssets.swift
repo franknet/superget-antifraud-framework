@@ -228,6 +228,7 @@ public enum GPAssets {
   public static let gpTypeBoleto = ImageAsset(name: "gp_type_boleto")
   public static let gpUnlocked = ImageAsset(name: "gp_unlocked")
   public static let gpUploadBoleto = ImageAsset(name: "gp_upload_boleto")
+  public static let gpUserAlias = ImageAsset(name: "gp_user_alias")
   public static let gpUserPermission = ImageAsset(name: "gp_user_permission")
   public static let gpVerdecard = ImageAsset(name: "gp_verdecard")
   public static let gpVisa = ImageAsset(name: "gp_visa")
