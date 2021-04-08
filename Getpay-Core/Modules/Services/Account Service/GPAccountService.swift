@@ -154,7 +154,7 @@ struct IndividualAccountNotification: LocalNotificationModel {
 
 //MARK: Verify Account
 extension GPAccountService {
-    public func checkAccount(navigationTitle: String? = "", coordinator: Coordinator? = nil) -> VerifyResult? {
+    public func checkAccount(navigationTitle: String? = "") -> VerifyResult? {
         var model: InformationViewPreset
         let merchant = GPUtils.loadGPMerchantFromUD()
         
@@ -165,13 +165,6 @@ extension GPAccountService {
         case .PENDING, .WAITING_CORRECTIONS, .ALIAS_ACCOUNT_PENDING:
             model = PresetWaitingDocumentsNewClient()
             model.navigationTitle = navigationTitle
-         
-            if let coo = coordinator as? GPAccountCoordinator {
-                model.buttonAction = {
-                    coo.startDocuments()
-                }
-            }
-            
             return (model, merchant.banking.status)
             
         case .WAITING_ANALYSIS:
