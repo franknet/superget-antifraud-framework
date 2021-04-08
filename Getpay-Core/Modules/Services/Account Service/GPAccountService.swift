@@ -1,6 +1,7 @@
 import UIKit
-
 // MARK: - Class
+
+public typealias VerifyResult = (preset: InformationViewPreset?, status: GNAccountStatus?)
 
 public class GPAccountService {
     
@@ -150,3 +151,42 @@ struct IndividualAccountNotification: LocalNotificationModel {
     var sound = UNNotificationSound.default
     var trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 3, repeats: false)
 }
+
+//MARK: Verify Account
+extension GPAccountService {
+    public func checkAccount(navigationTitle: String? = "", coordinator: Coordinator? = nil) -> VerifyResult? {
+        var model: InformationViewPreset
+        let merchant = GPUtils.loadGPMerchantFromUD()
+        
+        switch merchant.banking.status {
+        case .NOT_REQUESTED:
+            return (PresetClient403(), merchant.banking.status)
+            
+        case .PENDING, .WAITING_CORRECTIONS, .ALIAS_ACCOUNT_PENDING:
+            model = PresetWaitingDocumentsNewClient()
+            model.navigationTitle = navigationTitle
+         
+            if let coo = coordinator as? GPAccountCoordinator {
+                model.buttonAction = {
+                    coo.startDocuments()
+                }
+            }
+            
+            return (model, merchant.banking.status)
+            
+        case .WAITING_ANALYSIS:
+            model = PresetWaitingAnalysis()
+            model.navigationTitle = navigationTitle
+            return (model, merchant.banking.status)
+            
+        case .BLOCKED:
+            model = PresetCanceledAccount()
+            model.navigationTitle = navigationTitle
+            return (model, merchant.banking.status)
+            
+        default:
+            return (nil, merchant.banking.status)
+        }
+    }
+}
+
