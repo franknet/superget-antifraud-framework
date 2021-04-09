@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2F573D261E3D8500E87DB6 /* GPAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F573C261E3D8500E87DB6 /* GPAccountCoordinator.swift */; };
 		1D7331A33F127FD85F5B68FA /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F7AFC221E6F769C28DAB0 /* Pods_Getpay_Core.framework */; };
-		1D7CFBDE261E463D00A7BB60 /* GPAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2F573C261E3D8500E87DB6 /* GPAccountCoordinator.swift */; };
 		1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */; };
 		1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FF24006F8A00247FC7 /* GPAccount.swift */; };
 		1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E101240072B100247FC7 /* GPBankingInstitution.swift */; };
@@ -182,7 +180,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D2F573C261E3D8500E87DB6 /* GPAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccountCoordinator.swift; sourceTree = "<group>"; };
 		1E065AE3B8F7C608629E53BC /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1E10E0FF24006F8A00247FC7 /* GPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccount.swift; sourceTree = "<group>"; };
@@ -804,7 +801,6 @@
 			isa = PBXGroup;
 			children = (
 				D62C525C24BCE2CA00627C1C /* GPAccountService.swift */,
-				1D2F573C261E3D8500E87DB6 /* GPAccountCoordinator.swift */,
 			);
 			path = "Account Service";
 			sourceTree = "<group>";
@@ -1219,7 +1215,6 @@
 				D6E1F91624B5282A00C656DC /* UIPageViewControllerExtension.swift in Sources */,
 				D624BDF5242CD162006DD69C /* BaseRequestProtocol.swift in Sources */,
 				D655D73324E5CFFA001C5C91 /* GNSelectedViewWithRadioButton.swift in Sources */,
-				1D2F573D261E3D8500E87DB6 /* GPAccountCoordinator.swift in Sources */,
 				1EB0A1A72400088C00D7693D /* UILabelExtension.swift in Sources */,
 				D62557562496ACCC0062367F /* GPNavBarView.swift in Sources */,
 				BFEA3EDA24C0BD8400D0640E /* GPInputValueView.swift in Sources */,
@@ -1330,7 +1325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1E8A7D24045B47008B5822 /* GPModelTests.swift in Sources */,
-				1D7CFBDE261E463D00A7BB60 /* GPAccountCoordinator.swift in Sources */,
 				1E4CFE9923F2E71000E445F3 /* Getpay_CoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
