@@ -50,7 +50,7 @@ extension GPAccountService {
         
         let merchant = GPUtils.loadGPMerchantFromUD()
         
-        if merchant.banking.status == .NOT_REQUESTED && eligibilityService.shouldMakeEligibilityCall() {
+        if merchant.banking?.status == .NOT_REQUESTED && eligibilityService.shouldMakeEligibilityCall() {
             getEligibility(completion: { _ in })
         }
         
