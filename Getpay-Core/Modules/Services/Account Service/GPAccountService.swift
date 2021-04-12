@@ -48,8 +48,13 @@ extension GPAccountService {
     func accountResponseHandler(response: GPAccount) {
         shouldSendAccountNotification(response: response)
         
-        var persistedAccount = response
+        let merchant = GPUtils.loadGPMerchantFromUD()
         
+        if merchant.banking.status == .NOT_REQUESTED && eligibilityService.shouldMakeEligibilityCall() {
+            getEligibility(completion: { _ in })
+        }
+        
+        var persistedAccount = response
         if response.status == .WAITING_ANALYSIS {
             persistedAccount.requestStatus = .waitingAnalysis
             
@@ -82,15 +87,6 @@ extension GPAccountService {
         GPUtils.setNeedAccountUpdate(false)
         
         switch error.status {
-        case "404":
-            persistedAccount.requestStatus = .newClient404
-            GPUtils.save(account: persistedAccount)
-            
-            if eligibilityService.shouldMakeEligibilityCall() {
-                getEligibility(completion: completion)
-            } else {
-                completion(false)
-            }
         case "403":
             persistedAccount.requestStatus = .active403
             GPUtils.save(account: persistedAccount)
