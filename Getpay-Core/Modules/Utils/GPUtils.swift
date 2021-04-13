@@ -10,6 +10,7 @@ public class GPUtils {
     private static let didSendFeedback = "didSendFeedback"
     private static let dateFeedbackShowed = "dateFeedbackShowed"
     private static let showFeedback = "showFeedback"
+    private static let eligibilityKey = "eligibility"
     
     public static func save(account: GPAccount) {
         let encoder = JSONEncoder()
@@ -204,5 +205,16 @@ public class GPUtils {
     
     private static func feedbackShouldBeShown() -> Bool {
         return defaults.bool(forKey: showFeedback)
+    }
+    
+    public static func saveEligibilityStatus(eligibility: Eligibility) {
+        defaults.set(eligibility.rawValue, forKey: eligibilityKey)
+    }
+    
+    public static func loadEligibilityStatus() -> Eligibility? {
+        if let eligibility = defaults.string(forKey: eligibilityKey) {
+            return Eligibility(rawValue: eligibility)
+        }
+        return nil
     }
 }

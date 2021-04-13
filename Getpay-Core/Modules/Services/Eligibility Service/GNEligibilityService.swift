@@ -7,7 +7,6 @@ public class GNEligibilityService {
     // MARK: - Private Variables
     
     private let service = ServiceManager()
-    private let merchant = GPUtils.loadGPMerchantFromUD()
     
     // MARK: - Initializer
     
@@ -18,8 +17,8 @@ public extension GNEligibilityService {
     
     // MARK: - Public methods
     
-    func getStatus(completion: @escaping (Result<EligibilityResponse, GPResponseError>) -> Void) {
-        let request = EligibilityRequest(merchantId: merchant.id)
+    func getStatus(merchantId: Int, completion: @escaping (Result<EligibilityResponse, GPResponseError>) -> Void) {
+        let request = EligibilityRequest(merchantId: merchantId)
         service.performRequest(route: request, completion: completion)
     }
     
