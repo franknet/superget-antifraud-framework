@@ -11,7 +11,6 @@ public class GPAccountService {
     private var merchantId: Int {
         return GPUtils.loadGPMerchantFromUD().id
     }
-    private let eligibilityService = GNEligibilityService()
     
     // MARK: - Initializers
     
@@ -31,9 +30,10 @@ extension GPAccountService {
             guard let self = self else { return }
             switch response {
             case .success(let account):
-                self.accountResponseHandler(response: account)
-                completion(true)
-                
+                self.accountResponseHandler(response: account) {
+                    completion(true)
+                }
+
             case .failure(let error):
                 self.accountResponseHandler(error: error, completion: completion)
             }
@@ -45,82 +45,21 @@ extension GPAccountService {
         service.performRequest(route: request, completion: completion)
     }
     
-    func accountResponseHandler(response: GPAccount) {
+    func accountResponseHandler(response: GPAccount, completion: @escaping ActionVoid) {
         shouldSendAccountNotification(response: response)
-        
-        var persistedAccount = response
-        
-        if response.status == .WAITING_ANALYSIS {
-            persistedAccount.requestStatus = .waitingAnalysis
-            
-        } else if response.status == .WAITING_DOCUMENTS {
-            if response.origin == .VIZIR {
-                persistedAccount.requestStatus = .waitingDocumentsVizir
-                
-            } else if response.origin == .NEW_CLIENT {
-                persistedAccount.requestStatus = .waitingDocumentsNewClient
-                
-            } else if response.origin == .LEGACY {
-                persistedAccount.requestStatus = .waitingDocumentsLegacy
-                
-            }
-            
-        } else if response.status == .DENIED {
-            persistedAccount.requestStatus = .denied
-            
-        } else if response.status == .WAITING_CORRECTIONS {
-            persistedAccount.requestStatus = .waitingCorrections
-            
-        } else {
-            persistedAccount.requestStatus = .active
-        }
-        GPUtils.save(account: persistedAccount)
+        completion()
     }
     
     func accountResponseHandler(error: GPResponseError, completion: @escaping (Bool) -> Void) {
         var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
         GPUtils.setNeedAccountUpdate(false)
         
-        switch error.status {
-        case "404":
-            persistedAccount.requestStatus = .newClient404
-            GPUtils.save(account: persistedAccount)
-            
-            if eligibilityService.shouldMakeEligibilityCall() {
-                getEligibility(completion: completion)
-            } else {
-                completion(false)
-            }
-        case "403":
-            persistedAccount.requestStatus = .active403
-            GPUtils.save(account: persistedAccount)
-            completion(false)
-
-        default:
-            persistedAccount.requestStatus = .retry
-            GPUtils.save(account: persistedAccount)
-            completion(false)
-        }
+        persistedAccount.requestStatus = .retry
+        GPUtils.save(account: persistedAccount)
+        completion(false)
     }
     
     // MARK: - Private methods
-    
-    private func getEligibility(completion: @escaping (Bool) -> Void) {
-        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
-        eligibilityService.getStatus { [weak self] response in
-            switch response {
-            case .success(let result):
-                persistedAccount.eligibility = result.status
-                GPUtils.save(account: persistedAccount)
-                self?.eligibilityService.saveCurrentDate()
-                
-            case .failure(let error):
-                debugPrint(error)
-                
-            }
-            completion(false)
-        }
-    }
     
     private func shouldSendAccountNotification(response: GPAccount) {
         let persistedAccount = GPUtils.loadAccountPersistenceFromUD()
