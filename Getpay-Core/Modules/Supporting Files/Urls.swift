@@ -38,7 +38,7 @@ public enum Environment: String {
                            transactionalURL: "",
                            portServicesURL: "https://servicosportais-hti.getnet.com.br/")
         case .mock:
-            return AppUrls(baseURL: "http://demo6462393.mockable.io",
+            return AppUrls(baseURL: "http://testedosguri.mockable.io",
                            issuer: "https://getsso-hom.getnet.com.br",
                            transactionalURL: "",
                            portServicesURL: "https://servicosportais-hti.getnet.com.br/")
