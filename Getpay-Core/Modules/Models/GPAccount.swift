@@ -21,10 +21,6 @@ public struct GPAccount: Codable {
     public var document: String?
     
     public var needAccountUpdate: Bool? = false
-    
-    public lazy var isAliasAccountActive: Bool = {
-        return self.aliasAccountStatus == .ACTIVE
-    }()
 }
 
 // MARK: - Enum
