@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.module_name  = "GetpayCore"
   spec.name         = "Getpay-Core"
-  spec.version      = "10.1.0"
+  spec.version      = "10.1.1"
   spec.summary      = "A Getnet framework."
   spec.homepage     = "https://www.superget.com.br/"
 
