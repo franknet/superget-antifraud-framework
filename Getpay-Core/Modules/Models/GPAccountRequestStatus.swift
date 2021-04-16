@@ -6,6 +6,8 @@ import Foundation
 public enum GNAccountStatus: String, Codable {
     /// Não houve qualquer tipo de solicitação de abertura de conta.
     case NOT_REQUESTED
+    /// o app não deve exibir o banner de abertura de conta pois o usuário não é administrador do estabelecimento. Exibir a home sem as operações de conta. 
+    case UNAUTHORIZED
     /// A solicitação da abertura de conta será feita pelo backend.
     case PROCESSING
     /// Há pendências a serem resolvidas. Equivalente aos atuais status [WAITING_DOCUMENTS].
