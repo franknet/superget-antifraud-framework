@@ -68,6 +68,7 @@
 		1EF36EA523F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF36EA323F48E4E00A27983 /* GPListDisclousureCellTableViewCell.xib */; };
 		1EFBE8762407F861003805EC /* GPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBE8752407F861003805EC /* GPLogger.swift */; };
 		AF1EC3D558D92443F2D99620 /* Pods_Getpay_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E065AE3B8F7C608629E53BC /* Pods_Getpay_CoreTests.framework */; };
+		AF384405262D075E00BBB961 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF384404262D075E00BBB961 /* GPExpandView.swift */; };
 		BF105A8D2469CB90009E428E /* GPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A8A2469A244009E428E /* GPTextField.swift */; };
 		BF105A982469EBAB009E428E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF105A972469EBAB009E428E /* UINavigationControllerExtension.swift */; };
 		BF10BD62257E595300389E0F /* GNGeneralConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF10BD61257E595300389E0F /* GNGeneralConfig.swift */; };
@@ -134,7 +135,7 @@
 		D66C8F2524D347C200BEDE62 /* GNCircleViewWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */; };
 		D66C8F2724D3482C00BEDE62 /* GNLabelWithValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */; };
 		D67802DA25CB23D40041B71C /* GNBrazilStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67802D925CB23D40041B71C /* GNBrazilStates.swift */; };
-		D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */; };
+		D679B8C024B779DC006BC6F7 /* GPExpandStatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8BF24B779DC006BC6F7 /* GPExpandStatementView.swift */; };
 		D679B8C224B77A16006BC6F7 /* GPVerticalArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */; };
 		D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */; };
 		D67D5D1925CCB1A5000B5226 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */; };
@@ -244,6 +245,7 @@
 		41E7D23E8AEC84A359BEEB64 /* Pods-Getpay-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-Getpay-CoreTests/Pods-Getpay-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C4F7AFC221E6F769C28DAB0 /* Pods_Getpay_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD43F4D6A80F14CFB926A0A7 /* Pods-Getpay-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.debug.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		AF384404262D075E00BBB961 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
 		BD74519C7F9CF087025244D8 /* Pods-Getpay-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getpay-Core.release.xcconfig"; path = "Target Support Files/Pods-Getpay-Core/Pods-Getpay-Core.release.xcconfig"; sourceTree = "<group>"; };
 		BF105A8A2469A244009E428E /* GPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTextField.swift; sourceTree = "<group>"; };
 		BF105A8E2469CF64009E428E /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,7 +314,7 @@
 		D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNCircleViewWithIcon.swift; sourceTree = "<group>"; };
 		D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNLabelWithValueView.swift; sourceTree = "<group>"; };
 		D67802D925CB23D40041B71C /* GNBrazilStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNBrazilStates.swift; sourceTree = "<group>"; };
-		D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandView.swift; sourceTree = "<group>"; };
+		D679B8BF24B779DC006BC6F7 /* GPExpandStatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPExpandStatementView.swift; sourceTree = "<group>"; };
 		D679B8C124B77A16006BC6F7 /* GPVerticalArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPVerticalArrowButton.swift; sourceTree = "<group>"; };
 		D67A5B4725BB133A00903F3C /* GNPendenciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNPendenciesService.swift; sourceTree = "<group>"; };
 		D67D5D1825CCB1A5000B5226 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -607,7 +609,8 @@
 				1E3FCBDB248D8D9B00EC29DD /* GPInformationDisplayView.swift */,
 				1E913525248ECCF900BF4A79 /* InformationViewPresets.swift */,
 				D60B81A224A406160098443D /* TitleWithValueAndSubTitle.swift */,
-				D679B8BF24B779DC006BC6F7 /* GPExpandView.swift */,
+				AF384404262D075E00BBB961 /* GPExpandView.swift */,
+				D679B8BF24B779DC006BC6F7 /* GPExpandStatementView.swift */,
 				D694D4F724D081D700013055 /* NotEligibleView.swift */,
 				D66C8F2424D347C200BEDE62 /* GNCircleViewWithIcon.swift */,
 				D66C8F2624D3482C00BEDE62 /* GNLabelWithValueView.swift */,
@@ -1241,6 +1244,7 @@
 				D6B087B12568411700E6E3EB /* UITextViewExtension.swift in Sources */,
 				D67802DA25CB23D40041B71C /* GNBrazilStates.swift in Sources */,
 				D624BDFD242CE846006DD69C /* NibLoadable.swift in Sources */,
+				AF384405262D075E00BBB961 /* GPExpandView.swift in Sources */,
 				1E10E10C2400734A00247FC7 /* GPTerminal.swift in Sources */,
 				D6A992212551C807007F2655 /* OnboardingView.swift in Sources */,
 				BF63AD80254B85E50089FA78 /* ModalAccountStatusViewController.swift in Sources */,
@@ -1272,7 +1276,7 @@
 				D67A5B4825BB133A00903F3C /* GNPendenciesService.swift in Sources */,
 				1E3BBFAE240D4CC600283C58 /* StringProtocolExtension.swift in Sources */,
 				1EADB69E25C1F4E800F6C2AA /* TokenConfirmationView.swift in Sources */,
-				D679B8C024B779DC006BC6F7 /* GPExpandView.swift in Sources */,
+				D679B8C024B779DC006BC6F7 /* GPExpandStatementView.swift in Sources */,
 				D66B07A624BE54D1003269C9 /* GPTransactionType.swift in Sources */,
 				1E9516932427958100C92A04 /* GPSession.swift in Sources */,
 				D6695C682475A96E001333FB /* BaseViewController.swift in Sources */,

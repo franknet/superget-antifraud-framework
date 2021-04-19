@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - Class
 
-public class GPExpandView: UIView {
+public class GPExpandStatementView: UIView {
     
     // MARK: - Public variables
     
@@ -10,10 +10,10 @@ public class GPExpandView: UIView {
     
     public lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = FontFamily.Calibri.regular.font(size: 16.0)
+        label.font = FontFamily.Calibri.bold.font(size: 24.0)
         label.textAlignment = .left
-        label.numberOfLines = 0
-        label.textColor = GPColors.ralph.color
+        label.numberOfLines = 1
+        label.textColor = GPColors.edna.color
         return label
     }()
     
@@ -31,10 +31,10 @@ public class GPExpandView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = FontFamily.Calibri.regular.font(size: 16.0)
+        label.font = FontFamily.Calibri.regular.font(size: 14.0)
         label.textAlignment = .left
-        label.numberOfLines = 0
-        label.textColor = GPColors.edna.color
+        label.numberOfLines = 1
+        label.textColor = GPColors.flanders.color
         return label
     }()
     
@@ -101,7 +101,6 @@ public class GPExpandView: UIView {
         
         titleLabel.topAnchor.constraint(equalTo: titleContainerView.topAnchor, constant: 16.0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: titleContainerView.leadingAnchor, constant: 16.0).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: expandButton.leadingAnchor, constant: -16)
         titleLabel.centerY(to: expandButton)
         
         expandButton.topAnchor.constraint(greaterThanOrEqualTo: titleContainerView.topAnchor, constant: 13.0).isActive = true
