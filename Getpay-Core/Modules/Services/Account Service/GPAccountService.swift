@@ -47,6 +47,7 @@ extension GPAccountService {
     
     func accountResponseHandler(response: GPAccount, completion: @escaping ActionVoid) {
         shouldSendAccountNotification(response: response)
+        GPUtils.save(account: response)
         completion()
     }
     
