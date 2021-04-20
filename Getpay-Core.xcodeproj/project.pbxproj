@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D7331A33F127FD85F5B68FA /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F7AFC221E6F769C28DAB0 /* Pods_Getpay_Core.framework */; };
+		1D7FDA0F2629C9DD003EB765 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FDA0E2629C9DD003EB765 /* Constraint.swift */; };
 		1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */; };
 		1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FF24006F8A00247FC7 /* GPAccount.swift */; };
 		1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E101240072B100247FC7 /* GPBankingInstitution.swift */; };
@@ -180,6 +181,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D7FDA0E2629C9DD003EB765 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		1E065AE3B8F7C608629E53BC /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1E10E0FF24006F8A00247FC7 /* GPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccount.swift; sourceTree = "<group>"; };
@@ -825,6 +827,7 @@
 			isa = PBXGroup;
 			children = (
 				D63853E2245078C700C56F1D /* GPUtils.swift */,
+				1D7FDA0E2629C9DD003EB765 /* Constraint.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1306,6 +1309,7 @@
 				1E3FCBDC248D8D9B00EC29DD /* GPInformationDisplayView.swift in Sources */,
 				BFDC43CA2510F69F00D81DF4 /* GNEligibilityService.swift in Sources */,
 				BF913AE525F8683B00293381 /* IconWithTitleAndSubtitleView.swift in Sources */,
+				1D7FDA0F2629C9DD003EB765 /* Constraint.swift in Sources */,
 				1EFBE8762407F861003805EC /* GPLogger.swift in Sources */,
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
 				BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */,
