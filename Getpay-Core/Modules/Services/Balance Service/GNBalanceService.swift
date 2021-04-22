@@ -1,3 +1,5 @@
+import UIKit
+import RxSwift
 // MARK: - Class
 
 public class GNBalanceService {
@@ -14,6 +16,23 @@ public class GNBalanceService {
 extension GNBalanceService {
     
     // MARK: - Public methods
+    
+    public func fetchBalance() -> Observable<BalanceResponse> {
+        return Observable.create { observable -> Disposable in
+            self.fetch { response in
+                switch response {
+                case .success(let balance):
+                    observable.onNext(balance)
+                case .failure(let error):
+                    observable.onError(error)
+                }
+            }
+            return Disposables.create()
+        }
+        
+    }
+    
+    // MARK: - Private methods
     
     public func fetch(completion: @escaping (Result<BalanceResponse, GPResponseError>) -> Void) {
         let merchantId = GPUtils.loadGPMerchantFromUD().id
