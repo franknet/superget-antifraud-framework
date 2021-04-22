@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D555A9C2631DE9B00A3BC1B /* ProposalOfferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D555A9B2631DE9B00A3BC1B /* ProposalOfferService.swift */; };
+		1D555AD72631DF3200A3BC1B /* ProposalOfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D555AD62631DF3200A3BC1B /* ProposalOfferRequest.swift */; };
 		1D7331A33F127FD85F5B68FA /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F7AFC221E6F769C28DAB0 /* Pods_Getpay_Core.framework */; };
 		1D7FDA0F2629C9DD003EB765 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FDA0E2629C9DD003EB765 /* Constraint.swift */; };
 		1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */; };
@@ -181,6 +183,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D555A9B2631DE9B00A3BC1B /* ProposalOfferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalOfferService.swift; sourceTree = "<group>"; };
+		1D555AD62631DF3200A3BC1B /* ProposalOfferRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalOfferRequest.swift; sourceTree = "<group>"; };
 		1D7FDA0E2629C9DD003EB765 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		1E065AE3B8F7C608629E53BC /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
@@ -372,6 +376,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D555A982631DE4600A3BC1B /* Proposal Offer Service */ = {
+			isa = PBXGroup;
+			children = (
+				1D555A9B2631DE9B00A3BC1B /* ProposalOfferService.swift */,
+				1D555AD62631DF3200A3BC1B /* ProposalOfferRequest.swift */,
+			);
+			path = "Proposal Offer Service";
+			sourceTree = "<group>";
+		};
 		1E32AF1B23F712C200693F52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +706,7 @@
 				D64FFB982505BC2700C997CC /* Merchant Service */,
 				D62C525B24BCE29700627C1C /* Account Service */,
 				D63853E02450788F00C56F1D /* Terminal Service */,
+				1D555A982631DE4600A3BC1B /* Proposal Offer Service */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1181,6 +1195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D555AD72631DF3200A3BC1B /* ProposalOfferRequest.swift in Sources */,
 				D6476AA6258BD8EF00C72602 /* PixView.swift in Sources */,
 				D694D4F824D081D700013055 /* NotEligibleView.swift in Sources */,
 				1E19D9AC248AD68800C8D656 /* GPAccountRequestStatus.swift in Sources */,
@@ -1314,6 +1329,7 @@
 				1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */,
 				BFA5F2AA259A588200CC4983 /* GNBalanceService.swift in Sources */,
 				D624BDF3242AB851006DD69C /* GPColors.swift in Sources */,
+				1D555A9C2631DE9B00A3BC1B /* ProposalOfferService.swift in Sources */,
 				1E10E104240072D000247FC7 /* GPAccountBalance.swift in Sources */,
 				1E10E106240072EF00247FC7 /* GPAddress.swift in Sources */,
 				D6476A88258B9E8700C72602 /* PasswordView.swift in Sources */,
