@@ -45,7 +45,7 @@ public class GPExpandView: UIView {
     lazy var lineSeparatorView: UIView = {
         let view = UIView()
         view.height(size: 1)
-        view.backgroundColor = GPColors.ralph.color
+        view.backgroundColor = GPColors.moe.color
         return view
     }()
     
@@ -102,10 +102,6 @@ public class GPExpandView: UIView {
         
         titleContainerView.bottomAnchor.constraint(greaterThanOrEqualTo: expandButton.bottomAnchor).isActive = true
         titleContainerView.bottomAnchor.constraint(greaterThanOrEqualTo: titleLabel.bottomAnchor, constant: 4.0).isActive = true
-        
-//        let heightConstraint = titleContainerView.heightAnchor.constraint(equalTo: expandButton.heightAnchor, multiplier: 1)
-//        heightConstraint.priority = .defaultHigh
-//        heightConstraint.isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: titleContainerView.topAnchor, constant: 16.0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: titleContainerView.leadingAnchor, constant: 16.0).isActive = true

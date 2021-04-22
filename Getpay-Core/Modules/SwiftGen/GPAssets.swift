@@ -237,6 +237,7 @@ public enum GPAssets {
   public static let gpWallet = ImageAsset(name: "gp_wallet")
   public static let gpWallets = ImageAsset(name: "gp_wallets")
   public static let gpWeb = ImageAsset(name: "gp_web")
+  public static let gpSupport = ImageAsset(name: "gp_support")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
