@@ -56,12 +56,14 @@ open class ServiceManager: SessionDelegate {
                     "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
                     "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
                     "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
-                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="],
+                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA=",
+                    "dbazgBbDSniAzBgrcx2R1K+uLA+xL1DUAFB6iVE9fNI="],
                 Urls.shared.issuer: [
                     "F5qeWlRODHgf7yswYaG/K3L6Hj6GbMzJwoUjrSDCIkU=",
                     "RVPH5cXAfoy/PbRm46TZq2YOA9VP6gq/ozSIiriQfjE=",
                     "ceqykKitHuAY/32htwXK2GoUhWdb8AYOKIIKuOpm9/U=",
-                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA="]]
+                    "7sa/hZaEzoUzc4cmAy6DAocsvjE6na9pCJvkQ3RPRNA=",
+                    "dbazgBbDSniAzBgrcx2R1K+uLA+xL1DUAFB6iVE9fNI="]]
             
             setupSSLPinning(pinnedDomains: pinnedDomains, errorCallback: {})
         }
