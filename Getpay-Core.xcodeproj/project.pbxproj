@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D7331A33F127FD85F5B68FA /* Pods_Getpay_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4F7AFC221E6F769C28DAB0 /* Pods_Getpay_Core.framework */; };
 		1D7FDA0F2629C9DD003EB765 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7FDA0E2629C9DD003EB765 /* Constraint.swift */; };
+		1DDB5FE2262F15D400BB0A55 /* GNSCDProposalOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB5FE1262F15D400BB0A55 /* GNSCDProposalOffer.swift */; };
+		1DDB5FE6262F165200BB0A55 /* GNProposalOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB5FE5262F165200BB0A55 /* GNProposalOffer.swift */; };
 		1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */; };
 		1E10E10024006F8A00247FC7 /* GPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E0FF24006F8A00247FC7 /* GPAccount.swift */; };
 		1E10E102240072B100247FC7 /* GPBankingInstitution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E10E101240072B100247FC7 /* GPBankingInstitution.swift */; };
@@ -182,6 +184,8 @@
 
 /* Begin PBXFileReference section */
 		1D7FDA0E2629C9DD003EB765 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		1DDB5FE1262F15D400BB0A55 /* GNSCDProposalOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSCDProposalOffer.swift; sourceTree = "<group>"; };
+		1DDB5FE5262F165200BB0A55 /* GNProposalOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNProposalOffer.swift; sourceTree = "<group>"; };
 		1E065AE3B8F7C608629E53BC /* Pods_Getpay_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getpay_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E10E0FD24004F7200247FC7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		1E10E0FF24006F8A00247FC7 /* GPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAccount.swift; sourceTree = "<group>"; };
@@ -393,6 +397,7 @@
 				D66B07A524BE54D1003269C9 /* GPTransactionType.swift */,
 				BFED886524BE5FC400275D83 /* GPReceiptType.swift */,
 				D67802D925CB23D40041B71C /* GNBrazilStates.swift */,
+				1DDB5FE5262F165200BB0A55 /* GNProposalOffer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -693,6 +698,7 @@
 				D64FFB982505BC2700C997CC /* Merchant Service */,
 				D62C525B24BCE29700627C1C /* Account Service */,
 				D63853E02450788F00C56F1D /* Terminal Service */,
+				1DDB5FE1262F15D400BB0A55 /* GNSCDProposalOffer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1232,6 +1238,7 @@
 				1E1E8A512403E429008B5822 /* GPErrorViewController.swift in Sources */,
 				1E10E0FE24004F7200247FC7 /* UIApplicationExtension.swift in Sources */,
 				D681A53F24F1A5540009CC0D /* GNSuccessViewController.swift in Sources */,
+				1DDB5FE6262F165200BB0A55 /* GNProposalOffer.swift in Sources */,
 				BFE6FFF12601328F00A9CB1D /* TokenConfirmationWithResendButtonViewController.swift in Sources */,
 				1E1E8A8224046102008B5822 /* GPLoadingOverlay.swift in Sources */,
 				1E62A49223F42AC2009ED647 /* UINibExtension.swift in Sources */,
@@ -1300,6 +1307,7 @@
 				1E3E0ABE23F46D530067CF3E /* GPListItemDisclousure.swift in Sources */,
 				D62C526024BCE4C300627C1C /* GPLabel.swift in Sources */,
 				1EB0A1A924000D4700D7693D /* GPErrorViewModel.swift in Sources */,
+				1DDB5FE2262F15D400BB0A55 /* GNSCDProposalOffer.swift in Sources */,
 				BFD76EE62582B9FD00C469F1 /* SwitchButton.swift in Sources */,
 				BF10BD62257E595300389E0F /* GNGeneralConfig.swift in Sources */,
 				D68C647A241FB14600BA65B2 /* Coordinator.swift in Sources */,
