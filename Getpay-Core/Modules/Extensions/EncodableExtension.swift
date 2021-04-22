@@ -2,7 +2,7 @@
 // MARK: - Encodable Extension
 
 public extension Encodable {
-    func asDictionary() -> Parameters? {
+    public func asDictionary() -> Parameters? {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
         }
