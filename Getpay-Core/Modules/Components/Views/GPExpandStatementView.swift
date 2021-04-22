@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - Class
 
-public class GPExpandView: UIView {
+public class GPExpandStatementView: UIView {
     
     // MARK: - Public variables
     
@@ -10,10 +10,10 @@ public class GPExpandView: UIView {
     
     public lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = FontFamily.Calibri.regular.font(size: 16.0)
+        label.font = FontFamily.Calibri.bold.font(size: 24.0)
         label.textAlignment = .left
-        label.numberOfLines = 0
-        label.textColor = GPColors.ralph.color
+        label.numberOfLines = 1
+        label.textColor = GPColors.edna.color
         return label
     }()
     
@@ -31,23 +31,16 @@ public class GPExpandView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = FontFamily.Calibri.bold.font(size: 16.0)
+        label.font = FontFamily.Calibri.regular.font(size: 14.0)
         label.textAlignment = .left
-        label.numberOfLines = 0
-        label.textColor = GPColors.edna.color
+        label.numberOfLines = 1
+        label.textColor = GPColors.flanders.color
         return label
     }()
     
     lazy var expandButton = GPVerticalArrowButton()
     
     let descriptionContainerView = UIView()
-    
-    lazy var lineSeparatorView: UIView = {
-        let view = UIView()
-        view.height(size: 1)
-        view.backgroundColor = GPColors.moe.color
-        return view
-    }()
     
     // MARK: - Private variables
     
@@ -77,7 +70,7 @@ public class GPExpandView: UIView {
     // MARK: - Internal methods
     
     func setupView() {
-        addSubviews([stackView, lineSeparatorView], constraints: true)
+        addSubview(stackView, constraints: true)
         
         stackView.addArrangedSubview(titleContainerView)
         stackView.addArrangedSubview(descriptionContainerView)
@@ -98,17 +91,18 @@ public class GPExpandView: UIView {
     
     func setupConstraints() {
         stackView.applyAnchors(ofType: [.top, .leading, .trailing, .bottom], to: self)
-        lineSeparatorView.applyAnchors(ofType: [.leading, .trailing, .bottom], to: stackView)
         
         titleContainerView.bottomAnchor.constraint(greaterThanOrEqualTo: expandButton.bottomAnchor).isActive = true
         titleContainerView.bottomAnchor.constraint(greaterThanOrEqualTo: titleLabel.bottomAnchor, constant: 4.0).isActive = true
         
+        let heightConstraint = titleContainerView.heightAnchor.constraint(equalTo: expandButton.heightAnchor, multiplier: 1)
+        heightConstraint.priority = .defaultHigh
+        heightConstraint.isActive = true
+        
         titleLabel.topAnchor.constraint(equalTo: titleContainerView.topAnchor, constant: 16.0).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: titleContainerView.leadingAnchor, constant: 16.0).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: expandButton.leadingAnchor, constant: -24.0).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: titleContainerView.bottomAnchor, constant: -16.0).isActive = true
+        titleLabel.centerY(to: expandButton)
         
-        expandButton.centerY(to: titleLabel)
         expandButton.topAnchor.constraint(greaterThanOrEqualTo: titleContainerView.topAnchor, constant: 13.0).isActive = true
         expandButton.trailingAnchor.constraint(equalTo: titleContainerView.trailingAnchor, constant: -16.0).isActive = true
         
@@ -133,7 +127,9 @@ public class GPExpandView: UIView {
         
         UIView.animateWithDefaultDuration({
             self.descriptionLabel.alpha = hiddenAlpha ? 0 : 1
-            (self.parentViewToAnimate ?? self.superview ?? self).layoutIfNeeded()
+            (self.parentViewToAnimate
+                ?? self.superview
+                ?? self).layoutIfNeeded()
         })
         expandButton.isExpanded.toggle()
     }
