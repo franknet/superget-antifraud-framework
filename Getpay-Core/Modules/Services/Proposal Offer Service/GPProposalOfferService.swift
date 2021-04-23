@@ -1,4 +1,5 @@
 // MARK: - Class
+
 import RxSwift
 
 public class GPProposalOfferService {

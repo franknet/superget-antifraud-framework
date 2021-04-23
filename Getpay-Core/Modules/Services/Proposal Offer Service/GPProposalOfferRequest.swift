@@ -1,4 +1,6 @@
 
+// MARK: - Struct GPProposalOfferRequest
+
 public struct GPProposalOfferRequest: BaseRequestProtocol {
     public var path: String
     
@@ -7,7 +9,7 @@ public struct GPProposalOfferRequest: BaseRequestProtocol {
     }
 }
 
-// MARK: - Transaction Response
+// MARK: - Struct Transaction Response
 
 public struct GPProposalOfferResponse: Codable {
     public var productName: String
