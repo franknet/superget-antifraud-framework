@@ -1,13 +1,15 @@
 // MARK: - Class
 import RxSwift
 
-class ProposalOfferService {
+public class GPProposalOfferService {
   
     // MARK: - Initializers
 
-    init() {}
+    public init() {}
     
-    func fetchProposalOffer() -> Observable<ProposalOfferResponse> {
+    // MARK: - Internal methods
+    
+   public func fetchProposalOffer() -> Observable<GPProposalOfferResponse> {
         return Observable.create { observable -> Disposable in
             self.fetchProposal { response in
                 switch response {
@@ -21,10 +23,12 @@ class ProposalOfferService {
         }
     }
     
-    private func fetchProposal(completion: @escaping (Result<ProposalOfferResponse, GPResponseError>) -> Void) {
+    // MARK: - Private methods
+    
+    private func fetchProposal(completion: @escaping (Result<GPProposalOfferResponse, GPResponseError>) -> Void) {
         let service = ServiceManager()
         let merchantId = GPUtils.loadGPMerchantFromUD().id
-        let request = ProposalOfferRequest(merchantId)
+        let request = GPProposalOfferRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
 }

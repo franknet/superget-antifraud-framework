@@ -55,7 +55,6 @@ struct AccountDataRequest: BaseRequestProtocol {
     }
 }
 
-
 //MARK: Verify Account
 extension GPAccountService {
     public func checkAccount(navigationTitle: String? = "") -> VerifyResult? {
