@@ -1,4 +1,5 @@
 import UIKit
+import RxSwift
 // MARK: - Class
 
 public typealias VerifyResult = (preset: InformationViewPreset?, status: GNAccountStatus?)
@@ -21,22 +22,20 @@ extension GPAccountService {
     
     // MARK: - Public methods
     
-    public func getAccount(completion: @escaping (Bool) -> Void) {
-        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
-        persistedAccount.requestStatus = .loading
-        GPUtils.save(account: persistedAccount)
-        
-        self.get { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case .success(let account):
-                self.accountResponseHandler(response: account) {
-                    completion(true)
-                }
+    public func getAccount() -> Observable<GPAccount> {
+        return Observable.create { observable -> Disposable in
+            
+            self.get { response in
+                switch response {
+                case .success(let account):
+                    observable.onNext(account)
 
-            case .failure(let error):
-                self.accountResponseHandler(error: error, completion: completion)
+                case .failure(let error):
+                    observable.onError(error)
+                }
             }
+            return Disposables.create()
+            
         }
     }
     
@@ -44,31 +43,6 @@ extension GPAccountService {
         let request = AccountDataRequest(merchantId)
         service.performRequest(route: request, completion: completion)
     }
-    
-    func accountResponseHandler(response: GPAccount, completion: @escaping ActionVoid) {
-        shouldSendAccountNotification(response: response)
-        GPUtils.save(account: response)
-        completion()
-    }
-    
-    func accountResponseHandler(error: GPResponseError, completion: @escaping (Bool) -> Void) {
-        var persistedAccount = GPUtils.loadAccountPersistenceFromUD()
-        GPUtils.setNeedAccountUpdate(false)
-        
-        persistedAccount.requestStatus = .retry
-        GPUtils.save(account: persistedAccount)
-        completion(false)
-    }
-    
-    // MARK: - Private methods
-    
-    private func shouldSendAccountNotification(response: GPAccount) {
-        let persistedAccount = GPUtils.loadAccountPersistenceFromUD()
-        let persistedValidation = (persistedAccount.aliasAccountStatus != response.aliasAccountStatus && persistedAccount.id != 0)
-        if persistedValidation && response.aliasAccountStatus == .ACTIVE {
-            GPLocalNotification.fireNotification(withModel: IndividualAccountNotification())
-        }
-    }    
 }
 
 // MARK: - Request
@@ -79,17 +53,6 @@ struct AccountDataRequest: BaseRequestProtocol {
     init(_ merchantId: Int) {
         path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/account"
     }
-}
-
-
-// MARK: - Request
-
-struct IndividualAccountNotification: LocalNotificationModel {
-    var title: String = "Sua conta SuperGet mudou."
-    var subtitle: String = ""
-    var body: String = "Agora, com a parceria com o Banco Votorantim, você realiza transferências para qualquer banco, faz pagamentos de contas e muito mais. Acesse o app SuperGet e aproveite todas as vantagens."
-    var sound = UNNotificationSound.default
-    var trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 3, repeats: false)
 }
 
 //MARK: Verify Account
