@@ -3,7 +3,7 @@ public struct GPProposalOfferRequest: BaseRequestProtocol {
     public var path: String
     
     init(_ merchantId: Int) {
-        path = Urls.shared.baseURL + "/api/v1/merchant/\(merchantId)/scd/proposal/offer"
+        path = Urls.shared.baseURL + "/v1/merchant/\(merchantId)/scd/proposal/offer"
     }
 }
 
