@@ -70,8 +70,13 @@ public class GPExpandView: UIView {
     // MARK: - Public methods
     
     public func configure(title: String, description: String) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 5.0
+        let attributedString = NSMutableAttributedString(string: description)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+        descriptionLabel.attributedText = attributedString
+        
         self.titleLabel.text = title
-        self.descriptionLabel.text = description
     }
     
     // MARK: - Internal methods
